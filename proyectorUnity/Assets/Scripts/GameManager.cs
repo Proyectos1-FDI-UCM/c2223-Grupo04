@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject _player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public GameObject getPlayer()
+    {
+        return _player;
     }
 }
