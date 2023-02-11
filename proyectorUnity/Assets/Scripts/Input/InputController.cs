@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    GameManager _gameManager;
-    MovementController _movementController;
+    GameManager gameManager;
+    MovementController movementController;
 
     // Start is called before the first frame update
     void Start()
     {
-        _gameManager = GetComponent<GameManager>();
+        gameManager = GetComponent<GameManager>();
         //Obtiene el componente de movimiento del player
-        _movementController = _gameManager.getPlayer().GetComponent<MovementController>();
+        movementController = gameManager.getPlayer().GetComponent<MovementController>();
     }
 
     // Update is called once per frame
     void Update()
-    {   
-        if (Input.GetKey(KeyCode.W))
-            _movementController.Up();
-        if (Input.GetKey(KeyCode.A))
-            _movementController.Left();
-        if (Input.GetKey(KeyCode.S))
-            _movementController.Down();
-        if (Input.GetKey(KeyCode.D))
-            _movementController.Right();
+    {   if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            movementController.Stop();
+        else
+        {
+            if (Input.GetKey(KeyCode.W))
+                movementController.Up();
+            if (Input.GetKey(KeyCode.A))
+                movementController.Left();
+            if (Input.GetKey(KeyCode.S))
+                movementController.Down();
+            if (Input.GetKey(KeyCode.D))
+                movementController.Right();
+        }
     }
 }
