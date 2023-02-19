@@ -15,11 +15,20 @@ public class InventoryController : MonoBehaviour
     */
     public void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
     {
-        //TODO añadir la condición de que esté suficientemente cerca de Charlie.
-        if(tool == null)
+        //Debug.Log(Vector2.Distance(gameObject.transform.position, toolObject.transform.position));
+        
+        //Se puede coger el objeto si el inventario no está ocupado y está suficientemente cerca
+        if (tool == null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
         {
             tool = toolObject;
+            toolObject.GetComponent<Tool>().PickUpTool();            
             Debug.Log("Objeto recogido");
+        } else if(tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        {
+            tool = null;
+            toolObject.GetComponent<Tool>().DropTool();
+            Debug.Log("Objeto soltado");
+
         }
     }
 }

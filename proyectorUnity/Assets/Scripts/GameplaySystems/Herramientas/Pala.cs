@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Pala : Tool
+public class Pala : Tool, ToolInterface
 {
 
-    private Tool prueba;
+    public void OnClickFunction()
+    {
+        //TODO la accion de hacer clic detecho
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +17,4 @@ public class Pala : Tool
     {
         
     }
-
-    public override void RightClickFunction()
-    {
-        //La programación de la pala lol
-    }  
 }
