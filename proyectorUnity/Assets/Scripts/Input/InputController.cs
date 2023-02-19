@@ -38,18 +38,22 @@ public class InputController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePos = Input.mousePosition;
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward);
+            Vector2 mousePos = Input.mousePosition;
+            //impacto de rayo desde ubicación del ratón a punto del mundo.
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
+
             Debug.Log(mousePos.x);
             Debug.Log(mousePos.y);
 
-            if(hit.collider != null)
+            //Sólo entra si ha impactado con algún collider
+            if (hit)
             {
                 Debug.Log("Ha colaideado");
                 GameObject objeto = hit.collider.gameObject;
-                if(gameObject.GetComponent<Tool>() != null)
+                if(objeto.GetComponent<Tool>() != null)
                 {
-                    Debug.Log("Si que funciona así, pedazo de cazurro");
+                    Debug.Log("Ha colaideado con un objeto de tipo tool");
+                    inventoryController.TryPickUpTool(objeto, mousePos);
                 }
             }
         }
