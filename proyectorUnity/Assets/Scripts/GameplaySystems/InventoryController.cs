@@ -32,13 +32,11 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void ClickFunction(GameObject toolObject, Vector2 mousePos)
+    public void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
-        if (tool != null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        if (tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < distanciaMin)
         {
-            toolObject.GetComponent<Tool>().OnClickFunction();
+            tool.GetComponent<Tool>().OnClickFunction(objetoClicado);
         }
-
-
     }
 }

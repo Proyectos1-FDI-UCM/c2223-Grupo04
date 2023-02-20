@@ -22,5 +22,5 @@ public abstract class Tool : MonoBehaviour
         gameObject.GetComponent<Renderer>().enabled = true;
     }
 
-    public abstract void OnClickFunction();
+    public abstract void OnClickFunction(GameObject objetoClicado);
 }

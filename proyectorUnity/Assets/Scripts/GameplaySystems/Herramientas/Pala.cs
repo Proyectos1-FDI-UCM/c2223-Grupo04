@@ -1,20 +1,13 @@
+using UnityEngine;
+
 public class Pala : Tool
 {
 
-    public override void OnClickFunction()
+    public override void OnClickFunction(GameObject objetoClicado)
     {
-        //TODO la accion de hacer clic detecho
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //TODO posibles animaciones en el futuro
+        if (objetoClicado.tag == "Obstaculo") {
+            Destroy(objetoClicado);
+        }
     }
 }

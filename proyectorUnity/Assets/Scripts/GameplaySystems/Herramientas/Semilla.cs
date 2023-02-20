@@ -5,7 +5,7 @@ using UnityEngine;
 public class Semilla : Tool
 {
 
-    public override void OnClickFunction()
+    public override void OnClickFunction(GameObject objetoClicado)
     {
 
     }

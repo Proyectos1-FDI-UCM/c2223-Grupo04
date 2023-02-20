@@ -59,10 +59,10 @@ public class InputController : MonoBehaviour
                     Debug.Log("Ha colaideado con un objeto de tipo tool");
                     inventoryController.TryPickUpTool(objeto, mousePos);
                 }
-
-                else
+                else //En caso de no ser un tool
                 {
-                    
+                    //Efectua la acción de clic de la herramienta
+                    inventoryController.ClickFunction(objeto, mousePos);
                 }
             }
         }
