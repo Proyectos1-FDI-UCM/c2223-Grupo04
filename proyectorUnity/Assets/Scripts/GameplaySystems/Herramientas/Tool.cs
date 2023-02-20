@@ -2,32 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Interfaz a implementar en clases hijas (cada herramienta)
-public interface ToolInterface {
-    public void OnClickFunction();
-}
-public class Tool : MonoBehaviour, ToolInterface
+public abstract class Tool : MonoBehaviour
 {
     /**
-     * Al ser una clase abstracta, no se puede programar aquí. Es como un plano que deben cumplir las clases hijas.
-     * Todos los métodos de Tool deben ser implementados por sus clases hijas.
-     * 
+     * Clase abstracta, es como un plano para las clases hijas. No se puede instanciar.
+     * Todos los métodos abstract de Tool deben ser implementados por sus clases hijas como override.
+     * Los métodos virtual, ya tienen una programación "predeterminada". Pueden ser "sobrescritos" con override igualmente.
      */
 
     //Método para cuando el objeto es cogido.
-    public void PickUpTool()
+    public virtual void PickUpTool()
     {
         //El objeto se vuelve invisible al ser recogido
         gameObject.GetComponent<Renderer>().enabled = false;
     }
 
-    public void DropTool()
+    public virtual void DropTool()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
     }
 
-    public void OnClickFunction()
-    {
-        //Por defecto, programar en cada tula
-    }
+    public abstract void OnClickFunction();
 }

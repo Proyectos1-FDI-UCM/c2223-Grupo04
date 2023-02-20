@@ -1,7 +1,7 @@
-public class Pala : Tool, ToolInterface
+public class Pala : Tool
 {
 
-    public void OnClickFunction()
+    public override void OnClickFunction()
     {
         //TODO la accion de hacer clic detecho
     }
