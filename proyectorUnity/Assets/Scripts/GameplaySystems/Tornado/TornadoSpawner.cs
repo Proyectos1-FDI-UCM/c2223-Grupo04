@@ -4,15 +4,60 @@ using UnityEngine;
 
 public class TornadoSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Singleton del spawner del tornado
+    /// </summary>
+    public static TornadoSpawner Instance { get; private set; }
+    /// <summary>
+    /// Tiempo que pasa entre tornados
+    /// </summary>
+    [SerializeField]
+    float _tEntreTornados;
+    /// <summary>
+    /// Tiempo que se suma cada vez que aparece un tornado
+    /// </summary>
+    int _tMul = 0;
+    /// <summary>
+    /// Prefab del tornado
+    /// </summary>
+    [SerializeField]
+    GameObject _tornadoPrefab;
+    /// <summary>
+    /// Posición de instanciar tornado
+    /// </summary>
+    [SerializeField]
+    Transform _tornadoInstPos;
+    /// <summary>
+    /// Rutas de tornados
+    /// </summary>
+    [SerializeField]
+    GameObject[] _tornadoRutas;
+
+    /// <summary>
+    /// Espera entre tornados
+    /// </summary>
+    public void NewTornadoTime()
     {
-        
+        StartCoroutine(TiempoSpawn());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TiempoSpawn()
     {
-        
+        yield return new WaitForSeconds(_tEntreTornados + _tMul); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
+        _tMul = (10 * GameManager.Instance._nTornados);//Suma el multiplicador al de tiempo
+
+        //Elige una ruta random de las prefijadas
+        int _idRuta = Random.Range(0, _tornadoRutas.Length - 1);
+        //Instancia la ruta del tornado
+        GameObject _ruta = GameObject.Instantiate(_tornadoRutas[_idRuta], null);
+        //Instancia el tornado
+        GameObject _tornado = GameObject.Instantiate(_tornadoPrefab, _tornadoInstPos);
+        //Asigna la ruta al tornado
+        _tornado.GetComponent<TornadoMovement>()._tornadoPositions = _ruta;
+    }
+
+    private void Awake()
+    {
+        Instance = this;
     }
 }

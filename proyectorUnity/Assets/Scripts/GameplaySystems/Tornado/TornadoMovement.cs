@@ -8,7 +8,7 @@ public class TornadoMovement : MonoBehaviour
     /// GameObject padre con los puntos por donde pasará el tornado
     /// </summary>
     [SerializeField]
-    GameObject _tornadoPositions;
+    public GameObject _tornadoPositions;
     /// <summary>
     /// ID del punto al que irá el tornado
     /// </summary>
@@ -51,5 +51,11 @@ public class TornadoMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.NuevoTornado();
+        Destroy(_tornadoPositions);
     }
 }
