@@ -16,19 +16,29 @@ public class InventoryController : MonoBehaviour
     public void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
     {
         //Debug.Log(Vector2.Distance(gameObject.transform.position, toolObject.transform.position));
-        
+
         //Se puede coger el objeto si el inventario no está ocupado y está suficientemente cerca
         if (tool == null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
         {
             tool = toolObject;
-            toolObject.GetComponent<Tool>().PickUpTool();            
+            toolObject.GetComponent<Tool>().PickUpTool();
             Debug.Log("Objeto recogido");
-        } else if(tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        } else if (tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
         {
             tool = null;
             toolObject.GetComponent<Tool>().DropTool();
             Debug.Log("Objeto soltado");
 
         }
+    }
+
+    public void ClickFunction(GameObject toolObject, Vector2 mousePos)
+    {
+        if (tool != null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        {
+            toolObject.GetComponent<Tool>().OnClickFunction();
+        }
+
+
     }
 }

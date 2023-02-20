@@ -6,7 +6,7 @@ using UnityEngine;
 public interface ToolInterface {
     public void OnClickFunction();
 }
-public class Tool : MonoBehaviour
+public class Tool : MonoBehaviour, ToolInterface
 {
     /**
      * Al ser una clase abstracta, no se puede programar aquí. Es como un plano que deben cumplir las clases hijas.
@@ -24,5 +24,10 @@ public class Tool : MonoBehaviour
     public void DropTool()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
+    }
+
+    public void OnClickFunction()
+    {
+        //Por defecto, programar en cada tula
     }
 }
