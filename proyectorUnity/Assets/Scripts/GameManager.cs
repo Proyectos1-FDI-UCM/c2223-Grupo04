@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _nTornados = 0;
+        _player = PlayerController.Instance.gameObject;
     }
 
     // Update is called once per frame

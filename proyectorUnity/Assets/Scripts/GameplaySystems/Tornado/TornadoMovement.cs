@@ -43,11 +43,7 @@ public class TornadoMovement : MonoBehaviour
                 id++;
             }
         }
-        else if((transform.position-_startpos).magnitude > 0.5f) //Volver a la posición inicial
-        {
-            transform.position = Vector2.MoveTowards(transform.position, _startpos, _tornadoSpeed * Time.deltaTime);
-        }
-        else //Si ha vuelto a la posición inicial se destruye
+        else if((transform.position-_startpos).magnitude > 0.5f) //El tornado se destruye al llegar al último punto
         {
             Destroy(gameObject);
         }

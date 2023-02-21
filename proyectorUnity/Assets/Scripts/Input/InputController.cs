@@ -16,8 +16,8 @@ public class InputController : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         //Obtiene el componente de movimiento del player
-        movementController = gameManager.getPlayer().GetComponent<MovementController>();
-        inventoryController = gameManager.getPlayer().GetComponent<InventoryController>();
+        movementController = PlayerController.Instance.gameObject.GetComponent<MovementController>();
+        inventoryController = PlayerController.Instance.gameObject.GetComponent<InventoryController>();
     }
 
     // Update is called once per frame

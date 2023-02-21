@@ -4,11 +4,26 @@ using UnityEngine;
 
 public class SmoothCameraFollow : MonoBehaviour
 {
-    public Transform target; //Variable que determina el objeto a trackear
-    public Vector3 offset; //Variable que determina el retraso del seguimiento de la cámara
-    public float speed; //Variable que determina la velocidad del seguimiento de la cámara
-    
+    /// <summary>
+    /// Instancia del SmoothCameraFactor
+    /// </summary>
+    public static SmoothCameraFollow Instance { get; private set; }
 
+    public Transform target; //Variable que determina el objeto a trackear
+    [SerializeField]
+    Vector3 offset; //Variable que determina el retraso del seguimiento de la cámara
+    [SerializeField]
+    float speed; //Variable que determina la velocidad del seguimiento de la cámara
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void Start()
+    {
+        target = PlayerController.Instance.transform;
+    }
 
     // Update is called once per frame
     void Update()
