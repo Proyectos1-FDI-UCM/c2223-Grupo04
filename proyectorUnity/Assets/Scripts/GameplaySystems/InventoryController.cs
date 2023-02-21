@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    private GameObject tool;
+    [HideInInspector]
+    public GameObject tool;
     [SerializeField]
     [Tooltip("Ditancia mínima para que Charlie pueda coger la herramienta")]
     private float distanciaMin;
@@ -36,7 +37,7 @@ public class InventoryController : MonoBehaviour
     {
         if (tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < distanciaMin)
         {
-            tool.GetComponent<Tool>().OnClickFunction(objetoClicado);
+            tool.GetComponent<Tool>().OnClickFunction(objetoClicado, this);
         }
     }
 }

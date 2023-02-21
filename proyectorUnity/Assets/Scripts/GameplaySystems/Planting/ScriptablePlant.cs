@@ -10,6 +10,8 @@ public class ScriptablePlant : ScriptableObject
     public float DrySpeed;
 
     public Sprite[] GrowingSprite = new Sprite[3];
+
+    public Sprite[] DryingSprite = new Sprite[3];
     
 
 }
