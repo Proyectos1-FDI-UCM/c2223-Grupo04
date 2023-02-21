@@ -44,10 +44,10 @@ public class PlantaBehaviour : MonoBehaviour
             if (maxTime == true)
             {
                 dryTimer -= Time.deltaTime;
-                if (dryTimer <= (PlantaData.DrySpeed / 3) * 2) dryingSprite(1);
-                else if (growTimer <= PlantaData.DrySpeed / 3) dryingSprite(2);
+                if (dryTimer <= (PlantaData.DrySpeed / 3) * 2) dryingSprite(0);
+                else if (growTimer <= PlantaData.DrySpeed / 3) dryingSprite(1);
             }
-            else dryingSprite(3); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
+            else dryingSprite(2); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
         }
     }
     private void growingSprite(int gsprite = 0)
