@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class ScriptablePlant : ScriptableObject
 {
-    public float GrowSpeed;
-    public float DrySpeed;
+    public float GrowSpeed; //Tiempo máximo de crecimiento
+    public float DrySpeed; ////Tiempo máximo de secado
 
     public Sprite[] GrowingSprite = new Sprite[3];
 
