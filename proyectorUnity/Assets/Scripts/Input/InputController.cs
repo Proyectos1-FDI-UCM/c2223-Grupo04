@@ -7,14 +7,12 @@ using UnityEngine.UIElements;
 
 public class InputController : MonoBehaviour
 {
-    GameManager gameManager;
     MovementController movementController;
     InventoryController inventoryController;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponent<GameManager>();
         //Obtiene el componente de movimiento del player
         movementController = PlayerController.Instance.gameObject.GetComponent<MovementController>();
         inventoryController = PlayerController.Instance.gameObject.GetComponent<InventoryController>();

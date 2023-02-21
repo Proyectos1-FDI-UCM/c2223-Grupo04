@@ -12,11 +12,11 @@ public class TornadoSpawner : MonoBehaviour
     /// Tiempo que pasa entre tornados
     /// </summary>
     [SerializeField]
-    float _tEntreTornados;
+    public float _tEntreTornados;
     /// <summary>
     /// Tiempo que se suma cada vez que aparece un tornado
     /// </summary>
-    int _tMul = 0;
+    public int _tMul = 0;
     /// <summary>
     /// Prefab del tornado
     /// </summary>

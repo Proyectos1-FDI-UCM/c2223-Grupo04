@@ -5,10 +5,10 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [HideInInspector]
-    public GameObject tool;
+    private GameObject _tool;
     [SerializeField]
     [Tooltip("Ditancia mínima para que Charlie pueda coger la herramienta")]
-    private float distanciaMin;
+    private float _distanciaMin;
 
     /* 
     * Charlie coge el objeto, si se cumplen los requisitos.
@@ -19,14 +19,14 @@ public class InventoryController : MonoBehaviour
         //Debug.Log(Vector2.Distance(gameObject.transform.position, toolObject.transform.position));
 
         //Se puede coger el objeto si el inventario no está ocupado y está suficientemente cerca
-        if (tool == null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        if (_tool == null && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < _distanciaMin)
         {
-            tool = toolObject;
+            PickUpTool(toolObject);
             toolObject.GetComponent<Tool>().PickUpTool();
             Debug.Log("Objeto recogido");
-        } else if (tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < distanciaMin)
+        } else if (_tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < _distanciaMin)
         {
-            tool = null;
+            RemoveTool();
             toolObject.GetComponent<Tool>().DropTool();
             Debug.Log("Objeto soltado");
 
@@ -35,9 +35,20 @@ public class InventoryController : MonoBehaviour
 
     public void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
-        if (tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < distanciaMin)
+        if (_tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < _distanciaMin)
         {
-            tool.GetComponent<Tool>().OnClickFunction(objetoClicado, this);
+            _tool.GetComponent<Tool>().OnClickFunction(objetoClicado, this);
         }
+    }
+
+    public void PickUpTool(GameObject toolObject)
+    {
+        _tool = toolObject;
+    }
+
+    //Lo que pasa cuando sueltas una herramienta
+    public void RemoveTool()
+    {
+        _tool = null;
     }
 }

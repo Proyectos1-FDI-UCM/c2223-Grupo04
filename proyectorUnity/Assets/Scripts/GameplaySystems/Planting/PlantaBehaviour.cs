@@ -10,6 +10,7 @@ public class PlantaBehaviour : MonoBehaviour
     [HideInInspector]
     public bool _isSoilFertile;
 
+
     //Variables de control de crecimiento (temporizador)
     public float growTimer;
     public float dryTimer;
@@ -58,3 +59,4 @@ public class PlantaBehaviour : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = PlantaData.DryingSprite[dsprite];  //Referencia al Sprite Renderer para establecer los sprites de secado
     }
 } 
+

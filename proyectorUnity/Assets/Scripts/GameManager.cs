@@ -13,13 +13,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     enum GameStates
     {
-        INTRO,GAME,TORNADO,WIN,PAUSA 
+        INTRO, GAME, TORNADO, WIN, PAUSA
     }
-    /// <summary>
-    /// Referencia al jugador
-    /// </summary>
-    [SerializeField]
-    GameObject _player;
     /// <summary>
     /// Número de tornados que han pasado
     /// </summary>
@@ -38,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         _nTornados++;
         TornadoSpawner.Instance.NewTornadoTime();
+        UIManager.Instance.NuevoTiempoDeTornado();
     }
 
     #endregion
@@ -46,17 +42,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _nTornados = 0;
-        _player = PlayerController.Instance.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K)) NuevoTornado();
-    }
-
-    public GameObject getPlayer()
-    {
-        return _player;
     }
 }
