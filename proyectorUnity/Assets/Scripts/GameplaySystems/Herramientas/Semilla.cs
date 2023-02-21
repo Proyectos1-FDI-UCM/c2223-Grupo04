@@ -19,7 +19,7 @@ public class Semilla : Tool
             Debug.Log("AAAAAAAAAAAA");
 
 
-           _thisPlantaBehaviour = Instantiate(_plantaPrefab, objetoClicado.transform.position, Quaternion.identity, objetoClicado).GetComponent<PlantaBehaviour>();  //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
+           _thisPlantaBehaviour = Instantiate(_plantaPrefab, objetoClicado.transform.position, Quaternion.identity, objetoClicado.transform).GetComponent<PlantaBehaviour>();  //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
 
             _thisPlantaBehaviour.PlantaData = TipoDePlanta;                         //le pasamos los datos del scriptable Object
 
