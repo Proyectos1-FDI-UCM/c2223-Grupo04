@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         _nTornados++;
         TornadoSpawner.Instance.NewTornadoTime();
+        UIManager.Instance.NuevoTiempoDeTornado();
     }
 
     #endregion
