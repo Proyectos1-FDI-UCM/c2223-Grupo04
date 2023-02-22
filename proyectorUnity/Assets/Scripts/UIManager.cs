@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     float _time;
     
     [SerializeField] Text _contador;
+    [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI;
 
     public static UIManager Instance; //Para el singletone.
     
@@ -26,6 +27,21 @@ public class UIManager : MonoBehaviour
             _time = _time - Time.deltaTime;
         }
         else _contador.text = "¡TORNADO!"; //Cuando acaba el contador y el tornado esta en juego ponemos esto por ejemplo.
+        
+        if (GameManager.Instance._state == GameManager.GameStates.INTRO)
+        {
+            _introUI.SetActive(true);  
+            _gameUI.SetActive(false);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
+        }
+        else if(GameManager.Instance._state == GameManager.GameStates.GAME)
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(true);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
+        }
     }
     private void Awake() //Para el singletone.
     {
@@ -36,6 +52,10 @@ public class UIManager : MonoBehaviour
     public void NuevoTiempoDeTornado() //Es llamado por el GameManager para coger el nuevo tiempo del nuevo tornado.
     {
         _time = TornadoSpawner.Instance._tMul + TornadoSpawner.Instance._tEntreTornados; 
+    }
+    public void BotonIntro()
+    {
+        GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
     }
     #endregion
 }
