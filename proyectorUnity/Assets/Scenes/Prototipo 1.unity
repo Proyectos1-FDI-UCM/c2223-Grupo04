@@ -916,6 +916,7 @@ GameObject:
   - component: {fileID: 281525517}
   - component: {fileID: 281525516}
   - component: {fileID: 281525515}
+  - component: {fileID: 281525519}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1006,6 +1007,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &281525519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281525514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fadd29cc1bc40946a352be333f50cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _contador: {fileID: 1284116220}
 --- !u!1 &410192585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &541576465
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13017,11 +13031,11 @@ RectTransform:
   m_Father: {fileID: 281525518}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1284116220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13035,7 +13049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13044,18 +13058,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: fghdfjhgjhjfhjfg
 --- !u!222 &1284116221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13094,6 +13108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tEntreTornados: 0
+  _tMul: 0
   _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
   _tornadoInstPos: {fileID: 1321925506}
   _tornadoRutas:
@@ -30497,7 +30512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4cb456f1b5aa4a85bd6f02866d943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1125966663}
   _nTornados: 0
 --- !u!1 &2037729503
 GameObject:
