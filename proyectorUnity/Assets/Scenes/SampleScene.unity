@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aca1ee1b2cd96c4990544a094d43206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  _speed: 1
 --- !u!212 &96885218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96885216}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -514,8 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acb79760b6a30d4280f8ea0ca55e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tool: {fileID: 0}
-  distanciaMin: 2.2
+  _distanciaMin: 0
 --- !u!114 &96885223
 MonoBehaviour:
   m_ObjectHideFlags: 0

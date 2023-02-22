@@ -8,42 +8,44 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("La velocidad de moviemiento del personaje")]
-    float speed;
-    Vector2 direction;
+    float _speed;
+    Vector2 _direction;
+    Rigidbody2D _rigidbody2D;
     private void Start()
     {
-        direction = new Vector2(0, 0);
+        _direction = new Vector2(0, 0);
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void LateUpdate()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        _rigidbody2D.velocity = _direction.normalized * _speed;
     }
 
     public void Stop()
     {
-        direction.x = 0;
-        direction.y = 0;
+        _direction.x = 0;
+        _direction.y = 0;
     }
 
     public void Up()
     {
-        if(direction.y == 0)
-            direction.y = 1;
+        if(_direction.y == 0)
+            _direction.y = 1;
     }
     public void Down()
     {
-        if (direction.y == 0)
-            direction.y = -1;
+        if (_direction.y == 0)
+            _direction.y = -1;
     }
     public void Left()
     {
-        if (direction.x == 0)
-            direction.x = -1;
+        if (_direction.x == 0)
+            _direction.x = -1;
     }
     public void Right()
     {
-        if (direction.x == 0)
-            direction.x = 1;
+        if (_direction.x == 0)
+            _direction.x = 1;
     }
 }
