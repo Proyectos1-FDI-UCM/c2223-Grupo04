@@ -20,7 +20,7 @@ public class PlantaBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        growingSprite(0);
+        GrowingSprite(0);
         growTimer = PlantaData.GrowSpeed;
         dryTimer = PlantaData.DrySpeed;
     }
@@ -32,31 +32,36 @@ public class PlantaBehaviour : MonoBehaviour
         if (growTimer > 0f)
         {
             growTimer -= Time.deltaTime;
-            if (growTimer <= (PlantaData.GrowSpeed / 3) * 2) growingSprite(1);
-            else if (growTimer <= PlantaData.GrowSpeed / 3) growingSprite(2);
+            if (growTimer <= (PlantaData.GrowSpeed / 3) * 2) GrowingSprite(1);
+            else if (growTimer <= PlantaData.GrowSpeed / 3) GrowingSprite(2);
         }
         else if (!maxTime) 
         {
-            growingSprite(3); maxTime = true; //Último Sprite de crecimiento y establecimiento de la condición de inicio de secado "maxTime"
+            GrowingSprite(3); maxTime = true; //Último Sprite de crecimiento y establecimiento de la condición de inicio de secado "maxTime"
         }  
         else
         {
             if (maxTime == true)
             {
                 dryTimer -= Time.deltaTime;
-                if (dryTimer <= (PlantaData.DrySpeed / 3) * 2) dryingSprite(0);
-                else if (growTimer <= PlantaData.DrySpeed / 3) dryingSprite(1);
+                if (dryTimer <= (PlantaData.DrySpeed / 3) * 2) DryingSprite(0);
+                else if (growTimer <= PlantaData.DrySpeed / 3) DryingSprite(1);
             }
-            else dryingSprite(2); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
+            else DryingSprite(2); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
         }
     }
-    private void growingSprite(int gsprite = 0)
+    private void GrowingSprite(int gsprite = 0)
     {
         GetComponent<SpriteRenderer>().sprite = PlantaData.GrowingSprite [gsprite];  //Referencia al Sprite Renderer para establecer los sprites de crecimiento
     }
-    private void dryingSprite(int dsprite = 0)
+    private void DryingSprite(int dsprite = 0)
     {
         GetComponent<SpriteRenderer>().sprite = PlantaData.DryingSprite[dsprite];  //Referencia al Sprite Renderer para establecer los sprites de secado
+    }
+
+    public void RemovePlant()
+    {
+        Destroy(gameObject);
     }
 } 
 

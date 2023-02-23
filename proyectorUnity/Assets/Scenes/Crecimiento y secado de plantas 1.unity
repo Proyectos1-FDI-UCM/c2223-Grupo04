@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4cb456f1b5aa4a85bd6f02866d943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _state: 0
   _nTornados: 0
 --- !u!4 &439600789
 Transform:
@@ -306,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aca1ee1b2cd96c4990544a094d43206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  _speed: 3
 --- !u!50 &768999479
 Rigidbody2D:
   serializedVersion: 4
@@ -407,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acb79760b6a30d4280f8ea0ca55e90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanciaMin: 0
+  _distanciaMin: 3
 --- !u!114 &768999483
 MonoBehaviour:
   m_ObjectHideFlags: 0

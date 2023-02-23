@@ -34,6 +34,7 @@ public class Semilla : Tool
 
     public override void PickUpTool()
     { //que no de se desactive el render
+
     }
 
 }
