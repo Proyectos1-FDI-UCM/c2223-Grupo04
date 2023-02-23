@@ -9,8 +9,8 @@ public class Pala : Tool
         if (objetoClicado.GetComponent<ObstacleBehaviour>() != null) {
             objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle();
 
-        } else if (objetoClicado.GetComponent<PlantaBehaviour>() != null) {
-            objetoClicado.GetComponent<PlantaBehaviour>().RemovePlant();
+        } else if (objetoClicado.GetComponent<SoilComponent>() != null) {
+            objetoClicado.GetComponent<SoilComponent>().RemovePlant();
         }
     }
 }

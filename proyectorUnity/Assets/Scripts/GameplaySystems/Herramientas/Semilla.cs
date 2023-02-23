@@ -9,26 +9,17 @@ public class Semilla : Tool
 
     [SerializeField]
     private GameObject _plantaPrefab;
-    private PlantaBehaviour _thisPlantaBehaviour;
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
         if (objetoClicado.GetComponent<SoilComponent>() != null && objetoClicado.GetComponent<SoilComponent>()._isPlanted == false)  //si es soil y no esta plantado
         {
-            //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
-            _thisPlantaBehaviour = Instantiate(_plantaPrefab, objetoClicado.transform.position, Quaternion.identity, objetoClicado.transform).GetComponent<PlantaBehaviour>();
-            //le pasamos los datos del scriptable Object
-            _thisPlantaBehaviour.PlantaData = TipoDePlanta;
-            //le pasamos si el soil es fertil o no
-            _thisPlantaBehaviour._isSoilFertile = objetoClicado.GetComponent<SoilComponent>()._isFertile;
-            //marcamos el suelo como plantado
-            objetoClicado.GetComponent<SoilComponent>()._isPlanted = true;
-            //eliminamos herramienta
+            //Plantamos la planta
+            objetoClicado.GetComponent<SoilComponent>().Plant(_plantaPrefab, TipoDePlanta);
+            //eliminamos herramienta del inventario
             inventoryController.RemoveTool();
 
         }
-
-
 
     }
 

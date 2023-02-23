@@ -5,24 +5,25 @@ using UnityEngine;
 public class PlantaBehaviour : MonoBehaviour
 {
 
-    public ScriptablePlant PlantaData;
+    private ScriptablePlant _plantData;
 
     [HideInInspector]
-    public bool _isSoilFertile;
-
+    private bool _isSoilFertile;
 
     //Variables de control de crecimiento (temporizador)
-    public float growTimer;
-    public float dryTimer;
-    public bool maxTime = false;
-    public bool death = false;
+    private float growTimer;
+    private float dryTimer;
+    private bool maxTime;
+    private bool death;
 
     // Start is called before the first frame update
     void Start()
     {
         GrowingSprite(0);
-        growTimer = PlantaData.GrowSpeed;
-        dryTimer = PlantaData.DrySpeed;
+        growTimer = _plantData.GrowSpeed;
+        dryTimer = _plantData.DrySpeed;
+        maxTime = false;
+        death = false;
     }
 
     // Update is called once per frame
@@ -32,8 +33,8 @@ public class PlantaBehaviour : MonoBehaviour
         if (growTimer > 0f)
         {
             growTimer -= Time.deltaTime;
-            if (growTimer <= (PlantaData.GrowSpeed / 3) * 2) GrowingSprite(1);
-            else if (growTimer <= PlantaData.GrowSpeed / 3) GrowingSprite(2);
+            if (growTimer <= (_plantData.GrowSpeed / 3) * 2) GrowingSprite(1);
+            else if (growTimer <= _plantData.GrowSpeed / 3) GrowingSprite(2);
         }
         else if (!maxTime) 
         {
@@ -44,24 +45,25 @@ public class PlantaBehaviour : MonoBehaviour
             if (maxTime == true)
             {
                 dryTimer -= Time.deltaTime;
-                if (dryTimer <= (PlantaData.DrySpeed / 3) * 2) DryingSprite(0);
-                else if (growTimer <= PlantaData.DrySpeed / 3) DryingSprite(1);
+                if (dryTimer <= (_plantData.DrySpeed / 3) * 2) DryingSprite(0);
+                else if (growTimer <= _plantData.DrySpeed / 3) DryingSprite(1);
             }
             else DryingSprite(2); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
         }
     }
+    public void SetUpPlant(bool isSoilFertil, ScriptablePlant plantData)
+    {
+        _plantData = plantData;
+        _isSoilFertile = isSoilFertil;
+    }
+
     private void GrowingSprite(int gsprite = 0)
     {
-        GetComponent<SpriteRenderer>().sprite = PlantaData.GrowingSprite [gsprite];  //Referencia al Sprite Renderer para establecer los sprites de crecimiento
+        GetComponent<SpriteRenderer>().sprite = _plantData.GrowingSprite [gsprite];  //Referencia al Sprite Renderer para establecer los sprites de crecimiento
     }
     private void DryingSprite(int dsprite = 0)
     {
-        GetComponent<SpriteRenderer>().sprite = PlantaData.DryingSprite[dsprite];  //Referencia al Sprite Renderer para establecer los sprites de secado
-    }
-
-    public void RemovePlant()
-    {
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[dsprite];  //Referencia al Sprite Renderer para establecer los sprites de secado
     }
 } 
 

@@ -7,7 +7,34 @@ public class SoilComponent : MonoBehaviour
 
     [SerializeField]
     [Tooltip("El tipo de soil, que determina la velocidad de crecimiento de las plantas")]
-    public bool _isFertile;
+    private bool _isFertile;
 
-    public bool _isPlanted = false;
+    public bool _isPlanted;
+
+    public GameObject _myPlant;
+    private void Start()
+    {
+        _isPlanted = false;
+    }
+    /// <summary>
+    /// Planta la planta que le pases en el soil.
+    /// </summary>
+    public void Plant(GameObject plantPrefab, ScriptablePlant tipoPlanta)
+    {
+        //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
+        PlantaBehaviour plantBehaviour = Instantiate(plantPrefab, transform.position, Quaternion.identity, transform).GetComponent<PlantaBehaviour>();
+        //La configuramos
+        plantBehaviour.SetUpPlant(_isFertile, tipoPlanta);
+        _isPlanted = true;
+        _myPlant = transform.GetChild(0).gameObject;
+    }
+
+    /// <summary>
+    /// Llamado para quitar una planta del soil.
+    /// </summary>
+    public void RemovePlant()
+    {
+        _isPlanted = false;
+        Destroy(_myPlant);
+    }
 }
