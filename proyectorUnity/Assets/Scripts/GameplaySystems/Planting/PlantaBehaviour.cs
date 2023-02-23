@@ -9,61 +9,101 @@ public class PlantaBehaviour : MonoBehaviour
 
     [HideInInspector]
     private bool _isSoilFertile;
+    [SerializeField]
+    private float fertileMultiplier;
 
     //Variables de control de crecimiento (temporizador)
     private float growTimer;
     private float dryTimer;
-    private bool maxTime;
+    private bool _isGrowing;
     private bool death;
+    private int _currentGrowSprite = -1, _currentDrySprite = -1;
 
     // Start is called before the first frame update
     void Start()
     {
-        GrowingSprite(0);
-        growTimer = _plantData.GrowSpeed;
+        _isGrowing = true;
+        GrowSprite(0);
+
+        if (_isSoilFertile) growTimer = _plantData.GrowSpeed * fertileMultiplier;  //tenenmos en cuenta si el soil es fertil
+        else growTimer = _plantData.GrowSpeed;
+
         dryTimer = _plantData.DrySpeed;
-        maxTime = false;
-        death = false;
+        death = false; //ya decidiremos lo q hacemos con esto supongo
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (growTimer > 0f)
+        if (_isGrowing) 
         {
             growTimer -= Time.deltaTime;
-            if (growTimer <= (_plantData.GrowSpeed / 3) * 2) GrowingSprite(1);
-            else if (growTimer <= _plantData.GrowSpeed / 3) GrowingSprite(2);
+
+            if (growTimer <= (_plantData.GrowSpeed / 3) * 2 && _currentGrowSprite < 1)
+            {
+                GrowSprite(1);
+
+            }
+
+            else if (growTimer <= _plantData.GrowSpeed / 3 && _currentGrowSprite < 2)
+            {
+                GrowSprite(2);
+
+            }
+
+            else if (growTimer < 0)
+            {
+                GrowSprite(3);
+                _isGrowing = false;
+            }
+
+
         }
-        else if (!maxTime) 
-        {
-            GrowingSprite(3); maxTime = true; //Último Sprite de crecimiento y establecimiento de la condición de inicio de secado "maxTime"
-        }  
+
         else
         {
-            if (maxTime == true)
+            dryTimer -= Time.deltaTime;
+
+            if (dryTimer <= (_plantData.DrySpeed / 3) * 2 && _currentDrySprite < 0)
             {
-                dryTimer -= Time.deltaTime;
-                if (dryTimer <= (_plantData.DrySpeed / 3) * 2) DryingSprite(0);
-                else if (growTimer <= _plantData.DrySpeed / 3) DryingSprite(1);
+                Debug.Log("AAAAAAA");
+                DrySprite(0);
+
             }
-            else DryingSprite(2); death = true;  //Último Sprite de secadoy establecimiento de la condición de muerte "death"
+
+            else if (dryTimer <= _plantData.DrySpeed / 3 && _currentGrowSprite < 1)
+            {
+                DrySprite(1);
+
+            }
+
+            else if (dryTimer < 0)
+            {
+                DrySprite(2);
+
+                death = true;
+            }
+
         }
+
     }
+
     public void SetUpPlant(bool isSoilFertil, ScriptablePlant plantData)
     {
         _plantData = plantData;
         _isSoilFertile = isSoilFertil;
     }
 
-    private void GrowingSprite(int gsprite = 0)
+    private void GrowSprite(int _desiredSprite)
     {
-        GetComponent<SpriteRenderer>().sprite = _plantData.GrowingSprite [gsprite];  //Referencia al Sprite Renderer para establecer los sprites de crecimiento
+        _currentGrowSprite = _desiredSprite;
+        GetComponent<SpriteRenderer>().sprite = _plantData.GrowingSprite[_currentGrowSprite];
     }
-    private void DryingSprite(int dsprite = 0)
+
+    private void DrySprite(int _desiredSprite)
     {
-        GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[dsprite];  //Referencia al Sprite Renderer para establecer los sprites de secado
+        _currentDrySprite = _desiredSprite;
+        GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[_currentDrySprite];
     }
 } 
 
