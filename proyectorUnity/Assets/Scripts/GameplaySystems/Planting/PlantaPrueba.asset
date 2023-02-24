@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 972591479, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: -764723583, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   DryingSprite:
-  - {fileID: -1303983664, guid: 983178a14a29153408b557b1e204eb56, type: 3}
-  - {fileID: 1354087079, guid: 983178a14a29153408b557b1e204eb56, type: 3}
-  - {fileID: -364067663, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 972591479, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 479412304, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: -1363805324, guid: 983178a14a29153408b557b1e204eb56, type: 3}

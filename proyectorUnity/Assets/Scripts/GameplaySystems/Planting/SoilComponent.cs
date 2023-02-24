@@ -9,9 +9,9 @@ public class SoilComponent : MonoBehaviour
     [Tooltip("El tipo de soil, que determina la velocidad de crecimiento de las plantas")]
     private bool _isFertile;
 
-    public bool _isPlanted;
+    private bool _isPlanted;
 
-    public GameObject _myPlant;
+    private GameObject _myPlant;
     private void Start()
     {
         _isPlanted = false;
@@ -37,4 +37,10 @@ public class SoilComponent : MonoBehaviour
         _isPlanted = false;
         Destroy(_myPlant);
     }
+
+    public bool IsPlanted()
+    { return _isPlanted; }
+
+    public GameObject GetMyPLant() 
+    { return _myPlant; }
 }
