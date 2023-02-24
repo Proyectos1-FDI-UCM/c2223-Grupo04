@@ -35,23 +35,36 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         TornadoSpawner.Instance.NewTornadoTime();
         UIManager.Instance.NuevoTiempoDeTornado();
+           
+        
     }
     public void ChangeState(GameStates _newState)
     {
         _state = _newState;
+        StateExecution();
     }
     void StateExecution()
     {
         if(_state == GameStates.INTRO)
         {
-            PlayerController.Instance.gameObject.GetComponent<InputController>().enabled = false; //desacitvar el input
+            gameObject.GetComponent<InputController>().enabled = false; //desacitvar el input
+            Debug.Log("STATE: INTRO");
         }
         else if (_state == GameStates.GAME)
         {
-            PlayerController.Instance.gameObject.GetComponent<InputController>().enabled = true;
-
+            gameObject.GetComponent<InputController>().enabled = true; //activar el input
+            NuevoTornado();
+            Debug.Log("STATE: GAME");
+        } 
+        else if(_state==GameStates.TORNADO)
+        {
+            gameObject.GetComponent<InputController>().enabled = false; //desactivar el input
+            PlayerController.Instance.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input esté desactivado
+            
+            Debug.Log("STATE: TORNADO");
         }
     }
+    
 
     #endregion
 
@@ -59,7 +72,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _nTornados = 0;
-        _state = GameStates.INTRO;
+        ChangeState(GameStates.INTRO);
     }
 
     // Update is called once per frame

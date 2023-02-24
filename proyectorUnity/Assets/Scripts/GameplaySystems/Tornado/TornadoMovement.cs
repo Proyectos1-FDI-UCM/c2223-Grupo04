@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameManager;
 
 public class TornadoMovement : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class TornadoMovement : MonoBehaviour
     private void Start()
     {
         _startpos = transform.position; //Guarda la posición inicial del tornado, ya que depende de cada nivel
+        GameManager.Instance.ChangeState(GameStates.TORNADO); //llama para cambiar el estado a TORNADO
     }
 
     private void Update()
@@ -51,7 +53,9 @@ public class TornadoMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.Instance.NuevoTornado();
         Destroy(_tornadoPositions);
+        SmoothCameraFollow.Instance.target = PlayerController.Instance.transform;
+        GameManager.Instance.ChangeState(GameStates.GAME); //llama para cambiar el estado a GAME
+
     }
 }
