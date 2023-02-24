@@ -16,8 +16,7 @@ public class PlantaBehaviour : MonoBehaviour
     private float growTimer;
     private float dryTimer;
     private bool _isGrowing;
-    private bool death;
-    private int _currentGrowSprite = -1, _currentDrySprite = -1;
+    private int _currentGrowSprite, _currentDrySprite;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +24,12 @@ public class PlantaBehaviour : MonoBehaviour
         _isGrowing = true;
         GrowSprite(0);
 
+        _currentDrySprite = -1;
+        _currentGrowSprite= -1;
         if (_isSoilFertile) growTimer = _plantData.GrowSpeed * fertileMultiplier;  //tenenmos en cuenta si el soil es fertil
         else growTimer = _plantData.GrowSpeed;
 
         dryTimer = _plantData.DrySpeed;
-        death = false; //ya decidiremos lo q hacemos con esto supongo
     }
 
     // Update is called once per frame
@@ -80,8 +80,6 @@ public class PlantaBehaviour : MonoBehaviour
             else if (dryTimer < 0)
             {
                 DrySprite(2);
-
-                death = true;
             }
 
         }
