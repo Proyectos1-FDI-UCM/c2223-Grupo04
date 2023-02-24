@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb670222ee101a44389a3532c73ad603, type: 3}
+  m_Name: GuisanteData
+  m_EditorClassIdentifier: 
+  GrowSpeed: 70
+  DrySpeed: 270
+  GrowingSprite:
+  - {fileID: -1028147479, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1741607079, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1745523249, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: -2052187799, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  DryingSprite:
+  - {fileID: 1298673369, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: -1238453384, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: 470775143, guid: 136f4134d52208b40923383349747d91, type: 3}

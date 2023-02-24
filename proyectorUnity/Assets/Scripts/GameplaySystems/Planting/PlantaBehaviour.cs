@@ -9,8 +9,7 @@ public class PlantaBehaviour : MonoBehaviour
 
     [HideInInspector]
     private bool _isSoilFertile;
-    [SerializeField]
-    private float fertileMultiplier;
+    private float fertileMultiplier = 0.8f;
 
     //Variables de control de crecimiento (temporizador)
     private float growTimer;
