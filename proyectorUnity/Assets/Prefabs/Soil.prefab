@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isFertile: 0
+  _myPlant: {fileID: 0}
 --- !u!212 &-5077055194643747424
 SpriteRenderer:
   m_ObjectHideFlags: 0

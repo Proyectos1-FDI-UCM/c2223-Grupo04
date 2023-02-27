@@ -49,21 +49,21 @@ public class TornadoController : MonoBehaviour
         else if((transform.position-_startpos).magnitude > 0.5f) //El tornado se destruye al llegar al último punto
         {
             Destroy(gameObject);
+            SmoothCameraFollow.Instance.target = PlayerController.Instance.transform;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.GetChild(0) != null)
-        {
-            print(collision.transform.GetChild(0).name);
-        }
+        print("ASADUSDA");
+        print(collision.transform.GetChild(0).gameObject.name);
+        collision.GetComponent<SoilComponent>().RemovePlant();
     }
 
     private void OnDestroy()
     {
         Destroy(_tornadoPositions);
-        SmoothCameraFollow.Instance.target = PlayerController.Instance.transform;
         GameManager.Instance.ChangeState(GameStates.GAME); //llama para cambiar el estado a GAME
 
     }

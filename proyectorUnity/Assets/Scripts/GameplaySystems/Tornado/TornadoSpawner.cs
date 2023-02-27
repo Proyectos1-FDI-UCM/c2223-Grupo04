@@ -60,7 +60,7 @@ public class TornadoSpawner : MonoBehaviour
         //Instancia el tornado
         GameObject _tornado = GameObject.Instantiate(_tornadoPrefab, _tornadoInstPos);
         //Camara sigue al tornado
-        SmoothCameraFollow.Instance.target = _tornado.transform;
+        SmoothCameraFollow.Instance.target = _tornado.transform.GetChild(0).transform;
         //Asigna la ruta al tornado
         _tornado.GetComponent<TornadoController>()._tornadoPositions = _ruta;
     }

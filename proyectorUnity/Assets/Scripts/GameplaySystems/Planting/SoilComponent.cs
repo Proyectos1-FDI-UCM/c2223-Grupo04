@@ -11,6 +11,7 @@ public class SoilComponent : MonoBehaviour
 
     private bool _isPlanted;
 
+    [SerializeField]
     private GameObject _myPlant;
     private void Start()
     {
@@ -34,8 +35,12 @@ public class SoilComponent : MonoBehaviour
     /// </summary>
     public void RemovePlant()
     {
-        _isPlanted = false;
-        Destroy(_myPlant);
+        if (_isPlanted)
+        {
+            _isPlanted = false;
+            Destroy(_myPlant);
+            print("EE");
+        }
     }
 
     public bool IsPlanted()
