@@ -62,7 +62,7 @@ public class TornadoSpawner : MonoBehaviour
         //Camara sigue al tornado
         SmoothCameraFollow.Instance.target = _tornado.transform;
         //Asigna la ruta al tornado
-        _tornado.GetComponent<TornadoMovement>()._tornadoPositions = _ruta;
+        _tornado.GetComponent<TornadoController>()._tornadoPositions = _ruta;
     }
     private void Awake()
     {

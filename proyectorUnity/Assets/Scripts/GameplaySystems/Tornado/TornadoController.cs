@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using static GameManager;
 
-public class TornadoMovement : MonoBehaviour
+public class TornadoController : MonoBehaviour
 {
     /// <summary>
     /// GameObject padre con los puntos por donde pasará el tornado
@@ -48,6 +49,14 @@ public class TornadoMovement : MonoBehaviour
         else if((transform.position-_startpos).magnitude > 0.5f) //El tornado se destruye al llegar al último punto
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.GetChild(0) != null)
+        {
+            print(collision.transform.GetChild(0).name);
         }
     }
 
