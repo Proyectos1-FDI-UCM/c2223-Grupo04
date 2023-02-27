@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: farm objects free_47
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1322086579, guid: 20dd1fe1d0cc36944a43b36b06e1eb5b, type: 3}
+  m_Sprite: {fileID: 1096089897, guid: f3d210fa28987e944a22dd2db2e4384d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
