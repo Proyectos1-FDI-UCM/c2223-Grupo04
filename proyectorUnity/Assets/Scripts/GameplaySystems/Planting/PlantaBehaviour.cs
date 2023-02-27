@@ -11,6 +11,7 @@ public class PlantaBehaviour : MonoBehaviour
     private bool _isSoilFertile;
     [SerializeField]
     private float fertileMultiplier;
+    private LevelManager _levelManager;
 
     //Variables de control de crecimiento (temporizador)
     private float growTimer;
@@ -21,6 +22,7 @@ public class PlantaBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _levelManager = GameManager.Instance._levelManager;
         _isGrowing = true;
         GrowSprite(0);
 
@@ -80,6 +82,7 @@ public class PlantaBehaviour : MonoBehaviour
             else if (dryTimer < 0)
             {
                 DrySprite(2);
+                _levelManager.PlantDied()
             }
 
         }

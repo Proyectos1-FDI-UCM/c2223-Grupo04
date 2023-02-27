@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     /// Número de tornados que han pasado
     /// </summary>
     public int _nTornados;
-
+    [SerializeField]
+    public LevelManager _levelManager;
     private void Awake()
     {
         Instance = this;

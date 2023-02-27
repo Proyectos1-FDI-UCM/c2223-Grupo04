@@ -4,6 +4,7 @@ using UnityEngine;
 
 //Obliga a que el objeto contenga un componente Rigidbody2D
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class MovementController : MonoBehaviour
 {
     [SerializeField]
