@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 983178a14a29153408b557b1e204eb56
+guid: 136f4134d52208b40923383349747d91
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plants free_0
+      name: plants drying_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,20 +112,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d8403a5a8470a4d98e5171e3490e4a
-      internalID: -43463260
+      spriteID: 86aa5d9c3780de844ae3b9792d348b3a
+      internalID: -1372220339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_1
+      name: plants drying_1
       rect:
         serializedVersion: 2
         x: 16
@@ -133,20 +133,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c2ba0e1bc0b4a409f519811a8bad4e
-      internalID: -1363805324
+      spriteID: ea662a4b6a0dbc34187c9484093744a2
+      internalID: 379427181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_2
+      name: plants drying_2
       rect:
         serializedVersion: 2
         x: 32
@@ -154,20 +154,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1685b40caa62e724b936b79805312e65
-      internalID: 479412304
+      spriteID: 3d585259fb8a60943b47933ddfcebc9a
+      internalID: 1953839074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_3
+      name: plants drying_3
       rect:
         serializedVersion: 2
         x: 48
@@ -175,20 +175,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03077ba60ea50144683772a49a6fd6fd
-      internalID: 972591479
+      spriteID: 5c9b58f501ae4af42b58154a2f0f13a1
+      internalID: 1484042705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_4
+      name: plants drying_4
       rect:
         serializedVersion: 2
         x: 64
@@ -196,20 +196,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21f787793a4f1d84a88774382b972243
-      internalID: -764723583
+      spriteID: 45aff0a589c62d14ebaa8979c1e153bb
+      internalID: 504333174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_5
+      name: plants drying_5
       rect:
         serializedVersion: 2
         x: 0
@@ -217,20 +217,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc3a363c7eb90ea408dabe62b4ad6a41
-      internalID: -196840776
+      spriteID: 9d02ae70db74d0d4eb0509b4c3d56d1e
+      internalID: 1765443090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_6
+      name: plants drying_6
       rect:
         serializedVersion: 2
         x: 16
@@ -238,20 +238,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 928de798950cf2449b2060733af7d5b9
-      internalID: -202564734
+      spriteID: f09b190aef8ffb04eac57f59af45f8e8
+      internalID: 782993457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_7
+      name: plants drying_7
       rect:
         serializedVersion: 2
         x: 32
@@ -259,20 +259,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a7c65614c1fcd41af2a5bcf02bf8e1
-      internalID: -364067663
+      spriteID: 0afa43a9e90564446a407c9f702ea972
+      internalID: -1741676793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_8
+      name: plants drying_8
       rect:
         serializedVersion: 2
         x: 48
@@ -280,20 +280,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b4c43c550555204ea14cc6b4f224a94
-      internalID: 1354087079
+      spriteID: a5aec27caaba92345835953b0b3c02c9
+      internalID: 1776621705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_9
+      name: plants drying_9
       rect:
         serializedVersion: 2
         x: 64
@@ -301,20 +301,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7735fdd855067f4c88776b627b7fb18
-      internalID: -1303983664
+      spriteID: 8e8992ce9ab07384388d216d7eeac822
+      internalID: 1842177521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_10
+      name: plants drying_10
       rect:
         serializedVersion: 2
         x: 0
@@ -322,20 +322,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a28b19533790a24e9ec145c2c3575e0
-      internalID: 314781497
+      spriteID: 2ac0344dc0708bc46b0b473f28bf2630
+      internalID: -1746634518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_11
+      name: plants drying_11
       rect:
         serializedVersion: 2
         x: 16
@@ -343,20 +343,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cac3c60c7e402e4ea1b92952210c192
-      internalID: 369305280
+      spriteID: cfa1e0458db3a2a42bc9f7fe6ec98169
+      internalID: -1318121256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_12
+      name: plants drying_12
       rect:
         serializedVersion: 2
         x: 32
@@ -364,20 +364,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31cbf4e5801dc904d9350363a1fd4575
-      internalID: 1486795404
+      spriteID: e0dd08f151fb1b74b9f07328fedbe317
+      internalID: -1623264957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_13
+      name: plants drying_13
       rect:
         serializedVersion: 2
         x: 48
@@ -385,20 +385,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80efe8902b496f844ae23ed8c21e4c4a
-      internalID: 1755123986
+      spriteID: 24eea8bb05565b94b9c3c796fd35d912
+      internalID: -174932710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_14
+      name: plants drying_14
       rect:
         serializedVersion: 2
         x: 64
@@ -406,20 +406,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1afefdaaaeb7b284da6d546c7c342b14
-      internalID: -77967623
+      spriteID: 575390bab0773ff40baef9dd8ef990ba
+      internalID: 160032370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_15
+      name: plants drying_15
       rect:
         serializedVersion: 2
         x: 0
@@ -427,20 +427,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4d7f4d2048c4f4aa4db3aa200eb25f
-      internalID: 1898171728
+      spriteID: 6f550556e7a96d54390cd8ce59c06cd4
+      internalID: 1770462050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_16
+      name: plants drying_16
       rect:
         serializedVersion: 2
         x: 16
@@ -448,20 +448,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1a9c2d62c49c74b9683084e2017fef
-      internalID: 1717446551
+      spriteID: db429062214030d4aba18a167a2857c7
+      internalID: 2010728982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_17
+      name: plants drying_17
       rect:
         serializedVersion: 2
         x: 32
@@ -469,20 +469,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7058446d43ed7814b847ada4d3d28041
-      internalID: 874406965
+      spriteID: 9ca6e6ed9df67b245aff52af0bbe6c6f
+      internalID: 1312852277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_18
+      name: plants drying_18
       rect:
         serializedVersion: 2
         x: 48
@@ -490,20 +490,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0caf5c4e69f0d144800e89ee325bef6
-      internalID: -1419817870
+      spriteID: 27d40ccf152c62749bd98b6d48640675
+      internalID: -1653143510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_19
+      name: plants drying_19
       rect:
         serializedVersion: 2
         x: 64
@@ -511,20 +511,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697c9ecf86af4cd4aa00ba9285d63cf8
-      internalID: 229470108
+      spriteID: 619a0fa6362fb614797d9732a89e044b
+      internalID: 210854012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_20
+      name: plants drying_20
       rect:
         serializedVersion: 2
         x: 32
@@ -532,20 +532,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 199425c5e87e3d74e923e9d6aab492d0
-      internalID: 1673370687
+      spriteID: 95cee16a756f067458f104211cd2dcfe
+      internalID: 2094551714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_21
+      name: plants drying_21
       rect:
         serializedVersion: 2
         x: 48
@@ -553,20 +553,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d452c502c8846640b2bd6f68a45b302
-      internalID: -317319090
+      spriteID: 0fcbb2361c6b7ca4b83f1e14ec400e41
+      internalID: -1856333968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_22
+      name: plants drying_22
       rect:
         serializedVersion: 2
         x: 64
@@ -574,20 +574,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6964296d8ca63454b95dcb9dda94e8c8
-      internalID: 473844780
+      spriteID: 06bf94129d20c2f409982daf38bb1d88
+      internalID: -97911694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_23
+      name: plants drying_23
       rect:
         serializedVersion: 2
         x: 0
@@ -595,20 +595,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0d8bc8fa31dbbe4dba8653d18788c9a
-      internalID: 1802581955
+      spriteID: 900b57322c845654796bb665494e23be
+      internalID: -619535944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_24
+      name: plants drying_24
       rect:
         serializedVersion: 2
         x: 16
@@ -616,20 +616,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6e8bea0c2885a5438a338b7e18d9cda
-      internalID: -1028147479
+      spriteID: fb502be180765d44e9861b150af25c07
+      internalID: 643083853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_25
+      name: plants drying_25
       rect:
         serializedVersion: 2
         x: 32
@@ -637,56 +637,56 @@ TextureImporter:
         width: 16
         height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63e152f528087b847abbc98788e59f5c
-      internalID: 1741607079
+      spriteID: 27592a04aa22d7344a9b814a31656368
+      internalID: 470775143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_26
+      name: plants drying_26
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 31
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44413ec58b91ae34e9f9601cbedced9d
-      internalID: 1745523249
+      spriteID: c73482a88c4da8143be19e373a014556
+      internalID: -1238453384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plants free_27
+      name: plants drying_27
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 16
-        height: 32
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3991a4f4f99ba314e87ff9817613b231
-      internalID: -2052187799
+      spriteID: 247c358b9099194489e79714a38f0981
+      internalID: 1298673369
       vertices: []
       indices: 
       edges: []
@@ -702,34 +702,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plants free_21: -317319090
-      plants free_18: -1419817870
-      plants free_23: 1802581955
-      plants free_0: -43463260
-      plants free_17: 874406965
-      plants free_19: 229470108
-      plants free_26: 1745523249
-      plants free_16: 1717446551
-      plants free_13: 1755123986
-      plants free_5: -196840776
-      plants free_10: 314781497
-      plants free_20: 1673370687
-      plants free_1: -1363805324
-      plants free_15: 1898171728
-      plants free_12: 1486795404
-      plants free_6: -202564734
-      plants free_24: -1028147479
-      plants free_4: -764723583
-      plants free_22: 473844780
-      plants free_8: 1354087079
-      plants free_3: 972591479
-      plants free_7: -364067663
-      plants free_27: -2052187799
-      plants free_11: 369305280
-      plants free_25: 1741607079
-      plants free_2: 479412304
-      plants free_9: -1303983664
-      plants free_14: -77967623
+      plants drying_8: 1776621705
+      plants drying_17: 1312852277
+      plants drying_2: 1953839074
+      plants drying_20: 2094551714
+      plants drying_27: 1298673369
+      plants drying_1: 379427181
+      plants drying_25: 470775143
+      plants drying_18: -1653143510
+      plants drying_21: -1856333968
+      plants drying_26: -1238453384
+      plants drying_24: 643083853
+      plants drying_9: 1842177521
+      plants drying_3: 1484042705
+      plants drying_5: 1765443090
+      plants drying_12: -1623264957
+      plants drying_15: 1770462050
+      plants drying_13: -174932710
+      plants drying_19: 210854012
+      plants drying_7: -1741676793
+      plants drying_4: 504333174
+      plants drying_16: 2010728982
+      plants drying_6: 782993457
+      plants drying_14: 160032370
+      plants drying_23: -619535944
+      plants drying_0: -1372220339
+      plants drying_11: -1318121256
+      plants drying_22: -97911694
+      plants drying_10: -1746634518
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -11,23 +11,32 @@ public class PlantaBehaviour : MonoBehaviour
     private bool _isSoilFertile;
     [SerializeField]
     private float fertileMultiplier;
-    private LevelManager _levelManager;
 
     //Variables de control de crecimiento (temporizador)
     private float growTimer;
     private float dryTimer;
-    private bool _isGrowing;
+
+    private enum PlantState
+    {
+        Growing,
+        GrowingWatered,
+        Drying,
+        Dead
+    }
+
+    private PlantState _plantState;
     private int _currentGrowSprite, _currentDrySprite;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        _levelManager = GameManager.Instance._levelManager;
         _isGrowing = true;
         GrowSprite(0);
 
+        GrowSprite(0);
         _currentDrySprite = -1;
-        _currentGrowSprite= -1;
+
         if (_isSoilFertile) growTimer = _plantData.GrowSpeed * fertileMultiplier;  //tenenmos en cuenta si el soil es fertil
         else growTimer = _plantData.GrowSpeed;
 
@@ -37,7 +46,7 @@ public class PlantaBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isGrowing) 
+        if (_plantState == PlantState.Growing || _plantState == PlantState.GrowingWatered) 
         {
             growTimer -= Time.deltaTime;
 
@@ -56,19 +65,18 @@ public class PlantaBehaviour : MonoBehaviour
             else if (growTimer < 0)
             {
                 GrowSprite(3);
-                _isGrowing = false;
+                _plantState = PlantState.Drying;
             }
 
 
         }
 
-        else
+        else if (_plantState == PlantState.Drying)
         {
             dryTimer -= Time.deltaTime;
 
             if (dryTimer <= (_plantData.DrySpeed / 3) * 2 && _currentDrySprite < 0)
             {
-                Debug.Log("AAAAAAA");
                 DrySprite(0);
 
             }
@@ -82,7 +90,6 @@ public class PlantaBehaviour : MonoBehaviour
             else if (dryTimer < 0)
             {
                 DrySprite(2);
-                _levelManager.PlantDied()
             }
 
         }
@@ -105,6 +112,25 @@ public class PlantaBehaviour : MonoBehaviour
     {
         _currentDrySprite = _desiredSprite;
         GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[_currentDrySprite];
+    }
+
+    public void GetWatered()
+    {
+        if (_plantState == PlantState.Growing)
+        {
+            _plantState = PlantState.GrowingWatered;
+            growTimer = growTimer * 0.8f;
+        }
+
+
+        else if (_plantState == PlantState.Drying)
+        {
+            GrowSprite(3);
+            _currentDrySprite = -1;
+            dryTimer = _plantData.DrySpeed;
+
+        }
+
     }
 } 
 

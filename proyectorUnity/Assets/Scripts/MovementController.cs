@@ -9,7 +9,7 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("La velocidad de moviemiento del personaje")]
-    float _speed;
+    public float _speed;
     Vector2 _direction;
     Rigidbody2D _rigidbody2D;
     private void Start()

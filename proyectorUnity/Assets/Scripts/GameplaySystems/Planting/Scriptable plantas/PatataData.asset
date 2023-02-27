@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb670222ee101a44389a3532c73ad603, type: 3}
+  m_Name: PatataData
+  m_EditorClassIdentifier: 
+  GrowSpeed: 60
+  DrySpeed: 250
+  GrowingSprite:
+  - {fileID: 369305280, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1486795404, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1755123986, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: -77967623, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  DryingSprite:
+  - {fileID: 160032370, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: -174932710, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: -1623264957, guid: 136f4134d52208b40923383349747d91, type: 3}
