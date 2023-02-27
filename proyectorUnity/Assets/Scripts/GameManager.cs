@@ -80,5 +80,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K)) NuevoTornado();
+        if (Input.GetMouseButtonDown(0) && _state == GameStates.INTRO) 
+        {
+            GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
+        }
     }
 }

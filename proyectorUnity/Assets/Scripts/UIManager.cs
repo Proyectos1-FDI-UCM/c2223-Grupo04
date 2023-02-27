@@ -53,9 +53,6 @@ public class UIManager : MonoBehaviour
     {
         _time = TornadoSpawner.Instance._tMul + TornadoSpawner.Instance._tEntreTornados; 
     }
-    public void BotonIntro()
-    {
-        GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
-    }
+    
     #endregion
 }
