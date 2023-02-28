@@ -10,12 +10,17 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI _contador;
     [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI;
+    [SerializeField] Image _inventory;
+    
+    InventoryController _inventoryController2;
 
     public static UIManager Instance; //Para el singletone.
     
     // Start is called before the first frame update
     void Start()
     {
+        
+        _inventoryController2 = PlayerController.Instance._inventoryController;
     }
 
     // Update is called once per frame
@@ -27,7 +32,7 @@ public class UIManager : MonoBehaviour
             _time = _time - Time.deltaTime;
         }
         else _contador.text = "¡TORNADO!"; //Cuando acaba el contador y el tornado esta en juego ponemos esto por ejemplo.
-        
+
         if (GameManager.Instance._state == GameManager.GameStates.INTRO)
         {
             _introUI.SetActive(true);  
@@ -42,10 +47,13 @@ public class UIManager : MonoBehaviour
             _winUI.SetActive(false);
             _pausaUI.SetActive(false);
         }
+        
     }
     private void Awake() //Para el singletone.
     {
+        this.enabled = true;
         Instance = this;
+        GameManager.Instance._uIManager = this;
     }
 
     #region methods
@@ -53,6 +61,9 @@ public class UIManager : MonoBehaviour
     {
         _time = TornadoSpawner.Instance._tMul + TornadoSpawner.Instance._tEntreTornados; 
     }
-    
+    public void changeInventory(GameObject tool)
+    {
+        _inventory.sprite = tool.GetComponent<SpriteRenderer>().sprite;
+    }
     #endregion
 }

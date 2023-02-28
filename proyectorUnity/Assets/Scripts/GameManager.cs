@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public UIManager _uIManager;
     /// <summary>
     /// Instancia del GameManager
     /// </summary>
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        _uIManager.enabled = true;
     }
 
     #region methods

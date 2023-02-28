@@ -44,6 +44,7 @@ public class InventoryController : MonoBehaviour
     public void PickUpTool(GameObject toolObject)
     {
         _tool = toolObject;
+        GameManager.Instance._uIManager.changeInventory(_tool);
     }
 
     //Lo que pasa cuando sueltas una herramienta

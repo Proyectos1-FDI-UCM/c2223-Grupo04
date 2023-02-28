@@ -41,6 +41,7 @@ public class LevelManager : MonoBehaviour
     {
         progreso[FindIndex(scriptablePlant)]++;
         Debug.Log("planta crecida" + progreso[FindIndex(scriptablePlant)]);
+        //HACER LLAMADA A UI
 
     }
 

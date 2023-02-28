@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tornadoPositions: {fileID: 0}
   id: 0
-  _tornadoSpeed: 3
+  _tornadoSpeed: 6
 --- !u!95 &-7367957934492011772
 Animator:
   serializedVersion: 4

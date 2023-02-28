@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3284056813471461213}
-  - component: {fileID: 541363746345122715}
   - component: {fileID: 702613560511473000}
   - component: {fileID: 138346247410645601}
   - component: {fileID: 1987823289430901323}
+  - component: {fileID: 5577112931507152661}
   m_Layer: 0
   m_Name: ObstacleTest
   m_TagString: Obstaculo
@@ -35,32 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &541363746345122715
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7731640710028335627}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &702613560511473000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,3 +120,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &5577112931507152661
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731640710028335627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.27552298, y: 0.5}
+      - {x: -0.16388866, y: 0.5}
+      - {x: -0.25312, y: 0.39707473}
+      - {x: -0.4010334, y: 0.28395075}
+      - {x: -0.5, y: 0.20505875}
+      - {x: -0.5, y: -0.2778982}
+      - {x: -0.44062006, y: -0.39311612}
+      - {x: 0.022168517, y: -0.40499204}
+      - {x: 0.02612719, y: -0.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 0.5, y: 0.28819072}
+      - {x: 0.46041334, y: 0.32749605}
+      - {x: 0.38291734, y: 0.3931161}
