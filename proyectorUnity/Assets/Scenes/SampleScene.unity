@@ -123,57 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &230611169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 230611171}
-  - component: {fileID: 230611170}
-  m_Layer: 0
-  m_Name: TornadoSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &230611170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230611169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965e81ca3b334d343947d7de2f8f7113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tEntreTornados: 0
-  _tMul: 0
-  _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
-  _tornadoInstPos: {fileID: 230611171}
-  _tornadoRutas:
-  - {fileID: 7589020528995494579, guid: fc164d81d94de5a43a3205836b0e4dc9, type: 3}
-  - {fileID: 2746627479830806372, guid: a70ad24376eb5d54e8696651782344ca, type: 3}
---- !u!4 &230611171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230611169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &266062539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -538,6 +487,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3555167163678909704, guid: 72cc9757f1bba874987290c59d510655, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -595,6 +548,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1987823289430901323, guid: 2603689c9098e414dbc66f17ee569a00, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3284056813471461213, guid: 2603689c9098e414dbc66f17ee569a00, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -770,6 +727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charlie UwU
       objectReference: {fileID: 0}
+    - target: {fileID: 5877752316885151859, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5877752316885151871, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -883,6 +844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -893541525752904198, guid: ba37f8dc3ce2370479aac26a59b8ab60, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7890153610079468598, guid: ba37f8dc3ce2370479aac26a59b8ab60, type: 3}
       propertyPath: m_RootOrder
       value: 8

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3875521789436672168}
   - component: {fileID: -5848966148111910550}
   - component: {fileID: -5077055194643747424}
-  - component: {fileID: 3607537528759115128}
+  - component: {fileID: -7314265428236698645}
   m_Layer: 7
   m_Name: SoilFertil
   m_TagString: Untagged
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isFertile: 1
+  _myPlant: {fileID: 0}
 --- !u!212 &-5077055194643747424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -99,16 +100,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &3607537528759115128
-BoxCollider:
+--- !u!61 &-7314265428236698645
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4670867843186973513}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
