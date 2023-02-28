@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 5144896486828473832}
   - component: {fileID: 6606115133197833162}
   - component: {fileID: 3620506872657283398}
-  - component: {fileID: 6517527959309975055}
+  - component: {fileID: -6435339257228844745}
+  - component: {fileID: 3555167163678909704}
   m_Layer: 0
   m_Name: PalaPlaceholder
   m_TagString: Untagged
@@ -183,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443449a609654c54d8245771649a721d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &6517527959309975055
-PolygonCollider2D:
+--- !u!61 &-6435339257228844745
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,12 +207,27 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.40625, y: 0.4375}
-      - {x: -0.40625, y: 0}
-      - {x: -0.09375048, y: -0.53385615}
-      - {x: 0.20388222, y: -0.5536871}
-      - {x: 0.43515682, y: -0.5531275}
-      - {x: 0.40625, y: 0.1875}
-      - {x: 0.09375, y: 0.4375}
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.875}
+  m_EdgeRadius: 0
+--- !u!50 &3555167163678909704
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6562306557452687760}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
