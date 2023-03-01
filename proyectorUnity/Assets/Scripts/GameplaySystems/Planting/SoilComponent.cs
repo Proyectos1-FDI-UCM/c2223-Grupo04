@@ -28,7 +28,7 @@ public class SoilComponent : MonoBehaviour
         plantBehaviour.SetUpPlant(_isFertile, tipoPlanta);
         _isPlanted = true;
         _myPlant = transform.GetChild(0).gameObject;
-        _levelManager.AddPlant(_myPlant);
+        _levelManager.AddPlant(_myPlant.GetComponent<PlantaBehaviour>());
     }
 
     /// <summary>
@@ -36,14 +36,10 @@ public class SoilComponent : MonoBehaviour
     /// </summary>
     public void RemovePlant()
     {
-        if (_isPlanted)
-        {
-            _isPlanted = false;
-            _levelManager.AddPlant(_myPlant.GetComponent<PlantaBehaviour>());
-            Destroy(_myPlant);
-
-            print("EE");
-        }
+        _isPlanted = false;
+        _levelManager.AddPlant(_myPlant.GetComponent<PlantaBehaviour>());
+        Destroy(_myPlant);
+        print("EE");
     }
 
     public bool IsPlanted()

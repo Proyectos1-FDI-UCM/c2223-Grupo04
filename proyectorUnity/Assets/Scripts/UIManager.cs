@@ -53,7 +53,6 @@ public class UIManager : MonoBehaviour
     {
         this.enabled = true;
         Instance = this;
-        GameManager.Instance._uIManager = this;
     }
 
     #region methods
