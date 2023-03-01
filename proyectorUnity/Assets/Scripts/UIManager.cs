@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
         }
         else 
         {
-            _inventory.enabled = false;
+            _inventory.enabled = false; //desativamos el inventory para que no aparezca nada cuando se deja la herramienta o se usa la semilla.
         }
     }
     #endregion
