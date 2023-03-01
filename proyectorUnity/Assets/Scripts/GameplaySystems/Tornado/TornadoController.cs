@@ -56,9 +56,10 @@ public class TornadoController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("ASADUSDA");
-        print(collision.transform.GetChild(0).gameObject.name);
-        collision.GetComponent<SoilComponent>().RemovePlant();
+        if (collision.GetComponent<SoilComponent>().IsPlanted())
+        {
+            collision.GetComponent<SoilComponent>().RemovePlant();
+        }
     }
 
     private void OnDestroy()

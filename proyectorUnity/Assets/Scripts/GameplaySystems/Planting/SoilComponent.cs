@@ -35,12 +35,9 @@ public class SoilComponent : MonoBehaviour
     /// </summary>
     public void RemovePlant()
     {
-        if (_isPlanted)
-        {
-            _isPlanted = false;
-            Destroy(_myPlant);
-            print("EE");
-        }
+        _isPlanted = false;
+        Destroy(_myPlant);
+        print("EE");
     }
 
     public bool IsPlanted()
