@@ -74,7 +74,7 @@ public class PlantaBehaviour : MonoBehaviour
 
         }
 
-        else if (_plantState == PlantState.Drying)
+        else if (!_isSoilFertile && _plantState == PlantState.Drying)
         {
             dryTimer -= Time.deltaTime;
 
