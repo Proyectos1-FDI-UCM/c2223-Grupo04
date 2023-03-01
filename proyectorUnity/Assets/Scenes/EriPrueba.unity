@@ -257,8 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4cb456f1b5aa4a85bd6f02866d943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uIManager: {fileID: 0}
   _state: 1
   _nTornados: 0
+  _levelManager: {fileID: 0}
 --- !u!4 &439600789
 Transform:
   m_ObjectHideFlags: 0
@@ -423,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _irACasa: 0
   _casa: {fileID: 0}
+  _inventoryController: {fileID: 0}
 --- !u!1 &1094249395
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e847988e0a7c7c94cb23ff859d87b39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TipoDePlanta: {fileID: 11400000, guid: 68eba17c8dab7404296dbeac1f2039a4, type: 2}
+  TipoDePlanta: {fileID: 11400000, guid: 731a1864bda70284d8ab513f3b70ca38, type: 2}
   _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
 --- !u!61 &1939605307
 BoxCollider2D:

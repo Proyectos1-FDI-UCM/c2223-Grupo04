@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669c4679dc785c74fa47cf7b81486422, type: 3}
   m_Name: Level1Objetivos
   m_EditorClassIdentifier: 
+  plantas:
+  - {fileID: 11400000, guid: 4c6464484a77e1844ab068ac8938cb6a, type: 2}
+  cantidad: 04000000

@@ -84,7 +84,7 @@ public class PlantaBehaviour : MonoBehaviour
 
             }
 
-            else if (dryTimer <= _plantData.DrySpeed / 3 && _currentGrowSprite < 1)
+            else if (dryTimer <= (_plantData.DrySpeed / 3) && _currentDrySprite < 1)
             {
                 DrySprite(1);
 

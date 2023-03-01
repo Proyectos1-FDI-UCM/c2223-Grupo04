@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CalabazaData
   m_EditorClassIdentifier: 
   GrowSpeed: 60
-  DrySpeed: 300
+  DrySpeed: 60
   GrowingSprite:
   - {fileID: -1363805324, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: 479412304, guid: 983178a14a29153408b557b1e204eb56, type: 3}

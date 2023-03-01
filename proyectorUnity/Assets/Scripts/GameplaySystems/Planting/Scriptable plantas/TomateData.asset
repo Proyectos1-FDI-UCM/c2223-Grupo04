@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TomateData
   m_EditorClassIdentifier: 
   GrowSpeed: 50
-  DrySpeed: 210
+  DrySpeed: 60
   GrowingSprite:
   - {fileID: 1717446551, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: 874406965, guid: 983178a14a29153408b557b1e204eb56, type: 3}
