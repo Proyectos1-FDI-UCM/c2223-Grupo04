@@ -8,13 +8,13 @@ public class SoilComponent : MonoBehaviour
     [SerializeField]
     [Tooltip("El tipo de soil, que determina la velocidad de crecimiento de las plantas")]
     private bool _isFertile;
-
     private bool _isPlanted;
+    private LevelManager _levelManager;
 
-    [SerializeField]
     private GameObject _myPlant;
     private void Start()
     {
+        _levelManager = GameManager.Instance._levelManager;
         _isPlanted = false;
     }
     /// <summary>
@@ -28,6 +28,7 @@ public class SoilComponent : MonoBehaviour
         plantBehaviour.SetUpPlant(_isFertile, tipoPlanta);
         _isPlanted = true;
         _myPlant = transform.GetChild(0).gameObject;
+        _levelManager.AddPlant(_myPlant);
     }
 
     /// <summary>
@@ -38,7 +39,9 @@ public class SoilComponent : MonoBehaviour
         if (_isPlanted)
         {
             _isPlanted = false;
+            _levelManager.AddPlant(_myPlant.GetComponent<PlantaBehaviour>());
             Destroy(_myPlant);
+
             print("EE");
         }
     }

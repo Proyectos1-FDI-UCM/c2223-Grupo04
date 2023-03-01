@@ -8,15 +8,18 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private NivelObjetivos objetivos;
-    private ScriptablePlant[] plantas;
-    private int[] cantidad;
+    private ScriptablePlant[] plantasObjetivo;
+    private int[] cantidadObjetivo;
     private int[] progreso;
+    private List<PlantaBehaviour> plantas;
+
     // Start is called before the first frame update
     void Start()
     {
-        plantas = objetivos.plantas;
-        cantidad = objetivos.cantidad;
-        progreso = new int[plantas.Length];
+        plantas = new List<PlantaBehaviour>();
+        plantasObjetivo = objetivos.plantas;
+        cantidadObjetivo = objetivos.cantidad;
+        progreso = new int[plantasObjetivo.Length];
     }
 
     // Update is called once per frame
@@ -24,9 +27,9 @@ public class LevelManager : MonoBehaviour
     {
         int i = 0;
         bool complecion = true;
-        while(i < plantas.Length && complecion)
+        while(i < plantasObjetivo.Length && complecion)
         {
-            complecion = cantidad[i] < progreso[i];
+            complecion = cantidadObjetivo[i] < progreso[i];
             i++;
         }
 
@@ -41,6 +44,7 @@ public class LevelManager : MonoBehaviour
     {
         progreso[FindIndex(scriptablePlant)]++;
         Debug.Log("planta crecida" + progreso[FindIndex(scriptablePlant)]);
+        ComprobarComplecion();
         //HACER LLAMADA A UI
 
     }
@@ -49,6 +53,7 @@ public class LevelManager : MonoBehaviour
     {
         progreso[FindIndex(scriptablePlant)]--;
         Debug.Log("planta morida" + progreso[FindIndex(scriptablePlant)]);
+        ComprobarComplecion();
 
     }
 
@@ -56,11 +61,34 @@ public class LevelManager : MonoBehaviour
     {
         bool encontrado = false;
         int i = 0;
-        while (i < plantas.Length && !encontrado)
+        while (i < plantasObjetivo.Length && !encontrado)
         {
-            encontrado = scriptablePlant == plantas[i];
+            encontrado = scriptablePlant == plantasObjetivo[i];
             i++;
         }
         return i - 1;
+    }
+
+    public void AddPlant(PlantaBehaviour miPlanta)
+    {
+        plantas.Add(miPlanta);
+    }
+
+    public void RemovePlant(PlantaBehaviour miPlanta)
+    {
+        plantas.Remove(miPlanta);
+    }
+
+    public PlantaBehaviour GetGrownPlant()
+    {
+        List<PlantaBehaviour> plantasGrowadas = new List<PlantaBehaviour>();
+        int c = 0;
+        while(c < plantas.Count)
+        {
+            if (plantas[c].GetPlantState() == PlantaBehaviour.PlantState.Drying) {
+                plantasGrowadas.Add(plantas[c]);
+            }
+        }
+        return plantasGrowadas[UnityEngine.Random.Range(0, plantasGrowadas.Count)];
     }
 }

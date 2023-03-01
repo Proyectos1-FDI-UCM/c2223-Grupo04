@@ -16,7 +16,7 @@ public class PlantaBehaviour : MonoBehaviour
     private float growTimer;
     private float dryTimer;
 
-    private enum PlantState
+    public enum PlantState
     {
         Growing,
         GrowingWatered,
@@ -137,6 +137,10 @@ public class PlantaBehaviour : MonoBehaviour
 
         }
 
+    }
+    public PlantState GetPlantState()
+    {
+        return _plantState;
     }
 } 
 
