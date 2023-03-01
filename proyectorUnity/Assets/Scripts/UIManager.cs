@@ -63,7 +63,15 @@ public class UIManager : MonoBehaviour
     }
     public void changeInventory(GameObject tool)
     {
-        _inventory.sprite = tool.GetComponent<SpriteRenderer>().sprite;
+        if (tool != null)
+        {
+            _inventory.enabled = true;
+            _inventory.sprite = tool.GetComponent<SpriteRenderer>().sprite;
+        }
+        else 
+        {
+            _inventory.enabled = false;
+        }
     }
     #endregion
 }

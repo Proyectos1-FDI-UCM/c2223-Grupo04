@@ -125,6 +125,7 @@ public class PlantaBehaviour : MonoBehaviour
         {
             _plantState = PlantState.GrowingWatered;
             growTimer = growTimer * 0.8f;
+            Debug.Log("Regado");
         }
 
 

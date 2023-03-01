@@ -50,6 +50,7 @@ public class InventoryController : MonoBehaviour
     //Lo que pasa cuando sueltas una herramienta
     public void RemoveTool()
     {
+        GameManager.Instance._uIManager.changeInventory(null);
         _tool = null;
     }
 }
