@@ -37,9 +37,7 @@ public class SoilComponent : MonoBehaviour
     public void RemovePlant()
     {
         _isPlanted = false;
-        _levelManager.AddPlant(_myPlant.GetComponent<PlantaBehaviour>());
-        Destroy(_myPlant);
-        print("EE");
+        _myPlant.GetComponent<PlantaBehaviour>().RemovePlant();
     }
 
     public bool IsPlanted()

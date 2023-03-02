@@ -47,14 +47,12 @@ public class InputController : MonoBehaviour
             //Sólo entra si ha impactado con algún collider
             if (hit)
             {
-                Debug.Log("Ha colaideado");
                 GameObject objeto = hit.collider.gameObject;
 
 
 
                 if(objeto.GetComponent<Tool>() != null)
                 {
-                    Debug.Log("Ha colaideado con un objeto de tipo tool");
                     inventoryController.TryPickUpTool(objeto, mousePos);
                 }
                 else //En caso de no ser un tool
