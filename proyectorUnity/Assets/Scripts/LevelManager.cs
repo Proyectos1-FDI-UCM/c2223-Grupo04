@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -79,18 +80,25 @@ public class LevelManager : MonoBehaviour
     {
         plantas.Remove(miPlanta);
     }
-
+    /// <summary>
+    /// Busca de entre todas las plantas del nivel una que esté crecida del todo.
+    /// </summary>
+    /// <returns>Un PlantaBeahavior adecuado, null si no ha encontrado ninguno</returns>
     public PlantaBehaviour GetGrownPlant()
     {
+        PlantaBehaviour planta = null;
         List<PlantaBehaviour> plantasGrowadas = new List<PlantaBehaviour>();
-        int c = 0;
-        while(c < plantas.Count)
+        for( int c= 0; c < plantas.Count; c++)
         {
+            Debug.Log(plantas[c].GetPlantState().ToString());
             if (plantas[c].GetPlantState() == PlantaBehaviour.PlantState.Drying) {
                 plantasGrowadas.Add(plantas[c]);
             }
         }
-        return plantasGrowadas[UnityEngine.Random.Range(0, plantasGrowadas.Count)];
+        //si no ha encontrado ninguna planta crecida, devuelve nullz
+        if (plantasGrowadas.Any())
+            planta = plantasGrowadas[UnityEngine.Random.Range(0, plantasGrowadas.Count)];
+        return planta;
     }
     #endregion
 }

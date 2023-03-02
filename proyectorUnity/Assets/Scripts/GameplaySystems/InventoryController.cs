@@ -23,13 +23,10 @@ public class InventoryController : MonoBehaviour
         {
             PickUpTool(toolObject);
             toolObject.GetComponent<Tool>().PickUpTool();
-            Debug.Log("Objeto recogido");
         } else if (_tool == toolObject && Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < _distanciaMin)
         {
             RemoveTool();
             toolObject.GetComponent<Tool>().DropTool();
-            Debug.Log("Objeto soltado");
-
         }
     }
 

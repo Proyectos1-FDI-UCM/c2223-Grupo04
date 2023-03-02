@@ -142,5 +142,11 @@ public class PlantaBehaviour : MonoBehaviour
     {
         return _plantState;
     }
+
+    public void RemovePlant()
+    {
+        _levelManager.RemovePlant(this);
+        Destroy(gameObject);
+    }
 } 
 
