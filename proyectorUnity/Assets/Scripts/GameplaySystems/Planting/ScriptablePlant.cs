@@ -12,6 +12,8 @@ public class ScriptablePlant : ScriptableObject
     public Sprite[] GrowingSprite = new Sprite[3];
 
     public Sprite[] DryingSprite = new Sprite[3];
+
+    public Sprite icono;
     
 
 }
