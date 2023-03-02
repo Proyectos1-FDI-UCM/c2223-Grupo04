@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +12,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _contador;
     [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI;
     [SerializeField] Image _inventory;
-    
-    InventoryController _inventoryController2;
+    [SerializeField] GameObject _prefabObjetivo;
+    [SerializeField] Transform _panel3;
+    private List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
+    public NivelObjetivos objetivosnivel;
 
     public static UIManager Instance; //Para el singletone.
     
     // Start is called before the first frame update
     void Start()
     {
-        
-        _inventoryController2 = PlayerController.Instance._inventoryController;
+        _inventory.enabled = false;
     }
 
     // Update is called once per frame
@@ -32,22 +34,6 @@ public class UIManager : MonoBehaviour
             _time = _time - Time.deltaTime;
         }
         else _contador.text = "¡TORNADO!"; //Cuando acaba el contador y el tornado esta en juego ponemos esto por ejemplo.
-
-        if (GameManager.Instance._state == GameManager.GameStates.INTRO)
-        {
-            _introUI.SetActive(true);  
-            _gameUI.SetActive(false);
-            _winUI.SetActive(false);
-            _pausaUI.SetActive(false);
-        }
-        else if(GameManager.Instance._state == GameManager.GameStates.GAME)
-        {
-            _introUI.SetActive(false);
-            _gameUI.SetActive(true);
-            _winUI.SetActive(false);
-            _pausaUI.SetActive(false);
-        }
-        
     }
     private void Awake() //Para el singletone.
     {
@@ -70,6 +56,48 @@ public class UIManager : MonoBehaviour
         else 
         {
             _inventory.enabled = false; //desativamos el inventory para que no aparezca nada cuando se deja la herramienta o se usa la semilla.
+        }
+    }
+    public void SetearObjetivos(NivelObjetivos objetivosNivel)
+    {
+        Debug.Log("Seteado antes del bucle.");
+        for (int i = 0; i < objetivosNivel.plantas.Length; i++)
+        {
+            Debug.Log("Seteado en el bucle al principio.");
+            GameObject objetivoUI = GameObject.Instantiate(_prefabObjetivo, _panel3);
+            _insPrefObjs.Add(objetivoUI); //Añadimos a la lista el objetivo.
+            
+            Image icono = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverImagen();
+            TextMeshProUGUI txtinvariable = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverTxtInvariable();
+
+            icono.sprite = objetivosNivel.plantas[i].icono;
+            txtinvariable.text = "/ " + objetivosNivel.cantidad[i]; //Si sumas algo a un string todo se convierte a string.
+            Debug.Log("Seteado en el bucle al final.");
+        }
+        Debug.Log("Seteado despues del bucle.");
+    }
+    public void UpdatearObjetivosUI(int progreso, int index)
+    {
+        TextMeshProUGUI variable = _insPrefObjs[index].GetComponent<ReferenciaUIObjetivos>().DevolverTxtVariable();
+        variable.text = progreso.ToString();
+
+    }
+    public void CambiarUISegunEstadoJuego()
+    {
+        if (GameManager.Instance._state == GameManager.GameStates.INTRO)
+        {
+            SetearObjetivos(objetivosnivel);
+            _introUI.SetActive(true);
+            _gameUI.SetActive(false);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
+        }
+        else if (GameManager.Instance._state == GameManager.GameStates.GAME)
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(true);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
         }
     }
     #endregion

@@ -63,9 +63,9 @@ public class GameManager : MonoBehaviour
         {
             gameObject.GetComponent<InputController>().enabled = false; //desactivar el input
             PlayerController.Instance.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input esté desactivado
-            
             Debug.Log("STATE: TORNADO");
         }
+        _uIManager.CambiarUISegunEstadoJuego();
     }
     
 

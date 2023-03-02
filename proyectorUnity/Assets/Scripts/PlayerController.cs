@@ -7,16 +7,11 @@ public class PlayerController : MonoBehaviour
 {
     public bool _irACasa;
     [SerializeField] public Transform _casa;
-    public InventoryController _inventoryController;
+    
     /// <summary>
     /// Instancia del PlayerController
     /// </summary>
     public static PlayerController Instance { get; private set; }
-
-    private void Start()
-    {
-        _inventoryController = GetComponent<InventoryController>();
-    }
 
     private void Awake()
     {

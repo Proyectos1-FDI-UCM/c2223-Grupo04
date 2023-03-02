@@ -20,9 +20,14 @@ public class LevelManager : MonoBehaviour
         plantasObjetivo = objetivos.plantas;
         cantidadObjetivo = objetivos.cantidad;
         progreso = new int[plantasObjetivo.Length];
+        //GameManager.Instance._uIManager.SetearObjetivos(objetivos); //Pasamos lo objetivos al método del UIManager.
+    }
+    private void Awake()
+    {
+        GameManager.Instance._uIManager.objetivosnivel = objetivos;
     }
 
-    // Update is called once per frame
+    #region methods
     private void ComprobarComplecion()
     {
         int i = 0;
@@ -43,18 +48,17 @@ public class LevelManager : MonoBehaviour
     public void PlantHasGrown(ScriptablePlant scriptablePlant)
     {
         progreso[FindIndex(scriptablePlant)]++;
-        Debug.Log("planta crecida" + progreso[FindIndex(scriptablePlant)]);
+        Debug.Log("Planta crecida" + progreso[FindIndex(scriptablePlant)]);
+        GameManager.Instance._uIManager.UpdatearObjetivosUI(progreso[FindIndex(scriptablePlant)], FindIndex(scriptablePlant));
         ComprobarComplecion();
-        //HACER LLAMADA A UI
-
     }
 
     public void PlantDied(ScriptablePlant scriptablePlant)
     {
         progreso[FindIndex(scriptablePlant)]--;
         Debug.Log("planta morida" + progreso[FindIndex(scriptablePlant)]);
+        GameManager.Instance._uIManager.UpdatearObjetivosUI(progreso[FindIndex(scriptablePlant)], FindIndex(scriptablePlant));
         ComprobarComplecion();
-
     }
 
     private int FindIndex(ScriptablePlant scriptablePlant)
@@ -91,4 +95,5 @@ public class LevelManager : MonoBehaviour
         }
         return plantasGrowadas[UnityEngine.Random.Range(0, plantasGrowadas.Count)];
     }
+    #endregion
 }
