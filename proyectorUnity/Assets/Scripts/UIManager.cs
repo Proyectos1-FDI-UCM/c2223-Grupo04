@@ -14,7 +14,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
-    private List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
+    [SerializeField]
+    List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
     public NivelObjetivos objetivosnivel;
 
     public static UIManager Instance; //Para el singletone.
@@ -63,8 +64,8 @@ public class UIManager : MonoBehaviour
         Debug.Log("Seteado antes del bucle.");
         for (int i = 0; i < objetivosNivel.plantas.Length; i++)
         {
-            Debug.Log("Seteado en el bucle al principio.");
             GameObject objetivoUI = GameObject.Instantiate(_prefabObjetivo, _panel3);
+            Debug.Log(objetivoUI.name);
             _insPrefObjs.Add(objetivoUI); //Añadimos a la lista el objetivo.
             
             Image icono = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverImagen();
