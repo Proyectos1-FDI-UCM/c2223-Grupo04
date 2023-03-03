@@ -12,7 +12,7 @@ public class Semilla : Tool
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
-        if (objetoClicado.GetComponent<SoilComponent>() != null && !objetoClicado.GetComponent<SoilComponent>().IsPlanted())  //si es soil y no esta plantado
+        if (objetoClicado.GetComponent<SoilComponent>() != null && objetoClicado.GetComponent<SoilComponent>().IsEmpty())  //si es soil y no esta plantado
         {
             //Plantamos la planta
             objetoClicado.GetComponent<SoilComponent>().Plant(_plantaPrefab, TipoDePlanta);

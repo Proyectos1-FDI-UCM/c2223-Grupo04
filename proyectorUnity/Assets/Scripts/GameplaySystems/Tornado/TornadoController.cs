@@ -56,7 +56,7 @@ public class TornadoController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<SoilComponent>().IsPlanted())
+        if (!collision.GetComponent<SoilComponent>().IsEmpty())
         {
             collision.GetComponent<SoilComponent>().RemovePlant();
         }
