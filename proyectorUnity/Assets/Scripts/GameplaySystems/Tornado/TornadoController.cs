@@ -25,11 +25,18 @@ public class TornadoController : MonoBehaviour
     /// Posición inicial del tornado
     /// </summary>
     Vector3 _startpos;
+    /// <summary>
+    /// Posición inicial del tornado
+    /// </summary>
+    [SerializeField]
+    GameObject _prefabCameraShaker;
+    GameObject _cameraShaker;
 
     private void Start()
     {
         _startpos = transform.position; //Guarda la posición inicial del tornado, ya que depende de cada nivel
         GameManager.Instance.ChangeState(GameStates.TORNADO); //llama para cambiar el estado a TORNADO
+       _cameraShaker = GameObject.Instantiate(_prefabCameraShaker, null);
     }
 
     private void Update()
@@ -64,6 +71,7 @@ public class TornadoController : MonoBehaviour
 
     private void OnDestroy()
     {
+        Destroy(_cameraShaker);
         Destroy(_tornadoPositions);
         GameManager.Instance.ChangeState(GameStates.GAME); //llama para cambiar el estado a GAME
 

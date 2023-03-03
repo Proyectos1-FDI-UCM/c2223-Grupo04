@@ -104,6 +104,7 @@ MonoBehaviour:
   _tornadoPositions: {fileID: 0}
   id: 0
   _tornadoSpeed: 6
+  _prefabCameraShaker: {fileID: 3553325777570937985, guid: 0648059112b87864994f470c470b1e3a, type: 3}
 --- !u!95 &-7367957934492011772
 Animator:
   serializedVersion: 4
