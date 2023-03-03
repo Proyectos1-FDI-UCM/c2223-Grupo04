@@ -21,8 +21,7 @@ public class GameManager : MonoBehaviour
     /// Número de tornados que han pasado
     /// </summary>
     public int _nTornados;
-    [SerializeField]
-    public LevelManager _levelManager;
+    [SerializeField] public LevelManager _levelManager;
     private void Awake()
     {
         Instance = this;
@@ -38,8 +37,6 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         TornadoSpawner.Instance.NewTornadoTime();
         UIManager.Instance.NuevoTiempoDeTornado();
-           
-        
     }
     public void ChangeState(GameStates _newState)
     {
@@ -65,10 +62,20 @@ public class GameManager : MonoBehaviour
             PlayerController.Instance.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input esté desactivado
             Debug.Log("STATE: TORNADO");
         }
+        else if (_state == GameStates.WIN)
+        {
+            Time.timeScale = 0; //Parar el tiempo.
+
+            Debug.Log("STATE: WIN");
+        }/*
+        else if(_state == GameStates.PAUSA)
+        {
+            Time.timeScale = 0; //Parar el tiempo.
+
+            Debug.Log("STATE: PAUSA");
+        }*/
         _uIManager.CambiarUISegunEstadoJuego();
     }
-    
-
     #endregion
 
     // Start is called before the first frame update
@@ -82,9 +89,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.K)) NuevoTornado();
-        if (Input.GetMouseButtonDown(0) && _state == GameStates.INTRO) 
+        
+        if (Input.GetMouseButtonDown(0) && _state == GameStates.INTRO) //Pasar de la Intro o la Pausa al Game.
         {
             GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
+        }
+        if (Input.GetKeyDown(KeyCode.P)) //Pasar del Game a la Pausa.
+        {
+            _uIManager.Pausar();
+            Time.timeScale = 0; //Parar el tiempo.
         }
     }
 }

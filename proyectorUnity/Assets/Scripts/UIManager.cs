@@ -4,6 +4,7 @@ using TMPro;
 using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UI;
+using static GameManager;
 
 public class UIManager : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class UIManager : MonoBehaviour
         }
         else 
         {
-            _inventory.enabled = false; //desativamos el inventory para que no aparezca nada cuando se deja la herramienta o se usa la semilla.
+            _inventory.enabled = false; //desativamos el inventory para que no aparezca algo cuando se deja la herramienta o se usa la semilla.
         }
     }
     public void SetearObjetivos(NivelObjetivos objetivosNivel)
@@ -100,6 +101,37 @@ public class UIManager : MonoBehaviour
             _winUI.SetActive(false);
             _pausaUI.SetActive(false);
         }
+        else if (GameManager.Instance._state == GameManager.GameStates.WIN)
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(false);
+            _winUI.SetActive(true);
+            _pausaUI.SetActive(false);
+        }/*
+        else if (GameManager.Instance._state == GameManager.GameStates.PAUSA) 
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(false);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(true);
+        }*/
+    }
+    public void Pausar()
+    {
+        _introUI.SetActive(false);
+        _gameUI.SetActive(false);
+        _winUI.SetActive(false);
+        _pausaUI.SetActive(true);
+    }
+    public void ContinuarBoton()
+    {
+        Time.timeScale = 1; //Volver a correr el tiempo.
+        _gameUI.SetActive(true);
+        _pausaUI.SetActive(false);
+    }
+    public void SalirBoton()
+    {
+
     }
     #endregion
 }
