@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4402935d95b30e42a7610c600746c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temblorMagnitude: 0.075
+  temblorMagnitude: 0.03
   tiempoTemblor: 5
   mainCamera: {fileID: 0}

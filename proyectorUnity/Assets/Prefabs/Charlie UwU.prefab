@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5877752316885151871}
   - component: {fileID: 5877752316885151870}
-  - component: {fileID: 5877752316885151869}
   - component: {fileID: 5877752316885151868}
+  - component: {fileID: 8569356069377379390}
   - component: {fileID: 5877752316885151859}
   - component: {fileID: 5877752316885151864}
   - component: {fileID: 1083681086067009237}
+  - component: {fileID: 5869373370455778936}
   m_Layer: 0
   m_Name: Charlie UwU
   m_TagString: Untagged
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: 2064236944, guid: 80566fa4d714f6d459d7f667e909d180, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,8 +90,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5877752316885151869
-BoxCollider2D:
+--- !u!114 &5877752316885151868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877752316885151858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aca1ee1b2cd96c4990544a094d43206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 3
+--- !u!60 &8569356069377379390
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,22 +126,15 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &5877752316885151868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5877752316885151858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aca1ee1b2cd96c4990544a094d43206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 3
+  m_Points:
+    m_Paths:
+    - - {x: -0.43199602, y: -0.39897206}
+      - {x: -0.044760525, y: -0.50550395}
+      - {x: 0.45046407, y: -0.4119361}
+      - {x: 0.47798413, y: 0.10885236}
+      - {x: 0.23935632, y: 0.31836832}
+      - {x: -0.2574601, y: 0.3183683}
+      - {x: -0.45401198, y: 0.09038423}
 --- !u!50 &5877752316885151859
 Rigidbody2D:
   serializedVersion: 4
@@ -176,3 +183,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 2.2
+--- !u!95 &5869373370455778936
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877752316885151858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb0638f18a52e9f4da604ff5d94a6960, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
