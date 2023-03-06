@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static GameManager;
 
@@ -61,11 +62,11 @@ public class UIManager : MonoBehaviour
     }
     public void SetearObjetivos(NivelObjetivos objetivosNivel)
     {
-        Debug.Log("Seteado antes del bucle.");
+        //Debug.Log("Seteado antes del bucle.");
         for (int i = 0; i < objetivosNivel.plantas.Length; i++)
         {
             GameObject objetivoUI = GameObject.Instantiate(_prefabObjetivo, _panel3);
-            Debug.Log(objetivoUI.name);
+            //Debug.Log(objetivoUI.name);
             _insPrefObjs.Add(objetivoUI); //Añadimos a la lista el objetivo.
             
             Image icono = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverImagen();
@@ -73,9 +74,9 @@ public class UIManager : MonoBehaviour
 
             icono.sprite = objetivosNivel.plantas[i].icono;
             txtinvariable.text = "/ " + objetivosNivel.cantidad[i]; //Si sumas algo a un string todo se convierte a string.
-            Debug.Log("Seteado en el bucle al final.");
+            //Debug.Log("Seteado en el bucle al final.");
         }
-        Debug.Log("Seteado despues del bucle.");
+        //Debug.Log("Seteado despues del bucle.");
     }
     public void UpdatearObjetivosUI(int progreso, int index)
     {
@@ -130,7 +131,8 @@ public class UIManager : MonoBehaviour
     }
     public void SalirBoton()
     {
-
+        Time.timeScale = 1; //Volver a correr el tiempo.
+        SceneManager.LoadScene("MENU INICIAL");
     }
     #endregion
 }
