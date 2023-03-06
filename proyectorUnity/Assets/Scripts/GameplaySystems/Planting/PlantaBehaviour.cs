@@ -93,7 +93,7 @@ public class PlantaBehaviour : MonoBehaviour
             else if (dryTimer < 0)
             {
                 DrySprite(2);
-                _levelManager.PlantDied(_plantData);
+                _levelManager.RemovePlant(this);
                 _plantState = PlantState.Dead;
             }
 
@@ -147,6 +147,11 @@ public class PlantaBehaviour : MonoBehaviour
     {
         _levelManager.RemovePlant(this);
         Destroy(gameObject);
+    }
+
+    public ScriptablePlant GetPlantData()
+    {
+        return _plantData;
     }
 } 
 
