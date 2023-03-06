@@ -11,7 +11,7 @@ public class CameraShakeEffect : MonoBehaviour
     }
 
     Vector3 cameraIniPos;
-    public float temblorMagnitude = 0.075f, tiempoTemblor = 12f;
+    public float temblorMagnitude = 0.075f;
     public Camera mainCamera;
 
     public void ShakeYourButty() 
