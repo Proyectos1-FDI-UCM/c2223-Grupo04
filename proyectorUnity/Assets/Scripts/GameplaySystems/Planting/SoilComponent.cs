@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,13 +44,16 @@ public class SoilComponent : MonoBehaviour
     }
 
     /// <summary>
-    /// Llamado para quitar una planta del soil.
+    /// Comprueba si hay planta y llama a destruirla en caso de que haya.
     /// </summary>
     /// 
     public void RemovePlant()
     {
-        _isEmpty = true;
-        _myChild.GetComponent<PlantaBehaviour>().RemovePlant();
+        if(!_isEmpty)
+        {
+            _isEmpty = true;
+            _myChild.GetComponent<PlantaBehaviour>().RemovePlant();
+        }
     }
 
     public bool IsEmpty()
@@ -57,4 +61,12 @@ public class SoilComponent : MonoBehaviour
 
     public GameObject GetMyPLant() 
     { return _myChild; }
+
+    internal void RegarPlant()
+    {
+        if (!_isEmpty)
+        {
+            _myChild.GetComponent<PlantaBehaviour>().GetWatered();
+        }
+    }
 }

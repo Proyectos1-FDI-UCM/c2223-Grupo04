@@ -7,10 +7,9 @@ public class Regadera : Tool
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
         //TODO posibles animaciones en el futuro
-        if (objetoClicado.GetComponent<SoilComponent>() != null && objetoClicado.GetComponent<SoilComponent>().IsEmpty())
+        if (objetoClicado.GetComponent<SoilComponent>() != null)
         {
-            objetoClicado.transform.GetChild(0).GetComponent<PlantaBehaviour>().GetWatered();
-
+            objetoClicado.GetComponent<SoilComponent>().RegarPlant();
         }
     }
 }
