@@ -17618,9 +17618,9 @@ MonoBehaviour:
   _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
   _tornadoInstPos: {fileID: 1321925506}
   _tornadoRutas:
-  - {fileID: 4727401541229167564, guid: 64901aa559e744545b5358e88e4dd81c, type: 3}
-  - {fileID: 2746627479830806372, guid: a70ad24376eb5d54e8696651782344ca, type: 3}
-  - {fileID: 5557376012212972651, guid: 38c07529f3018bd40a8338a1d60f71e7, type: 3}
+  - {fileID: 6495072795260882660, guid: 64901aa559e744545b5358e88e4dd81c, type: 3}
+  - {fileID: 2602182068909468956, guid: a70ad24376eb5d54e8696651782344ca, type: 3}
+  - {fileID: 4130524772273002302, guid: 38c07529f3018bd40a8338a1d60f71e7, type: 3}
 --- !u!4 &1321925506
 Transform:
   m_ObjectHideFlags: 0
