@@ -27,6 +27,10 @@ public class LevelManager : MonoBehaviour
     }
 
     #region methods
+    /// <summary>
+    /// Comprueba si se cumplen los objetivos del nivel.
+    /// En caso afirmativo llama al GameManager para notifiar de victoria.
+    /// </summary>
     private void ComprobarComplecion()
     {
         int i = 0;
@@ -57,11 +61,10 @@ public class LevelManager : MonoBehaviour
         GameManager.Instance._uIManager.UpdatearObjetivosUI(progreso[index], index);
         ComprobarComplecion();
     }
-
     /// <summary>
-    /// Reduce en uno el contador de objetivos del tipo de planta pasada como parámetro.
+    /// Quita la planta del level manager, también llama a reducir el contador si es pertinente.
     /// </summary>
-    /// <param name="scriptablePlant">El tipo de planta que se ha "perdido"</param>
+    /// <param name="planta">El componente de la planta a eliminar.</param>
     public void RemovePlant(PlantaBehaviour planta)
     {
         if(planta.GetPlantState() == PlantaBehaviour.PlantState.Drying || planta.GetPlantState() == PlantaBehaviour.PlantState.Dead)
@@ -72,6 +75,10 @@ public class LevelManager : MonoBehaviour
         plantas.Remove(planta);
     }
 
+    /// <summary>
+    /// Reduce en uno el contador de objetivos del tipo de planta pasada como parámetro.
+    /// </summary>
+    /// <param name="scriptablePlant">El tipo de planta que se ha "perdido".</param>
     public void DiscountPlant(ScriptablePlant scriptablePlant)
     {
         int index = FindIndex(scriptablePlant);
@@ -99,7 +106,7 @@ public class LevelManager : MonoBehaviour
     /// <summary>
     /// Busca de entre todas las plantas del nivel una que esté crecida del todo.
     /// </summary>
-    /// <returns>Un PlantaBeahavior adecuado, null si no ha encontrado ninguno</returns>
+    /// <returns>Un PlantaBeahavior adecuado, null si no ha encontrado ninguno.</returns>
     public PlantaBehaviour GetGrownPlant()
     {
         PlantaBehaviour planta = null;
@@ -111,7 +118,6 @@ public class LevelManager : MonoBehaviour
                 plantasGrowadas.Add(plantas[c]);
             }
         }
-        //si no ha encontrado ninguna planta crecida, devuelve nullz
         if (plantasGrowadas.Any())
             planta = plantasGrowadas[UnityEngine.Random.Range(0, plantasGrowadas.Count)];
         return planta;

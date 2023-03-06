@@ -13,6 +13,7 @@ public class SoilComponent : MonoBehaviour
     private LevelManager _levelManager;
 
     [SerializeField]
+    [Tooltip("Prefab a generar como hijo sobre este soil, por ejemplo un obstáculo removible")]
     private GameObject _childPrefab;
     private GameObject _myChild;
     private void Start()
@@ -25,10 +26,14 @@ public class SoilComponent : MonoBehaviour
         _isEmpty = true;
     }
 
+    /// <summary>
+    /// Instancia _myChild como hijo a partir del tranform de este soil.
+    /// </summary>
     public void Instanciar()
     {
         _myChild = Instantiate(_childPrefab,transform.position, Quaternion.identity, transform);
     }
+
     /// <summary>
     /// Planta la planta que le pases en el soil.
     /// </summary>
@@ -55,13 +60,9 @@ public class SoilComponent : MonoBehaviour
             _myChild.GetComponent<PlantaBehaviour>().RemovePlant();
         }
     }
-
-    public bool IsEmpty()
-    { return _isEmpty; }
-
-    public GameObject GetMyPLant() 
-    { return _myChild; }
-
+    /// <summary>
+    /// Si hay planta, riega.
+    /// </summary>
     internal void RegarPlant()
     {
         if (!_isEmpty)
@@ -69,4 +70,11 @@ public class SoilComponent : MonoBehaviour
             _myChild.GetComponent<PlantaBehaviour>().GetWatered();
         }
     }
+
+    public bool IsEmpty()
+    { return _isEmpty; }
+
+    public GameObject GetMyPLant() 
+    { return _myChild; }
+
 }

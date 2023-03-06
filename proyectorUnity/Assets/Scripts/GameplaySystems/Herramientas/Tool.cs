@@ -22,5 +22,10 @@ public abstract class Tool : MonoBehaviour
         gameObject.GetComponent<Renderer>().enabled = true;
     }
 
+    /// <summary>
+    /// La función a realizar al hacer clic con una herramienta
+    /// </summary>
+    /// <param name="objetoClicado">El objeto clicado lol</param>
+    /// <param name="inventoryController">El inventario de Charlie</param>
     public abstract void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController);
 }

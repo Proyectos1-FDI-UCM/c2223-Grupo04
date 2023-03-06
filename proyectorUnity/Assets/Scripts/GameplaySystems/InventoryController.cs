@@ -29,7 +29,11 @@ public class InventoryController : MonoBehaviour
             toolObject.GetComponent<Tool>().DropTool();
         }
     }
-
+    /// <summary>
+    /// Comprueba si el objeto está al alcance de Charlie. En caso afirmativo, realiza la acción de clic de la herramienta.
+    /// </summary>
+    /// <param name="objetoClicado">El objeto clicado xd</param>
+    /// <param name="mousePos">La posición del ratón en el momento del clic</param>
     public void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
         if (_tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < _distanciaMin)
@@ -37,14 +41,19 @@ public class InventoryController : MonoBehaviour
             _tool.GetComponent<Tool>().OnClickFunction(objetoClicado, this);
         }
     }
-
+    /// <summary>
+    /// Guarda la herramienta en el inventario.
+    /// </summary>
+    /// <param name="toolObject">La herramienta a guardar</param>
     public void PickUpTool(GameObject toolObject)
     {
         _tool = toolObject;
         GameManager.Instance._uIManager.changeInventory(_tool);
     }
 
-    //Lo que pasa cuando sueltas una herramienta
+    /// <summary>
+    /// Quita la herramienta que haya en el inventario.
+    /// </summary>
     public void RemoveTool()
     {
         GameManager.Instance._uIManager.changeInventory(null);

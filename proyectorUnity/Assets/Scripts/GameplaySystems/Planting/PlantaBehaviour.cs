@@ -10,11 +10,12 @@ public class PlantaBehaviour : MonoBehaviour
     [HideInInspector]
     private bool _isSoilFertile;
     [SerializeField]
+    [Tooltip("Valor por el que multiplicar el crecimiento en caso de ser soil fertil")]
     private float fertileMultiplier;
     private LevelManager _levelManager;
     //Variables de control de crecimiento (temporizador)
-    private float growTimer;
-    private float dryTimer;
+    private float growTimer, dryTimer;
+    private int _currentGrowSprite, _currentDrySprite;
 
     public enum PlantState
     {
@@ -23,12 +24,9 @@ public class PlantaBehaviour : MonoBehaviour
         Drying,
         Dead
     }
-
     private PlantState _plantState;
-    private int _currentGrowSprite, _currentDrySprite;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         _levelManager = GameManager.Instance._levelManager;
@@ -100,7 +98,11 @@ public class PlantaBehaviour : MonoBehaviour
         }
 
     }
-
+    /// <summary>
+    /// Configura la planta al ser creada.
+    /// </summary>
+    /// <param name="isSoilFertil">Indica si el soil es fertil</param>
+    /// <param name="plantData">El tipo de planta</param>
     public void SetUpPlant(bool isSoilFertil, ScriptablePlant plantData)
     {
         _plantData = plantData;
@@ -119,6 +121,9 @@ public class PlantaBehaviour : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[_currentDrySprite];
     }
 
+    /// <summary>
+    /// Riega la planta. Aplicando los distintos calculos y lógicas pertinentes.
+    /// </summary>
     public void GetWatered()
     {
         if (_plantState == PlantState.Growing)
@@ -138,15 +143,19 @@ public class PlantaBehaviour : MonoBehaviour
         }
 
     }
-    public PlantState GetPlantState()
-    {
-        return _plantState;
-    }
 
+    /// <summary>
+    /// Quita la planta, llamando al level manager y destruyendo el propio gameObject.
+    /// </summary>
     public void RemovePlant()
     {
         _levelManager.RemovePlant(this);
         Destroy(gameObject);
+    }
+
+    public PlantState GetPlantState()
+    {
+        return _plantState;
     }
 
     public ScriptablePlant GetPlantData()
