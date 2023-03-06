@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443449a609654c54d8245771649a721d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _palaAnim: {fileID: 0}
+  _palaAnim: {fileID: 1038624117399638149, guid: 0e55f807d31fbdb48b8473816f7c3c90, type: 3}
 --- !u!61 &-6435339257228844745
 BoxCollider2D:
   m_ObjectHideFlags: 0

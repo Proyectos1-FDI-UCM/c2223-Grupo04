@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2bcba55d31ea841ab7e2958b008ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _regaderaAnim: {fileID: 2651751205311101106, guid: 4e84bbc165c0f614c8b47565dc911094, type: 3}
 --- !u!61 &6077798011693344209
 BoxCollider2D:
   m_ObjectHideFlags: 0
