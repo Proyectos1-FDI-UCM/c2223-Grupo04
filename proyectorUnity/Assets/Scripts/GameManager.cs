@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
         }
-        if (Input.GetKeyDown(KeyCode.P)) //Pasar del Game a la Pausa.
+        if (Input.GetKeyDown(KeyCode.P) && _state == GameStates.GAME) //Pasar del Game a la Pausa.
         {
             _uIManager.Pausar();
             Time.timeScale = 0; //Parar el tiempo.

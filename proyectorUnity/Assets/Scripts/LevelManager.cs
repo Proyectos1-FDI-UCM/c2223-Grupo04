@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
         bool complecion = true;
         while(i < plantasObjetivo.Length && complecion)
         {
-            complecion = cantidadObjetivo[i] < progreso[i];
+            complecion = cantidadObjetivo[i] <= progreso[i];
             i++;
         }
 
