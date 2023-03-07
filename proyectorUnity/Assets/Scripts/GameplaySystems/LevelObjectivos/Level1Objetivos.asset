@@ -15,4 +15,4 @@ MonoBehaviour:
   plantas:
   - {fileID: 11400000, guid: 4c6464484a77e1844ab068ac8938cb6a, type: 2}
   - {fileID: 11400000, guid: 6238c1797f8d5d64f905c240dd818a54, type: 2}
-  cantidad: 0a00000008000000
+  cantidad: 0800000006000000

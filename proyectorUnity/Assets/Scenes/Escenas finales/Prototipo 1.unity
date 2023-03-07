@@ -17613,7 +17613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965e81ca3b334d343947d7de2f8f7113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tEntreTornados: 20
+  _tEntreTornados: 30
   _tMul: 0
   _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
   _tornadoInstPos: {fileID: 1321925506}

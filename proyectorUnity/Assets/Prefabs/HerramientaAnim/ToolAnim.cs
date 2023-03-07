@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ToolAnim : MonoBehaviour
 {
-    float _timeToDestroy;
+    public float _timeToDestroy;
     Animator _anim;
 
     // Start is called before the first frame update

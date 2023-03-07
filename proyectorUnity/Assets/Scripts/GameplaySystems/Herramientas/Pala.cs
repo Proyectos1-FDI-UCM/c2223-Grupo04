@@ -11,12 +11,15 @@ public class Pala : Tool
         //TODO posibles animaciones en el futuro
         if (objetoClicado.GetComponent<SoilComponent>() != null)
         {
-            GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            if (!objetoClicado.GetComponent<SoilComponent>()._isEmpty)
+            {
+                GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            }
             objetoClicado.GetComponent<SoilComponent>().RemovePlant();
         } else if(objetoClicado.GetComponent<ObstacleBehaviour>() != null)
         {
-            GameObject.Instantiate(_palaAnim, objetoClicado.transform.parent);
-            objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle();
+            GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle(.75f);
         }
 
     }
