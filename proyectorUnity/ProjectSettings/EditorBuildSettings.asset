@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenas finales/Prototipo 1.unity
     guid: 90a5a7e8152bac64a9c05c97b175114f
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: 4e500ee7be4694944b4b0fd588b6cc12
   m_configObjects: {}
