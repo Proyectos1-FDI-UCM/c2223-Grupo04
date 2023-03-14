@@ -22,7 +22,7 @@ public class SmoothCameraFollow : MonoBehaviour
     }
     private void Start()
     {
-        target = PlayerController.Instance.transform;
+        target = GameManager.Instance._player.transform;
     }
 
     // Update is called once per frame

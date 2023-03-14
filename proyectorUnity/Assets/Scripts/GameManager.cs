@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public UIManager _uIManager;
     /// <summary>
     /// Instancia del GameManager
     /// </summary>
     public static GameManager Instance { get; private set; }
+    [SerializeField]
+    public GameObject _player;
+    public UIManager _uIManager;
     /// <summary>
     /// Estados de juego
     /// </summary>
