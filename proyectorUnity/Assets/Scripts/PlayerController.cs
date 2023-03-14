@@ -18,14 +18,15 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        GameManager.Instance._player = gameObject;
     }
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
-        GameManager.Instance._player = gameObject;
     }
+
     private void Update()
     {
         _anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));

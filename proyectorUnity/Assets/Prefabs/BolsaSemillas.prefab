@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e847988e0a7c7c94cb23ff859d87b39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TipoDePlanta: {fileID: 11400000, guid: 68eba17c8dab7404296dbeac1f2039a4, type: 2}
+  TipoDePlanta: {fileID: 11400000, guid: 1876dbe7b58332745a9168171358fbfe, type: 2}
   _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
 --- !u!61 &5010605649492911348
 BoxCollider2D:
