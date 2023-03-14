@@ -41,7 +41,7 @@ public class TornadoSpawner : MonoBehaviour
     public void NewTornadoTime()
     {
         StartCoroutine(TiempoSpawn());
-        SmoothCameraFollow.Instance.target = PlayerController.Instance.gameObject.transform;
+        SmoothCameraFollow.Instance.target = GameManager.Instance._player.transform;
     }
 
     IEnumerator TiempoSpawn()
@@ -49,7 +49,7 @@ public class TornadoSpawner : MonoBehaviour
 
         yield return new WaitForSeconds(_tEntreTornados + _tMul); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
         _tMul = (10 * GameManager.Instance._nTornados);//Suma el multiplicador al de tiempo
-        PlayerController.Instance._irACasa = true;
+        GameManager.Instance._player.GetComponent<PlayerController>()._irACasa = true;
         
         //Elige una ruta random de las prefijadas
         int _idRuta = Random.Range(0, _tornadoRutas.Length);

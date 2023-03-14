@@ -9,19 +9,6 @@ public class PlayerController : MonoBehaviour
     Animator _anim;
     Rigidbody2D _rb;
     
-    /// <summary>
-    /// Instancia del PlayerController
-    /// </summary>
-    public static PlayerController Instance { get; private set; }
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-    private void OnEnable()
-    {
-        GameManager.Instance._player = gameObject;
-    }
     private void Start()
     {
         _anim = GetComponent<Animator>();
