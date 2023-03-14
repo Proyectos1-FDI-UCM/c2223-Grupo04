@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 192.5}
-  m_SizeDelta: {x: -600, y: -415}
+  m_AnchoredPosition: {x: 0, y: 143.85}
+  m_SizeDelta: {x: -418, y: -317.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107680469
 MonoBehaviour:
@@ -282,7 +282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 118392649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2104565473}
+        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+        m_MethodName: CambiaEscena2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: Prototipo1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &118392649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,11 +652,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 140, y: 140}
-  m_Spacing: {x: 830.1, y: 47.3}
+  m_CellSize: {x: 140, y: 114.4}
+  m_Spacing: {x: 506.9, y: 43.8}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &347380484
@@ -748,9 +760,9 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 160, y: 160}
-  m_Spacing: {x: 128.2, y: 21.01}
-  m_Constraint: 0
+  m_CellSize: {x: 120, y: 120}
+  m_Spacing: {x: 31.6, y: 26.4}
+  m_Constraint: 2
   m_ConstraintCount: 2
 --- !u!1 &584546066
 GameObject:
@@ -1866,8 +1878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -51.85}
-  m_SizeDelta: {x: 0, y: -103.7}
+  m_AnchoredPosition: {x: 0, y: -29.84}
+  m_SizeDelta: {x: 10.600001, y: -59.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275019087
 MonoBehaviour:
@@ -2169,7 +2181,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1487474146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2104565473}
+        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+        m_MethodName: CambiaEscena2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1487474146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,6 +2856,7 @@ GameObject:
   - component: {fileID: 2104565471}
   - component: {fileID: 2104565470}
   - component: {fileID: 2104565469}
+  - component: {fileID: 2104565473}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2868,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2921,6 +2946,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2104565473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104565468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f607d6a61edefa0479052b93e7b78d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144317048
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LevelSelector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    /*public void CambiaEscena1(string nombreEscena) 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+        SceneManager.LoadScene(nombreEscena);
+    }*/
+    public void CambiaEscena2(int numeroEscena) 
     {
-        
+        SceneManager.LoadScene(numeroEscena);
     }
 }
