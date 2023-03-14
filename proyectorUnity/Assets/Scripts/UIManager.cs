@@ -129,10 +129,10 @@ public class UIManager : MonoBehaviour
         _gameUI.SetActive(true);
         _pausaUI.SetActive(false);
     }
-    public void SalirBoton()
+    public void SalirBoton(int id)
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
-        SceneManager.LoadScene("MENU INICIAL");
+        SceneManager.LoadScene(id);
     }
     #endregion
 }
