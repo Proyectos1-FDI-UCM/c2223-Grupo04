@@ -43455,7 +43455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4cb456f1b5aa4a85bd6f02866d943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 1940942771}
   _uIManager: {fileID: 281525519}
   _state: 0
   _nTornados: 0
