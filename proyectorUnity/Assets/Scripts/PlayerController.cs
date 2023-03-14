@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,9 +17,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    private void OnEnable()
+    {
         GameManager.Instance._player = gameObject;
     }
-
     private void Start()
     {
         _anim = GetComponent<Animator>();
