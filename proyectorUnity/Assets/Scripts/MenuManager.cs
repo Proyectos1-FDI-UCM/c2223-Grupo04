@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     #region methods
     public void PlayBoton()
     {
-        SceneManager.LoadScene("Prototipo 1");
+        SceneManager.LoadScene("LevelSelector");
     }
     public void MenuBoton()
     {

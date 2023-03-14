@@ -14,4 +14,8 @@ public class LevelSelector : MonoBehaviour
     {
         SceneManager.LoadScene(numeroEscena);
     }
+    public void ExitBoton()
+    {
+        SceneManager.LoadScene("MENU INICIAL");
+    }
 }
