@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public Transform _casa;
     Animator _anim;
     Rigidbody2D _rb;
-    
+
     private void Start()
     {
         _anim = GetComponent<Animator>();

@@ -51,9 +51,13 @@ public class InputController : MonoBehaviour
 
 
 
-                if(objeto.GetComponent<Tool>() != null)
+                if (objeto.GetComponent<Tool>() != null)
                 {
                     inventoryController.TryPickUpTool(objeto, mousePos);
+                }
+                else if (LayerMask.LayerToName(objeto.layer) == "NPC") 
+                {
+                    objeto.GetComponent<DialogosInGame>().Bocadillo();
                 }
                 else //En caso de no ser un tool
                 {
