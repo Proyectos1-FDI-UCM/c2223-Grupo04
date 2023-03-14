@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+        GameManager.Instance._player = gameObject;
     }
     private void Update()
     {
