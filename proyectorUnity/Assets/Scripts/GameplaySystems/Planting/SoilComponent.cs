@@ -40,12 +40,12 @@ public class SoilComponent : MonoBehaviour
     public void Plant(GameObject plantPrefab, ScriptablePlant tipoPlanta)
     {
         //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
-        PlantaBehaviour plantBehaviour = Instantiate(plantPrefab, transform.position, Quaternion.identity, transform).GetComponent<PlantaBehaviour>();
+        _myChild = Instantiate(plantPrefab, transform.position, Quaternion.identity, transform);
+        PlantaBehaviour plantBehaviour = _myChild.GetComponent<PlantaBehaviour>();
         //La configuramos
         plantBehaviour.SetUpPlant(_isFertile, tipoPlanta);
         _isEmpty = false;
-        _myChild = transform.GetChild(0).gameObject;
-        _levelManager.AddPlant(_myChild.GetComponent<PlantaBehaviour>());
+        _levelManager.AddPlant(plantBehaviour);
     }
 
     /// <summary>
