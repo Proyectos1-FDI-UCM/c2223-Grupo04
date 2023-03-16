@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     [SerializeField]
     public GameObject _player;
+    [SerializeField]
     public UIManager _uIManager;
+    [SerializeField]
+    public TornadoSpawner _tornadoSpawner;
     /// <summary>
     /// Estados de juego
     /// </summary>
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
     public void NuevoTornado()
     {
         _nTornados++;
-        TornadoSpawner.Instance.NewTornadoTime();
+        _tornadoSpawner.NewTornadoTime();
         UIManager.Instance.NuevoTiempoDeTornado();
     }
     public void ChangeState(GameStates _newState)

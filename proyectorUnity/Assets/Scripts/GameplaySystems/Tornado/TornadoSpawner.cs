@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class TornadoSpawner : MonoBehaviour
 {
-    
-
-    /// <summary>
-    /// Singleton del spawner del tornado
-    /// </summary>
-    public static TornadoSpawner Instance { get; private set; }
     /// <summary>
     /// Tiempo que pasa entre tornados
     /// </summary>
@@ -62,9 +56,5 @@ public class TornadoSpawner : MonoBehaviour
         Camera.main.GetComponent<SmoothCameraFollow>().target = _tornado.transform.GetChild(0).transform;
         //Asigna la ruta al tornado
         _tornado.GetComponent<TornadoController>()._tornadoPositions = _ruta;
-    }
-    private void Awake()
-    {
-        Instance = this;
     }
 }

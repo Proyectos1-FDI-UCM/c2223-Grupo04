@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     #region methods
     public void NuevoTiempoDeTornado() //Es llamado por el GameManager para coger el nuevo tiempo del nuevo tornado.
     {
-        _time = TornadoSpawner.Instance._tMul + TornadoSpawner.Instance._tEntreTornados; 
+        _time = GameManager.Instance._tornadoSpawner._tMul + GameManager.Instance._tornadoSpawner._tEntreTornados; 
     }
     public void changeInventory(GameObject tool)
     {
