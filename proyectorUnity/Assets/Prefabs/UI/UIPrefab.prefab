@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 4282436252477643498}
   - component: {fileID: 4282436252477643502}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UIPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

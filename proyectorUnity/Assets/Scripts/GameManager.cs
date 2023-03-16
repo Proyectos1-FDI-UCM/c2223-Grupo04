@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _uIManager.enabled = true;
     }
 
     #region methods

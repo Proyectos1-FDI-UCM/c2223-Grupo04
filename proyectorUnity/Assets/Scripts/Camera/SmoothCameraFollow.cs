@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class SmoothCameraFollow : MonoBehaviour
 {
-    /// <summary>
-    /// Instancia del SmoothCameraFactor
-    /// </summary>
-    public static SmoothCameraFollow Instance { get; private set; }
 
     public Transform target; //Variable que determina el objeto a trackear
     [SerializeField]
@@ -18,7 +14,7 @@ public class SmoothCameraFollow : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        gameObject.transform.parent = null;
     }
     private void Start()
     {

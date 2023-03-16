@@ -56,7 +56,7 @@ public class TornadoController : MonoBehaviour
         else if((transform.position-_startpos).magnitude > 0.5f) //El tornado se destruye al llegar al último punto
         {
             Destroy(gameObject);
-            SmoothCameraFollow.Instance.target = GameManager.Instance._player.transform;
+            Camera.main.GetComponent<SmoothCameraFollow>().target = GameManager.Instance._player.transform;
         }
 
     }
