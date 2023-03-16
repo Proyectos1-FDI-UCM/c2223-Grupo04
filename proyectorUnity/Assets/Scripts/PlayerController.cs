@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
         if (_irACasa) //(&& _casa.position - transform.position).magnitude > 0.5)
         {
-            GetComponent<MovementController>().Stop();
+            //GetComponent<MovementController>().Stop();
             //transform.position = Vector2.MoveTowards(transform.position, _casa.position, GetComponent<MovementController>()._speed * Time.deltaTime);
             transform.position = _casa.position;
             _irACasa = false;

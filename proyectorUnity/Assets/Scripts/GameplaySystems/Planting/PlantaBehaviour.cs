@@ -148,7 +148,7 @@ public class PlantaBehaviour : MonoBehaviour
     /// Quita la planta, llamando al level manager y destruyendo el propio gameObject.
     /// </summary>
     public void RemovePlant()
-    {
+    {        
         _levelManager.RemovePlant(this);
         Destroy(gameObject);
     }

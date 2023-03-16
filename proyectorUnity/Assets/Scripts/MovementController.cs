@@ -18,6 +18,12 @@ public class MovementController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    public void Move(float h, float v)
+    {
+        _direction = new Vector2(h, v);
+        _rigidbody2D.velocity = _direction * _speed;
+    } 
+    /*
     private void LateUpdate()
     {
         _rigidbody2D.velocity = _direction.normalized * _speed;
@@ -48,5 +54,5 @@ public class MovementController : MonoBehaviour
     {
         if (_direction.x == 0)
             _direction.x = 1;
-    }
+    }*/
 }

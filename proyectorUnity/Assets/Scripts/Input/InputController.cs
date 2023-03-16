@@ -9,6 +9,8 @@ public class InputController : MonoBehaviour
 {
     MovementController movementController;
     InventoryController inventoryController;
+    float _h;
+    float _v;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,10 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _h = Input.GetAxisRaw("Horizontal");
+        _v = Input.GetAxisRaw("Vertical");
+        movementController.Move(_h, _v);
+        /*
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
             movementController.Stop();
         else
@@ -33,7 +39,7 @@ public class InputController : MonoBehaviour
                 movementController.Down();
             if (Input.GetKey(KeyCode.D))
                 movementController.Right();
-        }
+        }*/
 
         if (Input.GetMouseButtonDown(0))
         {

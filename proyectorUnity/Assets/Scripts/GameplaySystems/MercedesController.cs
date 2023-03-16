@@ -75,7 +75,7 @@ public class MercedesController : MonoBehaviour
     /// </summary>
     private void Comer()
     {
-        planta.RemovePlant();
+        planta.transform.parent.GetComponent<SoilComponent>().RemovePlant();
         estado = MercheStates.Esperando;
         GenerateEatTime();
     }

@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5877752316885151871}
   - component: {fileID: 5877752316885151870}
-  - component: {fileID: 8569356069377379390}
+  - component: {fileID: 3099144953878257305}
   - component: {fileID: 5877752316885151859}
   - component: {fileID: 5877752316885151868}
   - component: {fileID: 5877752316885151864}
   - component: {fileID: 1083681086067009237}
   - component: {fileID: 5869373370455778936}
+  - component: {fileID: 5894849836583197850}
   m_Layer: 0
   m_Name: Charlie UwU
   m_TagString: Untagged
@@ -91,8 +92,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8569356069377379390
-PolygonCollider2D:
+--- !u!61 &3099144953878257305
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,7 +105,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,15 +115,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.43199602, y: -0.39897206}
-      - {x: -0.044760525, y: -0.50550395}
-      - {x: 0.45046407, y: -0.4119361}
-      - {x: 0.47798413, y: 0.10885236}
-      - {x: 0.23935632, y: 0.31836832}
-      - {x: -0.2574601, y: 0.3183683}
-      - {x: -0.45401198, y: 0.09038423}
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 0.75}
+  m_EdgeRadius: 0
 --- !u!50 &5877752316885151859
 Rigidbody2D:
   serializedVersion: 4
@@ -204,6 +199,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5894849836583197850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877752316885151858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8acb79760b6a30d4280f8ea0ca55e90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanciaMin: 2.2
 --- !u!1 &8101480800388054540
 GameObject:
   m_ObjectHideFlags: 0
