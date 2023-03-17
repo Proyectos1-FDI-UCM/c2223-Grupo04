@@ -31716,6 +31716,18 @@ PrefabInstance:
       propertyPath: _tEntreTornados
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1342967367626995690, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342967367626995690, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911450, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Name
       value: GameManager
