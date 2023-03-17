@@ -14,6 +14,16 @@ public class GameManager : MonoBehaviour
     public UIManager _uIManager;
     [SerializeField]
     public TornadoSpawner _tornadoSpawner;
+    [SerializeField]
+    public bool _lluviaFloja = false;
+    [SerializeField]
+    public bool _lluviaFuerte = false;
+    [SerializeField]
+    private int _nTornadosFloja;
+    [SerializeField]
+    private int _nTornadosFuerte;
+    [SerializeField]
+    private Transform _soilsPapas;
     /// <summary>
     /// Estados de juego
     /// </summary>
@@ -41,6 +51,18 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         _tornadoSpawner.NewTornadoTime();
         UIManager.Instance.NuevoTiempoDeTornado();
+
+       // transform.GetChildCount(_soilsPapas.GetChild);
+        
+        //for (int i = 0; i < length; i++)
+        {
+
+        }
+
+        //transform.GetChild(i);
+
+        _lluviaFloja = _nTornados >= _nTornadosFloja;
+        _lluviaFuerte = _nTornados >= _nTornadosFuerte;
     }
     public void ChangeState(GameStates _newState)
     {
@@ -95,6 +117,7 @@ public class GameManager : MonoBehaviour
     {
         _nTornados = 0;
         ChangeState(GameStates.INTRO);
+        _nTornadosFuerte = Random.Range(_nTornadosFloja, _nTornadosFloja + 6);
     }
 
     // Update is called once per frame

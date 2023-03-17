@@ -51,7 +51,6 @@ public class SoilComponent : MonoBehaviour
     /// <summary>
     /// Comprueba si hay planta y llama a destruirla en caso de que haya.
     /// </summary>
-    /// 
     public void RemovePlant()
     {
         if(!_isEmpty)
