@@ -4804,6 +4804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911450, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -36407,7 +36411,7 @@ GameObject:
   m_Layer: 0
   m_Name: PuertaCasa
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
