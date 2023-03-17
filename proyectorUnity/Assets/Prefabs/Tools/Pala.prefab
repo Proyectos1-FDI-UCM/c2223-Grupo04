@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -6435339257228844745}
   - component: {fileID: 3555167163678909704}
   m_Layer: 0
-  m_Name: PalaPlaceholder
+  m_Name: Pala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

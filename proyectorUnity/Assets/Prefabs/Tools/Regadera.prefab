@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6077798011693344209}
   - component: {fileID: 1469443648449278991}
   m_Layer: 0
-  m_Name: RegaderaPlaceHolder
+  m_Name: Regadera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

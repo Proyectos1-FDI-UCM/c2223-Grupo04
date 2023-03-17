@@ -12,7 +12,7 @@ public class MercedesController : MonoBehaviour
     float timeForEating;
     Transform transformPlanta;
     PlantaBehaviour planta;
-    [SerializeField]
+    //[SerializeField]
     MercheStates estado;
     enum MercheStates
     {
