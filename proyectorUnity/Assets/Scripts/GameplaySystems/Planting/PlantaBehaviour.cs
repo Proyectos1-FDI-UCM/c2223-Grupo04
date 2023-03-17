@@ -91,8 +91,8 @@ public class PlantaBehaviour : MonoBehaviour
             else if (dryTimer < 0)
             {
                 DrySprite(2);
-                _levelManager.RemovePlant(this);
                 _plantState = PlantState.Dead;
+                _levelManager.PlantaSeca(this);
             }
 
         }

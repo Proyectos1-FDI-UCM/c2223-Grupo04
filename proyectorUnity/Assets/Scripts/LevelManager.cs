@@ -57,7 +57,6 @@ public class LevelManager : MonoBehaviour
     {
         int index = FindIndex(scriptablePlant);
         progreso[index]++;
-        Debug.Log("Planta crecida" + progreso[index]);
         GameManager.Instance._uIManager.UpdatearObjetivosUI(progreso[index], index);
         ComprobarComplecion();
     }
@@ -67,19 +66,25 @@ public class LevelManager : MonoBehaviour
     /// <param name="planta">El componente de la planta a eliminar.</param>
     public void RemovePlant(PlantaBehaviour planta)
     {
-        if(planta.GetPlantState() == PlantaBehaviour.PlantState.Drying || planta.GetPlantState() == PlantaBehaviour.PlantState.Dead)
+        if(planta.GetPlantState() == PlantaBehaviour.PlantState.Drying)
         {
             ScriptablePlant scriptablePlant = planta.GetPlantData();
             DiscountPlant(scriptablePlant);
-        }   
+        }
         plantas.Remove(planta);
+    }
+
+    public void PlantaSeca(PlantaBehaviour planta)
+    {
+        ScriptablePlant scriptablePlant = planta.GetPlantData();
+        DiscountPlant(scriptablePlant);
     }
 
     /// <summary>
     /// Reduce en uno el contador de objetivos del tipo de planta pasada como parámetro.
     /// </summary>
     /// <param name="scriptablePlant">El tipo de planta que se ha "perdido".</param>
-    public void DiscountPlant(ScriptablePlant scriptablePlant)
+    private void DiscountPlant(ScriptablePlant scriptablePlant)
     {
         int index = FindIndex(scriptablePlant);
         progreso[index]--;
