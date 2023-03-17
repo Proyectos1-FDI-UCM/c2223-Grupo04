@@ -80,6 +80,14 @@ public class GameManager : MonoBehaviour
         }*/
         _uIManager.CambiarUISegunEstadoJuego();
     }
+
+    public void ChangeTutorialMode() //
+    {
+        _player.GetComponent<InventoryControllerTutorial>().enabled = false;
+        _player.GetComponent<InventoryController>().enabled = true;
+        //llamar a ui para q de mensaje final
+
+    }
     #endregion
 
     // Start is called before the first frame update

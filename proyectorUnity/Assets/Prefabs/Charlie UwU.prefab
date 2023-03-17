@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5877752316885151859}
   - component: {fileID: 5877752316885151868}
   - component: {fileID: 5877752316885151864}
-  - component: {fileID: 1083681086067009237}
   - component: {fileID: 5869373370455778936}
   - component: {fileID: 5894849836583197850}
   m_Layer: 0
@@ -166,19 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _irACasa: 0
   _casa: {fileID: 0}
---- !u!114 &1083681086067009237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5877752316885151858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8acb79760b6a30d4280f8ea0ca55e90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distanciaMin: 2.2
 --- !u!95 &5869373370455778936
 Animator:
   serializedVersion: 4

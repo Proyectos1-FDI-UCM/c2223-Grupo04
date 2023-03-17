@@ -11,13 +11,14 @@ public class UIManager : MonoBehaviour
     float _time;
 
     [SerializeField] TextMeshProUGUI _contador;
-    [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI;
+    [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI, _tutorialUI;
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
     [SerializeField]
     List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
     public NivelObjetivos objetivosnivel;
+
 
     public static UIManager Instance; //Para el singletone.
     
@@ -134,5 +135,16 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1; //Volver a correr el tiempo.
         SceneManager.LoadScene(id);
     }
+
+    public void TextoTutorial(string _texto)
+    {
+        _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = _texto;
+        _tutorialUI.SetActive(true);
+
+        Invoke("QuitarTextoTutorial", 3);
+    }
+
+    private void QuitarTextoTutorial()
+    { _tutorialUI.SetActive(false);}
     #endregion
 }

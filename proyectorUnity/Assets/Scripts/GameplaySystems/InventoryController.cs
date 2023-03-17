@@ -14,7 +14,7 @@ public class InventoryController : MonoBehaviour
     * Charlie coge el objeto, si se cumplen los requisitos.
     * Se debe pasar por parámetro, el objeto a coger y la posición del ratón en el clic.
     */
-    public void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
+    public virtual void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
     {
         //Debug.Log(Vector2.Distance(gameObject.transform.position, toolObject.transform.position));
 
@@ -34,7 +34,7 @@ public class InventoryController : MonoBehaviour
     /// </summary>
     /// <param name="objetoClicado">El objeto clicado xd</param>
     /// <param name="mousePos">La posición del ratón en el momento del clic</param>
-    public void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
+    public virtual void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
         if (_tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < _distanciaMin)
         {
