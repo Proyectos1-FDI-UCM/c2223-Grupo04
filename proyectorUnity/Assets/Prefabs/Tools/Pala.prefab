@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6033719825055070188}
   - component: {fileID: 973644212998609182}
   m_Layer: 0
-  m_Name: herramientas_2
+  m_Name: stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

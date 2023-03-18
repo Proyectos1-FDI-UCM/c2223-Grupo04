@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3875521789436672168}
   - component: {fileID: -5848966148111910550}
-  - component: {fileID: -7314265428236698645}
+  - component: {fileID: 8484919770324386638}
   m_Layer: 7
   m_Name: SoilFertil
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MonoBehaviour:
   _isFertile: 1
   _isEmpty: 0
   _childPrefab: {fileID: 0}
---- !u!61 &-7314265428236698645
+--- !u!61 &8484919770324386638
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,15 +65,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &9080763477600730666
 GameObject:
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 492699077, guid: 5a240c8ce4e858e42ba03ccb48359e49, type: 3}
+  m_Sprite: {fileID: 383946450, guid: 1c8a8687b4a66ef4e9553d46c88548a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

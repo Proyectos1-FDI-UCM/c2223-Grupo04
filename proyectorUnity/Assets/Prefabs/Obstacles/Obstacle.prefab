@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3154849034754614594}
   - component: {fileID: 1124555690544344951}
   - component: {fileID: 2147439123070552148}
-  - component: {fileID: 5422039932306337034}
+  - component: {fileID: 7624095860478079370}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstaculo
@@ -107,8 +107,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!60 &5422039932306337034
-PolygonCollider2D:
+--- !u!61 &7624095860478079370
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,18 +130,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.27552298, y: 0.5}
-      - {x: -0.16388866, y: 0.5}
-      - {x: -0.25312, y: 0.39707473}
-      - {x: -0.4010334, y: 0.28395075}
-      - {x: -0.5, y: 0.20505875}
-      - {x: -0.5, y: -0.2778982}
-      - {x: -0.44062006, y: -0.39311612}
-      - {x: 0.022168517, y: -0.40499204}
-      - {x: 0.02612719, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.28819072}
-      - {x: 0.46041334, y: 0.32749605}
-      - {x: 0.38291734, y: 0.3931161}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
