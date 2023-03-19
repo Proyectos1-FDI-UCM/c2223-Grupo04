@@ -259,6 +259,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 4.9999695
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942044946600741, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Text
+      value: "HOLA SOY GIUSEPPE. \nBienvenido al jard\xEDn de Mercedes la lombriz.
+        Este jard\xEDn tiene todas las herramientas y semillas en lecentro y las
+        zonas de plantados en \nlos laterales.\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
