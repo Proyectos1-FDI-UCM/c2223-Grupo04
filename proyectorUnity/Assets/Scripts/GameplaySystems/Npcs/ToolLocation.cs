@@ -8,25 +8,23 @@ public class ToolLocation : MonoBehaviour
     [SerializeField]
     bool isOcupied;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward); 
-        CheckCollidingTool(hit.collider.GetComponent<Tool>());
+        Debug.Log("Entrada colision" + gameObject.name);
+        if (CheckCollidingTool(collision.gameObject.GetComponent<Tool>()))
+            isOcupied = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        CheckCollidingTool(collision.collider.GetComponent<Tool>());
+        Debug.Log("Salida colision" + gameObject.name);
+        if(CheckCollidingTool(collision.gameObject.GetComponent<Tool>()))
+            isOcupied = false;
     }
 
-    private void OnCollisionExit(Collision collision)
+    private bool CheckCollidingTool(Tool tool)
     {
-        CheckCollidingTool(collision.collider.GetComponent<Tool>());
-    }
-
-    private void CheckCollidingTool(Tool tool)
-    {
-        isOcupied = tool != null;
+        return tool != null;
     }
 
     public bool IsOcupied()

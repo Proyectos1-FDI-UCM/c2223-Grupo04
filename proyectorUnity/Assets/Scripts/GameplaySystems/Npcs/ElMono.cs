@@ -20,11 +20,11 @@ public class ElMono : MonoBehaviour
 
     [SerializeField]
     float minTiempoMover, maxTiempoMover, monoSpeed;
-    
-    
+
+
     float tiempoMover;
     GameObject miHerramienta;
-
+    GameObject nuevaPosicion;
     enum EstadosMichael
     {
         Esperando,
@@ -43,38 +43,69 @@ public class ElMono : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(estado == EstadosMichael.Esperando)
+        if (estado == EstadosMichael.Esperando)
         {
             tiempoMover -= Time.deltaTime;
             if (tiempoMover < 0)
+            {
                 IrPorHerramienta();
+                GeneraTiempoMover();
+            }
         }
-        else if(estado == EstadosMichael.YendoAPorHerramienta)
+        else if (estado == EstadosMichael.YendoAPorHerramienta)
         {
             //Si la herramienta no está cogida, se va moviendo hacia ella. En caso de ser cogida, escoge otra.
-            if(!miHerramienta.GetComponent<Tool>().IsPickedUp())
+            if (!miHerramienta.GetComponent<Tool>().IsPickedUp())
             {
-                Vector2 direccion = transform.position - miHerramienta.transform.position;
-                transform.position = Vector2.MoveTowards(transform.position, miHerramienta.transform.position, monoSpeed * Time.deltaTime);
-                if (direccion.magnitude < 0.4)
+                if (MoverHacia(miHerramienta))
                     CogerHerramienta();
-            } else
+            }
+            else
             {
                 EscogerNuevaHerramienta();
             }
+        } else if (estado == EstadosMichael.MoviendoHerramienta)
+        {
+            if (MoverHacia(nuevaPosicion))
+                SoltarHerramienta();
         }
+    }
+
+    private bool MoverHacia(GameObject objetivo)
+    {
+        Vector2 direccion = transform.position - objetivo.transform.position;
+        transform.position = Vector2.MoveTowards(transform.position, objetivo.transform.position, monoSpeed * Time.deltaTime);
+        return direccion.magnitude < 0.4;
     }
 
     private void CogerHerramienta()
     {
+        EscogerNuevaPosition();
         miHerramienta.GetComponent<Collider2D>().enabled = false;
         miHerramienta.transform.SetParent(transform);
         estado = EstadosMichael.MoviendoHerramienta;
     }
 
+    private void EscogerNuevaPosition()
+    {
+        do
+            nuevaPosicion = posiblesPosiciones[Random.Range(0, posiblesPosiciones.Count)];
+        while (nuevaPosicion.GetComponent<ToolLocation>().IsOcupied());
+    }
+
     private void SoltarHerramienta()
     {
         miHerramienta.GetComponent<Collider2D>().enabled = true;
+        //La posición relativa al mundo de la herramienta al padre.
+        Vector3 posicionNueva = transform.InverseTransformPoint(miHerramienta.transform.position);
+        
+        //Saca todos los hijos del transform.
+        transform.DetachChildren();
+        //Convierte la herramienta a su nueva posición a través del padre.
+        miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
+
+        //Una vez soltada la herramienta, volver a espera
+        estado = EstadosMichael.Esperando;
     }
 
     private void GeneraTiempoMover()
