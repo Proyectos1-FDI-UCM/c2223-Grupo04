@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
 
     public static UIManager Instance; //Para el singletone.
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
     #region methods
     public void NuevoTiempoDeTornado() //Es llamado por el GameManager para coger el nuevo tiempo del nuevo tornado.
     {
-        _time = GameManager.Instance._tornadoSpawner._tMul + GameManager.Instance._tornadoSpawner._tEntreTornados; 
+        _time = GameManager.Instance._tornadoSpawner._tMul + GameManager.Instance._tornadoSpawner._tEntreTornados;
     }
     public void changeInventory(GameObject tool)
     {
@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
             _inventory.enabled = true;
             _inventory.sprite = tool.GetComponent<SpriteRenderer>().sprite;
         }
-        else 
+        else
         {
             _inventory.enabled = false; //desativamos el inventory para que no aparezca algo cuando se deja la herramienta o se usa la semilla.
         }
@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
             GameObject objetivoUI = GameObject.Instantiate(_prefabObjetivo, _panel3);
             //Debug.Log(objetivoUI.name);
             _insPrefObjs.Add(objetivoUI); //Añadimos a la lista el objetivo.
-            
+
             Image icono = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverImagen();
             TextMeshProUGUI txtinvariable = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverTxtInvariable();
 
@@ -92,6 +92,13 @@ public class UIManager : MonoBehaviour
             SetearObjetivos(objetivosnivel);
             _introUI.SetActive(true);
             _gameUI.SetActive(false);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
+        }
+        else if (GameManager.Instance._state == GameManager.GameStates.TUTORIAL)
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(true);
             _winUI.SetActive(false);
             _pausaUI.SetActive(false);
         }
@@ -136,15 +143,22 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(id);
     }
 
-    public void TextoTutorial(string _texto)
+    #region cosas tutorial
+    public void TextoTutorial(string _texto, float time)
     {
         _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = _texto;
         _tutorialUI.SetActive(true);
 
-        Invoke("QuitarTextoTutorial", 3);
+        Invoke("QuitarTextoTutorial", time);
     }
 
     private void QuitarTextoTutorial()
-    { _tutorialUI.SetActive(false);}
+    { _tutorialUI.SetActive(false); }
+
+    public void FinalTextoTutorial(string _texto)
+    {
+        _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>().text = _texto;
+    }
+    #endregion
     #endregion
 }

@@ -59,4 +59,9 @@ public class InventoryController : MonoBehaviour
         GameManager.Instance._uIManager.changeInventory(null);
         _tool = null;
     }
-}
+
+   public GameObject GetTool() 
+   {
+        return _tool; 
+   }
+}                                           

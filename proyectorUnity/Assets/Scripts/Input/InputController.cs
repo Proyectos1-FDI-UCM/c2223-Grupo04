@@ -18,6 +18,10 @@ public class InputController : MonoBehaviour
         //Obtiene el componente de movimiento del player
         movementController = GameManager.Instance._player.GetComponent<MovementController>();
         inventoryController = GameManager.Instance._player.GetComponent<InventoryController>();
+
+        if (GameManager.Instance._player.GetComponent<InventoryControllerTutorial>() != null)
+            inventoryController = GameManager.Instance._player.GetComponent<InventoryControllerTutorial>();
+
     }
 
     // Update is called once per frame
@@ -72,5 +76,14 @@ public class InputController : MonoBehaviour
                 }
             }
         }
+
+        
+    }
+
+    public void ChangeTutorialMode(GameObject toolObject)
+    {
+        inventoryController = GameManager.Instance._player.GetComponent<InventoryController>();
+        inventoryController.PickUpTool(toolObject);
+
     }
 }
