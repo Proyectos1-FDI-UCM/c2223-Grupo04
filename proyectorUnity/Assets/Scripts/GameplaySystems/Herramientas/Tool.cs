@@ -10,16 +10,31 @@ public abstract class Tool : MonoBehaviour
      * Los métodos virtual, ya tienen una programación "predeterminada". Pueden ser "sobrescritos" con override igualmente.
      */
 
+    //Indica si la herramienta ha sido cogida
+    bool pickedUp;
+
+    private void Start()
+    {
+        pickedUp = false;
+    }
+
     //Método para cuando el objeto es cogido.
     public virtual void PickUpTool()
     {
         //El objeto se vuelve invisible al ser recogido
         gameObject.GetComponent<Renderer>().enabled = false;
+        pickedUp = true;
     }
 
     public virtual void DropTool()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
+        pickedUp = false;
+    }
+
+    public virtual bool IsPickedUp()
+    {
+        return pickedUp;
     }
 
     /// <summary>
