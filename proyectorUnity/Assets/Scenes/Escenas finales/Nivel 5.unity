@@ -31728,7 +31728,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -79210,60 +79210,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
---- !u!1001 &2097663657561612272
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.9137657
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.746629
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 608636822044854589, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742819922587327011, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
-      propertyPath: m_Name
-      value: Ruta5 Nivel5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 39ea79fcac1583c47aa26e7d8124d0b4, type: 3}
