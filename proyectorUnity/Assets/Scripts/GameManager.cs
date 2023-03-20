@@ -54,18 +54,27 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         _tornadoSpawner.NewTornadoTime();
         UIManager.Instance.NuevoTiempoDeTornado();
-
-       // transform.GetChildCount(_soilsPapas.GetChild);
-        
-        //for (int i = 0; i < length; i++)
-        {
-
-        }
-
-        //transform.GetChild(i);
-
         _lluviaFloja = _nTornados >= _nTornadosFloja;
         _lluviaFuerte = _nTornados >= _nTornadosFuerte;
+
+        //Comprobación del número de tornados
+        if (_lluviaFuerte)
+        {
+            for (int i = 0; i < _soilsPapas.GetChildCount(); i++)
+            {
+                _soilsPapas.GetChild(i).GetComponent<SoilComponent>()._isFertile = true;
+            }
+
+        }
+        else if (_lluviaFloja) 
+        {
+            for (int i = 0; i < _soilsPapas.GetChildCount(); i++)
+            {
+                _soilsPapas.GetChild(i).GetComponent<SoilComponent>().RegarPlant();
+                print("la lluvia riega");
+            }
+        }
+        
     }
     public void ChangeState(GameStates _newState)
     {
@@ -133,7 +142,7 @@ public class GameManager : MonoBehaviour
     {
         _nTornados = 0;
         ChangeState(GameStates.INTRO);
-        _nTornadosFuerte = Random.Range(_nTornadosFloja, _nTornadosFloja + 6);
+        _nTornadosFuerte = _nTornadosFloja + 3;
     }
 
     // Update is called once per frame
