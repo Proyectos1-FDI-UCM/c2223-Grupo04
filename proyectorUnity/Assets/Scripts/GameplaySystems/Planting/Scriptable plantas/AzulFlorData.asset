@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb670222ee101a44389a3532c73ad603, type: 3}
   m_Name: AzulFlorData
   m_EditorClassIdentifier: 
-  GrowSpeed: 0
-  DrySpeed: 0
+  GrowSpeed: 20
+  DrySpeed: 30
   GrowingSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 153294229, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1254928252, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: 1772482630, guid: 983178a14a29153408b557b1e204eb56, type: 3}
+  - {fileID: -1511645348, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   DryingSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -621992037, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: 1808988729, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: -1009317456, guid: 136f4134d52208b40923383349747d91, type: 3}
   icono: {fileID: 1637709113, guid: f3d210fa28987e944a22dd2db2e4384d, type: 3}

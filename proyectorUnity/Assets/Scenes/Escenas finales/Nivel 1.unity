@@ -32084,7 +32084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1799222009
 Transform:
   m_ObjectHideFlags: 0
@@ -32804,6 +32804,7 @@ MonoBehaviour:
   - {fileID: 1297702874}
   - {fileID: 727300796}
   _dialogos: {fileID: 11400000, guid: 0e1e94587224cde448686fb365442955, type: 2}
+  _tiempoEspera: 0
 --- !u!4 &1979990521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
