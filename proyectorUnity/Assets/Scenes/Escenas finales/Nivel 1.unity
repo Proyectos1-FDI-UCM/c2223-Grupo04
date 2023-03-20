@@ -32518,7 +32518,7 @@ PrefabInstance:
     - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: TipoDePlanta
       value: 
-      objectReference: {fileID: 11400000, guid: 4c6464484a77e1844ab068ac8938cb6a, type: 2}
+      objectReference: {fileID: 11400000, guid: 534ccdbef3625f347bad0cecd9294c91, type: 2}
     - target: {fileID: 5010605649492911350, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_RootOrder
       value: 3
