@@ -8,7 +8,7 @@ public class Rampa : MonoBehaviour
     {
         if (collision.gameObject.transform.position.y > gameObject.transform.position.y)
         {
-            collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -16,7 +16,7 @@ public class Rampa : MonoBehaviour
         //collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         if (collision.gameObject.transform.position.y < gameObject.transform.position.y)
         {
-            collision.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         }
     }
 }
