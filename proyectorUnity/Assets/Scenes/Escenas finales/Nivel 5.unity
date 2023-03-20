@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2337214
 Transform:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.01
+      value: 3.7600002
       objectReference: {fileID: 0}
     - target: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29683,7 +29683,7 @@ Transform:
   - {fileID: 417345403}
   - {fileID: 1341342478}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1106906665
 PrefabInstance:
@@ -33320,7 +33320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3875521789436672168, guid: ef922484aa7268444b5ae035fec0bdf1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8300009
+      value: 3.76
       objectReference: {fileID: 0}
     - target: {fileID: 3875521789436672168, guid: ef922484aa7268444b5ae035fec0bdf1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37037,7 +37037,7 @@ Transform:
   - {fileID: 464591518}
   - {fileID: 1216727002}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783076011
 GameObject:
@@ -78313,7 +78313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254718, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254718, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -79094,7 +79094,7 @@ Transform:
   - {fileID: 871417811}
   - {fileID: 2337214}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1501942045570420904
 PrefabInstance:
@@ -79158,7 +79158,7 @@ PrefabInstance:
       objectReference: {fileID: 826999370}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_LocalPosition.x

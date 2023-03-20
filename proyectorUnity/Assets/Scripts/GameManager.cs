@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public enum GameStates
     {
-        INTRO, GAME, TORNADO, WIN, PAUSA
+        INTRO, TUTORIAL, GAME, TORNADO, WIN, PAUSA
     }
     public GameStates _state;
     /// <summary>
@@ -76,13 +76,21 @@ public class GameManager : MonoBehaviour
             gameObject.GetComponent<InputController>().enabled = false; //desacitvar el input
             Debug.Log("STATE: INTRO");
         }
+
+        if (_state == GameStates.TUTORIAL)
+        {
+            gameObject.GetComponent<InputController>().enabled = true; //activar el input
+            _player.GetComponent<InventoryControllerTutorial>().StartTutorial();
+            Debug.Log("STATE: TUTO");
+        }
+
         else if (_state == GameStates.GAME)
         {
             gameObject.GetComponent<InputController>().enabled = true; //activar el input
             NuevoTornado();
             Debug.Log("STATE: GAME");
-        } 
-        else if(_state==GameStates.TORNADO)
+        }
+        else if (_state == GameStates.TORNADO)
         {
             gameObject.GetComponent<InputController>().enabled = false; //desactivar el input
             _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input esté desactivado
@@ -103,10 +111,15 @@ public class GameManager : MonoBehaviour
         _uIManager.CambiarUISegunEstadoJuego();
     }
 
-    public void ChangeTutorialMode() //
+    public void ChangeTutorialMode(GameObject toolObject, string texto) //
     {
-        _player.GetComponent<InventoryControllerTutorial>().enabled = false;
-        _player.GetComponent<InventoryController>().enabled = true;
+        Destroy(_player.GetComponent<InventoryControllerTutorial>());
+        gameObject.GetComponent<InputController>().ChangeTutorialMode(toolObject);
+
+        _uIManager.FinalTextoTutorial(texto);
+        ChangeState(GameStates.INTRO);
+        
+
         //llamar a ui para q de mensaje final
 
     }
@@ -125,9 +138,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K)) NuevoTornado();
         
-        if (Input.GetMouseButtonDown(0) && _state == GameStates.INTRO) //Pasar de la Intro o la Pausa al Game.
+        if (_state == GameStates.INTRO && Input.GetMouseButtonDown(0)) //Pasar de la Intro o la Pausa al Game.
         {
-            GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
+            if (_player.GetComponent<InventoryControllerTutorial>() != null)
+                GameManager.Instance.ChangeState(GameManager.GameStates.TUTORIAL);
+            else
+                GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
         }
         if (Input.GetKeyDown(KeyCode.P) && _state == GameStates.GAME) //Pasar del Game a la Pausa.
         {

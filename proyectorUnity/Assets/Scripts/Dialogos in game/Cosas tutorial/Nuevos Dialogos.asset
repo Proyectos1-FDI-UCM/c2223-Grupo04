@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Nuevos Dialogos
   m_EditorClassIdentifier: 
   _dialogos:
-  - "Primero vamos a coger una semilla. Ac\xE9rcate a la bolsa y haz click."
+  - "Primero vamos a coger una semilla de tomates. Ac\xE9rcate a la bolsa y haz click."
   - "Muy bien. Ahora vamos a plantarla en el suelo. Recuerda, la tierra oscura es
     f\xE9rtil, y las plantas crecer\xE1n m\xE1s r\xE1pido, y no se secar\xE1n."
   - "Perfecto! Vamos a regarla. Si la regamos, crecer\xE1 m\xE1s r\xE1pido, y evitaremos
