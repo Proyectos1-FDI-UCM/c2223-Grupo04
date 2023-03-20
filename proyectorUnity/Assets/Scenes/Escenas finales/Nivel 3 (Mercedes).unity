@@ -6465,7 +6465,7 @@ PrefabInstance:
     - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: TipoDePlanta
       value: 
-      objectReference: {fileID: 11400000, guid: 1876dbe7b58332745a9168171358fbfe, type: 2}
+      objectReference: {fileID: 11400000, guid: fa650fceeadf8bd4c8c11c2271fd9179, type: 2}
     - target: {fileID: 5010605649492911350, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6524,7 +6524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
-      value: BolsaSemillasPatatas
+      value: FloresAmarillas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
@@ -8502,7 +8502,7 @@ PrefabInstance:
       objectReference: {fileID: -575065854, guid: b79d5517d69a5c44396379126a1e437b, type: 3}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
-      value: BolsaSemillas
+      value: Guisantes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
@@ -41837,7 +41837,7 @@ PrefabInstance:
     - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: TipoDePlanta
       value: 
-      objectReference: {fileID: 11400000, guid: 6238c1797f8d5d64f905c240dd818a54, type: 2}
+      objectReference: {fileID: 11400000, guid: d79aa03c804104e4a974b82ec3236bfc, type: 2}
     - target: {fileID: 5010605649492911350, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -41920,7 +41920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
-      value: BolsaSemillasZanahorias
+      value: FloresRojas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
@@ -42223,7 +42223,7 @@ PrefabInstance:
     - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: TipoDePlanta
       value: 
-      objectReference: {fileID: 11400000, guid: 4c6464484a77e1844ab068ac8938cb6a, type: 2}
+      objectReference: {fileID: 11400000, guid: 534ccdbef3625f347bad0cecd9294c91, type: 2}
     - target: {fileID: 5010605649492911350, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -42302,7 +42302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
-      value: BolsaSemillasTomates
+      value: FloresAzules
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
