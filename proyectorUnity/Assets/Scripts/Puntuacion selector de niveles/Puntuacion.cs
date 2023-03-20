@@ -5,6 +5,8 @@ using UnityEngine;
 public class Puntuacion : MonoBehaviour
 {
     [SerializeField]
+    private int _nivelActual;
+    [SerializeField]
     private int[] _numeroTornados;
     [SerializeField]
     private int[] _numeroPlantasSecas;
@@ -24,6 +26,11 @@ public class Puntuacion : MonoBehaviour
        
         DontDestroyOnLoad(gameObject);
     }
+    
+    public int GetNivelActual()
+    {
+        return _nivelActual;
+    }
 
     public int GetNumeroTornados(int nivel)
     {
@@ -41,6 +48,7 @@ public class Puntuacion : MonoBehaviour
 
         _numeroTornados[nivel] = tornados - 1;
         _numeroPlantasSecas[nivel] = plantasMuertas;
+        _nivelActual++;
         
         /*
         if (_puntuacion[nivel] < 100 - ((tornados-1) + plantasMuertas)) 

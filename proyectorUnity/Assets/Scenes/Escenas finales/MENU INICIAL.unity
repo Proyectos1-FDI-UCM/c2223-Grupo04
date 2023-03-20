@@ -1627,7 +1627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e51ef9c18ebf0742a7f1a2955e99915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nivelActual: 1
   _numeroTornados: 
+  _numeroPlantasSecas: 
 --- !u!4 &1436430993
 Transform:
   m_ObjectHideFlags: 0
