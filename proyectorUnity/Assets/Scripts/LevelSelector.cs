@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class LevelSelector : MonoBehaviour
 {
-    
-    /*public void CambiaEscena1(string nombreEscena) 
-    {
-        SceneManager.LoadScene(nombreEscena);
-    }*/
+    [SerializeField]
+    GameObject _playPrefab;
+
     public void CambiaEscena2(int numeroEscena) 
     {
         SceneManager.LoadScene(numeroEscena);
     }
+    public void Resumen()
+    {
+        GameObject gb = Instantiate(_playPrefab);
+
+    }
+
     public void ExitBoton()
     {
         SceneManager.LoadScene("MENU INICIAL");

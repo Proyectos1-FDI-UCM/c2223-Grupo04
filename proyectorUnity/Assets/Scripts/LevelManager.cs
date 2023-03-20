@@ -78,6 +78,7 @@ public class LevelManager : MonoBehaviour
     {
         ScriptablePlant scriptablePlant = planta.GetPlantData();
         DiscountPlant(scriptablePlant);
+        GameManager.Instance._plantasMuertas ++;
     }
 
     /// <summary>

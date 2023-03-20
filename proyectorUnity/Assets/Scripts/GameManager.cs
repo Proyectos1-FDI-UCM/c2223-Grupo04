@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     /// Número de tornados que han pasado
     /// </summary>
     public int _nTornados;
+    public int _plantasMuertas;
     [SerializeField] public LevelManager _levelManager;
     private void Awake()
     {
@@ -101,7 +102,7 @@ public class GameManager : MonoBehaviour
         else if (_state == GameStates.WIN)
         {
             Time.timeScale = 0; //Parar el tiempo.
-            Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados);
+            Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
             Debug.Log("STATE: WIN");
         }/*
         else if(_state == GameStates.PAUSA)
