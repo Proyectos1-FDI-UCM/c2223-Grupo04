@@ -47,7 +47,6 @@ public class TornadoSpawner : MonoBehaviour
         
         //Elige una ruta random de las prefijadas
         int _idRuta = Random.Range(0, _tornadoRutas.Length);
-        print(_idRuta);
         //Instancia la ruta del tornado
         GameObject _ruta = GameObject.Instantiate(_tornadoRutas[_idRuta], null);
         //Instancia el tornado

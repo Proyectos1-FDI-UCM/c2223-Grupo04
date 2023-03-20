@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TipoDePlanta: {fileID: 11400000, guid: 1876dbe7b58332745a9168171358fbfe, type: 2}
   _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
+  _semillaAnim: {fileID: 2221644548051976295, guid: 4a71fe9550d300f4d8c5f09aad0970c8, type: 3}
+  _semilla: {fileID: 0}
 --- !u!61 &5010605649492911348
 BoxCollider2D:
   m_ObjectHideFlags: 0

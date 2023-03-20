@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static GameManager Instance { get; private set; }
     [SerializeField]
+    int nivel;
+    [SerializeField]
     public GameObject _player;
     [SerializeField]
     public UIManager _uIManager;
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
         else if (_state == GameStates.WIN)
         {
             Time.timeScale = 0; //Parar el tiempo.
-
+            Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados);
             Debug.Log("STATE: WIN");
         }/*
         else if(_state == GameStates.PAUSA)

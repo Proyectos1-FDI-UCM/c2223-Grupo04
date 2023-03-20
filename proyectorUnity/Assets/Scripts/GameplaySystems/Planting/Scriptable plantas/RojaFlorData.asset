@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb670222ee101a44389a3532c73ad603, type: 3}
   m_Name: RojaFlorData
   m_EditorClassIdentifier: 
-  GrowSpeed: 20
-  DrySpeed: 30
+  GrowSpeed: 30
+  DrySpeed: 45
   GrowingSprite:
   - {fileID: 671197718, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: 113984427, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: 2017670711, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   - {fileID: 1255326090, guid: 983178a14a29153408b557b1e204eb56, type: 3}
   DryingSprite:
-  - {fileID: -726109943, guid: 136f4134d52208b40923383349747d91, type: 3}
-  - {fileID: 318417007, guid: 136f4134d52208b40923383349747d91, type: 3}
   - {fileID: -1096495944, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: 318417007, guid: 136f4134d52208b40923383349747d91, type: 3}
+  - {fileID: -726109943, guid: 136f4134d52208b40923383349747d91, type: 3}
   icono: {fileID: -2058039022, guid: b79d5517d69a5c44396379126a1e437b, type: 3}
