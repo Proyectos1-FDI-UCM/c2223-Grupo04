@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class PlantaBehaviour : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlantaBehaviour : MonoBehaviour
 
     [HideInInspector]
     private bool _isSoilFertile;
+    Animator _anim;
     [SerializeField]
     [Tooltip("Valor por el que multiplicar el crecimiento en caso de ser soil fertil")]
     private float fertileMultiplier;
@@ -29,6 +31,7 @@ public class PlantaBehaviour : MonoBehaviour
 
     void Start()
     {
+        _anim = GetComponent<Animator>();
         _levelManager = GameManager.Instance._levelManager;
         GrowSprite(0);
 
@@ -167,6 +170,11 @@ public class PlantaBehaviour : MonoBehaviour
     public ScriptablePlant GetPlantData()
     {
         return _plantData;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        _anim.SetTrigger("move");
     }
 } 
 

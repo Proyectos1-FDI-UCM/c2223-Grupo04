@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5877752316885151864}
   - component: {fileID: 5869373370455778936}
   - component: {fileID: 5894849836583197850}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Charlie UwU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 1310673421758945372}
   - component: {fileID: 4744348087191030827}
   - component: {fileID: 5397214421813972691}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
