@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3010746134341575103}
   - component: {fileID: 6457240662319855055}
   - component: {fileID: 2501742648794084750}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: valeporplanta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
