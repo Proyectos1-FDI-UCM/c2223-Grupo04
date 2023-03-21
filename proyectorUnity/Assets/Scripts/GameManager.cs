@@ -64,17 +64,18 @@ public class GameManager : MonoBehaviour
             {
                 _soilsPapas.GetChild(i).GetComponent<SoilComponent>()._isFertile = true;
             }
-
+            Camera.main.transform.GetChild(0).gameObject.SetActive(false);//Desactivar las partículas de la lluvia floja.
+            Camera.main.transform.GetChild(1).gameObject.SetActive(true); //Activar las partículas de la lluvia fuerte.
         }
         else if (_lluviaFloja) 
         {
             for (int i = 0; i < _soilsPapas.childCount; i++)
             {
                 _soilsPapas.GetChild(i).GetComponent<SoilComponent>().RegarPlant();
-                print("la lluvia riega");
+                print("La lluvia riega");
             }
+            Camera.main.transform.GetChild(0).gameObject.SetActive(true); //Activar las partículas de la lluvia floja.
         }
-        
     }
     public void ChangeState(GameStates _newState)
     {
@@ -143,6 +144,9 @@ public class GameManager : MonoBehaviour
         _nTornados = 0;
         ChangeState(GameStates.INTRO);
         _nTornadosFuerte = _nTornadosFloja + 3;
+        Camera.main.transform.GetChild(0).gameObject.SetActive(false); //Desactivar las partículas de la lluvia floja.
+        Camera.main.transform.GetChild(1).gameObject.SetActive(false); //Desactivar las partículas de la lluvia fuerte.
+
     }
 
     // Update is called once per frame
