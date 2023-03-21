@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     }
     public GameStates _state;
     /// <summary>
-    /// Número de tornados que han pasado
+    /// Nï¿½mero de tornados que han pasado
     /// </summary>
     public int _nTornados;
     public int _plantasMuertas;
@@ -57,10 +57,10 @@ public class GameManager : MonoBehaviour
         _lluviaFloja = _nTornados >= _nTornadosFloja;
         _lluviaFuerte = _nTornados >= _nTornadosFuerte;
 
-        //Comprobación del número de tornados
+        //Comprobaciï¿½n del nï¿½mero de tornados
         if (_lluviaFuerte)
         {
-            for (int i = 0; i < _soilsPapas.GetChildCount(); i++)
+            for (int i = 0; i < _soilsPapas.childCount; i++)
             {
                 _soilsPapas.GetChild(i).GetComponent<SoilComponent>()._isFertile = true;
             }
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         }
         else if (_lluviaFloja) 
         {
-            for (int i = 0; i < _soilsPapas.GetChildCount(); i++)
+            for (int i = 0; i < _soilsPapas.childCount; i++)
             {
                 _soilsPapas.GetChild(i).GetComponent<SoilComponent>().RegarPlant();
                 print("la lluvia riega");
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         else if (_state == GameStates.TORNADO)
         {
             gameObject.GetComponent<InputController>().enabled = false; //desactivar el input
-            _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input esté desactivado
+            _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input estï¿½ desactivado
             Debug.Log("STATE: TORNADO");
         }
         else if (_state == GameStates.WIN)
