@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TipoDePlanta: {fileID: 0}
   _plantaPrefab: {fileID: 0}
+  _semillaAnim: {fileID: 0}
+  _semilla: {fileID: 0}
 --- !u!50 &-893541525752904198
 Rigidbody2D:
   serializedVersion: 4

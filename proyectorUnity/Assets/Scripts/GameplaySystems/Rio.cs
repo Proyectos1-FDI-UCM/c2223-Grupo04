@@ -13,10 +13,7 @@ public class Rio : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
         {
-            print(collision.gameObject.GetComponent<Rigidbody2D>().velocity);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(_posFuerza * fuerza);
-
-            print(collision.gameObject.GetComponent<Rigidbody2D>().velocity);
         }
     }
 }
