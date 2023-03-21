@@ -49,7 +49,7 @@ public class InputController : MonoBehaviour
         {
             Vector2 mousePos = Input.mousePosition;
             //impacto de rayo desde ubicación del ratón a punto del mundo.
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero, 10000, 9);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
 
             //Debug.Log(mousePos.x);
             //Debug.Log(mousePos.y);
