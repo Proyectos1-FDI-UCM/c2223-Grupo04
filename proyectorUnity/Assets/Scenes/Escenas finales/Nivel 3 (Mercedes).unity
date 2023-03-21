@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: 1501942044946600741, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Text
       value: "HOLA SOY GIUSEPPE. \nBienvenido al jard\xEDn de Mercedes la lombriz.
-        Este jard\xEDn tiene todas las herramientas y semillas en lecentro y las
+        Este jard\xEDn tiene todas las herramientas y semillas en el centro y las
         zonas de plantados en \nlos laterales.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
@@ -272,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 1501942045731911450, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: nivel
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _player
@@ -45826,14 +45830,6 @@ PrefabInstance:
       propertyPath: _casa
       value: 
       objectReference: {fileID: 1625357963}
-    - target: {fileID: 5877752316885151868, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
-      propertyPath: _speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5877752316885151870, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5877752316885151871, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_RootOrder
       value: 1

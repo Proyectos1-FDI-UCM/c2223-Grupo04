@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
             _contador.text = (int)(_time / 60) + ":" + (int)(_time % 60);
             _time = _time - Time.deltaTime;
         }
-        else _contador.text = "¡TORNADO!"; //Cuando acaba el contador y el tornado esta en juego ponemos esto por ejemplo.
+        else _contador.text = "00:00"; //Cuando acaba el contador y el tornado esta en juego ponemos esto por ejemplo.
     }
     private void Awake() //Para el singletone.
     {
@@ -89,11 +89,12 @@ public class UIManager : MonoBehaviour
     {
         if (GameManager.Instance._state == GameManager.GameStates.INTRO)
         {
-            SetearObjetivos(objetivosnivel);
+            if (_panel3.childCount <= 0) SetearObjetivos(objetivosnivel);
             _introUI.SetActive(true);
             _gameUI.SetActive(false);
             _winUI.SetActive(false);
             _pausaUI.SetActive(false);
+            if (_tutorialUI != null) _tutorialUI.SetActive(false);
         }
         else if (GameManager.Instance._state == GameManager.GameStates.TUTORIAL)
         {
@@ -108,6 +109,7 @@ public class UIManager : MonoBehaviour
             _gameUI.SetActive(true);
             _winUI.SetActive(false);
             _pausaUI.SetActive(false);
+            if (_tutorialUI != null) _tutorialUI.SetActive(false);
         }
         else if (GameManager.Instance._state == GameManager.GameStates.WIN)
         {
@@ -149,7 +151,7 @@ public class UIManager : MonoBehaviour
         _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = _texto;
         _tutorialUI.SetActive(true);
 
-        Invoke("QuitarTextoTutorial", time);
+        //Invoke("QuitarTextoTutorial", time);
     }
 
     private void QuitarTextoTutorial()

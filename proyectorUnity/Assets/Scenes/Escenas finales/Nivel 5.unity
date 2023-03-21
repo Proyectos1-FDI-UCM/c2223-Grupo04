@@ -1384,7 +1384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &164441450
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -84671,7 +84671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254716, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_Size.y
-      value: 2.2848701
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254716, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_Offset.x
@@ -84679,7 +84679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254716, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_Offset.y
-      value: 0.16060925
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7634762855509254718, guid: 3e5b62b6dca1d494c8cf956fae993ad9, type: 3}
       propertyPath: m_RootOrder
@@ -84837,10 +84837,6 @@ PrefabInstance:
       propertyPath: _soilsPapas
       value: 
       objectReference: {fileID: 557223003}
-    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
-      propertyPath: _nTornadosFloja
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _nTornadosFuerte
       value: 3

@@ -1383,8 +1383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: -10, y: -10}
+  m_AnchoredPosition: {x: 84.92, y: -5}
+  m_SizeDelta: {x: -194.82, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1501942044946600742
 CanvasRenderer:
@@ -2089,7 +2089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89, y: -75}
+  m_AnchoredPosition: {x: -89, y: -16}
   m_SizeDelta: {x: 160.5634, y: 43.1415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1501942045197716590
@@ -3628,11 +3628,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c4cb456f1b5aa4a85bd6f02866d943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nivel: 0
   _player: {fileID: 0}
   _uIManager: {fileID: 1501942046594194259}
   _tornadoSpawner: {fileID: 997536862185482093}
+  _lluviaFloja: 0
+  _lluviaFuerte: 0
+  _nTornadosFloja: 4
+  _nTornadosFuerte: 0
+  _soilsPapas: {fileID: 0}
   _state: 0
   _nTornados: 0
+  _plantasMuertas: 0
   _levelManager: {fileID: 1501942046233701892}
 --- !u!114 &1501942045731911451
 MonoBehaviour:
@@ -5445,6 +5452,7 @@ MonoBehaviour:
   _gameUI: {fileID: 1501942045922549407}
   _pausaUI: {fileID: 1501942046108307678}
   _winUI: {fileID: 1501942045098751668}
+  _tutorialUI: {fileID: 0}
   _inventory: {fileID: 1501942045244193844}
   _prefabObjetivo: {fileID: 4718410252072182863, guid: f77589ed24e215d45b9ae58b3323de71, type: 3}
   _panel3: {fileID: 1501942045236984793}

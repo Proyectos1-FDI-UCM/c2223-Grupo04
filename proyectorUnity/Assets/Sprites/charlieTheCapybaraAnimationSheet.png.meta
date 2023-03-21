@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1437,10 +1437,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      charlieTheCapybaraAnimationSheet_56: 100683395
+      charlieTheCapybaraAnimationSheet_9: 823241715
       charlieTheCapybaraAnimationSheet_26: 1660065645
       charlieTheCapybaraAnimationSheet_29: 1053660308
-      charlieTheCapybaraAnimationSheet_59: -1405618664
       charlieTheCapybaraAnimationSheet_42: 858185325
       charlieTheCapybaraAnimationSheet_16: 1043074194
       charlieTheCapybaraAnimationSheet_24: 547405787
@@ -1487,19 +1486,20 @@ TextureImporter:
       charlieTheCapybaraAnimationSheet_36: 1499478440
       charlieTheCapybaraAnimationSheet_34: 849175474
       charlieTheCapybaraAnimationSheet_62: 1433104794
+      charlieTheCapybaraAnimationSheet_59: -1405618664
       charlieTheCapybaraAnimationSheet_5: 419760944
       charlieTheCapybaraAnimationSheet_31: -178469004
       charlieTheCapybaraAnimationSheet_40: -1214251947
-      charlieTheCapybaraAnimationSheet_41: 2053097682
       charlieTheCapybaraAnimationSheet_50: 1740093990
+      charlieTheCapybaraAnimationSheet_41: 2053097682
       charlieTheCapybaraAnimationSheet_27: -150866005
       charlieTheCapybaraAnimationSheet_1: -154145191
-      charlieTheCapybaraAnimationSheet_7: -1495456575
       charlieTheCapybaraAnimationSheet_0: 365501390
-      charlieTheCapybaraAnimationSheet_57: -468534997
+      charlieTheCapybaraAnimationSheet_7: -1495456575
       charlieTheCapybaraAnimationSheet_43: -1949554589
+      charlieTheCapybaraAnimationSheet_57: -468534997
       charlieTheCapybaraAnimationSheet_58: 1017801378
-      charlieTheCapybaraAnimationSheet_9: 823241715
+      charlieTheCapybaraAnimationSheet_56: 100683395
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
