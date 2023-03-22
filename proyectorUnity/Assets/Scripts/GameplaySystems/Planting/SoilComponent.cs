@@ -22,8 +22,8 @@ public class SoilComponent : MonoBehaviour
         if(_childPrefab != null)
         {
             Instanciar();
-        }
-        _isEmpty = true;
+            _isEmpty = false;
+        }else _isEmpty = true;
     }
 
     /// <summary>

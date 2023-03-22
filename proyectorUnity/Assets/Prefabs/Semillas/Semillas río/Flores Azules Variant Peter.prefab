@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5010605649492911351, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
       value: Flores Azules Variant Peter

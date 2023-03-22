@@ -3629,7 +3629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nivel: 0
-  _objetivos: {fileID: 0}
   _player: {fileID: 0}
   _uIManager: {fileID: 1501942046594194259}
   _tornadoSpawner: {fileID: 997536862185482093}
@@ -5413,7 +5412,7 @@ MonoBehaviour:
   _prefabObjetivo: {fileID: 4718410252072182863, guid: f77589ed24e215d45b9ae58b3323de71, type: 3}
   _panel3: {fileID: 1501942045236984793}
   _insPrefObjs: []
-  objetivosnivel: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
+  _objetivosnivel: {fileID: 0}
 --- !u!1 &1501942046605496097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6153,7 +6152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965e81ca3b334d343947d7de2f8f7113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tEntreTornados: 50
+  _tEntreTornados: 35
   _tMul: 0
   _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
   _tornadoInstPos: {fileID: 1342967367626995690}

@@ -38114,10 +38114,6 @@ PrefabInstance:
       propertyPath: _casa
       value: 
       objectReference: {fileID: 1625357963}
-    - target: {fileID: 5877752316885151868, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
-      propertyPath: _speed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5877752316885151871, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_RootOrder
       value: 4

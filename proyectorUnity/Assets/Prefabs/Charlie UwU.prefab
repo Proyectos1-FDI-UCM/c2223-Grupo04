@@ -19431,7 +19431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aca1ee1b2cd96c4990544a094d43206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 7
 --- !u!114 &5877752316885151864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19479,6 +19479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 2.2
+  _destructeable:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7141902859319113903
 GameObject:
   m_ObjectHideFlags: 0

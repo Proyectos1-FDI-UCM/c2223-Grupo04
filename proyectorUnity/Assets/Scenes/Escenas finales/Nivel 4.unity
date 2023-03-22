@@ -18716,7 +18716,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 2.2
-  _semillaDestructeable: 0
+  _destructeable:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &894123848
 GameObject:
   m_ObjectHideFlags: 0
@@ -35060,10 +35062,6 @@ PrefabInstance:
       propertyPath: _soilsPapas
       value: 
       objectReference: {fileID: 2077871593}
-    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
-      propertyPath: _levelManager
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _objetivosNivel
       value: 

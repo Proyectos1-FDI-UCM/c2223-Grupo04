@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Transform _panel3;
     [SerializeField]
     List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
+    [SerializeField]
     public NivelObjetivos _objetivosnivel;
 
 
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _inventory.enabled = false;
+        SetearObjetivos(GameManager.Instance._levelManager.objetivos);
     }
 
     // Update is called once per frame
@@ -90,7 +92,6 @@ public class UIManager : MonoBehaviour
     {
         if (GameManager.Instance._state == GameManager.GameStates.INTRO)
         {
-            //SetearObjetivos(objetivosnivel);
             _introUI.SetActive(true);
             _gameUI.SetActive(false);
             _winUI.SetActive(false);
