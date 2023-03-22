@@ -9,7 +9,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField]
     [Tooltip("Ditancia mínima para que Charlie pueda coger la herramienta")]
     private float _distanciaMin;
-    [SerializeField] bool _semillaDestructeable; // Activar solo en el nivel de Peter.
+    [SerializeField] LayerMask _destructeable; // Solo en el nivel de Peter.
 
     /* 
     * Charlie coge el objeto, si se cumplen los requisitos.
@@ -50,6 +50,12 @@ public class InventoryController : MonoBehaviour
     {
         _tool = toolObject;
         GameManager.Instance._uIManager.changeInventory(_tool);
+        if (toolObject.CompareTag("Semillita"))
+        {
+            Debug.Log("SemillaRío desactivada");
+            toolObject.GetComponent<Collider2D>().enabled = false;
+            toolObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     /// <summary>
