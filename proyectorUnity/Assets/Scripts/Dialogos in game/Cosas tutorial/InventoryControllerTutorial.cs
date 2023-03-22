@@ -23,6 +23,12 @@ public class InventoryControllerTutorial : InventoryController
     private GameManager _gameManager;
     private UIManager _uiManager;
 
+    [SerializeField]
+    private GameObject[] _posicionesLuces;
+    [SerializeField]
+    private GameObject _luz, _soil, _soilPiedras;
+    private int _luzNumero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +37,19 @@ public class InventoryControllerTutorial : InventoryController
         _semillaCogida= false;
         _gameManager = GameManager.Instance;
         _uiManager = _gameManager._uIManager;
+        _luzNumero=0;
+        _luz.SetActive(false);
 
+       
     }
 
     public void StartTutorial()
     {
-        _uiManager.TextoTutorial(_dialogos._dialogos[0], _tiempoEspera);
+        _uiManager.TextoTutorial(_dialogos._dialogos[0]);
+        _uiManager.MostrarControles(true);
+        _luz.SetActive(true);
+        MoverLuz();
+
 
     }
 
@@ -45,31 +58,60 @@ public class InventoryControllerTutorial : InventoryController
 
         if ((int)(_parteActual) == System.Array.IndexOf(Herramientas, toolObject) || base.GetTool() == toolObject)
         {
+            Debug.Log("aaaaa");
+
+            if (base.GetTool() == null) 
+            {
+                MoverLuz();
+                Debug.Log("EEEEEEEEEE");
+
+            }
 
             base.TryPickUpTool(toolObject, mousePos);
+
             if (!_semillaCogida)
             {
-                _uiManager.TextoTutorial(_dialogos._dialogos[1], _tiempoEspera);
+                _uiManager.TextoTutorial(_dialogos._dialogos[1]);
+                _uiManager.MostrarControles(false);
                 _semillaCogida = true;
 
             }
+
+            
         }
 
     }
 
     public override void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
-        base.ClickFunction(objetoClicado, mousePos);
-        if ((int)_parteActual == 2)
-            _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
-
-        else
+        if ( objetoClicado == _soil && (int)_parteActual < 2) 
         {
+            Debug.Log("ok i pull up");
+            base.ClickFunction(objetoClicado, mousePos);
             _parteActual++;
-            _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1], _tiempoEspera);
+            _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1]);
+            MoverLuz();
+            Debug.Log("iiii");
+
 
         }
 
+        else if (objetoClicado == _soilPiedras && (int)_parteActual == 2)
+        {
+            base.ClickFunction(objetoClicado, mousePos);
+            _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
+            Destroy(_luz);
+        }
+            
+
+
+    }
+
+    private void MoverLuz()
+    {
+        _luz.transform.position = _posicionesLuces[_luzNumero].transform.position;
+        _luzNumero++;
+        Debug.Log("luz Movida");
     }
 
 }

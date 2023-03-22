@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     float _time;
 
     [SerializeField] TextMeshProUGUI _contador;
-    [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI, _tutorialUI;
+    [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI, _tutorialUI, _controlesUI;
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
@@ -146,20 +146,22 @@ public class UIManager : MonoBehaviour
     }
 
     #region cosas tutorial
-    public void TextoTutorial(string _texto, float time)
+    public void TextoTutorial(string _texto)
     {
         _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = _texto;
         _tutorialUI.SetActive(true);
-
-        //Invoke("QuitarTextoTutorial", time);
     }
 
-    private void QuitarTextoTutorial()
-    { _tutorialUI.SetActive(false); }
 
     public void FinalTextoTutorial(string _texto)
     {
         _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>().text = _texto;
+    }
+
+    public void MostrarControles(bool SiONo) 
+    { 
+        _controlesUI.SetActive(SiONo);
+   
     }
     #endregion
     #endregion
