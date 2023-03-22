@@ -25,9 +25,7 @@ public class Semilla : Tool
             objetoClicado.GetComponent<SoilComponent>().Plant(_plantaPrefab, TipoDePlanta);
             //eliminamos herramienta del inventario
             inventoryController.RemoveTool();
-
         }
-
     }
 
     public override void PickUpTool()
