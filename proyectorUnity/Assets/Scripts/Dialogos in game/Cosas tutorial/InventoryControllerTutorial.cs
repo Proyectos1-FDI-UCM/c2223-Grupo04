@@ -14,7 +14,8 @@ public class InventoryControllerTutorial : InventoryController
     [SerializeField]
     private GameObject[] Herramientas;
     private ParteTutorial _parteActual;
-    private string[] _parteActualName;
+
+    
     private bool _semillaCogida;
     [SerializeField]
     private DialogoSO _dialogos;
@@ -28,6 +29,7 @@ public class InventoryControllerTutorial : InventoryController
     [SerializeField]
     private GameObject _luz, _soil, _soilPiedras;
     private int _luzNumero;
+    private bool _hasOnClick;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class InventoryControllerTutorial : InventoryController
         _uiManager = _gameManager._uIManager;
         _luzNumero=0;
         _luz.SetActive(false);
+        _hasOnClick = true;
 
        
     }
@@ -60,9 +63,10 @@ public class InventoryControllerTutorial : InventoryController
         {
             Debug.Log("aaaaa");
 
-            if (base.GetTool() == null) 
+            if ( base.GetTool() == null && _hasOnClick) 
             {
                 MoverLuz();
+                _hasOnClick = false;
                 Debug.Log("EEEEEEEEEE");
 
             }
@@ -91,13 +95,15 @@ public class InventoryControllerTutorial : InventoryController
             _parteActual++;
             _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1]);
             MoverLuz();
+            _hasOnClick = true;
             Debug.Log("iiii");
 
 
         }
 
-        else if (objetoClicado == _soilPiedras && (int)_parteActual == 2)
+        else 
         {
+            Debug.Log("tu madre");
             base.ClickFunction(objetoClicado, mousePos);
             _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
             Destroy(_luz);
