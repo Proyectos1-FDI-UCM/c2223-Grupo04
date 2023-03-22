@@ -6,25 +6,29 @@ using UnityEngine;
 public class LevelSelector : MonoBehaviour
 {
     [SerializeField]
-    GameObject _resumen;
+    GameObject _resumen; //resumen
 
     [SerializeField]
-    Sprite[] _npcs;
+    Sprite[] _npcs; //sprites a poner en los resumenes
 
     [SerializeField]
-    GameObject[] _niveles;
+    GameObject[] _niveles; //botones de los niveles
 
-    int _nivel;
-    string _nombre;
+    int _nivel; // nivel a poner en el resumen
+    string _nombre; // nombre del vecino a poner en el resumen
 
+    //cambia a la escena del index indicado
     public void CambiaEscena2(int numeroEscena) 
     {
         SceneManager.LoadScene(_nivel + 2);
     }
 
+    //actualiza el nivel del resumen
     public void Nivel(int nivel){ _nivel = nivel; }
+    //actualiza el nivel del resumen
     public void Nombre(string nombre) { _nombre = nombre; }
 
+    //actualiza el resumen
     public void Resumen()
     {
         _resumen.SetActive(true);
@@ -37,6 +41,7 @@ public class LevelSelector : MonoBehaviour
     }
     private void Awake()
     {
+        // Desactiva todos los niveles.
         _resumen.SetActive(false);
         for (int i = 0; i < _niveles.Length; i++)
         {
@@ -46,9 +51,17 @@ public class LevelSelector : MonoBehaviour
 
     private void Start()
     {
+        // Activa los botones de los niveles.
         for (int i = 0; i < Puntuacion.Instance.GetNivelActual(); i++)
         {
             _niveles[i].SetActive(true);
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Puntuacion.Instance.SetNivelActual(5);
         }
     }
 }
