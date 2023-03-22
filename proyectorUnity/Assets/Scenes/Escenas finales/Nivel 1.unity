@@ -32602,6 +32602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 2.2
+  _semillaDestructeable: 0
   Herramientas:
   - {fileID: 326324959}
   - {fileID: 1297702874}
@@ -33322,9 +33323,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 124248260}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
-      propertyPath: _objetivosNivel
+      propertyPath: _levelManager
       value: 
-      objectReference: {fileID: 11400000, guid: 7a96ccc3db791b846bf637d671d00b4d, type: 2}
+      objectReference: {fileID: 1403433585}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
       value: 2

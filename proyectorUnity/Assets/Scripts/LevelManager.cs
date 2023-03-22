@@ -14,10 +14,6 @@ public class LevelManager : MonoBehaviour
     private int[] cantidadObjetivo;
     private int[] progreso;
     private List<PlantaBehaviour> plantas;
-    private void Awake()
-    {
-        objetivos = GameManager.Instance._objetivosNivel;
-    }
     // Start is called before the first frame update
     void Start()
     {
