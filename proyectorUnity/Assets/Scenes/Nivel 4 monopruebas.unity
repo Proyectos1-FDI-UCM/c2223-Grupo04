@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 9263881}
   - component: {fileID: 9263883}
   - component: {fileID: 9263882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ToolLocation (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,6 +195,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.695863, y: 0.6557219}
   m_EdgeRadius: 0
+--- !u!1 &13467545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+  m_PrefabInstance: {fileID: 75202528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &43648547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
@@ -4227,6 +4232,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5010605649492911350, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
   m_PrefabInstance: {fileID: 75202528}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &75202534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13467545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &90579222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14246,7 +14264,7 @@ GameObject:
   - component: {fileID: 581266220}
   - component: {fileID: 581266222}
   - component: {fileID: 581266221}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ToolLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26538,6 +26556,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
   m_PrefabInstance: {fileID: 1105752171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1105752177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573880342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1106619595
 GameObject:
   m_ObjectHideFlags: 0
@@ -78523,7 +78554,7 @@ GameObject:
   - component: {fileID: 1684495254}
   - component: {fileID: 1684495256}
   - component: {fileID: 1684495255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ToolLocation (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78584,6 +78615,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.695863, y: 0.6557219}
   m_EdgeRadius: 0
+--- !u!1 &1689860496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+  m_PrefabInstance: {fileID: 1618854126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1689860501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689860496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1729500570
 GameObject:
   m_ObjectHideFlags: 0
@@ -78970,6 +79019,24 @@ Transform:
   m_Father: {fileID: 1106619596}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856065680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+  m_PrefabInstance: {fileID: 271849747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856065685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856065680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1864198546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
@@ -79077,7 +79144,7 @@ GameObject:
   - component: {fileID: 1943553596}
   - component: {fileID: 1943553598}
   - component: {fileID: 1943553597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ToolLocation (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79477,6 +79544,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
+--- !u!1 &2019046404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+  m_PrefabInstance: {fileID: 1404754086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019046409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019046404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2026721264
 GameObject:
   m_ObjectHideFlags: 0
@@ -79853,6 +79938,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
   m_PrefabInstance: {fileID: 2034458929}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2034458935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351152606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &2049112387
 PrefabInstance:
   m_ObjectHideFlags: 0
