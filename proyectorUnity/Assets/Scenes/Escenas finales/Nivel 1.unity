@@ -33319,6 +33319,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1940942771}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _objetivos
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a96ccc3db791b846bf637d671d00b4d, type: 2}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _soilsPapas
       value: 
       objectReference: {fileID: 124248260}
@@ -33378,6 +33382,10 @@ PrefabInstance:
       propertyPath: _tutorialUI
       value: 
       objectReference: {fileID: 486342714}
+    - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: objetivos
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a96ccc3db791b846bf637d671d00b4d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
 --- !u!4 &2006887024 stripped

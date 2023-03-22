@@ -21,8 +21,8 @@ public class LevelManager : MonoBehaviour
         plantasObjetivo = objetivos.plantas;
         cantidadObjetivo = objetivos.cantidad;
         progreso = new int[plantasObjetivo.Length];
-        //GameManager.Instance._uIManager.SetearObjetivos(objetivos); //Pasamos lo objetivos al método del UIManager.
-        GameManager.Instance._uIManager.objetivosnivel = objetivos;
+        GameManager.Instance._uIManager.SetearObjetivos(objetivos); //Pasamos lo objetivos al método del UIManager.
+        //GameManager.Instance._uIManager.objetivosnivel = objetivos;
     }
 
     #region methods

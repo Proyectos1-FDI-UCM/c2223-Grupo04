@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Transform _panel3;
     [SerializeField]
     List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
-    public NivelObjetivos objetivosnivel;
+    public NivelObjetivos _objetivosnivel;
 
 
     public static UIManager Instance; //Para el singletone.
@@ -77,6 +77,7 @@ public class UIManager : MonoBehaviour
             txtinvariable.text = "/ " + objetivosNivel.cantidad[i]; //Si sumas algo a un string todo se convierte a string.
             //Debug.Log("Seteado en el bucle al final.");
         }
+        _objetivosnivel = objetivosNivel;
         //Debug.Log("Seteado despues del bucle.");
     }
     public void UpdatearObjetivosUI(int progreso, int index)
@@ -89,7 +90,7 @@ public class UIManager : MonoBehaviour
     {
         if (GameManager.Instance._state == GameManager.GameStates.INTRO)
         {
-            if (_panel3.childCount <= 0) SetearObjetivos(objetivosnivel);
+            //SetearObjetivos(objetivosnivel);
             _introUI.SetActive(true);
             _gameUI.SetActive(false);
             _winUI.SetActive(false);
