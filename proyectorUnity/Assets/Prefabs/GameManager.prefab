@@ -3629,6 +3629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nivel: 0
+  _objetivosNivel: {fileID: 0}
   _player: {fileID: 0}
   _uIManager: {fileID: 1501942046594194259}
   _tornadoSpawner: {fileID: 997536862185482093}
@@ -5024,7 +5025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49bbb9e48db893438d760b750874d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivos: {fileID: 11400000, guid: 4380d1370f3da494889132a3a56df0ce, type: 2}
+  objetivos: {fileID: 0}
 --- !u!1 &1501942046254090160
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int nivel;
     [SerializeField]
+    public NivelObjetivos _objetivosNivel;
+    [SerializeField]
     public GameObject _player;
     [SerializeField]
     public UIManager _uIManager;

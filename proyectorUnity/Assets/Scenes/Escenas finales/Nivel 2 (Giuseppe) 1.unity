@@ -5682,6 +5682,10 @@ PrefabInstance:
       propertyPath: _soilsPapas
       value: 
       objectReference: {fileID: 989954053}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _objetivosNivel
+      value: 
+      objectReference: {fileID: 11400000, guid: 233cd4cbd53c5784e82d5fbe60f19d29, type: 2}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5726,10 +5730,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1501942046233701892, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
-      propertyPath: objetivos
-      value: 
-      objectReference: {fileID: 11400000, guid: 233cd4cbd53c5784e82d5fbe60f19d29, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
 --- !u!4 &454594806 stripped
