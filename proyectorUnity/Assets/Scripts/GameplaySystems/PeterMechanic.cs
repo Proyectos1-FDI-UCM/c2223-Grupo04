@@ -5,22 +5,18 @@ using UnityEngine;
 
 public class PeterMechanic : MonoBehaviour
 {
-    [SerializeField]
-    float time;
-    [SerializeField]
-    Transform _semillaSpawn;
-    [SerializeField]
-    GameObject _semillaDestructor;
+    public GameObject[] semillas; // Array de los elementos que puede lanzar Peter al río.
+    float time = 0; // Tiempo entre cada elemento lanzado por Peter.
+    [SerializeField] Transform _semillaSpawn; // Lugar donde aparecen las semillas lanzadas.
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = _semillaSpawn.position;
-
-     
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject); 
+        time += Time.deltaTime;
+        if (time >= 2) 
+        {
+            Instantiate(semillas[Random.Range(0, semillas.Length)], _semillaSpawn);
+            time = 0;
+        }
     }
 }

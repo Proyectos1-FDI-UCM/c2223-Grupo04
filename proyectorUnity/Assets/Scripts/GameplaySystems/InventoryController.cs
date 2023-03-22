@@ -9,6 +9,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField]
     [Tooltip("Ditancia mínima para que Charlie pueda coger la herramienta")]
     private float _distanciaMin;
+    [SerializeField] bool _semillaDestructeable; // Activar solo en el nivel de Peter.
 
     /* 
     * Charlie coge el objeto, si se cumplen los requisitos.

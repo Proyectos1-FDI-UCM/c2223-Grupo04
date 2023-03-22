@@ -18716,6 +18716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 2.2
+  _semillaDestructeable: 0
 --- !u!1 &894123848
 GameObject:
   m_ObjectHideFlags: 0
@@ -35052,9 +35053,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 879398032}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _objetivos
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _soilsPapas
       value: 
       objectReference: {fileID: 2077871593}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _levelManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _objetivosNivel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -35100,6 +35113,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1501942046233701892, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: objetivos
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
+    - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: objetivos
       value: 
       objectReference: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
