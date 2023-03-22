@@ -14,6 +14,7 @@ public class Semilla : Tool
     private GameObject _semillaAnim;
     [SerializeField]
     private Sprite _semilla;
+    [SerializeField] bool _destructeable; //Para el nivel de Peter.
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
@@ -25,6 +26,11 @@ public class Semilla : Tool
             objetoClicado.GetComponent<SoilComponent>().Plant(_plantaPrefab, TipoDePlanta);
             //eliminamos herramienta del inventario
             inventoryController.RemoveTool();
+            if (_destructeable)
+            {
+                Debug.Log("SemillaRío destructeada");
+                Destroy(gameObject);
+            }
         }
     }
 
