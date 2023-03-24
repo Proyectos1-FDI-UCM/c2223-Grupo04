@@ -12,11 +12,17 @@ public class ElMono : MonoBehaviour
      * 3. Una vez cogida la desplaza a una nueva ubicación. (Moviendo herramienta)
      * 4. Vuelve a esperar.
      */
+    [Tooltip("las posibles posiciones sobre las que maikel puede dejar una herramienta")]
     [SerializeField]
     List<GameObject> posiblesPosiciones;
 
+    [Tooltip("las herramientas que Miguel pue pillar")]
     [SerializeField]
     List<GameObject> listaTools;
+
+    [Tooltip("transform ubicación inicial de michelle")]
+    [SerializeField]
+    GameObject casitaMikhael;
 
     [SerializeField]
     float minTiempoMover, maxTiempoMover, monoSpeed;
@@ -50,6 +56,9 @@ public class ElMono : MonoBehaviour
             {
                 IrPorHerramienta();
                 GeneraTiempoMover();
+            } else
+            {
+                MoverHacia(casitaMikhael);
             }
         }
         else if (estado == EstadosMichael.YendoAPorHerramienta)

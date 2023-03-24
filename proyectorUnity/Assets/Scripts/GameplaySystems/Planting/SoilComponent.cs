@@ -53,7 +53,7 @@ public class SoilComponent : MonoBehaviour
     /// </summary>
     public void RemovePlant()
     {
-        if(!_isEmpty)
+        if(_myChild.GetComponent<PlantaBehaviour>() != null)
         {
             _isEmpty = true;
             _myChild.GetComponent<PlantaBehaviour>().RemovePlant();
