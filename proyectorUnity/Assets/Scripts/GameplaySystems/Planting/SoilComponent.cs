@@ -9,7 +9,7 @@ public class SoilComponent : MonoBehaviour
     [SerializeField]
     [Tooltip("El tipo de soil, que determina la velocidad de crecimiento de las plantas")]
     public bool _isFertile;
-    public bool _isEmpty;
+    private bool _isEmpty;
     private LevelManager _levelManager;
 
     [SerializeField]
@@ -76,4 +76,8 @@ public class SoilComponent : MonoBehaviour
     public GameObject GetMyPLant() 
     { return _myChild; }
 
+    public void SetIsEmpty(bool isEmpty)
+    {
+        _isEmpty = isEmpty;
+    }
 }

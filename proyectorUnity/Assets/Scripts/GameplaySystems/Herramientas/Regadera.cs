@@ -13,7 +13,7 @@ public class Regadera : Tool
         if (objetoClicado.GetComponent<SoilComponent>() != null)
         {
             objetoClicado.GetComponent<SoilComponent>().RegarPlant();
-            if (!objetoClicado.GetComponent<SoilComponent>()._isEmpty)
+            if (!objetoClicado.GetComponent<SoilComponent>().IsEmpty())
             {
                 print("AAAAAAAAAAAAAAAA");
                 GameObject.Instantiate(_regaderaAnim, objetoClicado.transform);

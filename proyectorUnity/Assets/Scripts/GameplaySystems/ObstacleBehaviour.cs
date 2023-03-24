@@ -12,6 +12,7 @@ public class ObstacleBehaviour : MonoBehaviour
     IEnumerator Espera(float espera)
     {
         yield return new WaitForSeconds(espera);
+        transform.parent.GetComponent<SoilComponent>().SetIsEmpty(true);
         Destroy(gameObject);
     }
 

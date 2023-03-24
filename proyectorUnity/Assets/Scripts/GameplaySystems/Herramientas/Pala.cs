@@ -11,7 +11,7 @@ public class Pala : Tool
         //TODO posibles animaciones en el futuro
         if (objetoClicado.GetComponent<SoilComponent>() != null)
         {
-            if (!objetoClicado.GetComponent<SoilComponent>()._isEmpty)
+            if (!objetoClicado.GetComponent<SoilComponent>().IsEmpty())
             {
                 GameObject.Instantiate(_palaAnim, objetoClicado.transform);
             }
