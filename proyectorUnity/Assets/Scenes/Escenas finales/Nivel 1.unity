@@ -2231,7 +2231,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 171.08066, y: -186.83464}
-  m_SizeDelta: {x: 297.787, y: 26.350365}
+  m_SizeDelta: {x: 297.787, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &429542805
 MonoBehaviour:
@@ -2246,16 +2246,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 2
-    m_Right: 2
-    m_Top: 5
-    m_Bottom: 5
+    m_Left: 5
+    m_Right: 5
+    m_Top: 7
+    m_Bottom: 7
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -2331,7 +2331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &486342715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6138,10 +6138,10 @@ RectTransform:
   m_Father: {fileID: 429542804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 148.8935, y: -13.175182}
-  m_SizeDelta: {x: 295.9676, y: 16.350365}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 148.8935, y: 0}
+  m_SizeDelta: {x: 287.787, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754726759
 MonoBehaviour:
@@ -6178,8 +6178,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: cfc07df469fdd2f4ba9a5baa5740a886, type: 3}
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -33682,6 +33682,10 @@ PrefabInstance:
       value: "Buenos d\xEDas, vecino. \xBFCharlie, te llamas? Yo soy Guiseppe. Menudo
         desastre es este jard\xEDn... No te peocupes, yo te ayudo a plantarlo.\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942044946600741, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: cfc07df469fdd2f4ba9a5baa5740a886, type: 3}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
