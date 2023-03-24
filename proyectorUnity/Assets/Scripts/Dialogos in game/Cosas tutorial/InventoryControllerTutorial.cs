@@ -61,13 +61,13 @@ public class InventoryControllerTutorial : InventoryController
 
         if ((int)(_parteActual) == System.Array.IndexOf(Herramientas, toolObject) || base.GetTool() == toolObject)
         {
-            Debug.Log("aaaaa");
+            
 
             if ( base.GetTool() == null && _hasOnClick) 
             {
                 MoverLuz();
                 _hasOnClick = false;
-                Debug.Log("EEEEEEEEEE");
+                
 
             }
 
@@ -88,29 +88,29 @@ public class InventoryControllerTutorial : InventoryController
 
     public override void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
-        if ( objetoClicado == _soil && (int)_parteActual < 2) 
+        if ((int) _parteActual == System.Array.IndexOf(Herramientas, base.GetTool()))
         {
-            Debug.Log("ok i pull up");
-            base.ClickFunction(objetoClicado, mousePos);
-            _parteActual++;
-            _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1]);
-            MoverLuz();
-            _hasOnClick = true;
-            Debug.Log("iiii");
+            if (objetoClicado == _soil && (int)_parteActual < 2)
+            {
+                base.ClickFunction(objetoClicado, mousePos);
+                _parteActual++;
+                _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1]);
+                MoverLuz();
+                _hasOnClick = true;
+                
+
+
+            }
+
+            else if (objetoClicado == _soilPiedras.transform.GetChild(1).gameObject && (int)_parteActual == 2)
+            {
+                base.ClickFunction(objetoClicado, mousePos);
+                _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
+                Destroy(_luz);
+            }
 
 
         }
-
-        else 
-        {
-            Debug.Log("tu madre");
-            base.ClickFunction(objetoClicado, mousePos);
-            _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
-            Destroy(_luz);
-        }
-            
-
-
     }
 
     private void MoverLuz()
