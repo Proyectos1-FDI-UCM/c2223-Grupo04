@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class PeterMechanic : MonoBehaviour
 {
-    public GameObject[] semillas; // Array de los elementos que puede lanzar Peter al río.
-    float time = 0; // Tiempo.
-    [SerializeField] Transform _semillaSpawn; // Lugar donde aparecen las semillas lanzadas.
+    public GameObject[] seeds; // Array de los elementos que puede lanzar Peter al río.
+    float time = 0; // Contador de tiempo.
+    [SerializeField] float _spawnTime; //Tiempo en el que la semilla spawnea.
+    [SerializeField] Transform _seedSpawn; // Lugar donde aparecen las semillas lanzadas.
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= 2) 
+        if (time >= _spawnTime) 
         {
-            Instantiate(semillas[Random.Range(0, semillas.Length)], _semillaSpawn);
+            Instantiate(seeds[Random.Range(0, seeds.Length)], _seedSpawn);
             time = 0;
         }
     }
