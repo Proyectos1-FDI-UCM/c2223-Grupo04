@@ -27,13 +27,13 @@ public class ElMono : MonoBehaviour
     [SerializeField]
     float minTiempoMover, maxTiempoMover, monoSpeed;
 
-
     float tiempoMover;
     GameObject miHerramienta;
     GameObject nuevaPosicion;
     enum EstadosMichael
     {
         Esperando,
+        EsperandoYendoACasa,
         YendoAPorHerramienta,
         MoviendoHerramienta
     }
@@ -42,6 +42,7 @@ public class ElMono : MonoBehaviour
 
     private void Start()
     {
+       
         estado = EstadosMichael.Esperando;
         GeneraTiempoMover();
     }
@@ -49,16 +50,20 @@ public class ElMono : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (estado == EstadosMichael.Esperando)
+        if (estado == EstadosMichael.Esperando || estado == EstadosMichael.EsperandoYendoACasa)
         {
             tiempoMover -= Time.deltaTime;
             if (tiempoMover < 0)
             {
                 IrPorHerramienta();
                 GeneraTiempoMover();
-            } else
+            } 
+            if (estado == EstadosMichael.EsperandoYendoACasa)
             {
-                MoverHacia(casitaMikhael);
+                if(MoverHacia(casitaMikhael))
+                {
+                    estado = EstadosMichael.Esperando;
+                }
             }
         }
         else if (estado == EstadosMichael.YendoAPorHerramienta)
@@ -113,8 +118,8 @@ public class ElMono : MonoBehaviour
         //Convierte la herramienta a su nueva posición a través del padre.
         miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
 
-        //Una vez soltada la herramienta, volver a espera
-        estado = EstadosMichael.Esperando;
+        //Una vez soltada la herramienta, volver a espera e ir a casa.
+        estado = EstadosMichael.EsperandoYendoACasa;
     }
 
     private void GeneraTiempoMover()
