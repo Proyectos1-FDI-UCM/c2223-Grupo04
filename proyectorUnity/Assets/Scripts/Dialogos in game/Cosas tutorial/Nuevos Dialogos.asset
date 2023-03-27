@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogos:
   - "Primero vamos a coger una semilla de tomates. Ac\xE9rcate a la bolsa y haz click."
-  - "Muy bien. Ahora vamos a plantarla en el suelo. Recuerda, la tierra oscura es
-    f\xE9rtil, y las plantas crecer\xE1n m\xE1s r\xE1pido, y no se secar\xE1n."
+  - "Muy bien. Ahora vamos a plantarla en el suelo. Recuerda, la tierra oscura ha
+    estado en barbecho,  por lo que las plantas crecer\xE1n m\xE1s r\xE1pido, y no
+    se secar\xE1n."
   - "Perfecto! Vamos a regarla. Si la regamos, crecer\xE1 m\xE1s r\xE1pido, y evitaremos
     que se seque."
   - "\xA1Muy bien! Por \xFAltimo, vamos a quitar las piedras peque\xF1as. Vamos a

@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!114 &1886613300536847702
 MonoBehaviour:
@@ -301,7 +301,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 8
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5330188, g: 0.9756563, b: 1, a: 1}
   m_FlipX: 0
@@ -325,12 +325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a9617ecc148ea4f9fa53e392f544da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  semillas:
-  - {fileID: 3725853638436261419, guid: 63e5d84a9b9d69743919757c77397d91, type: 3}
-  - {fileID: 878163615812192753, guid: 4ed102b76e38b3049b9c9af64f9dc379, type: 3}
-  - {fileID: 8380065591153134191, guid: 11f37b995d8a7444f9bf3de996553a4a, type: 3}
-  - {fileID: 3549022083153255625, guid: 465ad552ef39bbd418d3a317f160a61f, type: 3}
-  _semillaSpawn: {fileID: 1426153315860040845}
+  seeds: []
+  _spawnTime: 0
+  _seedSpawn: {fileID: 0}
 --- !u!1 &1426153315860040844
 GameObject:
   m_ObjectHideFlags: 0

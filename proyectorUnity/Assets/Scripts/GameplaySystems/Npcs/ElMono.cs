@@ -115,6 +115,7 @@ public class ElMono : MonoBehaviour
 
         //Saca la herramienta del parent.
         miHerramienta.transform.SetParent(null);
+
         //Convierte la herramienta a su nueva posición a través del padre.
         miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
 

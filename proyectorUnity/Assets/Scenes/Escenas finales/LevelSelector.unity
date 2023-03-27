@@ -2615,7 +2615,7 @@ MonoBehaviour:
   _npcs:
   - {fileID: -2026888590, guid: 454a60172a223ef4f94e257e0b2af389, type: 3}
   - {fileID: 21300000, guid: c8c2f659cdb3c2d40b7439febd04e403, type: 3}
-  - {fileID: 21300000, guid: 3999034958d54364da380a8839a11050, type: 3}
+  - {fileID: 21300000, guid: 247b17b4e7135f243abbbf977ee47af5, type: 3}
   - {fileID: 2023200396, guid: 818bc39d8e4214d4cbc5b52e28857f19, type: 3}
   - {fileID: 21300000, guid: 114d4aa7bb14433489b942bb28ff6183, type: 3}
   _niveles:
