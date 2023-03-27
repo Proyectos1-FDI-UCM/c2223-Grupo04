@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryControllerTutorial : InventoryController
 {
+//coger semilla, plantar normal, plantar soil fértil, quitar piedra, regar
     private enum ParteTutorial
     {
         plantando, 

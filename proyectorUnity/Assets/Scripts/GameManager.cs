@@ -156,8 +156,8 @@ public class GameManager : MonoBehaviour
         
         if (_state == GameStates.INTRO && Input.GetMouseButtonDown(0)) //Pasar de la Intro o la Pausa al Game.
         {
-            if (_player.GetComponent<InventoryControllerTutorial>() != null)
-                GameManager.Instance.ChangeState(GameManager.GameStates.TUTORIAL);
+            if (_player.GetComponent<InventoryControllerTutorial>() != null){
+                GameManager.Instance.ChangeState(GameManager.GameStates.TUTORIAL);}
             else
                 GameManager.Instance.ChangeState(GameManager.GameStates.GAME);
         }

@@ -21,17 +21,18 @@ public class SoilComponent : MonoBehaviour
         _levelManager = GameManager.Instance._levelManager;
         if(_childPrefab != null)
         {
-            Instanciar();
-            _isEmpty = false;
+            Instanciar(_childPrefab);
+            
         }else _isEmpty = true;
     }
 
     /// <summary>
     /// Instancia _myChild como hijo a partir del tranform de este soil.
     /// </summary>
-    public void Instanciar()
+    public void Instanciar(GameObject childPrefab)
     {
-        _myChild = Instantiate(_childPrefab,transform.position, Quaternion.identity, transform);
+        _myChild = Instantiate(childPrefab, transform.position, Quaternion.identity, transform);
+        _isEmpty = false;
     }
 
     /// <summary>

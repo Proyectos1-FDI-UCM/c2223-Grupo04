@@ -5408,6 +5408,7 @@ MonoBehaviour:
   _pausaUI: {fileID: 1501942046108307678}
   _winUI: {fileID: 1501942045098751668}
   _tutorialUI: {fileID: 0}
+  _controlesUI: {fileID: 0}
   _inventory: {fileID: 1501942045244193844}
   _prefabObjetivo: {fileID: 4718410252072182863, guid: f77589ed24e215d45b9ae58b3323de71, type: 3}
   _panel3: {fileID: 1501942045236984793}
@@ -6154,7 +6155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tEntreTornados: 35
   _tMul: 0
-  _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
+  _tornadoPrefab: {fileID: 4377523831334446803, guid: 792e1ef16a0d12243a1fd6c7eb43d99f, type: 3}
   _tornadoInstPos: {fileID: 1342967367626995690}
   _tornadoRutas:
   - {fileID: 6495072795260882660, guid: 64901aa559e744545b5358e88e4dd81c, type: 3}
