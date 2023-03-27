@@ -34,8 +34,7 @@ public class InventoryControllerTutorial : InventoryController
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
         _parteActual= ParteTutorial.plantando;
         _semillaCogida= false;
         _gameManager = GameManager.Instance;
@@ -43,8 +42,6 @@ public class InventoryControllerTutorial : InventoryController
         _luzNumero=0;
         _luz.SetActive(false);
         _hasOnClick = true;
-
-       
     }
 
     public void StartTutorial()
@@ -53,8 +50,6 @@ public class InventoryControllerTutorial : InventoryController
         _uiManager.MostrarControles(true);
         _luz.SetActive(true);
         MoverLuz();
-
-
     }
 
     public override void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
@@ -68,8 +63,6 @@ public class InventoryControllerTutorial : InventoryController
             {
                 MoverLuz();
                 _hasOnClick = false;
-                
-
             }
 
             base.TryPickUpTool(toolObject, mousePos);
@@ -79,7 +72,6 @@ public class InventoryControllerTutorial : InventoryController
                 _uiManager.TextoTutorial(_dialogos._dialogos[1]);
                 _uiManager.MostrarControles(false);
                 _semillaCogida = true;
-
             }
 
             
@@ -98,8 +90,6 @@ public class InventoryControllerTutorial : InventoryController
                 _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual + 1]);
                 MoverLuz();
                 _hasOnClick = true;
-                
-
 
             }
 

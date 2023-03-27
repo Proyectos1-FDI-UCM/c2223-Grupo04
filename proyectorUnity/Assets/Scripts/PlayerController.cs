@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool _irACasa;
     [SerializeField] public Transform _casa;
     Animator _anim;
-    Rigidbody2D _rb;
+    Transform _myTransform;
+    [SerializeField]
+    GameObject _radius;
+
+    public void GoHome(){_myTransform.position = _casa.position;}
+
+    public void SetVerticalAxis(float value){_anim.SetFloat("Vertical", value);}
+
+    public void SetHorizontalAxis(float value){ _anim.SetFloat("Horizontal", value); }
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
-        _rb = GetComponent<Rigidbody2D>();
+        _myTransform = transform;
+
+    }
+
+    public void DrawCircle(float radius)
+    {
+        _radius.transform.localScale = new Vector3(radius, radius, 0);
     }
 
     private void Update()
     {
-        _anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
-        _anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-        _anim.SetBool("Walk", Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f);
-
-        if (_irACasa) //(&& _casa.position - transform.position).magnitude > 0.5)
-        {
-            //GetComponent<MovementController>().Stop();
-            //transform.position = Vector2.MoveTowards(transform.position, _casa.position, GetComponent<MovementController>()._speed * Time.deltaTime);
-            transform.position = _casa.position;
-            _irACasa = false;
-        }
-        else _irACasa = false;
-        
+        _anim.SetBool("Walk", Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f);               
     }
 }

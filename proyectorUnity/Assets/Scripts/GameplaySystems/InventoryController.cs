@@ -11,6 +11,12 @@ public class InventoryController : MonoBehaviour
     private float _distanciaMin;
     [SerializeField] LayerMask _destructeable; // Solo en el nivel de Peter.
 
+
+    private void Start()
+    {
+        GameManager.Instance._player.GetComponent<PlayerController>().DrawCircle(_distanciaMin);
+    }
+
     /* 
     * Charlie coge el objeto, si se cumplen los requisitos.
     * Se debe pasar por parámetro, el objeto a coger y la posición del ratón en el clic.

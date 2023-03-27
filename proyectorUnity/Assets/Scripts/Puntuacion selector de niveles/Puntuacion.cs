@@ -52,11 +52,7 @@ public class Puntuacion : MonoBehaviour
 
         _numeroTornados[nivel] = tornados - 1;
         _numeroPlantasSecas[nivel] = plantasMuertas;
-        if (_nivelActual == 1)//para saltarse el nivel de giuseppe
-        {
-            _nivelActual = 2;
-        }else
-            _nivelActual++;
+        _nivelActual++;
         
         /*
         if (_puntuacion[nivel] < 100 - ((tornados-1) + plantasMuertas)) 

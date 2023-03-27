@@ -43,12 +43,12 @@ public class PlantaBehaviour : MonoBehaviour
         else growTimer = _plantData.GrowSpeed;
 
         dryTimer = _plantData.DrySpeed;
-        
+        /*
         if (GameManager.Instance._lluviaFloja) 
         {
             GetWatered();
             print("Llueve sobre recién plantado");
-        }
+        }*/
     }
 
     // Update is called once per frame

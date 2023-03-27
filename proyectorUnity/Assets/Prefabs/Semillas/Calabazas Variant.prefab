@@ -83,5 +83,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Calabazas Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5010605649492911348, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}

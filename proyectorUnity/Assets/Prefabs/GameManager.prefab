@@ -3632,10 +3632,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   _uIManager: {fileID: 1501942046594194259}
   _tornadoSpawner: {fileID: 997536862185482093}
-  _lluviaFloja: 0
-  _lluviaFuerte: 0
   _nTornadosFloja: 4
-  _nTornadosFuerte: 0
   _soilsPapas: {fileID: 0}
   _state: 0
   _nTornados: 0
@@ -3653,6 +3650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22aedb05956eeb040811ce23af8127c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movible: 0
 --- !u!1 &1501942045783953418
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,7 +6153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tEntreTornados: 35
   _tMul: 0
-  _tornadoPrefab: {fileID: 4377523831334446803, guid: 792e1ef16a0d12243a1fd6c7eb43d99f, type: 3}
+  _tornadoPrefab: {fileID: 3920482165076114902, guid: d4a5ae1f407a88b4594072e6c24bfa4c, type: 3}
   _tornadoInstPos: {fileID: 1342967367626995690}
   _tornadoRutas:
   - {fileID: 6495072795260882660, guid: 64901aa559e744545b5358e88e4dd81c, type: 3}

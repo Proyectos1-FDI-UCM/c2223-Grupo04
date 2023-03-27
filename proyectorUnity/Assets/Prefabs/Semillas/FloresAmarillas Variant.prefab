@@ -77,7 +77,8 @@ PrefabInstance:
       objectReference: {fileID: -1150858045, guid: b79d5517d69a5c44396379126a1e437b, type: 3}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Name
-      value: FloresAmarillas
+      value: FloresAmarillas Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5010605649492911348, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}

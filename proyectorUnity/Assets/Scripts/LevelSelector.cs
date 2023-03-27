@@ -54,9 +54,7 @@ public class LevelSelector : MonoBehaviour
         // Activa los botones de los niveles.
         for (int i = 0; i < Puntuacion.Instance.GetNivelActual(); i++)
         {
-
-            if (i != 1) //quitando el nivel de giuseppe para la prueba del 27
-                _niveles[i].SetActive(true);
+            _niveles[i].SetActive(true);
         }
     }
     private void Update()

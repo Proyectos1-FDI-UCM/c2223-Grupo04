@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class ObstacleBehaviour : MonoBehaviour
 {
-    public void RemoveObstacle(float espera)
+    public void RemoveObstacle()
     {
-        StartCoroutine(Espera(espera));
-    }
-
-    IEnumerator Espera(float espera)
-    {
-        yield return new WaitForSeconds(espera);
         transform.parent.GetComponent<SoilComponent>().SetIsEmpty(true);
         Destroy(gameObject);
     }
-
 }

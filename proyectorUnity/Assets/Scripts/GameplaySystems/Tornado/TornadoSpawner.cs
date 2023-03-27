@@ -40,10 +40,10 @@ public class TornadoSpawner : MonoBehaviour
 
     IEnumerator TiempoSpawn()
     {
-
+        print("ME QUIERO MORIR");
         yield return new WaitForSeconds(_tEntreTornados + _tMul); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
         _tMul = (10 * GameManager.Instance._nTornados);//Suma el multiplicador al de tiempo
-        GameManager.Instance._player.GetComponent<PlayerController>()._irACasa = true;
+        GameManager.Instance._player.GetComponent<PlayerController>().GoHome();
         
         //Elige una ruta random de las prefijadas
         int _idRuta = Random.Range(0, _tornadoRutas.Length);

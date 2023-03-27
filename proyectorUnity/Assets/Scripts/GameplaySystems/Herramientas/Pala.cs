@@ -14,18 +14,19 @@ public class Pala : Tool
         {
             if (!objetoClicado.GetComponent<SoilComponent>().IsEmpty())
             {
-                _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+                _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform.parent.gameObject.transform);
                 _animation.GetComponent<Animator>().SetTrigger("Accionar");
             }
             objetoClicado.GetComponent<SoilComponent>().RemovePlant();
         } else if (objetoClicado.GetComponent<ObstacleBehaviour>() != null)
         {
-            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform.parent.gameObject.transform);
             _animation.GetComponent<Animator>().SetTrigger("Accionar");
-            objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle(.75f);
+
+            objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle();
         }else if (objetoClicado.tag == "Obstaculo") 
         {
-            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform.parent.gameObject.transform);
             _animation.GetComponent<Animator>().SetTrigger("Chocar");
         } 
         else if(objetoClicado.GetComponent<MercedesController>() != null)
