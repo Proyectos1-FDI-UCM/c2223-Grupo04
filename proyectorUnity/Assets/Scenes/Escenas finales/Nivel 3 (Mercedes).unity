@@ -8563,6 +8563,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1386572046}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: tiempoStun
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: maxTimeForEating
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: tiempoEsperaComidaCancelada
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7115192470992153103, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

@@ -2,27 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class MercedesController : MonoBehaviour
 {
     LevelManager levelManager;
     [SerializeField]
     float minTimeForEating, maxTimeForEating;
     [SerializeField]
-    float mercedesSpeed, tiempoEsperaComidaCancelada;
+    float mercedesSpeed, tiempoEsperaComidaCancelada, tiempoStun;
     float timeForEating;
+    float contadorStun;
     Transform transformPlanta;
     PlantaBehaviour planta;
-    //[SerializeField]
+    //Collider a activar y desactivar durante los distintos estados de mercedes
+    Collider2D _collider2D;
+    [SerializeField]
     MercheStates estado;
     enum MercheStates
     {
         Comiendo,
         Esperando,
-        Desplazandose
+        Desplazandose,
+        Stuneada
     }
     void Start()
     {
-        estado = MercheStates.Esperando;
+        _collider2D = GetComponent<Collider2D>();
+        Esperar();
         levelManager = GameManager.Instance._levelManager;
         GenerateEatTime();
     }
@@ -36,7 +42,7 @@ public class MercedesController : MonoBehaviour
             if (timeForEating < 0)
                 MoverAComer();
         }
-        if (estado == MercheStates.Desplazandose)
+        else if (estado == MercheStates.Desplazandose)
         {
             if (planta != null)
             {
@@ -47,7 +53,15 @@ public class MercedesController : MonoBehaviour
             } else
             {
                 timeForEating = tiempoEsperaComidaCancelada;
-                estado = MercheStates.Esperando;
+                Esperar();
+            }
+        } else if (estado == MercheStates.Stuneada)
+        {
+            //falta tema de activar animación de estar estuneada
+            contadorStun -= Time.deltaTime;
+            if(contadorStun < 0)
+            {
+                FinDeStun();
             }
         }
         
@@ -60,6 +74,7 @@ public class MercedesController : MonoBehaviour
         planta = levelManager.GetGrownPlant();
         if (planta != null)
         {
+            _collider2D.enabled = true;
             transformPlanta = planta.transform;
             estado = MercheStates.Desplazandose;
         }
@@ -76,7 +91,7 @@ public class MercedesController : MonoBehaviour
     private void Comer()
     {
         planta.transform.parent.GetComponent<SoilComponent>().RemovePlant();
-        estado = MercheStates.Esperando;
+        Esperar();
         GenerateEatTime();
     }
 
@@ -87,6 +102,23 @@ public class MercedesController : MonoBehaviour
     {
         timeForEating = Random.Range(minTimeForEating, maxTimeForEating);
     }
+    
+    public void Stunear()
+    {
+        _collider2D.enabled = false;
+        contadorStun = tiempoStun;
+        estado = MercheStates.Stuneada;
+    }
 
+    private void FinDeStun()
+    {
+        Esperar();
+        GenerateEatTime();
+    }
 
+    private void Esperar()
+    {
+        _collider2D.enabled = false;
+        estado = MercheStates.Esperando;
+    }
 }

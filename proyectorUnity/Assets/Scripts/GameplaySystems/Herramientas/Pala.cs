@@ -20,6 +20,10 @@ public class Pala : Tool
         {
             GameObject.Instantiate(_palaAnim, objetoClicado.transform);
             objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle(.75f);
+        } else if(objetoClicado.GetComponent<MercedesController>() != null)
+        {
+            objetoClicado.GetComponent<MercedesController>().Stunear();
+            Debug.Log("mercedes stuneada");
         }
 
     }
