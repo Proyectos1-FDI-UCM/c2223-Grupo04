@@ -10,10 +10,12 @@ public class HiglightItem : MonoBehaviour
 
     [SerializeField]
     Color color;
+
     private void Start()
     {
-        outline = GetComponent<Outline>();
+        Outline outline = GetComponent<Outline>();
     }
+
 
     private void OnMouseEnter()
     {
@@ -25,12 +27,4 @@ public class HiglightItem : MonoBehaviour
         outline.enabled= false;
     }
 
-    private void OnPostRender()
-    {
-        LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
-        if (lineRenderer == null)
-        {
-            lineRenderer = gameObject.AddComponent<LineRenderer>();
-        }
-    }
 }
