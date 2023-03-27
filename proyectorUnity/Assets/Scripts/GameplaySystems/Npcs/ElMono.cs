@@ -112,9 +112,9 @@ public class ElMono : MonoBehaviour
         miHerramienta.GetComponent<Collider2D>().enabled = true;
         //La posición relativa al mundo de la herramienta al padre.
         Vector3 posicionNueva = transform.InverseTransformPoint(miHerramienta.transform.position);
-        
-        //Saca todos los hijos del transform.
-        transform.DetachChildren();
+
+        //Saca la herramienta del parent.
+        miHerramienta.transform.SetParent(null);
         //Convierte la herramienta a su nueva posición a través del padre.
         miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
 
