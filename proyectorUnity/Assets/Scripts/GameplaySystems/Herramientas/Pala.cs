@@ -5,6 +5,7 @@ public class Pala : Tool
 {
     [SerializeField]
     GameObject _palaAnim;
+    private GameObject _animation;
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
@@ -13,18 +14,25 @@ public class Pala : Tool
         {
             if (!objetoClicado.GetComponent<SoilComponent>().IsEmpty())
             {
-                GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+                _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+                _animation.GetComponent<Animator>().SetTrigger("Accionar");
             }
             objetoClicado.GetComponent<SoilComponent>().RemovePlant();
-        } else if(objetoClicado.GetComponent<ObstacleBehaviour>() != null)
+        } else if (objetoClicado.GetComponent<ObstacleBehaviour>() != null)
         {
-            GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            _animation.GetComponent<Animator>().SetTrigger("Accionar");
             objetoClicado.GetComponent<ObstacleBehaviour>().RemoveObstacle(.75f);
-        } else if(objetoClicado.GetComponent<MercedesController>() != null)
+        }else if (objetoClicado.tag == "Obstaculo") 
+        {
+            _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform);
+            _animation.GetComponent<Animator>().SetTrigger("Chocar");
+        } 
+        else if(objetoClicado.GetComponent<MercedesController>() != null)
         {
             objetoClicado.GetComponent<MercedesController>().Stunear();
             Debug.Log("mercedes stuneada");
-        }
+        } 
 
     }
 }
