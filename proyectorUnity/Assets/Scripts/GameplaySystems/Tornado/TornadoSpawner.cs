@@ -36,11 +36,11 @@ public class TornadoSpawner : MonoBehaviour
     {
         StartCoroutine(TiempoSpawn());
         Camera.main.GetComponent<SmoothCameraFollow>().target = GameManager.Instance._player.transform;
+        GameManager.Instance._player.GetComponent<PlayerController>().GetOutHome();
     }
 
     IEnumerator TiempoSpawn()
     {
-        print("ME QUIERO MORIR");
         yield return new WaitForSeconds(_tEntreTornados + _tMul); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
         _tMul = (10 * GameManager.Instance._nTornados);//Suma el multiplicador al de tiempo
         GameManager.Instance._player.GetComponent<PlayerController>().GoHome();

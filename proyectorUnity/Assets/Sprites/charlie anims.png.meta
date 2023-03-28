@@ -108,11 +108,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 200
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,11 +129,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 200
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,11 +150,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 200
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,11 +171,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 184
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,11 +192,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 184
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,11 +213,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 184
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,11 +234,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 168
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,11 +255,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 168
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,11 +276,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
+        y: 168
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,11 +297,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 152
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,11 +318,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 152
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,11 +339,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 152
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,6 +351,153 @@ TextureImporter:
       bones: []
       spriteID: c3fb2c8ca6c67664fa04e20d48ebaf19
       internalID: 1047876745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 122
+        width: 21
+        height: 27
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a401700f70ae9464ba55d6dc2c8112bd
+      internalID: 1038362080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 121
+        width: 21
+        height: 28
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f313467119f89714085dd8b88083e870
+      internalID: -1307625990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_25
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 89
+        width: 21
+        height: 28
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5bf5337d856544ab7a90adecad2d6
+      internalID: 1641595203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_27
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 88
+        width: 21
+        height: 29
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cdef5ea2600004da4280306eb894f9
+      internalID: -656734156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_33
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 51
+        width: 21
+        height: 34
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f16029693dca344dbb960eb29e61531
+      internalID: -2106762174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_35
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 47
+        width: 21
+        height: 38
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201b3dc8433bdae4ca7903b6bab2f5fa
+      internalID: -1087433959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charlie anims_41
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7
+        width: 21
+        height: 42
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a44d3001bcc7f4c844c97a3bf57780
+      internalID: -1827249340
       vertices: []
       indices: 
       edges: []
@@ -366,18 +513,50 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      charlie anims_39: 810388204
       charlie anims_1: -1259242943
+      charlie anims_38: 1512650398
+      charlie anims_26: -1691485425
+      charlie anims_35: -1087433959
+      charlie anims_22: -1612171901
       charlie anims_11: 1047876745
-      charlie anims_5: 1698929153
+      charlie anims_34: -91229202
+      charlie anims_20: -97831640
       charlie anims_2: -2053072270
       charlie anims_3: -1683506375
       charlie anims_0: -1306194915
-      charlie anims_9: 2064236944
       charlie anims_6: 155263856
       charlie anims_8: 1244847856
+      charlie anims_31: 2138543184
+      charlie anims_40: -556674189
+      charlie anims_30: -297069247
+      charlie anims_28: 689588650
+      charlie anims_33: -2106762174
+      charlie anims_42: 871560762
+      charlie anims_16: -1631505154
+      charlie anims_14: 108712483
+      charlie anims_17: 1038362080
+      charlie anims_27: -656734156
+      charlie anims_43: -1588872575
+      charlie anims_41: -1827249340
+      charlie anims_37: -1323435030
+      charlie anims_19: -1307625990
+      charlie anims_29: -2108748336
+      charlie anims_24: 562680028
+      charlie anims_5: 1698929153
+      charlie anims_9: 2064236944
+      charlie anims_32: 1309703681
+      charlie anims_25: 1641595203
+      charlie anims_36: -1068078413
+      charlie anims_12: 1931805024
+      charlie anims_18: -150101556
       charlie anims_10: 868550903
+      charlie anims_15: -124179919
       charlie anims_7: 420441913
+      charlie anims_13: -979197758
+      charlie anims_23: 1941583399
       charlie anims_4: 1503917033
+      charlie anims_21: 2065638343
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
