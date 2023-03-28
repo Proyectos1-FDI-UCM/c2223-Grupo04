@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < _soilsPapas.childCount; i++)
         {
-            _soilsPapas.GetChild(i).GetComponent<SoilComponent>().Fertilizar();
+            _soilsPapas.GetChild(i).GetComponent<SoilComponent>().Fertilice();
         }
         if (_nTornados >= _nTornadosFuerte)
         {

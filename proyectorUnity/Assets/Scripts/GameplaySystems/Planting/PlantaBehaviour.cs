@@ -107,15 +107,16 @@ public class PlantaBehaviour : MonoBehaviour
 
     }
     /// <summary>
-    /// Configura la planta al ser creada.
+    /// Configura el tipo de planta al ser creada.
+    /// </summary>
+    /// <param name="plantData">El tipo de planta</param>
+    public void SetUpPlant(ScriptablePlant plantData) { _plantData = plantData; }
+
+    /// <summary>
+    /// Set the fertile to the indicated value
     /// </summary>
     /// <param name="isSoilFertil">Indica si el soil es fertil</param>
-    /// <param name="plantData">El tipo de planta</param>
-    public void SetUpPlant(bool isSoilFertil, ScriptablePlant plantData)
-    {
-        _plantData = plantData;
-        _isSoilFertile = isSoilFertil;
-    }
+    public void SetFertil(bool isSoilFertil) { _isSoilFertile = isSoilFertil; }
 
     private void GrowSprite(int _desiredSprite)
     {

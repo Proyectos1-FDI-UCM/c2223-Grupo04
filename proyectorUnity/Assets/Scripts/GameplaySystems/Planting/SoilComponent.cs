@@ -26,9 +26,15 @@ public class SoilComponent : MonoBehaviour
         }else _isEmpty = true;
     }
 
-    public void Fertilizar()
+    /// <summary>
+    /// Convert the soil to a fertile one
+    /// </summary>
+    public void Fertilice()
     {
         _isFertile = true;
+
+        //if there is a plant inside the soil, it gets fertiliced
+        if (_myChild != null && _myChild.GetComponent<PlantaBehaviour>() != null) {_myChild.GetComponent<PlantaBehaviour>().SetFertil(_isFertile);}
     }
 
     /// <summary>
@@ -48,8 +54,11 @@ public class SoilComponent : MonoBehaviour
         //instanciamos una planta, cogemos su PlantaBehaviour y le asignamos el soil como parent
         _myChild = Instantiate(plantPrefab, transform.position, Quaternion.identity, transform);
         PlantaBehaviour plantBehaviour = _myChild.GetComponent<PlantaBehaviour>();
+
         //La configuramos
-        plantBehaviour.SetUpPlant(_isFertile, tipoPlanta);
+        plantBehaviour.SetUpPlant(tipoPlanta);
+        plantBehaviour.SetFertil(_isFertile);
+
         _isEmpty = false;
         _levelManager.AddPlant(plantBehaviour);
     }
