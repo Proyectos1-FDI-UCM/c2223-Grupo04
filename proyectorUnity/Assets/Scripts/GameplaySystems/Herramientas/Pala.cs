@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,6 +8,7 @@ public class Pala : Tool
     [SerializeField]
     GameObject _palaAnim;
     private GameObject _animation;
+    ParticleSystem _particulasChoque;
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
@@ -28,6 +31,10 @@ public class Pala : Tool
         {
             _animation = GameObject.Instantiate(_palaAnim, objetoClicado.transform.parent.gameObject.transform);
             _animation.GetComponent<Animator>().SetTrigger("Chocar");
+            _particulasChoque = _animation.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+            _particulasChoque.gameObject.transform.parent = null;
+            _particulasChoque.gameObject.SetActive(true);
+            _particulasChoque.Play(objetoClicado.transform.parent.gameObject.transform);
         } 
         else if(objetoClicado.GetComponent<MercedesController>() != null)
         {
