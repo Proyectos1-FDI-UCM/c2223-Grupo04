@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public int _nTornados;
     public int _plantasMuertas;
+
+    //para volver a darle el control al jugador tras pasar un tornado
+    float _time;
+    bool _goHome;
+
     [SerializeField] public LevelManager _levelManager;
     private void Awake()
     {
@@ -42,7 +47,6 @@ public class GameManager : MonoBehaviour
         _inputController = GetComponent<InputController>();
     }
 
-    #region methods
     /// <summary>
     /// Se crea un nuevo tornado
     /// </summary>
@@ -50,7 +54,7 @@ public class GameManager : MonoBehaviour
     {
         _nTornados++;
         _tornadoSpawner.NewTornadoTime();
-        UIManager.Instance.NuevoTiempoDeTornado();
+        _uIManager.NuevoTiempoDeTornado();
 
     }
 
@@ -78,6 +82,7 @@ public class GameManager : MonoBehaviour
         _state = _newState;
         StateExecution();
     }
+
     void StateExecution()
     {
         if(_state == GameStates.INTRO)
@@ -95,6 +100,7 @@ public class GameManager : MonoBehaviour
 
         else if (_state == GameStates.GAME)
         {
+            
             NuevoTornado();
             Debug.Log("STATE: GAME");
         }
@@ -122,18 +128,6 @@ public class GameManager : MonoBehaviour
         ChangeState(GameStates.INTRO);
         
     }
-    #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _nTornados = 0;
-        ChangeState(GameStates.INTRO);
-        _nTornadosFuerte = _nTornadosFloja + 3;
-        Camera.main.transform.GetChild(0).gameObject.SetActive(false); //Desactivar las partículas de la lluvia floja.
-        Camera.main.transform.GetChild(1).gameObject.SetActive(false); //Desactivar las partículas de la lluvia fuerte.
-
-    }
 
     public void Pause()
     {
@@ -148,6 +142,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Establece una cuenta atras para cuando Charlie sale de casa 
+    /// </summary>
+    /// <param name="time"></param>
+    public void OutHome(float time)
+    {
+        _time = time;
+        _goHome = true;
+    }
+
     public void Play()
     {
         if (_state == GameStates.INTRO)
@@ -160,6 +164,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        _nTornados = 0;
+        ChangeState(GameStates.INTRO);
+        _nTornadosFuerte = _nTornadosFloja + 3;
+        Camera.main.transform.GetChild(0).gameObject.SetActive(false); //Desactivar las partículas de la lluvia floja.
+        Camera.main.transform.GetChild(1).gameObject.SetActive(false); //Desactivar las partículas de la lluvia fuerte.
+        _goHome = false;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -167,6 +183,16 @@ public class GameManager : MonoBehaviour
         if (_nTornados >= _nTornadosFloja)
         {
             Rain();
-        } 
+        }
+
+        if (_goHome && _time > 0)
+        {
+            _time -= Time.deltaTime;
+        }
+        else if(_goHome && _time <= 0)
+        {
+            _inputController.MoveOrNot(true); //desacitvar el movimiento
+            _goHome = false;
+        }
     }
 }
