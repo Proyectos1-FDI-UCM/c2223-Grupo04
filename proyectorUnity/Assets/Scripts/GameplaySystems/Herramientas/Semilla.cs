@@ -36,7 +36,11 @@ public class Semilla : Tool
 
     public override void PickUpTool()
     { //que no de se desactive el render
-
+        if (gameObject.CompareTag("Semillita"))
+        {
+            GetComponent<Collider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
 }

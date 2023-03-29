@@ -56,12 +56,6 @@ public class InventoryController : MonoBehaviour
     {
         _tool = toolObject;
         GameManager.Instance._uIManager.changeInventory(_tool);
-        if (toolObject.CompareTag("Semillita"))
-        {
-            Debug.Log("SemillaRío desactivada");
-            toolObject.GetComponent<Collider2D>().enabled = false;
-            toolObject.GetComponent<SpriteRenderer>().enabled = false;
-        }
     }
 
     /// <summary>
