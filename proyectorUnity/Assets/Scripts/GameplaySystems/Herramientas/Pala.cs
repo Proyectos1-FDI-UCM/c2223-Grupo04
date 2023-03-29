@@ -8,6 +8,7 @@ public class Pala : Tool
     [SerializeField]
     GameObject _palaAnim;
     private GameObject _animation;
+    //PARTÍCULAS DE CHOQUE
     ParticleSystem _particulasChoque;
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
@@ -35,6 +36,7 @@ public class Pala : Tool
             _particulasChoque.gameObject.transform.parent = null;
             _particulasChoque.gameObject.SetActive(true);
             _particulasChoque.Play(objetoClicado.transform.parent.gameObject.transform);
+            Destroy(_particulasChoque.gameObject, 0.75f);
         } 
         else if(objetoClicado.GetComponent<MercedesController>() != null)
         {
