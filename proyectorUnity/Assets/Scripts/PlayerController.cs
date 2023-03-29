@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public void SetHorizontalAxis(float value){ _anim.SetFloat("Horizontal", value); }
 
+    public void GetOutHome() { _anim.SetTrigger("Casa"); }
+
     private void Start()
     {
         _anim = GetComponent<Animator>();
