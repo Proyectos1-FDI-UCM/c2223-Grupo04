@@ -16,10 +16,12 @@ public class SoilComponent : MonoBehaviour
     [Tooltip("Prefab a generar como hijo sobre este soil, por ejemplo un obstáculo removible")]
     private GameObject _childPrefab;
     private GameObject _myChild;
+
     private void Start()
     {
         _levelManager = GameManager.Instance._levelManager;
-        if(_childPrefab != null)
+
+        if (_childPrefab != null)
         {
             Instanciar(_childPrefab);
             
@@ -95,4 +97,6 @@ public class SoilComponent : MonoBehaviour
     {
         _isEmpty = isEmpty;
     }
+
+   
 }
