@@ -144,6 +144,7 @@ public class UIManager : MonoBehaviour
     public void SalirBoton(int id)
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
+        StopAllCoroutines();
         SceneManager.LoadScene(id);
     }
 

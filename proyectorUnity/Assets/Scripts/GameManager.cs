@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
     [SerializeField]
     public UIManager _uIManager;
+    public InputController _inputController;
     [SerializeField]
     public TornadoSpawner _tornadoSpawner;
     [SerializeField]
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public enum GameStates
     {
-        INTRO, TUTORIAL, GAME, TORNADO, WIN, PAUSA
+        INTRO, TUTORIAL, GAME, TORNADO, WIN
     }
     public GameStates _state;
     /// <summary>
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        _inputController = GetComponent<InputController>();
     }
 
     #region methods
@@ -80,26 +82,25 @@ public class GameManager : MonoBehaviour
     {
         if(_state == GameStates.INTRO)
         {
-            gameObject.GetComponent<InputController>().MoveOrNot(false); //desacitvar el movimiento
+            _inputController.MoveOrNot(false); //desacitvar el movimiento
             Debug.Log("STATE: INTRO");
         }
 
         if (_state == GameStates.TUTORIAL)
         {
-            gameObject.GetComponent<InputController>().MoveOrNot(true); //acitvar el movimiento
+            _inputController.MoveOrNot(true); //acitvar el movimiento
             _player.GetComponent<InventoryControllerTutorial>().StartTutorial();
             Debug.Log("STATE: TUTO");
         }
 
         else if (_state == GameStates.GAME)
         {
-            gameObject.GetComponent<InputController>().MoveOrNot(true); //acitvar el movimiento
             NuevoTornado();
             Debug.Log("STATE: GAME");
         }
         else if (_state == GameStates.TORNADO)
         {
-            gameObject.GetComponent<InputController>().MoveOrNot(false); //desacitvar el movimiento
+            _inputController.MoveOrNot(false); //desacitvar el movimiento
             _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input est� desactivado
             Debug.Log("STATE: TORNADO");
         }
@@ -109,19 +110,13 @@ public class GameManager : MonoBehaviour
             Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
             Debug.Log("STATE: WIN");
         }
-        else if(_state == GameStates.PAUSA)
-        {
-            _uIManager.Pausar();
-            Time.timeScale = 0; //Parar el tiempo.
-            Debug.Log("STATE: PAUSA");
-        }
         _uIManager.CambiarUISegunEstadoJuego();
     }
 
     public void ChangeTutorialMode(GameObject toolObject, string texto) //
     {
         Destroy(_player.GetComponent<InventoryControllerTutorial>());
-        gameObject.GetComponent<InputController>().ChangeTutorialMode(toolObject);
+        _inputController.ChangeTutorialMode(toolObject);
 
         _uIManager.FinalTextoTutorial(texto);
         ChangeState(GameStates.INTRO);
@@ -142,14 +137,14 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        if (_state == GameStates.GAME) //Pasar del Game a la Pausa.
+        if (Time.timeScale > 0) //Pasar del Game a la Pausa.
         {
-            ChangeState(GameStates.PAUSA);
+            _uIManager.Pausar();
+            Time.timeScale = 0; //Parar el tiempo.
         }
-        else if (_state == GameStates.PAUSA)
+        else 
         {
-            ChangeState(GameStates.GAME);
-            Time.timeScale = 1;
+            _uIManager.ContinuarBoton();
         }
     }
 

@@ -14,7 +14,7 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance._player.GetComponent<PlayerController>().DrawCircle(_distanciaMin);
+
     }
 
     /* 
