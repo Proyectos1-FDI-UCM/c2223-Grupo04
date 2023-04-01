@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
     Animator _anim;
     Transform _myTransform;
     [SerializeField]
-    GameObject _radius;
+    Color _transparent = new Color(255,255,255,0);
+    [SerializeField]
+    Color _white = new Color(255,255,255,255);
 
     public void GoHome() 
     { 
         _myTransform.position = _casa.position;
-        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<SpriteRenderer>().color =_transparent;
     }
 
     public void SetVerticalAxis(float value) { _anim.SetFloat("Vertical", value); }
@@ -22,9 +24,16 @@ public class PlayerController : MonoBehaviour
 
     public void GetOutHome()
     {
-        GetComponent<SpriteRenderer>().enabled = true;
         _anim.SetTrigger("Casa");
-        GameManager.Instance.OutHome(1.75f);
+        _myTransform.GetChild(0).GetComponent<SpriteRenderer>().color = _white;
+        _myTransform.GetChild(1).GetComponent<SpriteRenderer>().color = _white;
+        GameManager.Instance.OutHome(1.7f);
+    }
+    public void RestoreOIL(){
+        GetComponent<SpriteRenderer>().color =_white;
+        _myTransform.GetChild(0).GetComponent<SpriteRenderer>().color = _transparent;
+        _myTransform.GetChild(1).GetComponent<SpriteRenderer>().color = _transparent;
+        GetComponent<SpriteRenderer>().enabled = true;
     }
 
     private void Start()
@@ -32,6 +41,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = true;
         _anim = GetComponent<Animator>();
         _myTransform = transform;
+        GoHome();
     }
 
     private void Update()

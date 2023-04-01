@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     public GameStates _state;
     /// <summary>
-    /// N�mero de tornados que han pasado
+    /// Numero de tornados que han pasado
     /// </summary>
     public int _nTornados;
     public int _plantasMuertas;
@@ -113,7 +113,9 @@ public class GameManager : MonoBehaviour
         else if (_state == GameStates.WIN)
         {
             Time.timeScale = 0; //Parar el tiempo.
-            Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
+            if(Puntuacion.Instance != null){
+                Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
+            }
             Debug.Log("STATE: WIN");
         }
         _uIManager.CambiarUISegunEstadoJuego();
@@ -179,7 +181,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Comprobaci�n del n�mero de tornados
+        //Comprobacion del numero de tornados
         if (_nTornados >= _nTornadosFloja)
         {
             Rain();
@@ -192,6 +194,7 @@ public class GameManager : MonoBehaviour
         else if(_goHome && _time <= 0)
         {
             _inputController.MoveOrNot(true); //desacitvar el movimiento
+            _player.GetComponent<PlayerController>().RestoreOIL();
             _goHome = false;
         }
     }
