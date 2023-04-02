@@ -32635,7 +32635,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.9
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -34952,18 +34952,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.03
       objectReference: {fileID: 0}
@@ -35003,10 +34991,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3218208392903033970, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4320326590028734497, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
       propertyPath: m_Name
       value: WateringCanPlaceHolder
@@ -35037,7 +35021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741505945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.12, y: 16.31, z: 0}
+  m_LocalPosition: {x: -6.97, y: 16.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44982,7 +44966,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 270952002481803741, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964241040578258422, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5877752316885151858, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_Name
@@ -45066,7 +45054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182739197765028732, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
@@ -53533,7 +53521,7 @@ Transform:
   m_Children:
   - {fileID: 1908473929}
   m_Father: {fileID: 826999378}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1666887972
 PrefabInstance:
@@ -104114,18 +104102,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.94
       objectReference: {fileID: 0}
@@ -104164,10 +104140,6 @@ PrefabInstance:
     - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144896486828473832, guid: 72cc9757f1bba874987290c59d510655, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6562306557452687760, guid: 72cc9757f1bba874987290c59d510655, type: 3}
       propertyPath: m_Name
