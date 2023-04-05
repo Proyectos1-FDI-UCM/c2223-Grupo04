@@ -14,6 +14,6 @@ public class ScriptablePlant : ScriptableObject
     public Sprite[] DryingSprite = new Sprite[3];
 
     public Sprite icono;
-    
 
+    public int maxQty; //La cantidad maxima de este tipo de semilla que se puede tener en el inventario
 }

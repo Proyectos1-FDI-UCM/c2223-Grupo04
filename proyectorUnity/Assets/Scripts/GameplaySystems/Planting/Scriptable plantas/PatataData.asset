@@ -24,3 +24,4 @@ MonoBehaviour:
   - {fileID: -174932710, guid: 136f4134d52208b40923383349747d91, type: 3}
   - {fileID: -1623264957, guid: 136f4134d52208b40923383349747d91, type: 3}
   icono: {fileID: 1727475665, guid: b79d5517d69a5c44396379126a1e437b, type: 3}
+  maxQty: 3
