@@ -36,7 +36,6 @@ public class TornadoSpawner : MonoBehaviour
     {
         StartCoroutine(TiempoSpawn());
         Camera.main.GetComponent<SmoothCameraFollow>().target = GameManager.Instance._player.transform;
-        GameManager.Instance._player.GetComponent<PlayerController>().GetOutHome();
     }
 
     IEnumerator TiempoSpawn()

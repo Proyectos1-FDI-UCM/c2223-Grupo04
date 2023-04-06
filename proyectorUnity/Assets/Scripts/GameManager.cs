@@ -87,20 +87,20 @@ public class GameManager : MonoBehaviour
     {
         if(_state == GameStates.INTRO)
         {
+            _player.GetComponent<PlayerController>().GoHome(); //va a casa
             _inputController.MoveOrNot(false); //desacitvar el movimiento
             Debug.Log("STATE: INTRO");
         }
 
         if (_state == GameStates.TUTORIAL)
         {
-            _inputController.MoveOrNot(true); //acitvar el movimiento
+            _player.GetComponent<PlayerController>().GetOutHome(); //sale de casa
             _player.GetComponent<InventoryControllerTutorial>().StartTutorial();
             Debug.Log("STATE: TUTO");
         }
-
         else if (_state == GameStates.GAME)
         {
-            
+            _player.GetComponent<PlayerController>().GetOutHome(); //va a casa
             NuevoTornado();
             Debug.Log("STATE: GAME");
         }
@@ -130,7 +130,9 @@ public class GameManager : MonoBehaviour
         ChangeState(GameStates.INTRO);
         
     }
-
+    /// <summary>
+    /// pausa o despausa el juego
+    /// </summary>
     public void Pause()
     {
         if (Time.timeScale > 0) //Pasar del Game a la Pausa.
@@ -154,6 +156,9 @@ public class GameManager : MonoBehaviour
         _goHome = true;
     }
 
+    /// <summary>
+    /// reanuda el juego
+    /// </summary>
     public void Play()
     {
         if (_state == GameStates.INTRO)
@@ -193,7 +198,7 @@ public class GameManager : MonoBehaviour
         }
         else if(_goHome && _time <= 0)
         {
-            _inputController.MoveOrNot(true); //desacitvar el movimiento
+            _inputController.MoveOrNot(true); //acitvar el movimiento
             _player.GetComponent<PlayerController>().RestoreOIL();
             _goHome = false;
         }

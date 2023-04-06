@@ -35,13 +35,15 @@ public class PlayerController : MonoBehaviour
         _myTransform.GetChild(1).GetComponent<SpriteRenderer>().color = _transparent;
         GetComponent<SpriteRenderer>().enabled = true;
     }
+    private void Awake()
+    {
+        _anim = GetComponent<Animator>();
+        _myTransform = transform;
+    }
 
     private void Start()
     {
         GetComponent<SpriteRenderer>().enabled = true;
-        _anim = GetComponent<Animator>();
-        _myTransform = transform;
-        GoHome();
     }
 
     private void Update()
