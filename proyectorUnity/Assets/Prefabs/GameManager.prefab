@@ -5276,6 +5276,7 @@ MonoBehaviour:
   _inventory: {fileID: 1501942045244193844}
   _prefabObjetivo: {fileID: 4718410252072182863, guid: f77589ed24e215d45b9ae58b3323de71, type: 3}
   _panel3: {fileID: 1501942045236984793}
+  _cantInventario: {fileID: 1693188599299919443}
   _insPrefObjs: []
   _objetivosnivel: {fileID: 0}
 --- !u!1 &1501942046605496097
