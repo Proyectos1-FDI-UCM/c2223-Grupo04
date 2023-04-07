@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
+    [SerializeField] TextMeshProUGUI _cantInventario; //texto con la cantidad de cosas que llevas en el inventario.
     [SerializeField]
     List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
     [SerializeField]
@@ -51,12 +52,20 @@ public class UIManager : MonoBehaviour
     {
         _time = GameManager.Instance._tornadoSpawner._tMul + GameManager.Instance._tornadoSpawner._tEntreTornados;
     }
+    public void CantSem(int cant)
+    {       
+        print("" + cant);
+        //Si hay varias semillas
+        if (cant > 0) { _cantInventario.gameObject.SetActive(true); _cantInventario.text = "" + cant; }
+        else { _cantInventario.gameObject.SetActive(false); }
+    }
     public void changeInventory(GameObject tool)
     {
         if (tool != null)
         {
             _inventory.enabled = true;
             _inventory.sprite = tool.GetComponent<SpriteRenderer>().sprite;
+            //coge la cantidqd de elementos en el inventario
         }
         else
         {
@@ -70,7 +79,7 @@ public class UIManager : MonoBehaviour
         {
             GameObject objetivoUI = GameObject.Instantiate(_prefabObjetivo, _panel3);
             //Debug.Log(objetivoUI.name);
-            _insPrefObjs.Add(objetivoUI); //Añadimos a la lista el objetivo.
+            _insPrefObjs.Add(objetivoUI); //Aï¿½adimos a la lista el objetivo.
 
             Image icono = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverImagen();
             TextMeshProUGUI txtinvariable = objetivoUI.GetComponent<ReferenciaUIObjetivos>().DevolverTxtInvariable();

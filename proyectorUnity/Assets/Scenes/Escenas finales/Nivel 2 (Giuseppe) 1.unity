@@ -8886,6 +8886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _cantInventario
+      value: 
+      objectReference: {fileID: 621304670}
     - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: objetivos
       value: 
@@ -9084,6 +9088,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &621304670 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1693188599299919443, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+  m_PrefabInstance: {fileID: 453308354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &658904657
 PrefabInstance:
   m_ObjectHideFlags: 0

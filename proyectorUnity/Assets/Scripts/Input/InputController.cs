@@ -49,10 +49,10 @@ public class InputController : MonoBehaviour
             if (_movible)
             {
                 Vector2 mousePos = Input.mousePosition;
-                //impacto de rayo desde ubicación del ratón a punto del mundo.
+                //impacto de rayo desde ubicacion del raton a punto del mundo.
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
 
-                //Sólo entra si ha impactado con algún collider
+                //Solo entra si ha impactado con algun collider
                 if (hit)
                 {
                     GameObject objeto = hit.collider.gameObject;
@@ -68,7 +68,7 @@ public class InputController : MonoBehaviour
                     }
                     else //En caso de no ser un tool
                     {
-                        //Efectua la acción de clic de la herramienta
+                        //Efectua la acciï¿½n de clic de la herramienta
                         inventoryController.ClickFunction(objeto, mousePos);
                     }
                 }

@@ -8,9 +8,10 @@ public class InventoryController : MonoBehaviour
     [HideInInspector]
     private GameObject _tool;
     [SerializeField]
-    [Tooltip("Ditancia mínima para que Charlie pueda coger la herramienta")]
+    [Tooltip("Ditancia mï¿½nima para que Charlie pueda coger la herramienta")]
     private float _distanciaMin;
     [SerializeField] LayerMask _destructeable; // Solo en el nivel de Peter.
+    [SerializeField]
     private int inventoryQty;
 
 
@@ -19,15 +20,20 @@ public class InventoryController : MonoBehaviour
         inventoryQty = 0;
     }
 
+    public int GetInventoryQty()
+    {
+        return inventoryQty;
+    }
+
     /* 
     * Charlie coge el objeto, si se cumplen los requisitos.
-    * Se debe pasar por parámetro, el objeto a coger y la posición del ratón en el clic.
+    * Se debe pasar por parï¿½metro, el objeto a coger y la posiciï¿½n del ratï¿½n en el clic.
     */
     public virtual void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
     {
         //Debug.Log(Vector2.Distance(gameObject.transform.position, toolObject.transform.position));
 
-        //Se puede coger el objeto si el inventario no está ocupado y está suficientemente cerca
+        //Se puede coger el objeto si el inventario no estï¿½ ocupado y estï¿½ suficientemente cerca
         if (Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < _distanciaMin)
         {
             if (toolObject.GetComponent<Semilla>() != null)
@@ -52,8 +58,9 @@ public class InventoryController : MonoBehaviour
         if (_tool == null)
         {
             _tool = toolObject;
-            GameManager.Instance._uIManager.changeInventory(_tool);
             inventoryQty++;
+            GameManager.Instance._uIManager.changeInventory(_tool);
+            GameManager.Instance._uIManager.CantSem(inventoryQty);
         }
         //Comprueba si es el mismo tipo de semilla, por ejemplo zanahoria.
         else if(_tool.GetComponent<Semilla>().GetScriptablePlant().Equals(toolObject.GetComponent<Semilla>().GetScriptablePlant()))
@@ -61,20 +68,22 @@ public class InventoryController : MonoBehaviour
             if (inventoryQty < _tool.GetComponent<Semilla>().GetMaxQty())
             {
                 inventoryQty++;
+                GameManager.Instance._uIManager.CantSem(inventoryQty);
             }
             else
             {
                 inventoryQty = 0;
+                GameManager.Instance._uIManager.CantSem(inventoryQty);
                 RemoveTool();
             }
         }
     }
 
     /// <summary>
-    /// Comprueba si el objeto está al alcance de Charlie. En caso afirmativo, realiza la acción de clic de la herramienta.
+    /// Comprueba si el objeto estï¿½ al alcance de Charlie. En caso afirmativo, realiza la acciï¿½n de clic de la herramienta.
     /// </summary>
     /// <param name="objetoClicado">El objeto clicado xd</param>
-    /// <param name="mousePos">La posición del ratón en el momento del clic</param>
+    /// <param name="mousePos">La posiciï¿½n del ratï¿½n en el momento del clic</param>
     public virtual void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
         if (_tool != null && Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < _distanciaMin)
@@ -86,6 +95,7 @@ public class InventoryController : MonoBehaviour
     public void UsarSemilla()
     {
         inventoryQty--;
+        GameManager.Instance._uIManager.CantSem(inventoryQty);
         if (inventoryQty <= 0) { 
             RemoveTool();
         }
