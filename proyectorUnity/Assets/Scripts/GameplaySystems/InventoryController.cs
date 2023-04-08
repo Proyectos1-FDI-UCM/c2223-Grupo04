@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
@@ -55,6 +56,7 @@ public class InventoryController : MonoBehaviour
 
     private void PickUpSemilla(GameObject toolObject)
     {
+        toolObject.GetComponent<Semilla>().PickUpTool();
         if (_tool == null)
         {
             _tool = toolObject;

@@ -14,7 +14,6 @@ public class Semilla : Tool
     private GameObject _semillaAnim;
     [SerializeField]
     private Sprite _semilla;
-    [SerializeField] public bool _destructeable; //Para el nivel de Peter.
 
     public override void OnClickFunction(GameObject objetoClicado, InventoryController inventoryController)
     {
@@ -36,5 +35,10 @@ public class Semilla : Tool
     public ScriptablePlant GetScriptablePlant()
     {
         return TipoDePlanta;
+    }
+
+    public override void PickUpTool()
+    {
+        
     }
 }
