@@ -3591,6 +3591,7 @@ GameObject:
   - component: {fileID: 1501942045731911453}
   - component: {fileID: 1501942045731911452}
   - component: {fileID: 1501942045731911451}
+  - component: {fileID: 7063027728679573383}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3636,6 +3637,7 @@ MonoBehaviour:
   _tornadoSpawner: {fileID: 997536862185482093}
   _nTornadosFloja: 4
   _soilsPapas: {fileID: 0}
+  _letterTyper: {fileID: 0}
   _state: 0
   _nTornados: 0
   _plantasMuertas: 0
@@ -3653,6 +3655,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movible: 0
+--- !u!114 &7063027728679573383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501942045731911450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a54007372eda544b89d3e0b2b79458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogos: {fileID: 0}
+  _dialogue: 
 --- !u!1 &1501942045783953418
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Giuseppe
   m_EditorClassIdentifier: 
   _dialogos:
-  - Hola, que tal :)
-  - PLANTA CHARLIE PLANTA!!!!!
+  - "Hola, \xBFqu\xE9 tal? :)"
+  - PLANTA, CHARLIE!!! PLANTA!!!
   - De chill bro.
   - "Oye, \xBFquieres una pi\xF1a colada? As\xED descansas un rato."
   - "Volvamos un d\xEDa a pasear por el r\xEDo."
   - "Si fuera un humano, \xBFme seguir\xEDas queriendo?"
-  - Gracias por planta y ayudarme :)
+  - Gracias por plantar y ayudarme :)
   - "El estilo lo es todo colega, as\xED que ponte algo de ropa."
