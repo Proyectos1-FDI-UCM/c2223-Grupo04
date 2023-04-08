@@ -9,9 +9,7 @@ public class LetterByLetterTyping : MonoBehaviour
 
     float _delay;
     float _delayReset;
-    [SerializeField]
     TextMeshProUGUI _dialogos;
-    [SerializeField]
     string _dialogue;
     int _controlVar = 0;
 
