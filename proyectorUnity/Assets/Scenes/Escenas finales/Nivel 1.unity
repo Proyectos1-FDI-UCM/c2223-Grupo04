@@ -38602,6 +38602,14 @@ PrefabInstance:
       propertyPath: _controlesUI
       value: 
       objectReference: {fileID: 137509927}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _stopAudioSource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _dialogueTypingSounds
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ece002fec22d946a1d09aaff6ccc71, type: 3}
     - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: objetivos
       value: 
