@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
+    [SerializeField]
     private MovementController movementController;
+    [SerializeField]
     private InventoryController inventoryController;
     private float _h;
     private float _v;
