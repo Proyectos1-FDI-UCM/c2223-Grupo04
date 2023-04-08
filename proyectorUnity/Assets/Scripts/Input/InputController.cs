@@ -64,6 +64,7 @@ public class InputController : MonoBehaviour
                     }
                     else if (LayerMask.LayerToName(objeto.layer) == "NPC")
                     {
+                        //objeto.GetComponent<DialogosInGame>().Bocadillo();
                         objeto.GetComponent<DialogosInGame>().Bocadillo();
                     }
                     else //En caso de no ser un tool

@@ -13,13 +13,22 @@ public class DialogosInGame : MonoBehaviour
     [SerializeField]
     Transform _bocadilloSpawner;
 
-    public void Bocadillo()
+    public void Bocadillo() 
     {
-        //instanciar un bpcadillo
-        if (_dialogoInstancia == null)
+        if (_dialogoInstancia == null) 
         {
+        
             _dialogoInstancia = Instantiate(_dialogoPrefab, _bocadilloSpawner);
             _dialogoInstancia.GetComponent<Bocadillo>().Escribir(_dialogos._dialogos[Random.Range(0, _dialogos._dialogos.Length)]);
         }
+        else if (_dialogoInstancia != null) 
+        {
+            Destroy(_dialogoInstancia);
+            _dialogoInstancia = Instantiate(_dialogoPrefab, _bocadilloSpawner);
+            _dialogoInstancia.GetComponent<Bocadillo>().Escribir(_dialogos._dialogos[Random.Range(0, _dialogos._dialogos.Length)]);
+
+        }
+
     }
+    
 }

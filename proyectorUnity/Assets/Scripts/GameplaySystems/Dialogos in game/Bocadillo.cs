@@ -19,12 +19,14 @@ public class Bocadillo : MonoBehaviour
         {
             _countdown -= Time.deltaTime;
         }
-
     }
 
     public void Escribir(string dialogo)
     {
-        _txtDialogo.text = dialogo;
-        _countdown = 5;
+
+
+        GameManager.Instance._letterTyper.LetterByLetter(dialogo, _txtDialogo, 0.045f);
+        _countdown = 15;
     }
+    
 }

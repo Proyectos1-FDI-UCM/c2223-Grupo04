@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     private int _nTornadosFuerte;
     [SerializeField]
     private Transform _soilsPapas;
+    [SerializeField]
+    public LetterByLetterTyping _letterTyper;
     /// <summary>
     /// Estados de juego
     /// </summary>
