@@ -19296,6 +19296,7 @@ GameObject:
   - component: {fileID: 5877752316885151864}
   - component: {fileID: 5869373370455778936}
   - component: {fileID: 5894849836583197850}
+  - component: {fileID: 9143574729366432172}
   - component: {fileID: 4279259898049434261}
   m_Layer: 3
   m_Name: Charlie UwU
@@ -19364,7 +19365,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 2064236944, guid: 80566fa4d714f6d459d7f667e909d180, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19459,6 +19460,19 @@ MonoBehaviour:
   _destructeable:
     serializedVersion: 2
     m_Bits: 0
+  inventoryQty: 0
+--- !u!114 &9143574729366432172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877752316885151858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73787b6bf7e5de448a7126b9b19be3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &4279259898049434261
 CircleCollider2D:
   m_ObjectHideFlags: 0
