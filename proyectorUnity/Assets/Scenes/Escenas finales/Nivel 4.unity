@@ -19083,6 +19083,7 @@ MonoBehaviour:
   _destructeable:
     serializedVersion: 2
     m_Bits: 0
+  inventoryQty: 0
 --- !u!1 &894123848
 GameObject:
   m_ObjectHideFlags: 0
@@ -35402,6 +35403,10 @@ PrefabInstance:
         jard\xEDn est\xE1 escalonado y tendr\xE1s que usar las rampa de la izquierda
         para moverte entre niveles.\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045002787131, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e92f86611c3a9db47ae62165b20250af, type: 3}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

@@ -104438,6 +104438,10 @@ PrefabInstance:
       value: "HOLA SOY GIUSEPPE. \nBienvenido al jard\xEDn de Peter el pel\xEDcano.
         Este jard\xEDn \ntiene un rio en el medio que te arrastra."
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045002787131, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28c49611e97682a42a09223608bf1a57, type: 3}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

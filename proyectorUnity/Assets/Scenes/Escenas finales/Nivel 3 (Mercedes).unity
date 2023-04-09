@@ -265,6 +265,10 @@ PrefabInstance:
         Este jard\xEDn tiene todas las herramientas y semillas en el centro y las
         zonas de plantados en \nlos laterales.\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045002787131, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 247b17b4e7135f243abbbf977ee47af5, type: 3}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -46072,6 +46076,7 @@ MonoBehaviour:
   _destructeable:
     serializedVersion: 2
     m_Bits: 0
+  inventoryQty: 0
 --- !u!1 &1969145520
 GameObject:
   m_ObjectHideFlags: 0
