@@ -15,7 +15,7 @@ public class LetterByLetterTyping : MonoBehaviour
     int _controlVar = 0;
     
     //SOUND
-    [SerializeField] private AudioClip _dialogueTypingSounds;
+    [SerializeField] private AudioClip[] _dialogueTypingSounds;
     [SerializeField] private bool _stopAudioSource;
 
     private AudioSource _audioTrack;
@@ -39,7 +39,6 @@ public class LetterByLetterTyping : MonoBehaviour
             if (_delay <= 0f) 
             {
                 PlayDialogueSound(_controlVar);
-                print(_controlVar);
                 _dialogos.text += _dialogue[_controlVar];
                 
                 _controlVar++;
@@ -74,8 +73,94 @@ public class LetterByLetterTyping : MonoBehaviour
             {
                 _audioTrack.Stop();
             }
+  
+            AudioClip currentSound = _dialogueTypingSounds[Random.Range(0, _dialogueTypingSounds.Length)];
             _audioTrack.pitch = Random.Range(_minPitch, _maxPitch);
-            _audioTrack.PlayOneShot(_dialogueTypingSounds);
+            switch (_dialogue[_controlVar]) 
+            {
+                case 'A':
+                    currentSound = _dialogueTypingSounds[0];
+                    break;
+                case 'B':
+                    currentSound = _dialogueTypingSounds[1];
+                    break;
+                case 'C':
+                    currentSound = _dialogueTypingSounds[2];
+                    break;
+                case 'D':
+                    currentSound = _dialogueTypingSounds[3];
+                    break;
+                case 'E':
+                    currentSound = _dialogueTypingSounds[4];
+                    break;
+                case 'F':
+                    currentSound = _dialogueTypingSounds[5];
+                    break;
+                case 'G':
+                    currentSound = _dialogueTypingSounds[6];
+                    break;
+                case 'H':
+                    currentSound = _dialogueTypingSounds[7];
+                    break;
+                case 'I':
+                    currentSound = _dialogueTypingSounds[8];
+                    break;
+                case 'J':
+                    currentSound = _dialogueTypingSounds[9];
+                    break;
+                case 'K':
+                    currentSound = _dialogueTypingSounds[10];
+                    break;
+                case 'L':
+                    currentSound = _dialogueTypingSounds[11];
+                    break;
+                case 'M':
+                    currentSound = _dialogueTypingSounds[12];
+                    break;
+                case 'N':
+                    currentSound = _dialogueTypingSounds[13];
+                    break;
+                case 'Ñ':
+                    currentSound = _dialogueTypingSounds[14];
+                    break;
+                case 'O':
+                    currentSound = _dialogueTypingSounds[15];
+                    break;
+                case 'P':
+                    currentSound = _dialogueTypingSounds[16];
+                    break;
+                case 'Q':
+                    currentSound = _dialogueTypingSounds[17];
+                    break;
+                case 'R':
+                    currentSound = _dialogueTypingSounds[18];
+                    break;
+                case 'S':
+                    currentSound = _dialogueTypingSounds[19];
+                    break;
+                case 'T':
+                    currentSound = _dialogueTypingSounds[20];
+                    break;
+                case 'U':
+                    currentSound = _dialogueTypingSounds[21];
+                    break;
+                case 'V':
+                    currentSound = _dialogueTypingSounds[22];
+                    break;
+                case 'W':
+                    currentSound = _dialogueTypingSounds[23];
+                    break;
+                case 'X':
+                    currentSound = _dialogueTypingSounds[24];
+                    break;
+                case 'Y':
+                    currentSound = _dialogueTypingSounds[25];
+                    break;
+                case 'Z':
+                    currentSound = _dialogueTypingSounds[26];
+                    break;
+            }
+            _audioTrack.PlayOneShot(currentSound);
         } 
     }
 }

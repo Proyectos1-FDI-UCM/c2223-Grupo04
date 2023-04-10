@@ -6155,8 +6155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 148.8935, y: 0}
-  m_SizeDelta: {x: 287.787, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754726759
 MonoBehaviour:
@@ -38603,10 +38603,6 @@ PrefabInstance:
       propertyPath: _controlesUI
       value: 
       objectReference: {fileID: 137509927}
-    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
-      propertyPath: _stopAudioSource
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _dialogueTypingSounds
       value: 
