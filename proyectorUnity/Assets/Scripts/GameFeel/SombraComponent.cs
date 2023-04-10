@@ -33,7 +33,7 @@ public class SombraComponent : MonoBehaviour
     {
         _shadowSpriteRenderer.sprite = _thisSpriteRenderer.sprite;
         blackAlfa = new Color(0,0,0,140) ;
-        print(blackAlfa);
+        //print(blackAlfa);
         _shadowSpriteRenderer.color = blackAlfa;
     }
 }

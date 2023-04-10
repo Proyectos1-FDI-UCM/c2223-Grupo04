@@ -23,8 +23,6 @@ public class Bocadillo : MonoBehaviour
 
     public void Escribir(string dialogo)
     {
-
-
         GameManager.Instance._letterTyper.LetterByLetter(dialogo, _txtDialogo, 0.045f);
         _countdown = 15;
     }

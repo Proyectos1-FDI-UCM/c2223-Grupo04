@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LetterByLetterTyping : MonoBehaviour
 {
 
+    //Variables locales
     float _delay;
     float _delayReset;
     TextMeshProUGUI _dialogos;
@@ -14,12 +15,18 @@ public class LetterByLetterTyping : MonoBehaviour
     int _controlVar = 0;
     
     //SOUND
-    [SerializeField]
-    private AudioClip _dialogueTypingSounds;
-    [SerializeField]
-    private bool _stopAudioSource;
+    [SerializeField] private AudioClip _dialogueTypingSounds;
+    [SerializeField] private bool _stopAudioSource;
 
     private AudioSource _audioTrack;
+
+    [SerializeField] private int _frequencylevel;
+
+    [Range(-3, 3)]
+    [SerializeField] float _minPitch = 0.5f;
+
+    [Range(-3, 3)]
+    [SerializeField] float _maxPitch = 3f;
 
 
     // Update is called once per frame
@@ -31,7 +38,8 @@ public class LetterByLetterTyping : MonoBehaviour
             
             if (_delay <= 0f) 
             {
-                PlayDialogueSound(_dialogue.Length);
+                PlayDialogueSound(_controlVar);
+                print(_controlVar);
                 _dialogos.text += _dialogue[_controlVar];
                 
                 _controlVar++;
@@ -39,7 +47,7 @@ public class LetterByLetterTyping : MonoBehaviour
             }
             else _delay -= Time.deltaTime;
         }
-
+        
 
     }
     public void LetterByLetter(string dialogue, TextMeshProUGUI dialogues, float delay) 
@@ -59,13 +67,14 @@ public class LetterByLetterTyping : MonoBehaviour
     
     private void PlayDialogueSound(int currentDisplayedCharCount) 
     {
-        if(currentDisplayedCharCount % 3 == 0)
+        if(currentDisplayedCharCount % _frequencylevel == 0)
         {
             _audioTrack = this.gameObject.AddComponent<AudioSource>();
             if (_stopAudioSource)
             {
                 _audioTrack.Stop();
             }
+            _audioTrack.pitch = Random.Range(_minPitch, _maxPitch);
             _audioTrack.PlayOneShot(_dialogueTypingSounds);
         } 
     }

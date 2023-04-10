@@ -26,7 +26,6 @@ public class DialogosInGame : MonoBehaviour
             Destroy(_dialogoInstancia);
             _dialogoInstancia = Instantiate(_dialogoPrefab, _bocadilloSpawner);
             _dialogoInstancia.GetComponent<Bocadillo>().Escribir(_dialogos._dialogos[Random.Range(0, _dialogos._dialogos.Length)]);
-
         }
 
     }
