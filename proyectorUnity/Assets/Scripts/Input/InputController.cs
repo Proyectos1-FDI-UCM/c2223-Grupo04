@@ -24,12 +24,15 @@ public class InputController : MonoBehaviour
 
         //Obtiene el componente de movimiento del player
         movementController = GameManager.Instance._player.GetComponent<MovementController>();
-        inventoryController = GameManager.Instance._player.GetComponent<InventoryController>();
+        
 
         _movible = false;
 
         if (GameManager.Instance._player.GetComponent<InventoryControllerTutorial>() != null)
             inventoryController = GameManager.Instance._player.GetComponent<InventoryControllerTutorial>();
+        else
+            inventoryController = GameManager.Instance._player.GetComponent<InventoryController>();
+
 
     }
 

@@ -19840,7 +19840,7 @@ GameObject:
   - component: {fileID: 1453690814}
   - component: {fileID: 1453690813}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: LightTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19862,7 +19862,7 @@ MonoBehaviour:
   m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.22726944, g: 0.7924528, b: 0.7298456, a: 1}
+  m_Color: {r: 0.1411712, g: 0.9716981, b: 0.8794173, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -37777,6 +37777,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5894849836583197850, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
 --- !u!1 &1940942771 stripped
@@ -37801,22 +37805,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   inventoryQty: 0
-  Herramientas:
+  ObjetosAInteractuar:
   - {fileID: 326324959}
+  - {fileID: 326324959}
+  - {fileID: 97196787}
+  - {fileID: 2065722892}
+  - {fileID: 1297702874}
+  - {fileID: 97196787}
   - {fileID: 1297702874}
   - {fileID: 727300796}
-  _dialogos: {fileID: 11400000, guid: 0e1e94587224cde448686fb365442955, type: 2}
-  _tiempoEspera: 10
-  _posicionesLuces:
-  - {fileID: 7919377365756190746, guid: 104e69ccce65a9a4d84a0ce6ee259011, type: 3}
-  - {fileID: 9173918497114956844, guid: e7bfac998359dd34abe66f7a1bcb4c23, type: 3}
-  - {fileID: 3449894229462919565, guid: e34162f1de09b9b4e803ea4e431c8149, type: 3}
-  - {fileID: 9173918497114956844, guid: e7bfac998359dd34abe66f7a1bcb4c23, type: 3}
-  - {fileID: 8629946458464544620, guid: 4c0851ddfdfc1f749b22186b1d793def, type: 3}
-  - {fileID: 1302899246727427000, guid: 437c3d1d821639c4085dcc5fd6d012bd, type: 3}
+  - {fileID: 1923918376}
   _luz: {fileID: 1453690812}
-  _soil: {fileID: 97196787}
-  _soilPiedras: {fileID: 1923918376}
+  _parteActual: 0
+  _dialogos: {fileID: 11400000, guid: 0e1e94587224cde448686fb365442955, type: 2}
 --- !u!4 &1979990521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
@@ -39796,6 +39797,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2065722892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4670867843186973513, guid: ef922484aa7268444b5ae035fec0bdf1, type: 3}
+  m_PrefabInstance: {fileID: 543067832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2080347587
 PrefabInstance:
   m_ObjectHideFlags: 0

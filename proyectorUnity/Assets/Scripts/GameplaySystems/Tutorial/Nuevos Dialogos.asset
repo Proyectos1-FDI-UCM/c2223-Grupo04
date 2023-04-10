@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogos:
   - "Primero vamos a coger una semilla de tomates. Ac\xE9rcate a la bolsa y haz click."
-  - "Muy bien. Ahora vamos a plantarla en el suelo. Recuerda, la tierra oscura ha
-    estado en barbecho,  por lo que las plantas crecer\xE1n m\xE1s r\xE1pido, y no
-    se secar\xE1n."
-  - "Perfecto! Vamos a regarla. Si la regamos, crecer\xE1 m\xE1s r\xE1pido, y evitaremos
-    que se seque."
-  - "\xA1Muy bien! Por \xFAltimo, vamos a quitar las piedras peque\xF1as. Vamos a
-    por la pala, pero no te olvides de dejar la regadera!"
-  - "\xA1Genial! \xA1Qu\xE9 buen jardinero! \xA1A por ellos, Charlie! \xA1Y cuidado
-    con los tornados!"
+  - Coge otra. Puedes llevar hasta tres semillas al mismo tiempo, pero empecemos
+    con dos
+  - "Muy bien. Ahora vamos a plantarlas. Por ejemplo, ah\xED"
+  - "Y planta la otra ah\xED. Esa tierra ha estado en barbecho, asi que crecer\xE1
+    m\xE1s r\xE1pido y no se secar\xE1."
+  - "\xA1Perfecto! Ahora vamos a regarlas para que crezcan m\xE1s r\xE1pido. Ve a
+    por la regadera."
+  - "Si se empiezan a secar las plantas, ri\xE9galas. Si no, se morir\xE1n, y tendr\xE1s
+    que desplantarlas. Vamos adejar la regadera"
+  - "Por \xFAltimo, vamos a quitar las piedras peque\xF1as. ve a por la pala, \xA1pero
+    no te olvides de dejar la regadera!"
+  - "No podemos hacer nada con las piedras grandes, pero al menos podemos quitar
+    las peque\xF1as. Venga, Charlie, que ya no queda nada."
+  - "\xA1Genial! \xA1Qu\xE9 buen jardinero! Ahora solo tienes que hacer esto un par
+    de veces m\xE1s, hasta que tengas todas tus plantitas palantadas. \xA1A por ellos,
+    Charlie!\xA1Y cuidado con los tornados!"
