@@ -28,7 +28,10 @@ public class LetterByLetterTyping : MonoBehaviour
     [Range(-3, 3)]
     [SerializeField] float _maxPitch = 3f;
 
-
+    private void Start()
+    {
+        _audioTrack = this.gameObject.AddComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -68,7 +71,6 @@ public class LetterByLetterTyping : MonoBehaviour
     {
         if(currentDisplayedCharCount % _frequencylevel == 0)
         {
-            _audioTrack = this.gameObject.AddComponent<AudioSource>();
             if (_stopAudioSource)
             {
                 _audioTrack.Stop();
@@ -76,6 +78,7 @@ public class LetterByLetterTyping : MonoBehaviour
   
             AudioClip currentSound = _dialogueTypingSounds[Random.Range(0, _dialogueTypingSounds.Length)];
             _audioTrack.pitch = Random.Range(_minPitch, _maxPitch);
+            //TODO ESTE SWTICH ESTÁ EN VERSIÓN PRELIMINAR, SE VA A INTENTAR HACER CON LOS CARACTERES ASCII DE CADA LETRA PARA EVITAR ERRORES
             switch (_dialogue[_controlVar]) 
             {
                 case 'A':
