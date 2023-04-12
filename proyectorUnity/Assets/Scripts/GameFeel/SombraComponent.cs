@@ -18,7 +18,7 @@ public class SombraComponent : MonoBehaviour
         //Creamos los objetos de la sombra y su padre
         _shadow = new GameObject("Shadow", typeof(SpriteRenderer));
         _shadowParent = new GameObject("ShadowParent");
-        //Colocamos en la herarquia los gameobjects
+        //Colocamos en la jerarquia los gameobjects
         _shadowParent.transform.parent = gameObject.transform;
         _shadow.transform.parent = _shadowParent.transform;
         //Cacheamos los sprite renderers
@@ -50,8 +50,8 @@ public class SombraComponent : MonoBehaviour
         _shadowSpriteRenderer.flipX = _thisSpriteRenderer.flipX;
         //creamos un color temporal con la transparencia deseada y lo asignamos a la sombra
         Color tmp = new Color(0,0,0,_thisSpriteRenderer.color.a - 140) ;
-        print(tmp);
+        //print(tmp);
         _shadowSpriteRenderer.color = tmp;
-        print(_shadowSpriteRenderer.color.a);
+        //print(_shadowSpriteRenderer.color.a);
     }
 }

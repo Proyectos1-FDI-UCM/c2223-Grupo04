@@ -18,11 +18,13 @@ public class MercedesController : MonoBehaviour
     Collider2D _collider2D;
     [SerializeField]
     MercheStates estado;
+    Animator animator;
     enum MercheStates
     {
         Comiendo,
         Esperando,
-        Desplazandose,
+        DesplazandoseAComer,
+        DesplazandoseACasa,
         Stuneada
     }
     void Start()
@@ -31,6 +33,7 @@ public class MercedesController : MonoBehaviour
         Esperar();
         levelManager = GameManager.Instance._levelManager;
         GenerateEatTime();
+        animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     void Update()
@@ -42,7 +45,7 @@ public class MercedesController : MonoBehaviour
             if (timeForEating < 0)
                 MoverAComer();
         }
-        else if (estado == MercheStates.Desplazandose)
+        else if (estado == MercheStates.DesplazandoseAComer)
         {
             if (planta != null)
             {
@@ -57,7 +60,7 @@ public class MercedesController : MonoBehaviour
             }
         } else if (estado == MercheStates.Stuneada)
         {
-            //falta tema de activar animación de estar estuneada
+            //falta tema de activar animaciï¿½n de estar estuneada
             contadorStun -= Time.deltaTime;
             if(contadorStun < 0)
             {
@@ -67,7 +70,7 @@ public class MercedesController : MonoBehaviour
         
     }
     /// <summary>
-    /// Método que "llama a comer" a merche, haciendo que comience a moverse hacia una planta para comersela.
+    /// Metodo que "llama a comer" a merche, haciendo que comience a moverse hacia una planta para comersela.
     /// </summary>
     private void MoverAComer()
     {
@@ -76,7 +79,8 @@ public class MercedesController : MonoBehaviour
         {
             _collider2D.enabled = true;
             transformPlanta = planta.transform;
-            estado = MercheStates.Desplazandose;
+            estado = MercheStates.DesplazandoseAComer;
+            animator.SetBool("Move", true);
         }
         else
         {
@@ -93,6 +97,7 @@ public class MercedesController : MonoBehaviour
         planta.transform.parent.GetComponent<SoilComponent>().RemovePlant();
         Esperar();
         GenerateEatTime();
+       LlegarAUnSitio();
     }
 
     /// <summary>
@@ -120,5 +125,10 @@ public class MercedesController : MonoBehaviour
     {
         _collider2D.enabled = false;
         estado = MercheStates.Esperando;
+    }
+
+    private void LlegarAUnSitio() 
+    {
+        animator.SetBool("Move", false);
     }
 }
