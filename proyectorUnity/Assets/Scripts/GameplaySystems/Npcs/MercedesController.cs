@@ -7,12 +7,15 @@ public class MercedesController : MonoBehaviour
 {
     LevelManager levelManager;
     [SerializeField]
-    float minTimeForEating, maxTimeForEating;
+    float minTimeForEating, maxTimeForEating, timeAfterEating;
     [SerializeField]
     float mercedesSpeed, tiempoEsperaComidaCancelada, tiempoStun;
+    [SerializeField]
+    GameObject casitaMercedes;
     float timeForEating;
+    float elapsedTimeAfterEating;
     float contadorStun;
-    Transform transformPlanta;
+    Transform transformObjetivo;
     PlantaBehaviour planta;
     //Collider a activar y desactivar durante los distintos estados de mercedes
     Collider2D _collider2D;
@@ -22,7 +25,7 @@ public class MercedesController : MonoBehaviour
     enum MercheStates
     {
         Comiendo,
-        Esperando,
+        EsperandoEnCasa,
         DesplazandoseAComer,
         DesplazandoseACasa,
         Stuneada
@@ -39,36 +42,72 @@ public class MercedesController : MonoBehaviour
     void Update()
     {
 
-        if (estado == MercheStates.Esperando)
+        if (estado == MercheStates.EsperandoEnCasa)
         {
             timeForEating -= Time.deltaTime;
             if (timeForEating < 0)
+            {
                 MoverAComer();
+            }
+        }
+        else if (estado == MercheStates.Comiendo)
+        {
+            elapsedTimeAfterEating -= Time.deltaTime;
+            if (elapsedTimeAfterEating < 0)
+            {
+                MoverACasa();
+            }
+        }
+        else if (estado == MercheStates.DesplazandoseACasa)
+        {
+            if (MoverHacia(transformObjetivo))
+            {
+                Esperar();
+            }
+
         }
         else if (estado == MercheStates.DesplazandoseAComer)
         {
             if (planta != null)
             {
-                Vector2 direccion = transform.position - transformPlanta.position;
-                transform.position = Vector2.MoveTowards(transform.position, transformPlanta.position, mercedesSpeed * Time.deltaTime);
-                if (direccion.magnitude < 0.5)
+                if (MoverHacia(transformObjetivo))
+                {
                     Comer();
-            } else
+                }
+            }
+            else
             {
                 timeForEating = tiempoEsperaComidaCancelada;
                 Esperar();
             }
-        } else if (estado == MercheStates.Stuneada)
+        }
+        else if (estado == MercheStates.Stuneada)
         {
             //falta tema de activar animaci�n de estar estuneada
             contadorStun -= Time.deltaTime;
-            if(contadorStun < 0)
+            if (contadorStun < 0)
             {
                 FinDeStun();
             }
         }
-        
+
     }
+
+    private void MoverACasa()
+    {
+        _collider2D.enabled = true;
+        transformObjetivo = casitaMercedes.transform;
+        estado = MercheStates.DesplazandoseACasa;
+        animator.SetBool("Move", true);
+    }
+
+    private bool MoverHacia(Transform objetivo)
+    {
+        Vector2 direccion = transform.position - objetivo.position;
+        transform.position = Vector2.MoveTowards(transform.position, objetivo.position, mercedesSpeed * Time.deltaTime);
+        return direccion.magnitude < 0.4;
+    }
+
     /// <summary>
     /// Metodo que "llama a comer" a merche, haciendo que comience a moverse hacia una planta para comersela.
     /// </summary>
@@ -78,7 +117,7 @@ public class MercedesController : MonoBehaviour
         if (planta != null)
         {
             _collider2D.enabled = true;
-            transformPlanta = planta.transform;
+            transformObjetivo = planta.transform;
             estado = MercheStates.DesplazandoseAComer;
             animator.SetBool("Move", true);
         }
@@ -95,9 +134,11 @@ public class MercedesController : MonoBehaviour
     private void Comer()
     {
         planta.transform.parent.GetComponent<SoilComponent>().RemovePlant();
-        Esperar();
         GenerateEatTime();
-       LlegarAUnSitio();
+        LlegarAUnSitio();
+        estado = MercheStates.EsperandoEnCasa;
+        //Establece el tiempo a esperar nada mas despues de comer
+        elapsedTimeAfterEating = timeAfterEating;
     }
 
     /// <summary>
@@ -107,7 +148,7 @@ public class MercedesController : MonoBehaviour
     {
         timeForEating = Random.Range(minTimeForEating, maxTimeForEating);
     }
-    
+
     public void Stunear()
     {
         _collider2D.enabled = false;
@@ -124,10 +165,10 @@ public class MercedesController : MonoBehaviour
     private void Esperar()
     {
         _collider2D.enabled = false;
-        estado = MercheStates.Esperando;
+        estado = MercheStates.EsperandoEnCasa;
     }
 
-    private void LlegarAUnSitio() 
+    private void LlegarAUnSitio()
     {
         animator.SetBool("Move", false);
     }

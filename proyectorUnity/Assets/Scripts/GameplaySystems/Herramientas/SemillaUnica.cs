@@ -8,5 +8,6 @@ public class SemillaUnica : Semilla
     {
         gameObject.GetComponent<Renderer>().enabled = false;
         gameObject.GetComponent<Collider2D>().enabled = false;
+
     }
 }
