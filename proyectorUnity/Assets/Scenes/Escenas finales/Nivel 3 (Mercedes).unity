@@ -1513,6 +1513,78 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &184597209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184597212}
+  - component: {fileID: 184597211}
+  - component: {fileID: 184597210}
+  m_Layer: 2
+  m_Name: CasaMercedes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &184597210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184597209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23d3a07ab457d542b3445ad93ee14e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOcupied: 0
+--- !u!61 &184597211
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184597209}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0069981813, y: -0.15629399}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.875}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.695863, y: 0.6557219}
+  m_EdgeRadius: 0
+--- !u!4 &184597212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184597209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.39, y: 2.98, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188197376
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,6 +8642,14 @@ PrefabInstance:
     - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: tiempoStun
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: casitaMercedes
+      value: 
+      objectReference: {fileID: 184597209}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: timeAfterEating
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: maxTimeForEating

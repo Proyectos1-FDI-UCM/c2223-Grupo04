@@ -63,6 +63,7 @@ public class MercedesController : MonoBehaviour
             if (MoverHacia(transformObjetivo))
             {
                 Esperar();
+                LlegarAUnSitio();
             }
 
         }
@@ -136,7 +137,7 @@ public class MercedesController : MonoBehaviour
         planta.transform.parent.GetComponent<SoilComponent>().RemovePlant();
         GenerateEatTime();
         LlegarAUnSitio();
-        estado = MercheStates.EsperandoEnCasa;
+        estado = MercheStates.Comiendo;
         //Establece el tiempo a esperar nada mas despues de comer
         elapsedTimeAfterEating = timeAfterEating;
     }
