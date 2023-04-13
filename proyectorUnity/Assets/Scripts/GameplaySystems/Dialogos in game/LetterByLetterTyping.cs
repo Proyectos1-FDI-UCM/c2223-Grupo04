@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class LetterByLetterTyping : MonoBehaviour
 {
-
     //Variables locales
     float _delay;
     float _delayReset;
@@ -46,14 +45,17 @@ public class LetterByLetterTyping : MonoBehaviour
                 
                 _controlVar++;
                 _delay = _delayReset;
+
+                
             }
             else _delay -= Time.deltaTime;
         }
         
 
     }
-    public void LetterByLetter(string dialogue, TextMeshProUGUI dialogues, float delay) 
+    public void LetterByLetter(string dialogue, TextMeshProUGUI dialogues, float delay = 0.045f) 
     {
+        dialogues.text = "";
 
         _controlVar = 0;
         _dialogue = dialogue;
@@ -78,7 +80,20 @@ public class LetterByLetterTyping : MonoBehaviour
   
             AudioClip currentSound = _dialogueTypingSounds[Random.Range(0, _dialogueTypingSounds.Length)];
             _audioTrack.pitch = Random.Range(_minPitch, _maxPitch);
-            //TODO ESTE SWTICH ESTÁ EN VERSIÓN PRELIMINAR, SE VA A INTENTAR HACER CON LOS CARACTERES ASCII DE CADA LETRA PARA EVITAR ERRORES
+
+            int chr = _dialogue[_controlVar];
+
+            if (chr == 129 || chr == 161) { currentSound = _dialogueTypingSounds[1]; }
+            else if (chr == 137 || chr == 169) { currentSound = _dialogueTypingSounds[5]; }
+            else if (chr == 141 || chr == 173) { currentSound = _dialogueTypingSounds[9]; }
+            else if (chr == 147 || chr == 179) { currentSound = _dialogueTypingSounds[15]; }
+            else if (chr == 154 || chr == 186) { currentSound = _dialogueTypingSounds[21]; }
+            else if (chr == 177 || chr == 145) { currentSound = _dialogueTypingSounds[0]; }
+            else if (chr > 66 || chr < 91) { currentSound = _dialogueTypingSounds[chr / 66]; }
+            else if (chr > 34 || chr < 59) { currentSound = _dialogueTypingSounds[chr / 34]; }
+            else currentSound = _dialogueTypingSounds[1];
+
+            /*//TODO ESTE SWTICH ESTÁ EN VERSIÓN PRELIMINAR, SE VA A INTENTAR HACER CON LOS CARACTERES ASCII DE CADA LETRA PARA EVITAR ERRORES
             switch (_dialogue[_controlVar]) 
             {
                 case 'A':
@@ -162,7 +177,7 @@ public class LetterByLetterTyping : MonoBehaviour
                 case 'Z':
                     currentSound = _dialogueTypingSounds[26];
                     break;
-            }
+            }*/
             _audioTrack.PlayOneShot(currentSound);
         } 
     }

@@ -104518,6 +104518,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _textIntro
+      value: "Buenos d\xEDas. \xBFAs\xED que usted es Charlie? Bueno, caballero,
+        espero que pueda ayudarme. Con el r\xEDo que cruza mi parcela, me resulta
+        dif\xEDcil cuidar de mi jard\xEDn\u2026 Tal vez con su ayuda sea m\xE1s f\xE1cil."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _maxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _minPitch
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8793557566348871660, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.04

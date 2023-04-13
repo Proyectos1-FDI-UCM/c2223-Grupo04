@@ -40,7 +40,10 @@ public class TornadoSpawner : MonoBehaviour
 
     IEnumerator TiempoSpawn()
     {
-        yield return new WaitForSeconds(_tEntreTornados + _tMul); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
+        yield return new WaitForSeconds((_tEntreTornados + _tMul) - 1.5f); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
+        GameManager.Instance._sountManager.ChangeTor();
+
+        yield return new WaitForSeconds(1.5f); // esperar tiempo base + la cantidad de tornados que hayan pasado * 10
         _tMul = (10 * GameManager.Instance._nTornados);//Suma el multiplicador al de tiempo
         GameManager.Instance._player.GetComponent<PlayerController>().GoHome();
         

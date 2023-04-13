@@ -349,10 +349,24 @@ PrefabInstance:
       propertyPath: objetivos
       value: 
       objectReference: {fileID: 11400000, guid: 5d9ee13fd1907aa41a77f633a03f0ac5, type: 2}
+    - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _textIntro
+      value: "Oh, Charlie. Giuseppe me ha hablado de ti. Muchas gracias por venir
+        a ayudarme. Con tu ayuda, voy a ser la envidia de todas mis amigas. Si te
+        molesto en alg\xFAn momento, no tengas miedo de darme un palazo."
+      objectReference: {fileID: 0}
     - target: {fileID: 4590792349041813036, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _maxPitch
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _minPitch
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: objetivos
       value: 

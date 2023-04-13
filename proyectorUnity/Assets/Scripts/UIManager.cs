@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
+    [SerializeField] string _textIntro;
     [SerializeField] TextMeshProUGUI _cantInventario; //texto con la cantidad de cosas que llevas en el inventario.
     [SerializeField]
     List<GameObject> _insPrefObjs; //Contiene las instacias de los prefabs de los objetivos.
@@ -29,6 +30,7 @@ public class UIManager : MonoBehaviour
     {
         _inventory.enabled = false;
         SetearObjetivos(GameManager.Instance._levelManager.objetivos);
+        IntroText(_textIntro);
     }
 
     // Update is called once per frame
@@ -160,20 +162,19 @@ public class UIManager : MonoBehaviour
     #region cosas tutorial
     public void TextoTutorial(string _texto)
     {
-        _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = _texto;
+        GameManager.Instance._letterTyper.LetterByLetter(_texto, _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         _tutorialUI.SetActive(true);
     }
 
 
-    public void FinalTextoTutorial(string _texto)
+    public void IntroText(string _texto)
     {
-        _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<Text>().text = _texto;
+        GameManager.Instance._letterTyper.LetterByLetter(_texto, _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
     }
 
     public void MostrarControles(bool SiONo) 
     { 
-        _controlesUI.SetActive(SiONo);
-   
+        _controlesUI.SetActive(SiONo);   
     }
     #endregion
     #endregion

@@ -9787,6 +9787,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _textIntro
+      value: "Bienvenido a mi jard\xEDn Charlie, Perd\xF3n por el desorden Charlie,
+        y ten cuidado de que no te de una de las piedras que lanza el tornado."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _cantInventario
       value: 
       objectReference: {fileID: 621304670}

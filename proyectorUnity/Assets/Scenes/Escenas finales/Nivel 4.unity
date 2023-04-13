@@ -35483,6 +35483,14 @@ PrefabInstance:
       propertyPath: objetivos
       value: 
       objectReference: {fileID: 11400000, guid: 6cec421f72efc674db11266f007119b5, type: 2}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _maxPitch
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _minPitch
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7066157427188296467, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: objetivos
       value: 

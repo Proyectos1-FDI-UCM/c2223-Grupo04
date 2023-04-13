@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         _tornadoSpawner.NewTornadoTime();
         _uIManager.NuevoTiempoDeTornado();
+        _sountManager.ChangeChill();
 
     }
 
@@ -94,7 +95,6 @@ public class GameManager : MonoBehaviour
             _player.GetComponent<PlayerController>().GoHome(); //va a casa
             _inputController.MoveOrNot(false); //desacitvar el movimiento
             Debug.Log("STATE: INTRO");
-            _sountManager.PlayChill();
         }
 
         if (_state == GameStates.TUTORIAL)
@@ -114,7 +114,6 @@ public class GameManager : MonoBehaviour
             _inputController.MoveOrNot(false); //desacitvar el movimiento
             _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input est� desactivado
             Debug.Log("STATE: TORNADO");
-            _sountManager.PlayTornado();
         }
         else if (_state == GameStates.WIN)
         {
@@ -132,7 +131,7 @@ public class GameManager : MonoBehaviour
         Destroy(_player.GetComponent<InventoryControllerTutorial>());
         _inputController.ChangeTutorialMode(toolObject);
 
-        _uIManager.FinalTextoTutorial(texto);
+        _uIManager.IntroText(texto);
         ChangeState(GameStates.INTRO);
         
     }
@@ -186,7 +185,6 @@ public class GameManager : MonoBehaviour
         Camera.main.transform.GetChild(0).gameObject.SetActive(false); //Desactivar las partículas de la lluvia floja.
         Camera.main.transform.GetChild(1).gameObject.SetActive(false); //Desactivar las partículas de la lluvia fuerte.
         _goHome = false;
-
     }
 
     // Update is called once per frame
