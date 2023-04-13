@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public TornadoSpawner _tornadoSpawner;
     [SerializeField]
+    public SoundManager _sountManager;
+    [SerializeField]
     private int _nTornadosFloja;
     private int _nTornadosFuerte;
     [SerializeField]
@@ -92,6 +94,7 @@ public class GameManager : MonoBehaviour
             _player.GetComponent<PlayerController>().GoHome(); //va a casa
             _inputController.MoveOrNot(false); //desacitvar el movimiento
             Debug.Log("STATE: INTRO");
+            _sountManager.PlayChill();
         }
 
         if (_state == GameStates.TUTORIAL)
@@ -111,6 +114,7 @@ public class GameManager : MonoBehaviour
             _inputController.MoveOrNot(false); //desacitvar el movimiento
             _player.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //cuando estan los tornados la velocicad se deja a cero para evitar que el player se siga moviendo aunque el input est� desactivado
             Debug.Log("STATE: TORNADO");
+            _sountManager.PlayTornado();
         }
         else if (_state == GameStates.WIN)
         {
