@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffe350169535fa4d9227058161d4bc2, type: 3}
+  m_Name: Maika
+  m_EditorClassIdentifier: 
+  _dialogos:
+  - "\xA1No, no, no! \xA1Esto no va aqu\xED! "
+  - "\xA1As\xED me gusta, Charlie! \xA1Manteniendo el feng sui! "
+  - "Un poco m\xE1s a la derecha..."
+  - "Un poquito m\xE1s a la izquierda\u2026"
+  - "Que poco orden, que poca energ\xEDa, que poco equilibrio\u2026"
+  - "La majestuosidad de la naturaleza, tan impresionante\u2026"
+  - Volando voy, volando vengo. Por el camino, yo redirijo el Qi.

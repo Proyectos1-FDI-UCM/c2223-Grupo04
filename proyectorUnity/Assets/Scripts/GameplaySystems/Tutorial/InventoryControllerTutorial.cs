@@ -62,34 +62,44 @@ public class InventoryControllerTutorial : InventoryController
 
     public override void TryPickUpTool(GameObject toolObject, Vector2 mousePos)
     {
-
-        if (toolObject == ObjetosAInteractuar[(int)_parteActual])
+        if (Vector2.Distance(gameObject.transform.position, toolObject.transform.position) < base._distanciaMin)
         {
-            base.TryPickUpTool(toolObject, mousePos);
-            _parteActual++;
-            _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual]);
-            MoverLuz();
+
+            if (toolObject == ObjetosAInteractuar[(int)_parteActual])
+            {
+                base.TryPickUpTool(toolObject, mousePos);
+                _parteActual++;
+                _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual]);
+                MoverLuz();
+            }
+            if (_parteActual == ParteTutorial.cogerSemilla2)
+            {
+                _uiManager.MostrarControles(false);
+            }
         }
         
     }
 
     public override void ClickFunction(GameObject objetoClicado, Vector2 mousePos)
     {
-        if (_parteActual == ParteTutorial.usarPala && objetoClicado == ObjetosAInteractuar[8].transform.GetChild(1).gameObject)
+        if (Vector2.Distance(gameObject.transform.position, objetoClicado.transform.position) < base._distanciaMin)
         {
-            base.ClickFunction(objetoClicado, mousePos);
-            _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[4]);
-            Destroy(_luz);
-        }
-    
+            if (_parteActual == ParteTutorial.usarPala && objetoClicado == ObjetosAInteractuar[8].transform.GetChild(1).gameObject)
+            {
+                base.ClickFunction(objetoClicado, mousePos);
+                _gameManager.ChangeTutorialMode(base.GetTool(), _dialogos._dialogos[9]);
+                Destroy(_luz);
+            }
 
-        else if (objetoClicado == ObjetosAInteractuar[(int)_parteActual])
-        {
-            base.ClickFunction(objetoClicado, mousePos);
-            _parteActual++;
-            MoverLuz();
-            _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual]);
-  
+
+            else if (objetoClicado == ObjetosAInteractuar[(int)_parteActual])
+            {
+                base.ClickFunction(objetoClicado, mousePos);
+                _parteActual++;
+                MoverLuz();
+                _uiManager.TextoTutorial(_dialogos._dialogos[(int)_parteActual]);
+
+            }
         }
     }
 

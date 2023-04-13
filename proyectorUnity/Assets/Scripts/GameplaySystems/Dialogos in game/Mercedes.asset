@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffe350169535fa4d9227058161d4bc2, type: 3}
+  m_Name: Mercedes
+  m_EditorClassIdentifier: 
+  _dialogos:
+  - "perd\xF3n, me entr\xF3 hambre\u2026"
+  - "\xBFMe seguir\xEDas queriendo si fuese humana? "
+  - 'Charlie por el amor de dios ponte un jersey que te vas a resfriar. '
+  - "\xA1Ay madre, voy a llegar tarde a clase de costura!"
+  - "Qu\xE9 bueno eres, Charlie, ayudando a los mayores\u2026"
+  - "\xA1Qu\xE9 bonito est\xE1 quedando! "
+  - "Mhhhh\u2026 Azaleas, mis favoritas\u2026"
