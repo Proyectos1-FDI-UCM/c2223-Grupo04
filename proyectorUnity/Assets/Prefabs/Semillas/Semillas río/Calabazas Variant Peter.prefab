@@ -4963,8 +4963,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
 --- !u!4 &3725853638436261413 stripped
 Transform:
@@ -4976,22 +4975,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
   m_PrefabInstance: {fileID: 8520207338693470931}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-200797810162563544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3725853638436261419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1152b65f4bb8b3e44ab077ec6bff124c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TipoDePlanta: {fileID: 11400000, guid: 731a1864bda70284d8ab513f3b70ca38, type: 2}
-  _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
-  _semillaAnim: {fileID: 2221644548051976295, guid: 4a71fe9550d300f4d8c5f09aad0970c8, type: 3}
-  _semilla: {fileID: 0}
 --- !u!114 &1322954097202343979
 MonoBehaviour:
   m_ObjectHideFlags: 0

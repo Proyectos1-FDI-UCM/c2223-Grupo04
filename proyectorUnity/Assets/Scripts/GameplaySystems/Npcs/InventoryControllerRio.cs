@@ -27,7 +27,6 @@ public class InventoryControllerRio : InventoryController
         if (base.inventoryQty == 0)
         {
             Destroy(semillaBeingUsed.gameObject);
-            Debug.Log(semillaBeingUsed);
         }
 
 
