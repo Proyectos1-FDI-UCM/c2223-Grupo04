@@ -13,7 +13,7 @@ public class InventoryController : MonoBehaviour
     protected float _distanciaMin;
     [SerializeField] LayerMask _destructeable; // Solo en el nivel de Peter.
     [SerializeField]
-    private int inventoryQty;
+    protected int inventoryQty;
 
 
     private void Start()
@@ -54,9 +54,8 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    private void PickUpSemilla(GameObject toolObject)
+    protected virtual void PickUpSemilla(GameObject toolObject)
     {
-        toolObject.GetComponent<Semilla>().PickUpTool();
         if (_tool == null)
         {
             _tool = toolObject;
@@ -94,7 +93,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void UsarSemilla()
+    public virtual void UsarSemilla()
     {
         inventoryQty--;
         GameManager.Instance._uIManager.CantSem(inventoryQty);

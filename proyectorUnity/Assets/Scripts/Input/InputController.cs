@@ -30,6 +30,8 @@ public class InputController : MonoBehaviour
 
         if (GameManager.Instance._player.GetComponent<InventoryControllerTutorial>() != null)
             inventoryController = GameManager.Instance._player.GetComponent<InventoryControllerTutorial>();
+        else if (GameManager.Instance._player.GetComponent<InventoryControllerRio>() != null)
+            inventoryController = GameManager.Instance._player.GetComponent<InventoryControllerRio>();
         else
             inventoryController = GameManager.Instance._player.GetComponent<InventoryController>();
 

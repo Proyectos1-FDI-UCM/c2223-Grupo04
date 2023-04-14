@@ -36,9 +36,4 @@ public class Semilla : Tool
     {
         return TipoDePlanta;
     }
-
-    public override void PickUpTool()
-    {
-        
-    }
 }
