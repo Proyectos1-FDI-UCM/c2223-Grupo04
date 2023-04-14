@@ -14,11 +14,7 @@ public class Rio : MonoBehaviour
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(_posFuerza * fuerza);
-            collision.gameObject.GetComponent<WaterParticulitas>().ActivaParticulitas(); //Activa las partículas de los objetos en el río.
+            collision.gameObject.GetComponent<WaterParticulitas>().ActivaParticulitas(); //Activa las partï¿½culas de los objetos en el rï¿½o.
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        collision.gameObject.GetComponent<WaterParticulitas>().DesactivaParticulitas(); //Desactiva las partículas de los objetos en el río.
     }
 }

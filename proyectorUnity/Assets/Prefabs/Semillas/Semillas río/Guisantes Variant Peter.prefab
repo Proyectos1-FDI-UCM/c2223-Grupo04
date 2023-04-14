@@ -4864,6 +4864,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010605649492911349, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: TipoDePlanta
       value: 
       objectReference: {fileID: 11400000, guid: 07c6bccfce5cfa74db17f05f61e58c39, type: 2}
@@ -4949,11 +4953,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_TagString
       value: Semillita
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592597675225060651, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
@@ -4967,6 +4975,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
   m_PrefabInstance: {fileID: 8415424012742228017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393300926543297768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549022083153255625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1152b65f4bb8b3e44ab077ec6bff124c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TipoDePlanta: {fileID: 0}
+  _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
+  _semillaAnim: {fileID: 2221644548051976295, guid: 4a71fe9550d300f4d8c5f09aad0970c8, type: 3}
+  _semilla: {fileID: 0}
 --- !u!114 &9125683593906641977
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstaculo
   - Semillita
+  - Rio
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - NPC
   - Plants
   - Semillas
-  - "R\xEDo"
+  - 
   - 
   - 
   - 

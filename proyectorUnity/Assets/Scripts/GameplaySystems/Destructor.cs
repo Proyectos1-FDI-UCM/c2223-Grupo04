@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Destructor : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("DestructorDestruyendo");
-        Destroy(collision.gameObject);
+        if(collision.gameObject.CompareTag("Semillita"))
+        {
+            Debug.Log("DestructorDestruyendo");
+            Destroy(collision.gameObject);
+        }
     }
 }

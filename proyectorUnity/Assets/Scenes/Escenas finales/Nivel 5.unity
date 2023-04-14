@@ -104308,6 +104308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeedsDestructor
       objectReference: {fileID: 0}
+    - target: {fileID: 1426153315447256611, guid: 09cb86edbcbff01429eb2b31d30201ec, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1426153315618639621, guid: 09cb86edbcbff01429eb2b31d30201ec, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -104399,7 +104403,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _tEntreTornados
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _tornadoRutas.Array.size

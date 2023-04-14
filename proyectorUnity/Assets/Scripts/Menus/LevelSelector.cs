@@ -57,11 +57,4 @@ public class LevelSelector : MonoBehaviour
             _niveles[i].SetActive(true);
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Puntuacion.Instance.SetNivelActual(5);
-        }
-    }
 }
