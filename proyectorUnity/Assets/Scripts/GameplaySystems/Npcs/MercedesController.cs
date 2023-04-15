@@ -46,6 +46,7 @@ public class MercedesController : MonoBehaviour
 
         if (estado == MercheStates.EsperandoEnCasa)
         {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false); //Desactiva las particulas de Mercedes enterrada.
             timeForEating -= Time.deltaTime;
             if (timeForEating < 0)
             {
@@ -54,6 +55,7 @@ public class MercedesController : MonoBehaviour
         }
         else if (estado == MercheStates.Comiendo)
         {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false); //Desactiva las particulas de Mercedes enterrada.
             elapsedTimeAfterEating -= Time.deltaTime;
             if (elapsedTimeAfterEating < 0)
             {
@@ -62,6 +64,7 @@ public class MercedesController : MonoBehaviour
         }
         else if (estado == MercheStates.DesplazandoseACasa)
         {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true); //Activa las particulas de Mercedes enterrada.
             if (MoverHacia(transformObjetivo))
             {
                 Esperar();
@@ -73,6 +76,7 @@ public class MercedesController : MonoBehaviour
         {
             if (planta != null)
             {
+                gameObject.transform.GetChild(1).gameObject.SetActive(true); //Activa las particulas de Mercedes enterrada.
                 if (MoverHacia(transformObjetivo))
                 {
                     Comer();
@@ -86,7 +90,7 @@ public class MercedesController : MonoBehaviour
         }
         else if (estado == MercheStates.Stuneada)
         {
-            //falta tema de activar animaci�n de estar estuneada
+            //falta tema de activar animacion de estar estuneada
             contadorStun -= Time.deltaTime;
             if (contadorStun < 0)
             {
