@@ -21,7 +21,8 @@ public class MercedesController : MonoBehaviour
     Collider2D _collider2D;
     [SerializeField]
     MercheStates estado;
-    Animator animator;
+    Animator merchAnimator;
+    SpriteRenderer mercheRenderer;
     enum MercheStates
     {
         Comiendo,
@@ -36,7 +37,8 @@ public class MercedesController : MonoBehaviour
         Esperar();
         levelManager = GameManager.Instance._levelManager;
         GenerateEatTime();
-        animator = transform.GetChild(0).GetComponent<Animator>();
+        merchAnimator = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
+        mercheRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -99,7 +101,8 @@ public class MercedesController : MonoBehaviour
         _collider2D.enabled = true;
         transformObjetivo = casitaMercedes.transform;
         estado = MercheStates.DesplazandoseACasa;
-        animator.SetBool("Move", true);
+        mercheRenderer.flipX = casitaMercedes.transform.position.x > transform.position.x;
+        merchAnimator.SetBool("Move", true);
     }
 
     private bool MoverHacia(Transform objetivo)
@@ -120,7 +123,8 @@ public class MercedesController : MonoBehaviour
             _collider2D.enabled = true;
             transformObjetivo = planta.transform;
             estado = MercheStates.DesplazandoseAComer;
-            animator.SetBool("Move", true);
+            mercheRenderer.flipX = planta.transform.position.x > transform.position.x;
+            merchAnimator.SetBool("Move", true);
         }
         else
         {
@@ -171,6 +175,6 @@ public class MercedesController : MonoBehaviour
 
     private void LlegarAUnSitio()
     {
-        animator.SetBool("Move", false);
+        merchAnimator.SetBool("Move", false);
     }
 }

@@ -9,6 +9,7 @@ public class PlantaBehaviour : MonoBehaviour
 
     [HideInInspector]
     private bool _isSoilFertile;
+    [SerializeField]
     Animator _anim;
     [SerializeField]
     [Tooltip("Valor por el que multiplicar el crecimiento en caso de ser soil fertil")]
@@ -30,7 +31,6 @@ public class PlantaBehaviour : MonoBehaviour
 
     void Start()
     {
-        _anim = GetComponent<Animator>();
         _levelManager = GameManager.Instance._levelManager;
         GrowSprite(0);
 
@@ -121,13 +121,13 @@ public class PlantaBehaviour : MonoBehaviour
     private void GrowSprite(int _desiredSprite)
     {
         _currentGrowSprite = _desiredSprite;
-        GetComponent<SpriteRenderer>().sprite = _plantData.GrowingSprite[_currentGrowSprite];
+        _anim.gameObject.GetComponent<SpriteRenderer>().sprite = _plantData.GrowingSprite[_currentGrowSprite];
     }
 
     private void DrySprite(int _desiredSprite)
     {
         _currentDrySprite = _desiredSprite;
-        GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[_currentDrySprite];
+        _anim.gameObject.GetComponent<SpriteRenderer>().sprite = _plantData.DryingSprite[_currentDrySprite];
     }
 
     /// <summary>

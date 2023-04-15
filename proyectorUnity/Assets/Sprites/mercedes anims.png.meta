@@ -301,7 +301,7 @@ TextureImporter:
         width: 13
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,6 +309,90 @@ TextureImporter:
       bones: []
       spriteID: 441340a5e0b5fbf41a2d1e5700c34859
       internalID: 1142991863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mercedes anims_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 10
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5608f76bb36c084c8ecc8cc6a3e975c
+      internalID: 549538167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mercedes anims_11
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 7
+        width: 10
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4470a8293e3c3649a8d134d1f112184
+      internalID: 156926746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mercedes anims_12
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 7
+        width: 13
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d126474dfb515748ac9046c0773f900
+      internalID: -1604517938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mercedes anims_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 7
+        width: 13
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031ac3462935e674ba1dabd97ec2dfc5
+      internalID: 405006330
       vertices: []
       indices: 
       edges: []
@@ -324,7 +408,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      mercedes anims_3: -2511344
       mercedes anims_0: 827149905
+      mercedes anims_13: 405006330
+      mercedes anims_10: 549538167
       mercedes anims_5: -477012805
       mercedes anims_7: -1690276539
       mercedes anims_9: 1142991863
@@ -333,7 +420,8 @@ TextureImporter:
       mercedes anims_1: 1369921628
       mercedes anims_8: -2092356271
       mercedes anims_2: -110813069
-      mercedes anims_3: -2511344
+      mercedes anims_11: 156926746
+      mercedes anims_12: -1604517938
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

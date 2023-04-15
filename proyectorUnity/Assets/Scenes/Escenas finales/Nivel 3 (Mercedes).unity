@@ -11731,9 +11731,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1256469118942886287, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1927042513596763326, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_Name
       value: Mercedes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035430633679001734, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2490011853413736339, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_RootOrder
@@ -11802,6 +11810,10 @@ PrefabInstance:
     - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: tiempoEsperaComidaCancelada
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318114073675620660, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7115192470992153103, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -102472,23 +102484,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1897172645 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1492730467015705211, guid: 316db51567b919440b315451cbe0456e, type: 3}
-  m_PrefabInstance: {fileID: 659510169}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1897172649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897172645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73787b6bf7e5de448a7126b9b19be3f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1930083461
 PrefabInstance:
   m_ObjectHideFlags: 0

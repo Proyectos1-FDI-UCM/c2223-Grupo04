@@ -63,10 +63,9 @@ public class Puntuacion : MonoBehaviour
     }
     private void Update()
     {
-        if (_nivelActual > 4) SetNivelActual(4);
         if (Input.GetKeyDown(KeyCode.T))
         {
-            SetNivelActual(4);
+            SetNivelActual(5);
         }
     }
 }
