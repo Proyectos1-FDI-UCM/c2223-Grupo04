@@ -58,7 +58,7 @@ public class SombraComponent : MonoBehaviour
         else { tmp.a = 0; }
 
         _shadowSpriteRenderer.color = tmp;
-        print(_shadowSpriteRenderer.color);
+        //print(_shadowSpriteRenderer.color);
         //print(_shadowSpriteRenderer.color.a);
     }
 }
