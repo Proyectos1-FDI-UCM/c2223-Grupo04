@@ -14,7 +14,7 @@ public class InventoryControllerRio : InventoryController
             semillaBeingUsed = toolObject;
             toolObject.gameObject.SetActive(false);
         }
-        else if(_tool.GetComponent<Semilla>().GetScriptablePlant().Equals(toolObject.GetComponent<Semilla>().GetScriptablePlant()))
+        else if(_tool.GetComponent<Semilla>() != null && _tool.GetComponent<Semilla>().GetScriptablePlant().Equals(toolObject.GetComponent<Semilla>().GetScriptablePlant()))
         {
             base.PickUpSemilla(toolObject);
             Destroy(toolObject.gameObject);
