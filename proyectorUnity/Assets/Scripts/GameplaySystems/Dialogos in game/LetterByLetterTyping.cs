@@ -92,8 +92,8 @@ public class LetterByLetterTyping : MonoBehaviour
             else if (chr == 147 || chr == 179) { currentSound = _dialogueTypingSounds[15]; }
             else if (chr == 154 || chr == 186) { currentSound = _dialogueTypingSounds[21]; }
             else if (chr == 177 || chr == 145) { currentSound = _dialogueTypingSounds[0]; }
-            else if (chr >= 66 && chr <= 91) { currentSound = _dialogueTypingSounds[chr / 66]; print(chr/66);}
-            else if (chr >= 34 && chr <= 59) { currentSound = _dialogueTypingSounds[chr / 34]; print (chr/34);}
+            else if (chr >= 66 && chr <= 91) { currentSound = _dialogueTypingSounds[chr / 66]; }
+            else if (chr >= 34 && chr <= 59) { currentSound = _dialogueTypingSounds[chr / 34]; }
             else currentSound = _dialogueTypingSounds[1];
 
             /*//TODO ESTE SWTICH EST� EN VERSI�N PRELIMINAR, SE VA A INTENTAR HACER CON LOS CARACTERES ASCII DE CADA LETRA PARA EVITAR ERRORES

@@ -51,10 +51,14 @@ public class SombraComponent : MonoBehaviour
         //Asignamos a la sombra el sprite del jugador a la sompra para que cambie igual que la animación
         _shadowSpriteRenderer.sprite = _thisSpriteRenderer.sprite;
         _shadowSpriteRenderer.flipX = _thisSpriteRenderer.flipX;
+
         //creamos un color temporal con la transparencia deseada y lo asignamos a la sombra
-        Color tmp = new Color(0,0,0,_thisSpriteRenderer.color.a) ;
-        //print(tmp);
+        Color tmp = new Color(0, 0, 0); ;
+        if (_thisSpriteRenderer.color.a > 0) { tmp.a = 115; }
+        else { tmp.a = 0; }
+
         _shadowSpriteRenderer.color = tmp;
+        print(_shadowSpriteRenderer.color);
         //print(_shadowSpriteRenderer.color.a);
     }
 }

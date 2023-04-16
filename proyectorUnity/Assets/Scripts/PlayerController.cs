@@ -7,9 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public Transform _casa;
     Animator _anim;
     Transform _myTransform;
-    [SerializeField]
     Color _transparent = new Color(255,255,255,0);
-    [SerializeField]
     Color _white = new Color(255,255,255,255);
 
     public void GoHome() 

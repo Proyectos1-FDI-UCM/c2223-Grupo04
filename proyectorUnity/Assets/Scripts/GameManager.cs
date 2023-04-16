@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
                 ChangeState(GameManager.GameStates.TUTORIAL);
             }
             else { ChangeState(GameManager.GameStates.GAME); }
+            _letterTyper.StopWriting();
         }
     }
 
