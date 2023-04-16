@@ -7,7 +7,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [HideInInspector]
-    private GameObject _tool;
+    protected GameObject _tool;
     [SerializeField]
     [Tooltip("Ditancia m�nima para que Charlie pueda coger la herramienta")]
     protected float _distanciaMin;

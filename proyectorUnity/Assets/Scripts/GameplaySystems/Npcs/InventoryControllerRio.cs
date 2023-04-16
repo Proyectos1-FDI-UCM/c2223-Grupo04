@@ -8,13 +8,13 @@ public class InventoryControllerRio : InventoryController
 
    protected override void PickUpSemilla(GameObject toolObject)
    {
-        if (base.inventoryQty == 0)
+        if (_tool == null)
         {
             base.PickUpSemilla(toolObject);
             semillaBeingUsed = toolObject;
             toolObject.gameObject.SetActive(false);
         }
-        else
+        else if(_tool.GetComponent<Semilla>().GetScriptablePlant().Equals(toolObject.GetComponent<Semilla>().GetScriptablePlant()))
         {
             base.PickUpSemilla(toolObject);
             Destroy(toolObject.gameObject);
