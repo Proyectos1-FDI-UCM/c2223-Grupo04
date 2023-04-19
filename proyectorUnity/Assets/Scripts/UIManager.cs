@@ -130,6 +130,13 @@ public class UIManager : MonoBehaviour
             _gameUI.SetActive(false);
             _winUI.SetActive(true);
             _pausaUI.SetActive(false);
+        }
+        else if (GameManager.Instance._state == GameManager.GameStates.WIN_TRANSITION)
+        {
+            _introUI.SetActive(false);
+            _gameUI.SetActive(false);
+            _winUI.SetActive(false);
+            _pausaUI.SetActive(false);
         }/*
         else if (GameManager.Instance._state == GameManager.GameStates.PAUSA) 
         {

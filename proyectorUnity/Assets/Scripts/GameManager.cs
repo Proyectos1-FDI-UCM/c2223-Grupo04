@@ -26,12 +26,14 @@ public class GameManager : MonoBehaviour
     private Transform _soilsPapas;
     [SerializeField]
     public LetterByLetterTyping _letterTyper;
+    [SerializeField]
+    public double _winTransitionTime;
     /// <summary>
     /// Estados de juego
     /// </summary>
     public enum GameStates
     {
-        INTRO, TUTORIAL, GAME, TORNADO, WIN
+        INTRO, TUTORIAL, GAME, TORNADO, WIN, WIN_TRANSITION
     }
     public GameStates _state;
     /// <summary>
@@ -122,11 +124,15 @@ public class GameManager : MonoBehaviour
                 Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
             }
             Debug.Log("STATE: WIN");
+        } else if (_state == GameStates.WIN_TRANSITION)
+        {
+            _inputController.MoveOrNot(false);
+
         }
         _uIManager.CambiarUISegunEstadoJuego();
     }
 
-    public void ChangeTutorialMode(GameObject toolObject, string texto) //
+    public void ChangeTutorialMode(GameObject toolObject, string texto)
     {
         Destroy(_player.GetComponent<InventoryControllerTutorial>());
         _inputController.ChangeTutorialMode(toolObject);
@@ -206,6 +212,17 @@ public class GameManager : MonoBehaviour
             _inputController.MoveOrNot(true); //acitvar el movimiento
             _player.GetComponent<PlayerController>().RestoreOIL();
             _goHome = false;
+        }
+        if(_state == GameStates.WIN_TRANSITION) {
+            _winTransitionTime -= Time.deltaTime;
+            if (_winTransitionTime < 0)
+            {
+                ChangeState(GameStates.WIN);
+            }
+        }
+        //Guarrada para probar la transición a victoria
+        if (Input.GetKeyDown(KeyCode.P)) { 
+            ChangeState(GameStates.WIN_TRANSITION);
         }
     }
 }
