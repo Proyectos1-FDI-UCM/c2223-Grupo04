@@ -9727,6 +9727,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _grid
+      value: 
+      objectReference: {fileID: 77897680}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: nivel
       value: 1
       objectReference: {fileID: 0}
@@ -9743,9 +9747,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 989954053}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _cameraEndSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _objetivosNivel
       value: 
       objectReference: {fileID: 11400000, guid: 233cd4cbd53c5784e82d5fbe60f19d29, type: 2}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _cameraCenterPoint
+      value: 
+      objectReference: {fileID: 625296363}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _prefabInvernadero
+      value: 
+      objectReference: {fileID: 4126093623813502767, guid: b21b2c11c8b855d41b196b5531ae89e9, type: 3}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _winTransitionTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10012,6 +10032,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &625296363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625296364}
+  m_Layer: 0
+  m_Name: camera center point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625296364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625296363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34, y: -1.9, z: -0.1349688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &658904657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54537,6 +54588,14 @@ PrefabInstance:
     - target: {fileID: 3634098732200207848, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964241040578258422, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964241040578258422, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 5877752316885151858, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_Name

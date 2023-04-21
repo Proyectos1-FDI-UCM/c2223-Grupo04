@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
     public LetterByLetterTyping _letterTyper;
     [SerializeField]
     public double _winTransitionTime;
+    [SerializeField]
+    private GameObject _grid, _prefabInvernadero, _cameraCenterPoint;
+    [SerializeField]
+    private int _cameraEndSize;
+
     /// <summary>
     /// Estados de juego
     /// </summary>
@@ -126,7 +131,11 @@ public class GameManager : MonoBehaviour
             Debug.Log("STATE: WIN");
         } else if (_state == GameStates.WIN_TRANSITION)
         {
+            Camera.main.GetComponent<SmoothCameraFollow>().enabled = false;
+            Camera.main.transform.position = _cameraCenterPoint.transform.position;
+            Camera.main.orthographicSize = _cameraEndSize;
             _inputController.MoveOrNot(false);
+            Instantiate(_prefabInvernadero, _grid.transform);
 
         }
         _uIManager.CambiarUISegunEstadoJuego();
