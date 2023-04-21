@@ -52,6 +52,11 @@ public class LevelSelector : MonoBehaviour
     private void Start()
     {
         // Activa los botones de los niveles.
+        if (Puntuacion.Instance == null)
+        {
+            new GameObject("Puntuacion",typeof(Puntuacion));
+            Puntuacion.Instance.SetNivelActual(1);
+        }
         for (int i = 0; i < Puntuacion.Instance.GetNivelActual(); i++)
         {
             _niveles[i].SetActive(true);
