@@ -13,8 +13,19 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     float _fadeoutMusic;
 
+    public static SoundManager Instance;
+
     void Start()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+
         _fadeoutMusic = .5f;
         PlayChill();
     }

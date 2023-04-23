@@ -9,6 +9,9 @@ public class LevelSelector : MonoBehaviour
     GameObject _resumen; //resumen
 
     [SerializeField]
+    Animator _transition;
+
+    [SerializeField]
     Sprite[] _npcs; //sprites a poner en los resumenes
 
     [SerializeField]
@@ -16,11 +19,13 @@ public class LevelSelector : MonoBehaviour
 
     int _nivel; // nivel a poner en el resumen
     string _nombre; // nombre del vecino a poner en el resumen
+    [SerializeField]
+    SombraComponentUI _sombra;
 
     //cambia a la escena del index indicado
-    public void CambiaEscena2(int numeroEscena) 
+    public void CambiaEscena2()
     {
-        SceneManager.LoadScene(_nivel + 2);
+        StartCoroutine(LoadLevel(_nivel + 2));
     }
 
     //actualiza el nivel del resumen
@@ -33,12 +38,23 @@ public class LevelSelector : MonoBehaviour
     {
         _resumen.SetActive(true);
         _resumen.GetComponent<ResumenNivel>().UpdateResumen(_nombre, Puntuacion.Instance.GetNumeroTornados(_nivel), Puntuacion.Instance.GetNumeroPlantasSecas(_nivel), _npcs[_nivel]);
+        _sombra.UpdateSadow();
     }
 
     public void ExitBoton()
     {
-        SceneManager.LoadScene("MENU INICIAL");
+        StartCoroutine(LoadLevel(0));
     }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        _transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene(levelIndex);
+    }
+
     private void Awake()
     {
         // Desactiva todos los niveles.

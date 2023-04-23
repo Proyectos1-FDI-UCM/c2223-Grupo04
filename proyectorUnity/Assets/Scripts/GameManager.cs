@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public SoundManager _sountManager;
     [SerializeField]
+    private GameObject _soundMangPref;
+    [SerializeField]
     private int _nTornadosFloja;
     private int _nTornadosFuerte;
     [SerializeField]
@@ -195,6 +197,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SoundManager.Instance == null)
+        {
+            GameObject.Instantiate(_soundMangPref);
+        }
+        _sountManager = SoundManager.Instance;
         _nTornados = 0;
         ChangeState(GameStates.INTRO);
         _nTornadosFuerte = _nTornadosFloja + 3;
