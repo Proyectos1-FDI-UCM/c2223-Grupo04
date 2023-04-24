@@ -19298,6 +19298,7 @@ GameObject:
   - component: {fileID: 5894849836583197850}
   - component: {fileID: 9143574729366432172}
   - component: {fileID: 4279259898049434261}
+  - component: {fileID: 2472603818476918231}
   m_Layer: 3
   m_Name: Charlie UwU
   m_TagString: Untagged
@@ -19422,8 +19423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _casa: {fileID: 0}
-  _transparent: {r: 255, g: 255, b: 255, a: 0}
-  _white: {r: 255, g: 255, b: 255, a: 255}
 --- !u!95 &5869373370455778936
 Animator:
   serializedVersion: 4
@@ -19473,6 +19472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73787b6bf7e5de448a7126b9b19be3f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _npcGO: {fileID: 0}
 --- !u!58 &4279259898049434261
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19489,6 +19489,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &2472603818476918231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877752316885151858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d029e7a8966e4e95153e4ea27ce58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _charlieCamina:
+  - {fileID: 8300000, guid: f83d3e0c37b6dea448cb3d2ff143a619, type: 3}
+  - {fileID: 8300000, guid: d53a0ef871b113a45af7d59938415eb8, type: 3}
+  - {fileID: 8300000, guid: 22abc78c43ff367449c9b601429d9574, type: 3}
+  - {fileID: 8300000, guid: 43b86f269323ce44cba3e8ba58a2d314, type: 3}
+  _minPitch: 0
+  _maxPitch: 0
 --- !u!1 &6562401402838821234
 GameObject:
   m_ObjectHideFlags: 0
