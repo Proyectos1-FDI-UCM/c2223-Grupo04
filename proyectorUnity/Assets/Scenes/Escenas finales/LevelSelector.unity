@@ -2345,9 +2345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e17369a2f9471a429d5374ba90f570e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myTransform: {fileID: 0}
-  _cameraTransform: {fileID: 0}
-  _movementVelocity: 0.1
 --- !u!4 &868495094
 Transform:
   m_ObjectHideFlags: 0
@@ -4063,9 +4060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e17369a2f9471a429d5374ba90f570e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myTransform: {fileID: 0}
-  _cameraTransform: {fileID: 0}
-  _movementVelocity: 0.01
 --- !u!4 &1781186091
 Transform:
   m_ObjectHideFlags: 0
@@ -4814,7 +4808,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &2104565472
 RectTransform:

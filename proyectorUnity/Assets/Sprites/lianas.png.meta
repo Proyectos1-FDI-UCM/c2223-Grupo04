@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c3bae3b44b65e7c4a895ca494f20d8e9
+guid: 71da52c1550a4b84b8fd41b86b0fca51
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,106 +104,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maikelAnim_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 193
-        width: 35
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ec3ba1b35b10ff478f39d343db6ab01
-      internalID: 50741183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: maikelAnim_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 158
-        width: 45
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39536db0fc0549e40a74acbc6109fde1
-      internalID: 1199895310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: maikelAnim_2
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 155
-        width: 17
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d72496ed9b67054e81a3ca18bf6a5da
-      internalID: 121502344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: maikelAnim_3
+      name: lianas_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 119
-        width: 17
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 0
+        width: 4
+        height: 127
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b3339ca02209ae4984b45e5ad8a4fa4
-      internalID: -1745183566
+      spriteID: bcf371918f525aa4789df9d67c64dafb
+      internalID: 1585567387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maikelAnim_4
+      name: lianas_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 115
-        width: 27
-        height: 37
-      alignment: 9
-      pivot: {x: 0.82497096, y: 0.063845865}
+        x: 9
+        y: 25
+        width: 6
+        height: 102
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feed038a91cea15468a0a0e8fd0af221
-      internalID: 313766075
+      spriteID: e38d9b984331812478821a708898b57f
+      internalID: 1436519041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lianas_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3
+        height: 127
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d089b7dec793c7048a1cd74b47856ed7
+      internalID: -1217252143
       vertices: []
       indices: 
       edges: []
@@ -219,11 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      maikelAnim_1: 1199895310
-      maikelAnim_0: 50741183
-      maikelAnim_3: -1745183566
-      maikelAnim_2: 121502344
-      maikelAnim_4: 313766075
+      lianas_2: -1217252143
+      lianas_1: 1436519041
+      lianas_0: 1585567387
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
