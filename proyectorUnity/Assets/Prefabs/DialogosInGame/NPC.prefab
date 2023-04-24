@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8310338207996135023}
   - component: {fileID: 5438847599832486111}
   - component: {fileID: -3698145637686588575}
+  - component: {fileID: 4568809749917301252}
   m_Layer: 8
   m_Name: NPC
   m_TagString: Untagged
@@ -337,6 +338,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMinimaIluminado: 2.2
+--- !u!114 &4568809749917301252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4994316339556966461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a54007372eda544b89d3e0b2b79458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chr: 0
+  _controlVar: 0
+  _dialogueTypingSounds: []
+  _stopAudioSource: 0
+  _frequencylevel: 0
+  _minPitch: 0.5
+  _maxPitch: 3
 --- !u!1 &6089799247627051418
 GameObject:
   m_ObjectHideFlags: 0

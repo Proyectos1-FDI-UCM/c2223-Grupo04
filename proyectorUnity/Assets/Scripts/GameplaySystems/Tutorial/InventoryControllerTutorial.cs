@@ -55,6 +55,7 @@ public class InventoryControllerTutorial : InventoryController
     public void StartTutorial()
     {
         _uiManager.TextoTutorial(_dialogos._dialogos[0]);
+  
         _uiManager.MostrarControles(true);
         _luz.SetActive(true);
         MoverLuz();

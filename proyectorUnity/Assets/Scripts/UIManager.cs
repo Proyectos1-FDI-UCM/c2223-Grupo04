@@ -169,7 +169,7 @@ public class UIManager : MonoBehaviour
     #region cosas tutorial
     public void TextoTutorial(string _texto)
     {
-        GameManager.Instance._letterTyper.LetterByLetter(_texto, _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+        _tutorialUI.GetComponent<LetterByLetterTyping>().LetterByLetter(_texto, _tutorialUI.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         _tutorialUI.SetActive(true);
     }
 
