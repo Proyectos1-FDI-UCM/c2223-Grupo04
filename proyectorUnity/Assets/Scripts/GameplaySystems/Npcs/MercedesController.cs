@@ -23,6 +23,8 @@ public class MercedesController : MonoBehaviour
     MercheStates estado;
     Animator merchAnimator;
     SpriteRenderer mercheRenderer;
+    //Sound
+    MercedesSoundController _mercheSound;
     enum MercheStates
     {
         Comiendo,
@@ -39,6 +41,7 @@ public class MercedesController : MonoBehaviour
         GenerateEatTime();
         merchAnimator = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
         mercheRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+        _mercheSound = GetComponent<MercedesSoundController>();
     }
 
     void Update()
@@ -146,6 +149,7 @@ public class MercedesController : MonoBehaviour
         GenerateEatTime();
         LlegarAUnSitio();
         estado = MercheStates.Comiendo;
+        _mercheSound.MercedesMastica(); //Sonido de comer de Mercedes
         //Establece el tiempo a esperar nada mas despues de comer
         elapsedTimeAfterEating = timeAfterEating;
     }
