@@ -87,6 +87,7 @@ public class PlantaBehaviour : MonoBehaviour
             if (dryTimer <= (_plantData.DrySpeed / 3) * 2 && _currentDrySprite < 0)
             {
                 DrySprite(0);
+                gameObject.transform.GetChild(1).gameObject.SetActive(false);
 
             }
 
@@ -137,6 +138,7 @@ public class PlantaBehaviour : MonoBehaviour
     {
         if (_plantState == PlantState.Growing)
         {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
             _plantState = PlantState.GrowingWatered;
             growTimer = growTimer * 0.8f;
             Debug.Log("Regado");
