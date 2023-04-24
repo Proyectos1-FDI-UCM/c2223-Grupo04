@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4126093623813502802}
   - component: {fileID: 4126093623813502765}
   m_Layer: 0
-  m_Name: Invernaderos nivel 2 1
+  m_Name: Nivel 2 Invernadero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
