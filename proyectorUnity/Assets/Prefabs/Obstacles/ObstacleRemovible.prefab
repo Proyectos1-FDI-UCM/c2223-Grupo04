@@ -215,4 +215,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanciaMinimaIluminado: 2.2
+  _distanciaMinimaIluminado: 3

@@ -86,7 +86,10 @@ public class SoilComponent : MonoBehaviour
             _myChild.GetComponent<PlantaBehaviour>().GetWatered();
         }
     }
-
+    public bool HasPlant()
+    {
+        return (_myChild.GetComponent<PlantaBehaviour>() != null);
+    }
     public bool IsEmpty()
     { return _isEmpty; }
 

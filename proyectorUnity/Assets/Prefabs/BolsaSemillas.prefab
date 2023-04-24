@@ -106,7 +106,6 @@ MonoBehaviour:
   _plantaPrefab: {fileID: 2616575724842903892, guid: 7bd2ef135cb95404ea00bad31992af52, type: 3}
   _semillaAnim: {fileID: 2221644548051976295, guid: 4a71fe9550d300f4d8c5f09aad0970c8, type: 3}
   _semilla: {fileID: 0}
-  _destructeable: 0
 --- !u!50 &4013105254483806949
 Rigidbody2D:
   serializedVersion: 4
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ebd00b6f2ee324e9e8884318a3bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanciaMinimaIluminado: 2.2
+  _distanciaMinimaIluminado: 3
 --- !u!1 &7592597675225060651
 GameObject:
   m_ObjectHideFlags: 0
