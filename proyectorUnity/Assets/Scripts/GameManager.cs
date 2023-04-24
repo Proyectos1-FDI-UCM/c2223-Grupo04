@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public TornadoSpawner _tornadoSpawner;
     [SerializeField]
-    public SoundManager _sountManager;
-    [SerializeField]
     private GameObject _soundMangPref;
     [SerializeField]
     private int _nTornadosFloja;
@@ -58,6 +56,10 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         _inputController = GetComponent<InputController>();
+        if (SoundManager.Instance == null)
+        {
+            GameObject.Instantiate(_soundMangPref);
+        }
     }
 
     /// <summary>
@@ -68,7 +70,7 @@ public class GameManager : MonoBehaviour
         _nTornados++;
         _tornadoSpawner.NewTornadoTime();
         _uIManager.NuevoTiempoDeTornado();
-        _sountManager.ChangeChill();
+        SoundManager.Instance.ChangeChill();
 
     }
 
@@ -193,15 +195,10 @@ public class GameManager : MonoBehaviour
             _letterTyper.StopWriting();
         }
     }
-
+   
     // Start is called before the first frame update
     void Start()
     {
-        if (SoundManager.Instance == null)
-        {
-            GameObject.Instantiate(_soundMangPref);
-        }
-        _sountManager = SoundManager.Instance;
         _nTornados = 0;
         ChangeState(GameStates.INTRO);
         _nTornadosFuerte = _nTornadosFloja + 3;
