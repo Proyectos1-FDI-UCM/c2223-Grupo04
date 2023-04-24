@@ -27,6 +27,9 @@ public class ElMono : MonoBehaviour
     [SerializeField]
     float minTiempoMover, maxTiempoMover, monoSpeed;
 
+    [SerializeField]
+    Animator maikelAnim;
+
     float tiempoMover;
     GameObject miHerramienta;
     GameObject nuevaPosicion;
@@ -52,6 +55,9 @@ public class ElMono : MonoBehaviour
     {
         if (estado == EstadosMichael.Esperando || estado == EstadosMichael.EsperandoYendoACasa)
         {
+            maikelAnim.SetBool("Balancea", false); 
+            maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+
             tiempoMover -= Time.deltaTime;
             if (tiempoMover < 0)
             {
@@ -87,7 +93,11 @@ public class ElMono : MonoBehaviour
 
     private bool MoverHacia(GameObject objetivo)
     {
+        maikelAnim.SetBool("Balancea", true);
         Vector2 direccion = transform.position - objetivo.transform.position;
+        //gira el sprite segun la direccion
+        if (direccion.x < 0) maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        else maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         transform.position = Vector2.MoveTowards(transform.position, objetivo.transform.position, monoSpeed * Time.deltaTime);
         return direccion.magnitude < 0.4;
     }
