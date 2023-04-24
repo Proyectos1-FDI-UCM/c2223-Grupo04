@@ -110,6 +110,8 @@ public class MercedesController : MonoBehaviour
         estado = MercheStates.DesplazandoseACasa;
         mercheRenderer.flipX = casitaMercedes.transform.position.x > transform.position.x;
         merchAnimator.SetBool("Move", true);
+        //Sonido de enterrarse
+        _mercheSound.MercedesEntierra();
     }
 
     private bool MoverHacia(Transform objetivo)
@@ -132,6 +134,8 @@ public class MercedesController : MonoBehaviour
             estado = MercheStates.DesplazandoseAComer;
             mercheRenderer.flipX = planta.transform.position.x > transform.position.x;
             merchAnimator.SetBool("Move", true);
+            //Sonido de enterrarse
+            _mercheSound.MercedesEntierra();
         }
         else
         {
@@ -184,5 +188,6 @@ public class MercedesController : MonoBehaviour
     private void LlegarAUnSitio()
     {
         merchAnimator.SetBool("Move", false);
+        _mercheSound.MercedesSale();
     }
 }

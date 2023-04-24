@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 2490011853413736339}
   - component: {fileID: 4521688559975860263}
   - component: {fileID: -7153271933305522570}
+  - component: {fileID: 2189507726584424753}
   m_Layer: 0
   m_Name: Mercedes
   m_TagString: Untagged
@@ -185,6 +186,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2189507726584424753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927042513596763326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1049cbb92cfef57428a86fc91cc02ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mercheCome: {fileID: 8300000, guid: c9e1ea9a3a788154aa2e1a0e9b62b6bc, type: 3}
+  _mercheEntierra: {fileID: 8300000, guid: e6d627fa28e9d4546acc6118e2058be7, type: 3}
+  mercheSale: {fileID: 8300000, guid: 8166283de718aa443a39ba988a5ca83b, type: 3}
+  _minPitch: 1.2
+  _maxPitch: 1.7
 --- !u!1 &4555062934756852896
 GameObject:
   m_ObjectHideFlags: 0

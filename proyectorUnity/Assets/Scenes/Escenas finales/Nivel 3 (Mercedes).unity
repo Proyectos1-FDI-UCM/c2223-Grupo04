@@ -11829,11 +11829,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 316db51567b919440b315451cbe0456e, type: 3}
---- !u!1 &659510170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1927042513596763326, guid: 316db51567b919440b315451cbe0456e, type: 3}
-  m_PrefabInstance: {fileID: 659510169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &678149418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65645,23 +65640,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2490011853413736339, guid: 316db51567b919440b315451cbe0456e, type: 3}
   m_PrefabInstance: {fileID: 659510169}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1458748200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659510170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1049cbb92cfef57428a86fc91cc02ef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mercheCome: {fileID: 8300000, guid: c9e1ea9a3a788154aa2e1a0e9b62b6bc, type: 3}
-  _mercheMueve: {fileID: 0}
-  mercheTierra: {fileID: 0}
-  _minPitch: 1.2
-  _maxPitch: 1.7
 --- !u!1001 &1483546234
 PrefabInstance:
   m_ObjectHideFlags: 0

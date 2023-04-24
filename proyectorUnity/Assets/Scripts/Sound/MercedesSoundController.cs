@@ -6,7 +6,7 @@ public class MercedesSoundController : MonoBehaviour
 {
     //Sonidos
     private AudioSource _merche;
-    [SerializeField] private AudioClip _mercheCome, _mercheMueve, mercheTierra;
+    [SerializeField] private AudioClip _mercheCome, _mercheEntierra, mercheSale;
     //Pitch
     [Range(-3, 3)]
     [SerializeField] float _minPitch;
@@ -18,6 +18,7 @@ public class MercedesSoundController : MonoBehaviour
     void Start()
     {
         _merche = this.gameObject.AddComponent<AudioSource>();
+        _merche.volume = 5;
     }
 
     // Update is called once per frame
@@ -27,17 +28,18 @@ public class MercedesSoundController : MonoBehaviour
     }
     public void MercedesMastica() 
     {
+        
         _merche.pitch = Random.Range(_minPitch, _maxPitch);
         _merche.PlayOneShot(_mercheCome);
     }
-    public void MercedesDesliza() 
+    public void MercedesEntierra() 
     {
         _merche.pitch = Random.Range(_minPitch, _maxPitch);
-        _merche.PlayOneShot(_mercheMueve);
+        _merche.PlayOneShot(_mercheEntierra);
     }
-    public void MercedesTierra() 
+    public void MercedesSale() 
     {
         _merche.pitch = Random.Range(_minPitch, _maxPitch);
-        _merche.PlayOneShot(mercheTierra);
+        _merche.PlayOneShot(mercheSale);
     }
 }
