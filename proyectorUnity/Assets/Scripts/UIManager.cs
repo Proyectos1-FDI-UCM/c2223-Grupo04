@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI _contador;
     [SerializeField] GameObject _introUI, _gameUI, _pausaUI, _winUI, _tutorialUI, _controlesUI;
+    [SerializeField] Animator _transition;
     [SerializeField] Image _inventory;
     [SerializeField] GameObject _prefabObjetivo;
     [SerializeField] Transform _panel3;
@@ -163,7 +164,16 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
         StopAllCoroutines();
-        SceneManager.LoadScene(id);
+        StartCoroutine(LoadLevel(id));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        _transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene(levelIndex);
     }
 
     #region cosas tutorial
