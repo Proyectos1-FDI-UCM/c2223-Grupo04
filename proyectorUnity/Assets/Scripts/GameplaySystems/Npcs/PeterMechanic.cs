@@ -9,8 +9,8 @@ public class PeterMechanic : MonoBehaviour
     [SerializeField] float _spawnTime; //Tiempo en el que la semilla spawnea.
     [SerializeField] Transform _seedSpawn; // Lugar donde aparecen las semillas lanzadas.
     Animator _anim;
-    [SerializeField] int _maxSeeds;
-    int seedsCount;
+    //[SerializeField] int _maxSeeds;
+    //int seedsCount = 1;
     private void Start()
     {
         _anim = transform.GetChild(2).GetComponent<Animator>();
@@ -19,8 +19,8 @@ public class PeterMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (seedsCount > _maxSeeds)
-        {
+        //if (seedsCount > _maxSeeds)
+        //{
             time += Time.deltaTime;
             if (time >= _spawnTime)
             {
@@ -28,9 +28,9 @@ public class PeterMechanic : MonoBehaviour
                 time = 0;
                 _anim.SetTrigger("Fly");
             }
-            seedsCount = 0;
-        }
-        else seedsCount++;
+            //seedsCount = 0;
+        //
+        //else seedsCount++;
         
     }
 }
