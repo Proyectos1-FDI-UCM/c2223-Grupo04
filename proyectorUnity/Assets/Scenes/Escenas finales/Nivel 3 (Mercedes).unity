@@ -107465,6 +107465,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2472603818476918231, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: _charlieCamina.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: af41ed30235f54b449fab71bb9200376, type: 3}
+    - target: {fileID: 2472603818476918231, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: _charlieCamina.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8919a72ea4d975941a3d379203516641, type: 3}
+    - target: {fileID: 2472603818476918231, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: _charlieCamina.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f449b66224755d54ab82905c1eed9207, type: 3}
+    - target: {fileID: 2472603818476918231, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
+      propertyPath: _charlieCamina.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: d9797b864a2346f4e8baa5f3692b5d47, type: 3}
     - target: {fileID: 5877752316885151858, guid: 78e9ef704d741824094bdb4ba6bfcd28, type: 3}
       propertyPath: m_Name
       value: Charlie UwU

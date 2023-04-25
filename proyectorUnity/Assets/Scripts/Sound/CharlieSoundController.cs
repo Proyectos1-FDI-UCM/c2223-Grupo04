@@ -10,11 +10,11 @@ public class CharlieSoundController : MonoBehaviour
     private AudioSource _charlie;
     [SerializeField] private AudioClip[] _charlieCamina;
     //Pitch
-    [Range(-3, 3)]
+    /*[Range(-3, 3)]
     [SerializeField] float _minPitch;
 
     [Range(-3, 3)]
-    [SerializeField] float _maxPitch;
+    [SerializeField] float _maxPitch;*/
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +30,8 @@ public class CharlieSoundController : MonoBehaviour
     }
     public void CharlieCamina() 
     {
-        AudioClip currentSound = _charlieCamina[Random.Range(0, _charlieCamina.Length)];
-        StartCoroutine(PasosCharlie(currentSound));
+        _charlie.PlayOneShot(_charlieCamina[Random.Range(0, _charlieCamina.Length)]);
         
     }
-    public IEnumerator PasosCharlie(AudioClip currentCharlie) 
-    {
-        yield return new WaitForSeconds(0.17f);
-        _charlie.PlayOneShot(currentCharlie);
-    }
+    
 }

@@ -7,7 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class MovementController : MonoBehaviour
 {
-    CharlieSoundController _charlieSound;
     [SerializeField]
     [Tooltip("La velocidad de moviemiento del personaje")]
     public float _speed;
@@ -17,14 +16,12 @@ public class MovementController : MonoBehaviour
     {
         _direction = new Vector2(0, 0);
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _charlieSound = GetComponent<CharlieSoundController>();
     }
 
     public void Move(float h, float v)
     {
         _direction = new Vector2(h, v);
         _rigidbody2D.velocity = _direction * _speed;
-        _charlieSound.CharlieCamina();
 
     } 
     /*

@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     Transform _myTransform;
     Color _transparent = new Color(255,255,255,0);
     Color _white = new Color(255,255,255,255);
+    //SOUND
+    CharlieSoundController _charlieSound;
+    bool isSounding;
 
     public void GoHome() 
     { 
@@ -41,11 +44,25 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _charlieSound = GetComponent<CharlieSoundController>();
         GetComponent<SpriteRenderer>().enabled = true;
+        isSounding = false;
     }
 
     private void Update()
     {
+        
         _anim.SetBool("Walk", Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f);
+        if ((Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f) && !isSounding) 
+        {
+            isSounding = true;
+            StartCoroutine(CharliePasos());
+        }
+    }
+    public IEnumerator CharliePasos()
+    {
+        _charlieSound.CharlieCamina();
+        yield return new WaitForSeconds(.17f);
+        isSounding = false;
     }
 }

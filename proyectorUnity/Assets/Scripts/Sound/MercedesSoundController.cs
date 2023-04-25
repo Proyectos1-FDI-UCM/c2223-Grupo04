@@ -32,10 +32,15 @@ public class MercedesSoundController : MonoBehaviour
         _merche.pitch = Random.Range(_minPitch, _maxPitch);
         _merche.PlayOneShot(_mercheCome);
     }
+    public IEnumerator MercedesEntierra(AudioClip currentCharlie)
+    {
+        yield return new WaitForSeconds(.65f);
+        _merche.PlayOneShot(currentCharlie);
+    }
     public void MercedesEntierra() 
     {
         _merche.pitch = Random.Range(_minPitch, _maxPitch);
-        _merche.PlayOneShot(_mercheEntierra);
+        StartCoroutine(MercedesEntierra(_mercheEntierra));
     }
     public void MercedesSale() 
     {
