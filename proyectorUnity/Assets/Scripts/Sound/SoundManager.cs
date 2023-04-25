@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -60,4 +61,5 @@ public class SoundManager : MonoBehaviour
     void PlayChill(){ _chillMus.clip=_chillMusic; _chillMus.Play(); print("ER"); }
 
     void PlayTornado(){ _torMus.clip=_tornadoMusic; _torMus.Play();}
+   
 }

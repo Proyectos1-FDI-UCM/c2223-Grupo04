@@ -33,11 +33,17 @@ public class MenuManager : MonoBehaviour
     }
     public void MenuBoton()
     {
-        // Not yet
+        StartCoroutine(LoadLevel(0));
+        _menuSounds.ButtonSound();
     }
     public void ExitBoton()
     {
         Application.Quit();
+        _menuSounds.ButtonSound();
+    }
+    public void OptionButton() 
+    {
+        StartCoroutine(LoadLevel(7));
         _menuSounds.ButtonSound();
     }
     #endregion

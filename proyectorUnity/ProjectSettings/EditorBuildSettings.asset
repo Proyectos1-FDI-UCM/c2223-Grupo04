@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenas finales/Nivel 5.unity
     guid: 8f6f6fa3d08a1ca4f8ca488a30b2c413
+  - enabled: 1
+    path: "Assets/Scenes/Escenas finales/MEN\xDA OPCIONES.unity"
+    guid: b00e4dc8e6d298e49840de82590182ec
   m_configObjects: {}
