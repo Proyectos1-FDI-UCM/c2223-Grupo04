@@ -37790,6 +37790,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: 76a9428533b707d4a91bcb9168b3cc9d, type: 3}
   m_PrefabInstance: {fileID: 589199519}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &695748540 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2575181401667388696, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+  m_PrefabInstance: {fileID: 1501942045570420904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &714678503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59987,6 +59992,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767402096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1501942046594194258, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+  m_PrefabInstance: {fileID: 1501942045570420904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1767402099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767402096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b115450f731d4342bdad3d5d1235de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transition: {fileID: 695748540}
 --- !u!1 &1782792506
 GameObject:
   m_ObjectHideFlags: 0
@@ -107339,6 +107362,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 28c49611e97682a42a09223608bf1a57, type: 3}
+    - target: {fileID: 1501942045158328390, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1767402099}
+    - target: {fileID: 1501942045158328390, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045158328390, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlSelPruebas, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045236984793, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -107435,6 +107470,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1767402099}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlSelPruebas, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1767402099}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlSelPruebas, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _textIntro
       value: HOLA DE NUEVO AMIGO DE LOS CAPYBARAS, AQUI TIENES QUE PROBAR SI SE PUEDE
@@ -107457,5 +107520,9 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 16.35
       objectReference: {fileID: 0}
+    - target: {fileID: 9043271379130025853, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28c49611e97682a42a09223608bf1a57, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}

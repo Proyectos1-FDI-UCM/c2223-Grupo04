@@ -13039,15 +13039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492730467015705211, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1927042513596763326, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_Name
       value: Mercedes
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927042513596763326, guid: 316db51567b919440b315451cbe0456e, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2035430633679001734, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_Sprite
@@ -13106,12 +13102,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: tiempoStun
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521688559975860263, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: casitaMercedes
       value: 
       objectReference: {fileID: 184597209}
     - target: {fileID: 4555062934756852896, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5917749728543004664, guid: 316db51567b919440b315451cbe0456e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6318114073675620660, guid: 316db51567b919440b315451cbe0456e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23321,7 +23325,7 @@ GameObject:
   - component: {fileID: 973006138}
   - component: {fileID: 973006140}
   - component: {fileID: 973006139}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MercedesParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

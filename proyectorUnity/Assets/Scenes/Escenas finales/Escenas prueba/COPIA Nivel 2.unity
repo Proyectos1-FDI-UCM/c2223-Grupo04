@@ -10623,6 +10623,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 632947526}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlSelPruebas, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045846993761, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 632947526}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942046125129628, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlSelPruebas, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _textIntro
       value: HOLA BIENVENIDO, AQUI TIENES QUE PROBAR LOS HIGHLICHT DE LOS DIFERENTES
@@ -10815,6 +10843,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &632947523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1501942046594194258, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+  m_PrefabInstance: {fileID: 453308354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &632947526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632947523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b115450f731d4342bdad3d5d1235de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transition: {fileID: 662416297}
+--- !u!95 &662416297 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2575181401667388696, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+  m_PrefabInstance: {fileID: 453308354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &699016898
 PrefabInstance:
   m_ObjectHideFlags: 0

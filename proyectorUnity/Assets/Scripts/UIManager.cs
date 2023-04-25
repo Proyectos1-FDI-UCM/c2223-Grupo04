@@ -166,11 +166,16 @@ public class UIManager : MonoBehaviour
         _pausaUI.SetActive(false);
         
     }
-    public void SalirBoton(int id)
+    public void SalirBoton()
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
-        StopAllCoroutines();
-        StartCoroutine(LoadLevel(id));
+        StartCoroutine(LoadLevel(0));
+    }
+
+    public void NivelesBoton()
+    {
+        Time.timeScale = 1; //Volver a correr el tiempo.
+        StartCoroutine(LoadLevel(0));
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -181,6 +186,7 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(levelIndex);
+        StopAllCoroutines();
     }
 
     #region cosas tutorial

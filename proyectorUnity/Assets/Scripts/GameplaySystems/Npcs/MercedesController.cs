@@ -171,6 +171,7 @@ public class MercedesController : MonoBehaviour
 
     public void Stunear()
     {
+        merchAnimator.SetBool("Mareo", true);
         _collider2D.enabled = false;
         contadorStun = tiempoStun;
         estado = MercheStates.Stuneada;
@@ -178,12 +179,14 @@ public class MercedesController : MonoBehaviour
 
     private void FinDeStun()
     {
+        merchAnimator.SetBool("Mareo", false);
         Esperar();
         GenerateEatTime();
     }
 
     private void Esperar()
     {
+        merchAnimator.SetBool("Move", false);
         merchAnimator.SetBool("Eat", false);
         _collider2D.enabled = false;
         estado = MercheStates.EsperandoEnCasa;

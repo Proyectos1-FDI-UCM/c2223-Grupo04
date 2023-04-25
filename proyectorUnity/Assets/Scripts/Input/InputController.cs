@@ -82,7 +82,7 @@ public class InputController : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) &&  GameManager.Instance._state == GameManager.GameStates.GAME)
         {
             GameManager.Instance.Pause();
         }
