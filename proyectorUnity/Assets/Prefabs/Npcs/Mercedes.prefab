@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 827149905, guid: 8e797c4b88e668d48944f97f57ce11e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,6 +117,8 @@ GameObject:
   - component: {fileID: 4521688559975860263}
   - component: {fileID: -7153271933305522570}
   - component: {fileID: 2189507726584424753}
+  - component: {fileID: 8714136269121512761}
+  - component: {fileID: 1915029224053330437}
   m_Layer: 0
   m_Name: Mercedes
   m_TagString: Untagged
@@ -160,6 +162,7 @@ MonoBehaviour:
   tiempoStun: 25
   casitaMercedes: {fileID: 0}
   estado: 0
+  merchAnimator: {fileID: 4293257070771484658}
 --- !u!61 &-7153271933305522570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203,6 +206,68 @@ MonoBehaviour:
   mercheSale: {fileID: 8300000, guid: 8166283de718aa443a39ba988a5ca83b, type: 3}
   _minPitch: 1.2
   _maxPitch: 1.7
+--- !u!114 &8714136269121512761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927042513596763326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a54007372eda544b89d3e0b2b79458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chr: 0
+  _controlVar: 0
+  _dialogueTypingSounds:
+  - {fileID: 8300000, guid: f0ece002fec22d946a1d09aaff6ccc71, type: 3}
+  - {fileID: 8300000, guid: a8371b4943e46354782a3ef872042536, type: 3}
+  - {fileID: 8300000, guid: e19f3ba04185b7148b2daa09a2f3a80b, type: 3}
+  - {fileID: 8300000, guid: 9957551b3155e064b95bd357bb2990cb, type: 3}
+  - {fileID: 8300000, guid: bbf4f4390ab5fc248a14db1c318e2297, type: 3}
+  - {fileID: 8300000, guid: 8efd4d9e478027b4c9a50b530f690ded, type: 3}
+  - {fileID: 8300000, guid: 58db202d310e0b24cb7ab3d6a4883512, type: 3}
+  - {fileID: 8300000, guid: 6919e353d6597dd4ca432b0da5ec5455, type: 3}
+  - {fileID: 8300000, guid: 63c7e5faa52ed3a458e3fa6b81582365, type: 3}
+  - {fileID: 8300000, guid: e7d8c4494ce029c418f8b0a3abc5371a, type: 3}
+  - {fileID: 8300000, guid: 6d8de28af827ce040ae8d821060cb8f6, type: 3}
+  - {fileID: 8300000, guid: f6504afaf3fa8bd41ad867c496c4af1d, type: 3}
+  - {fileID: 8300000, guid: 0ca5e0500bd9dfa4a97f7408116251ce, type: 3}
+  - {fileID: 8300000, guid: 5e215864a2bf7f447a31e312ffb508d7, type: 3}
+  - {fileID: 8300000, guid: 6dd2587ec88742c47a75339c9759ed4f, type: 3}
+  - {fileID: 8300000, guid: e43ada2329717aa4b8147cc140459d01, type: 3}
+  - {fileID: 8300000, guid: 91427f4a24eb31b46acbcdab05101cc8, type: 3}
+  - {fileID: 8300000, guid: eed6e3fbefb710547952e68b7886ad0b, type: 3}
+  - {fileID: 8300000, guid: 8e56ad1bb12a96849a3724e7a5d53841, type: 3}
+  - {fileID: 8300000, guid: ccc9de996e8e7d741a42cc394852a8ce, type: 3}
+  - {fileID: 8300000, guid: 14e1bcec3b0e95c4fb4f44743c98b23f, type: 3}
+  - {fileID: 8300000, guid: ec782800b33f6e944aa9a5cfade87a65, type: 3}
+  - {fileID: 8300000, guid: eecc22f5920b010479e19991b56b7112, type: 3}
+  - {fileID: 8300000, guid: 597764cdced0a34499d45f70b47f8136, type: 3}
+  - {fileID: 8300000, guid: e2d0e9a1caa53e148a3536c81c52828b, type: 3}
+  - {fileID: 8300000, guid: 3edc109bf58e81548b774ecf60e69c0e, type: 3}
+  - {fileID: 8300000, guid: 4ec8b70ec8cac3f48a4ae34d57333e23, type: 3}
+  _stopAudioSource: 1
+  _frequencylevel: 3
+  _minPitch: 1.2
+  _maxPitch: 1.7
+--- !u!114 &1915029224053330437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927042513596763326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2de2514101d7f40a4e6a57e06a2433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogos: {fileID: 11400000, guid: 7f967c95f22687e4d881c6bd6c4a0764, type: 2}
+  _dialogoPrefab: {fileID: 1676767637170646874, guid: 687f8abc1d5efaf47915132814cb80c6, type: 3}
+  _dialogoInstancia: {fileID: 0}
+  _bocadilloSpawner: {fileID: 8819709188646600544}
 --- !u!1 &4555062934756852896
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +298,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1256469118942886287}
+  - {fileID: 8819709188646600544}
   m_Father: {fileID: 2490011853413736339}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -249,3 +315,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _npcGO: {fileID: 1492730467015705211}
+--- !u!1 &5917749728543004664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8819709188646600544}
+  m_Layer: 8
+  m_Name: bocadillo spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8819709188646600544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917749728543004664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.46, y: 1.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6318114073675620660}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

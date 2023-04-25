@@ -21,7 +21,9 @@ public class MercedesController : MonoBehaviour
     Collider2D _collider2D;
     [SerializeField]
     MercheStates estado;
+    [SerializeField]
     Animator merchAnimator;
+    DialogosInGame mercheBocata;
     SpriteRenderer mercheRenderer;
     //Sound
     MercedesSoundController _mercheSound;
@@ -39,7 +41,7 @@ public class MercedesController : MonoBehaviour
         Esperar();
         levelManager = GameManager.Instance._levelManager;
         GenerateEatTime();
-        merchAnimator = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
+        mercheBocata = GetComponent<DialogosInGame>();
         mercheRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
         _mercheSound = GetComponent<MercedesSoundController>();
     }
@@ -156,6 +158,7 @@ public class MercedesController : MonoBehaviour
         _mercheSound.MercedesMastica(); //Sonido de comer de Mercedes
         //Establece el tiempo a esperar nada mas despues de comer
         elapsedTimeAfterEating = timeAfterEating;
+        merchAnimator.SetBool("Eat", true);
     }
 
     /// <summary>
@@ -181,6 +184,7 @@ public class MercedesController : MonoBehaviour
 
     private void Esperar()
     {
+        merchAnimator.SetBool("Eat", false);
         _collider2D.enabled = false;
         estado = MercheStates.EsperandoEnCasa;
     }
@@ -188,6 +192,7 @@ public class MercedesController : MonoBehaviour
     private void LlegarAUnSitio()
     {
         merchAnimator.SetBool("Move", false);
+        mercheBocata.Bocadillo();
         _mercheSound.MercedesSale();
     }
 }
