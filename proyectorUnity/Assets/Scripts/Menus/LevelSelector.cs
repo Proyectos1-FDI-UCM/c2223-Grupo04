@@ -22,6 +22,9 @@ public class LevelSelector : MonoBehaviour
     [SerializeField]
     SombraComponentUI _sombra;
 
+    //SOUNDS
+    MenuSounds _menuSounds;
+
     //cambia a la escena del index indicado
     public void CambiaEscena2()
     {
@@ -39,20 +42,24 @@ public class LevelSelector : MonoBehaviour
         _resumen.SetActive(true);
         _resumen.GetComponent<ResumenNivel>().UpdateResumen(_nombre, Puntuacion.Instance.GetNumeroTornados(_nivel), Puntuacion.Instance.GetNumeroPlantasSecas(_nivel), _npcs[_nivel]);
         _sombra.UpdateSadow();
+        _menuSounds.ButtonSound();
     }
 
     public void ExitBoton()
     {
+        _menuSounds.ButtonSound();
         StartCoroutine(LoadLevel(0));
     }
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        _menuSounds.ButtonSound();
         _transition.SetTrigger("Start");
-
+        
         yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(levelIndex);
+        
     }
 
     private void Awake()
@@ -67,6 +74,7 @@ public class LevelSelector : MonoBehaviour
 
     private void Start()
     {
+        _menuSounds = GetComponent<MenuSounds>();
         // Activa los botones de los niveles.
         if (Puntuacion.Instance == null)
         {
@@ -77,5 +85,6 @@ public class LevelSelector : MonoBehaviour
         {
             _niveles[i].SetActive(true);
         }
+        
     }
 }

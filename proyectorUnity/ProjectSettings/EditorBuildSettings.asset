@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Escenas finales/Nivel 2 (Giuseppe) 1.unity
     guid: cbfd5d45ff71f384b8feaf3281b8ef34
   - enabled: 1
-    path: Assets/Scenes/Escenas finales/Nivel 3 (Mercedes).unity
-    guid: 1ef7a1d7f994cb64e8a9a6c2e2e9f4e5
+    path: Assets/Scenes/Escenas finales/Nivel 3 (Mercedes Final).unity
+    guid: 6571ab75f7ae4d8429eae9f862eda59c
   - enabled: 1
     path: Assets/Scenes/Escenas finales/Nivel 42.unity
     guid: 85e4e0b7b9f68874cade0b00ff2e8923

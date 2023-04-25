@@ -26,12 +26,16 @@ public class UIManager : MonoBehaviour
 
     public static UIManager Instance; //Para el singletone.
 
+    //SOUNDS
+    MenuSounds _menuSounds;
+
     // Start is called before the first frame update
     void Start()
     {
         _inventory.enabled = false;
         SetearObjetivos(GameManager.Instance._levelManager.objetivos);
         IntroText(_textIntro);
+        _menuSounds = GetComponent<MenuSounds>();
     }
 
     // Update is called once per frame
@@ -153,12 +157,14 @@ public class UIManager : MonoBehaviour
         _gameUI.SetActive(false);
         _winUI.SetActive(false);
         _pausaUI.SetActive(true);
+        
     }
     public void ContinuarBoton()
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
         _gameUI.SetActive(true);
         _pausaUI.SetActive(false);
+        
     }
     public void SalirBoton(int id)
     {
@@ -169,6 +175,7 @@ public class UIManager : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        _menuSounds.ButtonSound();
         _transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(0.5f);

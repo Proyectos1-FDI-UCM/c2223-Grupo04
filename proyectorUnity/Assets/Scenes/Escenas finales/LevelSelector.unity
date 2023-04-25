@@ -1339,6 +1339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554186421}
   - component: {fileID: 554186424}
+  - component: {fileID: 554186425}
   m_Layer: 5
   m_Name: Resumen
   m_TagString: Untagged
@@ -1389,6 +1390,19 @@ MonoBehaviour:
   _tornados: {fileID: 1828315122}
   _secas: {fileID: 1927787349}
   _npc: {fileID: 824069113}
+--- !u!114 &554186425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554186420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669647ec91184b24abf539e34ed95005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuButton: {fileID: 8300000, guid: a8620637b36050047ada1fc85093dc3e, type: 3}
 --- !u!1 &563685281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,6 +3200,7 @@ GameObject:
   - component: {fileID: 1275019089}
   - component: {fileID: 1275019088}
   - component: {fileID: 1275019087}
+  - component: {fileID: 1275019090}
   m_Layer: 5
   m_Name: Salir
   m_TagString: Untagged
@@ -3309,6 +3324,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275019085}
   m_CullTransparentMesh: 1
+--- !u!114 &1275019090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275019085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669647ec91184b24abf539e34ed95005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuButton: {fileID: 8300000, guid: a8620637b36050047ada1fc85093dc3e, type: 3}
 --- !u!1 &1327202319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,6 +4770,7 @@ GameObject:
   - component: {fileID: 2104565470}
   - component: {fileID: 2104565469}
   - component: {fileID: 2104565473}
+  - component: {fileID: 2104565474}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4858,6 +4887,19 @@ MonoBehaviour:
   - {fileID: 1217046164}
   - {fileID: 283129620}
   _sombra: {fileID: 824069115}
+--- !u!114 &2104565474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104565468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669647ec91184b24abf539e34ed95005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuButton: {fileID: 8300000, guid: a8620637b36050047ada1fc85093dc3e, type: 3}
 --- !u!1 &2144317048
 GameObject:
   m_ObjectHideFlags: 0

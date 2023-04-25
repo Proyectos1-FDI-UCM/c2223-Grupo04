@@ -8,7 +8,14 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]
     Animator _transition;
+    //SOUNDS
+    [SerializeField]
+    MenuSounds _menuSounds;
 
+    private void Start()
+    {
+        _menuSounds = GetComponent<MenuSounds>();
+    }
     IEnumerator LoadLevel(int levelIndex)
     {
         _transition.SetTrigger("Start");
@@ -22,6 +29,7 @@ public class MenuManager : MonoBehaviour
     public void PlayBoton()
     {
         StartCoroutine(LoadLevel(1));
+        _menuSounds.ButtonSound();
     }
     public void MenuBoton()
     {
@@ -30,6 +38,7 @@ public class MenuManager : MonoBehaviour
     public void ExitBoton()
     {
         Application.Quit();
+        _menuSounds.ButtonSound();
     }
     #endregion
 }

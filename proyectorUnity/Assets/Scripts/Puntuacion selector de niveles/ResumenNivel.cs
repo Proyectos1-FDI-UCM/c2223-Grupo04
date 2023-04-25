@@ -15,6 +15,14 @@ public class ResumenNivel : MonoBehaviour
     [SerializeField]
     Image _npc;
 
+    //SOUNDS
+    MenuSounds _menuSounds;
+
+    private void Start()
+    {
+        _menuSounds = GetComponent<MenuSounds>();
+    }
+
     public void UpdateResumen(string nombre, int tornados, int secas, Sprite npc)
     {
         _nombre.text = "Jardín de: " + nombre;
@@ -25,7 +33,9 @@ public class ResumenNivel : MonoBehaviour
 
     public void Disable()
     {
+        _menuSounds.ButtonSound();
         gameObject.SetActive(false);
+        
     }
 
     private void Update()
