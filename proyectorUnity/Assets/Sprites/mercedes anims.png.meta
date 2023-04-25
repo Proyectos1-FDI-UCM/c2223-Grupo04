@@ -397,6 +397,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mercedes anims_14
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 118
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c40cd0e254e9445b1654ae39f661c9
+      internalID: -1172971089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mercedes anims_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 117
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3dbc58e28cce646ab1721be81226db
+      internalID: -1056670994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -408,20 +450,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mercedes anims_3: -2511344
+      mercedes anims_12: -1604517938
       mercedes anims_0: 827149905
       mercedes anims_13: 405006330
       mercedes anims_10: 549538167
       mercedes anims_5: -477012805
       mercedes anims_7: -1690276539
       mercedes anims_9: 1142991863
+      mercedes anims_14: -1172971089
       mercedes anims_6: -487091117
       mercedes anims_4: 522041585
       mercedes anims_1: 1369921628
       mercedes anims_8: -2092356271
+      mercedes anims_15: -1056670994
       mercedes anims_2: -110813069
       mercedes anims_11: 156926746
-      mercedes anims_12: -1604517938
+      mercedes anims_3: -2511344
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
