@@ -155,7 +155,7 @@ MonoBehaviour:
   minTimeForEating: 5
   maxTimeForEating: 13
   timeAfterEating: 3
-  mercedesSpeed: 1.5
+  mercedesSpeed: 3.5
   tiempoEsperaComidaCancelada: 5
   tiempoStun: 25
   casitaMercedes: {fileID: 0}
