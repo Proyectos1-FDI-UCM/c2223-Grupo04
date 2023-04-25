@@ -9,6 +9,8 @@ public class CharlieSoundController : MonoBehaviour
     //Sonidos
     private AudioSource _charlie;
     [SerializeField] private AudioClip[] _charlieCamina;
+    //Variable que aloja la pista de pisadas de Charlie
+    int _currentCharlieTrack = -1;
     //Pitch
     /*[Range(-3, 3)]
     [SerializeField] float _minPitch;
@@ -20,8 +22,9 @@ public class CharlieSoundController : MonoBehaviour
     void Start()
     {
         _charlie = this.gameObject.AddComponent<AudioSource>();
-        _charlie.volume = 5;
+        _charlie.volume = 3;
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -30,8 +33,14 @@ public class CharlieSoundController : MonoBehaviour
     }
     public void CharlieCamina() 
     {
-        _charlie.PlayOneShot(_charlieCamina[Random.Range(0, _charlieCamina.Length)]);
-        
+        int currentCharlie = Random.Range(0, _charlieCamina.Length);
+        while (_currentCharlieTrack == currentCharlie) 
+        {
+            currentCharlie = Random.Range(0, _charlieCamina.Length);
+        }
+        _charlie.PlayOneShot(_charlieCamina[currentCharlie]);
+        _currentCharlieTrack = currentCharlie;
+
     }
     
 }

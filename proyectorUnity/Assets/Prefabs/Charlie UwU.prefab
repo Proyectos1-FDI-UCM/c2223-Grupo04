@@ -19502,12 +19502,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _charlieCamina:
-  - {fileID: 8300000, guid: f83d3e0c37b6dea448cb3d2ff143a619, type: 3}
-  - {fileID: 8300000, guid: d53a0ef871b113a45af7d59938415eb8, type: 3}
-  - {fileID: 8300000, guid: 22abc78c43ff367449c9b601429d9574, type: 3}
-  - {fileID: 8300000, guid: 43b86f269323ce44cba3e8ba58a2d314, type: 3}
-  _minPitch: 0
-  _maxPitch: 0
+  - {fileID: 8300000, guid: af41ed30235f54b449fab71bb9200376, type: 3}
+  - {fileID: 8300000, guid: 8919a72ea4d975941a3d379203516641, type: 3}
+  - {fileID: 8300000, guid: f449b66224755d54ab82905c1eed9207, type: 3}
+  - {fileID: 8300000, guid: d9797b864a2346f4e8baa5f3692b5d47, type: 3}
+  - {fileID: 8300000, guid: d74b306d0c3d9264c9dd3d1ef59935eb, type: 3}
+  - {fileID: 8300000, guid: 9c835bc47af8a174bbaf86e9c19c27ec, type: 3}
+  - {fileID: 8300000, guid: 7a8b42f7d34872948ab3ccaabfd519d7, type: 3}
 --- !u!1 &6562401402838821234
 GameObject:
   m_ObjectHideFlags: 0

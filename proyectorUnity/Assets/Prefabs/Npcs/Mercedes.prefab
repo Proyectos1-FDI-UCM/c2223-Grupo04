@@ -153,11 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTimeForEating: 5
-  maxTimeForEating: 15
-  timeAfterEating: 0
-  mercedesSpeed: 3
-  tiempoEsperaComidaCancelada: 1
-  tiempoStun: 30
+  maxTimeForEating: 13
+  timeAfterEating: 3
+  mercedesSpeed: 1.5
+  tiempoEsperaComidaCancelada: 5
+  tiempoStun: 25
   casitaMercedes: {fileID: 0}
   estado: 0
 --- !u!61 &-7153271933305522570
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1049cbb92cfef57428a86fc91cc02ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mercheCome: {fileID: 8300000, guid: c9e1ea9a3a788154aa2e1a0e9b62b6bc, type: 3}
+  _mercheCome: {fileID: 8300000, guid: b32c3f114471b3b458d02e28ef79b72a, type: 3}
   _mercheEntierra: {fileID: 8300000, guid: e6d627fa28e9d4546acc6118e2058be7, type: 3}
   mercheSale: {fileID: 8300000, guid: 8166283de718aa443a39ba988a5ca83b, type: 3}
   _minPitch: 1.2

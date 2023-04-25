@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator CharliePasos()
     {
         _charlieSound.CharlieCamina();
-        yield return new WaitForSeconds(.17f);
+        yield return new WaitForSeconds(.2f);
         isSounding = false;
     }
 }
