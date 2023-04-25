@@ -107250,6 +107250,10 @@ PrefabInstance:
       value: Peter
       objectReference: {fileID: 0}
     - target: {fileID: 1426153315618639623, guid: 09cb86edbcbff01429eb2b31d30201ec, type: 3}
+      propertyPath: _maxSeeds
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426153315618639623, guid: 09cb86edbcbff01429eb2b31d30201ec, type: 3}
       propertyPath: _seedSpawn
       value: 
       objectReference: {fileID: 22598224}
