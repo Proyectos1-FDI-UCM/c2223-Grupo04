@@ -13,10 +13,12 @@ public class InventoryControllerRio : InventoryController
             base.PickUpSemilla(toolObject);
             semillaBeingUsed = toolObject;
             toolObject.gameObject.SetActive(false);
+            toolObject.gameObject.transform.parent.GetComponent<PeterMechanic>().SeedDestroyed();
         }
         else if(_tool.GetComponent<Semilla>() != null && _tool.GetComponent<Semilla>().GetScriptablePlant().Equals(toolObject.GetComponent<Semilla>().GetScriptablePlant()))
         {
             base.PickUpSemilla(toolObject);
+            toolObject.gameObject.transform.parent.GetComponent<PeterMechanic>().SeedDestroyed();
             Destroy(toolObject.gameObject);
         }
 
