@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2388534101226971706}
   - component: {fileID: -5239484908686623290}
   - component: {fileID: 2896341291262046858}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BolsaSemillas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4823775339185184701}
   - component: {fileID: 3957914851406471238}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

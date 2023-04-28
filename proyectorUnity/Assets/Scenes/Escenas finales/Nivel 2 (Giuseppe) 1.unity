@@ -10626,8 +10626,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _textIntro
-      value: "Bienvenido a mi jard\xEDn Charlie, Perd\xF3n por el desorden Charlie,
-        y ten cuidado de que no te de una de las piedras que lanza el tornado."
+      value: "Tu jard\xEDn ha quedado precioso, Charlie. \xA1Que alegr\xEDa que me
+        ayudes con el mio! Aunque he de advertirte, los tornados por aqu\xED traen
+        muchas piedras, \xA1cuidado no te vayan a dar, Charlie!"
       objectReference: {fileID: 0}
     - target: {fileID: 1501942046594194259, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _cantInventario

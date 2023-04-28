@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6409473524063188172}
   - component: {fileID: -7148519095215348334}
   - component: {fileID: -8558612467667234934}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Regadera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 2338233281549594442}
   - component: {fileID: 4042280013422377313}
   - component: {fileID: 5984778945024430060}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: herramientas_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

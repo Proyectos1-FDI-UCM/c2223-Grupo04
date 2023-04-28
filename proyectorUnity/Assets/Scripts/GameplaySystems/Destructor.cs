@@ -8,7 +8,6 @@ public class Destructor : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Semillita"))
         {
-            Debug.Log("DestructorDestruyendo");
             collision.gameObject.transform.parent.GetComponent<PeterMechanic>().SeedDestroyed();
             Destroy(collision.gameObject);
         }
