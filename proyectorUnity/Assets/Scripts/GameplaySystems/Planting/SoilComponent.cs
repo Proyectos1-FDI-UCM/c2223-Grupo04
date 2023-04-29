@@ -16,10 +16,12 @@ public class SoilComponent : MonoBehaviour
     [Tooltip("Prefab a generar como hijo sobre este soil, por ejemplo un obstáculo removible")]
     private GameObject _childPrefab;
     private GameObject _myChild;
+    private HiglightItem _highlight;
 
     private void Start()
     {
         _levelManager = GameManager.Instance._levelManager;
+        _highlight = gameObject.GetComponent<HiglightItem>();
 
         if (_childPrefab != null)
         {
@@ -46,6 +48,7 @@ public class SoilComponent : MonoBehaviour
     {
         _myChild = Instantiate(childPrefab, transform.position, Quaternion.identity, transform);
         _isEmpty = false;
+        _highlight.enabled = false;
     }
 
     /// <summary>
@@ -88,7 +91,7 @@ public class SoilComponent : MonoBehaviour
     }
     public bool HasPlant()
     {
-        return (_myChild.GetComponent<PlantaBehaviour>() != null);
+        return (_myChild != null && _myChild.GetComponent<PlantaBehaviour>() != null);
     }
     public bool IsEmpty()
     { return _isEmpty; }
@@ -99,6 +102,13 @@ public class SoilComponent : MonoBehaviour
     public void SetIsEmpty(bool isEmpty)
     {
         _isEmpty = isEmpty;
+    }
+
+    public void RemoveObstacle()
+    {
+        _isEmpty = true;
+        _highlight.enabled = true;
+
     }
 
    

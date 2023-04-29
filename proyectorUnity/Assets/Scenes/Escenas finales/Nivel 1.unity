@@ -47516,6 +47516,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1501942045731911451, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _grid
       value: 

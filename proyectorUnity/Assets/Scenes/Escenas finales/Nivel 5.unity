@@ -47944,7 +47944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720895d6db50e0b4a9ac09cacac7ab54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanciaMin: 2.2
+  _distanciaMin: 3
   _destructeable:
     serializedVersion: 2
     m_Bits: 0
@@ -107346,6 +107346,10 @@ PrefabInstance:
     - target: {fileID: 1501942045731911450, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501942045731911451, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _grid
