@@ -12,6 +12,8 @@ public class InputController : MonoBehaviour
     private float _v;
     [SerializeField]
     private bool _movible;
+    [SerializeField]
+    private LayerMask _layerMask;
 
     public void MoveOrNot(bool mov)
     {
@@ -49,6 +51,7 @@ public class InputController : MonoBehaviour
         GameManager.Instance._player.GetComponent<PlayerController>().SetHorizontalAxis(_h);
         GameManager.Instance._player.GetComponent<PlayerController>().SetVerticalAxis(_v);
 
+
         if (Input.GetMouseButtonDown(0))
         {
             GameManager.Instance.Play(); //pasa al estado game
@@ -57,31 +60,47 @@ public class InputController : MonoBehaviour
             {
                 Vector2 mousePos = Input.mousePosition;
                 //impacto de rayo desde ubicacion del raton a punto del mundo.
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero, 0, _layerMask);
 
                 //Solo entra si ha impactado con algun collider
                 if (hit)
                 {
+                    Debug.Log("hit a tool");
+
                     GameObject objeto = hit.collider.gameObject;
-
-
                     if (objeto.GetComponent<Tool>() != null)
                     {
+                        print("la tool tiene tula");
                         inventoryController.TryPickUpTool(objeto, mousePos);
                     }
-                    else if (LayerMask.LayerToName(objeto.layer) == "NPC")
-                    {
-                        //objeto.GetComponent<DialogosInGame>().Bocadillo();
-                        objeto.GetComponent<DialogosInGame>().Bocadillo();
+                    
+                    
+                }
+                else
+                {
+                    hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
+                    if(hit) 
+                    { 
+                        Debug.Log("hit not a tool");
+                        GameObject objeto = hit.collider.gameObject;
+
+                        if (LayerMask.LayerToName(objeto.layer) == "NPC")
+                        {
+                            objeto.GetComponent<DialogosInGame>().Bocadillo();
+                        }
+                        else 
+                        {
+                            //Efectua la acci�n de clic de la herramienta
+                            inventoryController.ClickFunction(objeto, mousePos);
+                        }
+
                     }
-                    else //En caso de no ser un tool
-                    {
-                        //Efectua la acci�n de clic de la herramienta
-                        inventoryController.ClickFunction(objeto, mousePos);
-                    }
+
                 }
             }
         }
+
+
         if (Input.GetKeyDown(KeyCode.Escape) &&  GameManager.Instance._state == GameManager.GameStates.GAME)
         {
             GameManager.Instance.Pause();

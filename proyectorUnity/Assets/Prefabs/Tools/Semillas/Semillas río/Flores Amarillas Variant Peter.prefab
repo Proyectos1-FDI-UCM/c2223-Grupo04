@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4422370563245866307}
   - component: {fileID: 7812271526662632064}
   - component: {fileID: 3842218926866509261}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SalpicadasCharlie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4030234593530399836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particulitas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5065,7 +5065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5010605649492911352, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_IsActive
@@ -5077,7 +5077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7592597675225060651, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a7c446c6043454a888840b51a3cb10, type: 3}
