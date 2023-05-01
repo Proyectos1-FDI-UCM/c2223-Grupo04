@@ -315,7 +315,11 @@ PrefabInstance:
     - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _prefabInvernadero
       value: 
-      objectReference: {fileID: 3444574105448531846, guid: 3b1c35c9855532e43aa7b87a65bb5e80, type: 3}
+      objectReference: {fileID: 8398089973456023651, guid: 348993cff5eebab4682ae86f325d7059, type: 3}
+    - target: {fileID: 1501942045731911452, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _winTransitionTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1501942045731911453, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: m_RootOrder
       value: 3
