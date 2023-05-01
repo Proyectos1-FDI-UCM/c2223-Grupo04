@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour
         {
             //TODO NIVEL COMPLETADO
             Debug.Log("Te lo has pasado!");
-            GameManager.Instance.ChangeState(GameManager.GameStates.WIN);
+            GameManager.Instance.ChangeState(GameManager.GameStates.WIN_TRANSITION);
         }
     }
 
