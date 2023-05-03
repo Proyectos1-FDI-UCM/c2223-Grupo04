@@ -50,15 +50,31 @@ public class PlayerController : MonoBehaviour
         isSounding = false;
     }
 
-    private void Update()
+    //private void Update()
+    //{
+
+    //    _anim.SetBool("Walk", Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f);
+    //    if ((Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f) && !isSounding)
+    //    {
+    //        isSounding = true;
+    //        StartCoroutine(CharliePasos());
+    //    }
+    //}
+    public void Animate(float _v, float _h)
     {
-        
-        _anim.SetBool("Walk", Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f);
-        if ((Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f) && !isSounding) 
+        if (Mathf.Abs(_v) > 0.5f || Mathf.Abs(_h) > 0.5f)
         {
-            isSounding = true;
-            StartCoroutine(CharliePasos());
+            _anim.SetBool("Walk", true);
+            if (!isSounding) 
+            {
+                isSounding = true;
+                StartCoroutine(CharliePasos());
+            }
         }
+        else
+            _anim.SetBool("Walk", false);
+
+
     }
     public IEnumerator CharliePasos()
     {

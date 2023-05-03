@@ -11,7 +11,6 @@ public class InventoryController : MonoBehaviour
     [SerializeField]
     [Tooltip("Ditancia m�nima para que Charlie pueda coger la herramienta")]
     protected float _distanciaMin;
-    [SerializeField] LayerMask _destructeable; // Solo en el nivel de Peter.
     [SerializeField]
     protected int inventoryQty;
 
