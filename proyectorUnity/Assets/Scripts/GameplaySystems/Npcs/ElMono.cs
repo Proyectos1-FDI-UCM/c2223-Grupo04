@@ -24,6 +24,10 @@ public class ElMono : MonoBehaviour
     [SerializeField]
     GameObject casitaMikhael;
 
+    [Tooltip("punto de origen de la liana de Miguel")]
+    [SerializeField]
+    Transform origenLiana;
+
     [SerializeField]
     float minTiempoMover, maxTiempoMover, monoSpeed;
 
@@ -33,6 +37,8 @@ public class ElMono : MonoBehaviour
     float tiempoMover;
     GameObject miHerramienta;
     GameObject nuevaPosicion;
+
+    LineRenderer lineRenderer;
     enum EstadosMichael
     {
         Esperando,
@@ -45,7 +51,7 @@ public class ElMono : MonoBehaviour
 
     private void Start()
     {
-       
+        lineRenderer = GetComponent<LineRenderer>();
         estado = EstadosMichael.Esperando;
         GeneraTiempoMover();
     }
@@ -55,7 +61,7 @@ public class ElMono : MonoBehaviour
     {
         if (estado == EstadosMichael.Esperando || estado == EstadosMichael.EsperandoYendoACasa)
         {
-            maikelAnim.SetBool("Balancea", false); 
+            maikelAnim.SetBool("Balancea", false);
             maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
             tiempoMover -= Time.deltaTime;
@@ -63,17 +69,20 @@ public class ElMono : MonoBehaviour
             {
                 IrPorHerramienta();
                 GeneraTiempoMover();
-            } 
+            }
             if (estado == EstadosMichael.EsperandoYendoACasa)
             {
-                if(MoverHacia(casitaMikhael))
+                ActualizarLiana();
+                if (MoverHacia(casitaMikhael))
                 {
+                    lineRenderer.enabled = false;
                     estado = EstadosMichael.Esperando;
                 }
             }
         }
         else if (estado == EstadosMichael.YendoAPorHerramienta)
         {
+            ActualizarLiana();
             //Si la herramienta no está cogida, se va moviendo hacia ella. En caso de ser cogida, escoge otra.
             if (!miHerramienta.GetComponent<Tool>().IsPickedUp())
             {
@@ -84,11 +93,19 @@ public class ElMono : MonoBehaviour
             {
                 EscogerNuevaHerramienta();
             }
-        } else if (estado == EstadosMichael.MoviendoHerramienta)
+        }
+        else if (estado == EstadosMichael.MoviendoHerramienta)
         {
+            ActualizarLiana();
             if (MoverHacia(nuevaPosicion))
                 SoltarHerramienta();
         }
+    }
+
+    private void ActualizarLiana()
+    {
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, origenLiana.position);
     }
 
     private bool MoverHacia(GameObject objetivo)
@@ -129,6 +146,7 @@ public class ElMono : MonoBehaviour
         //Convierte la herramienta a su nueva posición a través del padre.
         miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
 
+
         //Una vez soltada la herramienta, volver a espera e ir a casa.
         estado = EstadosMichael.EsperandoYendoACasa;
     }
@@ -142,6 +160,7 @@ public class ElMono : MonoBehaviour
     {
         EscogerNuevaHerramienta();
         estado = EstadosMichael.YendoAPorHerramienta;
+        lineRenderer.enabled = true;
     }
 
     private void EscogerNuevaHerramienta()
