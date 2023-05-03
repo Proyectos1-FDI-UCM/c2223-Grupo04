@@ -6,16 +6,20 @@ using UnityEngine.Audio;
 
 public class AudioMixerController : MonoBehaviour
 {
-    [SerializeField] Slider _volumeSlider;
+    [SerializeField] private AudioMixer _effectsAudioMixer;
+    [SerializeField] private AudioMixer _musicAudioMixer;
 
-    //[SerializeField] private AudioMixer _capybaraAudioMixer;
-    //public void SetVolume(float sliderValue) 
-    //{
-    //    _capybaraAudioMixer.SetFloat("MasterVolume", Mathf.Log10(sliderValue) * 20);
-    //}
-    public void ChangeVolume() 
+    public void SetEffectsVolume(float sliderValue)
+    {
+        _effectsAudioMixer.SetFloat("MasterEffectsVolume", Mathf.Log10(sliderValue) * 20);
+    }
+    public void SetMusicVolume(float sliderValue)
+    {
+        _musicAudioMixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+    }
+    /*public void ChangeVolume() 
     {
         AudioListener.volume = _volumeSlider.value;
     
-    }
+    }*/
 }
