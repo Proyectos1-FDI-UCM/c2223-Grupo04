@@ -96,6 +96,7 @@ public class MercedesController : MonoBehaviour
         else if (estado == MercheStates.Stuneada)
         {
             //falta tema de activar animacion de estar estuneada
+            gameObject.transform.GetChild(1).gameObject.SetActive(false); //Desactiva las particulas de Mercedes enterrada.
             contadorStun -= Time.deltaTime;
             if (contadorStun < 0)
             {
