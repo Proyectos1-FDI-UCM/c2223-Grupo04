@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669647ec91184b24abf539e34ed95005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _buttonMixer: {fileID: 24300002, guid: 1d428fa40bcb1f441bd989d6d0237fd4, type: 2}
   _menuButton: {fileID: 8300000, guid: a8620637b36050047ada1fc85093dc3e, type: 3}
 --- !u!114 &49664991
 MonoBehaviour:
