@@ -57,6 +57,10 @@ public class InputController : MonoBehaviour
             _playerController.Animate(_v, _h);
 
         }
+        else
+        {
+           _playerController.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
 
         GameManager.Instance._player.GetComponent<PlayerController>().SetHorizontalAxis(_h);
         GameManager.Instance._player.GetComponent<PlayerController>().SetVerticalAxis(_v);
