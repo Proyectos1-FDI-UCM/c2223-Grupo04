@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     { 
         _myTransform.position = _casa.position;
         GetComponent<SpriteRenderer>().color =_transparent;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     public void SetVerticalAxis(float value) { _anim.SetFloat("Vertical", value); }
