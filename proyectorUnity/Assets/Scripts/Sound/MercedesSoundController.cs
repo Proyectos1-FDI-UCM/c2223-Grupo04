@@ -17,7 +17,7 @@ public class MercedesSoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _merche = this.gameObject.AddComponent<AudioSource>();
+        _merche = GetComponent<AudioSource>();
         _merche.volume = 5;
     }
 
