@@ -47945,9 +47945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distanciaMin: 3
-  _destructeable:
-    serializedVersion: 2
-    m_Bits: 0
   inventoryQty: 0
 --- !u!1 &855990585
 GameObject:
@@ -107296,7 +107293,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _tEntreTornados
-      value: 10
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _tornadoRutas.Array.size
