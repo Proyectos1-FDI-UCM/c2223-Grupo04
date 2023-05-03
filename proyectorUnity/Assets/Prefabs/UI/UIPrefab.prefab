@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9d13b3b68fcf540b902657aeca3012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transition: {fileID: 0}
+  _menuSounds: {fileID: 0}
 --- !u!1 &4282436252286551084
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9d13b3b68fcf540b902657aeca3012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transition: {fileID: 0}
+  _menuSounds: {fileID: 0}
 --- !u!1 &4282436252332563196
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,11 +739,16 @@ MonoBehaviour:
   _gameUI: {fileID: 4282436253140353336}
   _pausaUI: {fileID: 4282436252510417587}
   _winUI: {fileID: 4282436254116285527}
+  _tutorialUI: {fileID: 0}
+  _controlesUI: {fileID: 0}
+  _transition: {fileID: 0}
   _inventory: {fileID: 4282436253893154371}
   _prefabObjetivo: {fileID: 4718410252072182863, guid: f77589ed24e215d45b9ae58b3323de71, type: 3}
   _panel3: {fileID: 4282436252657934664}
+  _textIntro: 
+  _cantInventario: {fileID: 0}
   _insPrefObjs: []
-  objetivosnivel: {fileID: 0}
+  _objetivosnivel: {fileID: 0}
 --- !u!1 &4282436252510417587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4670,8 +4679,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4282436252477643502}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SalirBoton
-        m_Mode: 3
+        m_MethodName: NivelesBoton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

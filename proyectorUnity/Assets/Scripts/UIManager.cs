@@ -175,7 +175,7 @@ public class UIManager : MonoBehaviour
     public void NivelesBoton()
     {
         Time.timeScale = 1; //Volver a correr el tiempo.
-        StartCoroutine(LoadLevel(0));
+        StartCoroutine(LoadLevel(1));
     }
 
     IEnumerator LoadLevel(int levelIndex)
