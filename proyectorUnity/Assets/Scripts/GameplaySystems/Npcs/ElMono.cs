@@ -54,6 +54,8 @@ public class ElMono : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         estado = EstadosMichael.Esperando;
         GeneraTiempoMover();
+        lineRenderer.SetPosition(1, origenLiana.position);
+
     }
 
     // Update is called once per frame
@@ -105,7 +107,6 @@ public class ElMono : MonoBehaviour
     private void ActualizarLiana()
     {
         lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, origenLiana.position);
     }
 
     private bool MoverHacia(GameObject objetivo)
