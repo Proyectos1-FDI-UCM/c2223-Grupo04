@@ -9,6 +9,7 @@ public class TornadoControllerGuiseppe : TornadoController
     private int _limiteSuperiorRandom;
     [SerializeField]
     private GameObject _piedrasPrefab;
+    [SerializeField] GameObject _rocksParticlesPrefab;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,11 +21,8 @@ public class TornadoControllerGuiseppe : TornadoController
         }
         else if ((int)Random.Range(0, _limiteSuperiorRandom) == 0)
         {
-            _soilComponent.Instanciar(_piedrasPrefab);
+             GameObject rocks = _soilComponent.InstanciarGiusseppe(_piedrasPrefab);
+            Instantiate(_rocksParticlesPrefab, rocks.transform);
         }
-        
-
     }
-
-
 }

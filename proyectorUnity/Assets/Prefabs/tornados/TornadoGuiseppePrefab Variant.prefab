@@ -145,3 +145,4 @@ MonoBehaviour:
   _prefabCameraShaker: {fileID: 3553325777570937985, guid: 0648059112b87864994f470c470b1e3a, type: 3}
   _limiteSuperiorRandom: 10
   _piedrasPrefab: {fileID: 1979666216587085886, guid: 2ee966ca08b1b2f4ba30b7a2a9bdc8f9, type: 3}
+  _rocksParticlesPrefab: {fileID: 9159013517755806203, guid: 6e9a04af405616b49b27f19103da652c, type: 3}

@@ -17,7 +17,6 @@ public class SoilComponent : MonoBehaviour
     private GameObject _childPrefab;
     private GameObject _myChild;
     private HiglightItem _highlight;
-
     private void Start()
     {
         _levelManager = GameManager.Instance._levelManager;
@@ -49,6 +48,13 @@ public class SoilComponent : MonoBehaviour
         _myChild = Instantiate(childPrefab, transform.position, Quaternion.identity, transform);
         _isEmpty = false;
         _highlight.enabled = false;
+    }
+    public GameObject InstanciarGiusseppe(GameObject childPrefab)
+    {
+        _myChild = Instantiate(childPrefab, transform.position, Quaternion.identity, transform);
+        _isEmpty = false;
+        _highlight.enabled = false;
+        return _myChild;
     }
 
     /// <summary>

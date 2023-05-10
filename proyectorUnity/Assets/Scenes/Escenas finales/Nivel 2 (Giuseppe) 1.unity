@@ -10496,6 +10496,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4377523831334446803, guid: 792e1ef16a0d12243a1fd6c7eb43d99f, type: 3}
     - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: _tEntreTornados
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 997536862185482093, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _tornadoRutas.Array.size
       value: 4
       objectReference: {fileID: 0}
