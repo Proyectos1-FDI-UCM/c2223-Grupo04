@@ -72,6 +72,7 @@ public class PlantaBehaviour : MonoBehaviour
 
             else if (growTimer < 0)
             {
+                gameObject.transform.GetChild(1).gameObject.SetActive(false); //Desactiva las particulas de regado.
                 GrowSprite(3);
                 _plantState = PlantState.Drying;
                 _levelManager.PlantHasGrown(_plantData);
@@ -87,8 +88,6 @@ public class PlantaBehaviour : MonoBehaviour
             if (dryTimer <= (_plantData.DrySpeed / 3) * 2 && _currentDrySprite < 0)
             {
                 DrySprite(0);
-                gameObject.transform.GetChild(1).gameObject.SetActive(false);
-
             }
 
             else if (dryTimer <= (_plantData.DrySpeed / 3) && _currentDrySprite < 1)
@@ -138,7 +137,7 @@ public class PlantaBehaviour : MonoBehaviour
     {
         if (_plantState == PlantState.Growing)
         {
-            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            gameObject.transform.GetChild(1).gameObject.SetActive(true); // Activa las particulas de regado.
             _plantState = PlantState.GrowingWatered;
             growTimer = growTimer * 0.8f;
             Debug.Log("Regado");
