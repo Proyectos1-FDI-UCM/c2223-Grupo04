@@ -74,7 +74,6 @@ public class ElMono : MonoBehaviour
             }
             if (estado == EstadosMichael.EsperandoYendoACasa)
             {
-                ActualizarLiana();
                 if (MoverHacia(casitaMikhael))
                 {
                     lineRenderer.enabled = false;
@@ -84,7 +83,6 @@ public class ElMono : MonoBehaviour
         }
         else if (estado == EstadosMichael.YendoAPorHerramienta)
         {
-            ActualizarLiana();
             //Si la herramienta no está cogida, se va moviendo hacia ella. En caso de ser cogida, escoge otra.
             if (!miHerramienta.GetComponent<Tool>().IsPickedUp())
             {
@@ -98,15 +96,9 @@ public class ElMono : MonoBehaviour
         }
         else if (estado == EstadosMichael.MoviendoHerramienta)
         {
-            ActualizarLiana();
             if (MoverHacia(nuevaPosicion))
                 SoltarHerramienta();
         }
-    }
-
-    private void ActualizarLiana()
-    {
-        lineRenderer.SetPosition(0, transform.position);
     }
 
     private bool MoverHacia(GameObject objetivo)
@@ -117,6 +109,7 @@ public class ElMono : MonoBehaviour
         if (direccion.x < 0) maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         else maikelAnim.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         transform.position = Vector2.MoveTowards(transform.position, objetivo.transform.position, monoSpeed * Time.deltaTime);
+        lineRenderer.SetPosition(0, transform.position);
         return direccion.magnitude < 0.4;
     }
 
