@@ -47,3 +47,6 @@ TagManager:
   - name: Weather
     uniqueID: 3495450045
     locked: 0
+  - name: Invernaderos
+    uniqueID: 3142492989
+    locked: 0
