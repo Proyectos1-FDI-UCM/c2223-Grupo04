@@ -37859,7 +37859,7 @@ GameObject:
   m_Layer: 0
   m_Name: HouseDoor
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -107442,6 +107442,10 @@ PrefabInstance:
         espero que pueda ayudarme. Con el r\xEDo que cruza mi parcela, me resulta
         dif\xEDcil cuidar de mi jard\xEDn\u2026 Tal vez con su ayuda sea m\xE1s f\xE1cil."
       objectReference: {fileID: 0}
+    - target: {fileID: 4590792349041813036, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7063027728679573383, guid: 6da842dd1f4e4864796b0cbdc2305e41, type: 3}
       propertyPath: _maxPitch
       value: 1
