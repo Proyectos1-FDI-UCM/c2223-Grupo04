@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int _nTornadosFloja;
     private int _nTornadosFuerte;
+    private bool _saltaIntro;
     [SerializeField]
     private Transform _soilsPapas;
     [SerializeField]
@@ -150,7 +151,7 @@ public class GameManager : MonoBehaviour
         Destroy(_player.GetComponent<InventoryControllerTutorial>());
         _inputController.ChangeTutorialMode(toolObject);
 
-        _uIManager.IntroText(texto);
+        _uIManager.IntroTutText(texto);
         ChangeState(GameStates.INTRO);
         
     }
@@ -189,10 +190,29 @@ public class GameManager : MonoBehaviour
         {
             if (_player.GetComponent<InventoryControllerTutorial>() != null)
             {
-                ChangeState(GameManager.GameStates.TUTORIAL);
+                if(!_saltaIntro)
+                 {
+                    _uIManager.SaltarIntro(true);
+                    _saltaIntro = true;
+                 }else
+                 {
+                    ChangeState(GameManager.GameStates.TUTORIAL);
+                    _letterTyper.StopWriting();
+                    _saltaIntro = false;
+                 }
             }
-            else { ChangeState(GameManager.GameStates.GAME); }
-            _letterTyper.StopWriting();
+            else
+            {
+                 if(!_saltaIntro)
+                 {
+                    _uIManager.SaltarIntro(false);
+                    _saltaIntro = true;
+                 }else
+                 {
+                     ChangeState(GameManager.GameStates.GAME); 
+                    _letterTyper.StopWriting();
+                 }
+            }
         }
     }
    
@@ -205,6 +225,7 @@ public class GameManager : MonoBehaviour
         Camera.main.transform.GetChild(0).gameObject.SetActive(false); //Desactivar las partículas de la lluvia floja.
         Camera.main.transform.GetChild(1).gameObject.SetActive(false); //Desactivar las partículas de la lluvia fuerte.
         _goHome = false;
+        _saltaIntro= false;
     }
 
     // Update is called once per frame

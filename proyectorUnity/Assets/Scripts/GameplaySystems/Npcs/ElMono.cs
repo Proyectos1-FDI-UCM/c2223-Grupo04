@@ -9,7 +9,7 @@ public class ElMono : MonoBehaviour
      * 
      * 1. Espera hasta el momento de empezar a mover una herramienta. (esperando)
      * 2. Se mueve a la herramienta y la coge. (YendoAPorHerramienta).
-     * 3. Una vez cogida la desplaza a una nueva ubicación. (Moviendo herramienta)
+     * 3. Una vez cogida la desplaza a una nueva ubicaciï¿½n. (Moviendo herramienta)
      * 4. Vuelve a esperar.
      */
     [Tooltip("las posibles posiciones sobre las que maikel puede dejar una herramienta")]
@@ -20,7 +20,7 @@ public class ElMono : MonoBehaviour
     [SerializeField]
     List<GameObject> listaTools;
 
-    [Tooltip("transform ubicación inicial de michelle")]
+    [Tooltip("transform ubicaciï¿½n inicial de michelle")]
     [SerializeField]
     GameObject casitaMikhael;
 
@@ -83,7 +83,7 @@ public class ElMono : MonoBehaviour
         }
         else if (estado == EstadosMichael.YendoAPorHerramienta)
         {
-            //Si la herramienta no está cogida, se va moviendo hacia ella. En caso de ser cogida, escoge otra.
+            //Si la herramienta no estï¿½ cogida, se va moviendo hacia ella. En caso de ser cogida, escoge otra.
             if (!miHerramienta.GetComponent<Tool>().IsPickedUp())
             {
                 if (MoverHacia(miHerramienta))
@@ -126,23 +126,27 @@ public class ElMono : MonoBehaviour
         do
             nuevaPosicion = posiblesPosiciones[Random.Range(0, posiblesPosiciones.Count)];
         while (nuevaPosicion.GetComponent<ToolLocation>().IsOcupied());
+        
+        CambiarOrigenLiana(nuevaPosicion.transform.position);
     }
 
     private void SoltarHerramienta()
     {
         miHerramienta.GetComponent<Collider2D>().enabled = true;
-        //La posición relativa al mundo de la herramienta al padre.
+        //La posiciï¿½n relativa al mundo de la herramienta al padre.
         Vector3 posicionNueva = transform.InverseTransformPoint(miHerramienta.transform.position);
 
         //Saca la herramienta del parent.
         miHerramienta.transform.SetParent(null);
 
-        //Convierte la herramienta a su nueva posición a través del padre.
+        //Convierte la herramienta a su nueva posiciï¿½n a travï¿½s del padre.
         miHerramienta.transform.position = transform.TransformPoint(posicionNueva);
 
 
         //Una vez soltada la herramienta, volver a espera e ir a casa.
         estado = EstadosMichael.EsperandoYendoACasa;
+        
+        CambiarOrigenLiana(casitaMikhael.transform.position);
     }
 
     private void GeneraTiempoMover()
@@ -154,6 +158,7 @@ public class ElMono : MonoBehaviour
     {
         EscogerNuevaHerramienta();
         estado = EstadosMichael.YendoAPorHerramienta;
+        CambiarOrigenLiana(miHerramienta.transform.position);
         lineRenderer.enabled = true;
     }
 
@@ -161,5 +166,11 @@ public class ElMono : MonoBehaviour
     {
         //Saca un objeto aleatorio de la lista de objetos tools.
         miHerramienta = listaTools[Random.Range(0, listaTools.Count)];
+    }
+
+    private void CambiarOrigenLiana(Vector2 finPos)
+    {
+        origenLiana.gameObject.GetComponent<LianaOrigen>().SetLianaOrigen(transform.position, nuevaPosicion.transform.position);
+        lineRenderer.SetPosition(1, origenLiana.position);
     }
 }

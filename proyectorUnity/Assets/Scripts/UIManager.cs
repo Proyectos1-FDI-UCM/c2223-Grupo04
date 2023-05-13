@@ -183,10 +183,25 @@ public class UIManager : MonoBehaviour
         _menuSounds.ButtonSound();
         _transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
 
         SceneManager.LoadScene(levelIndex);
         StopAllCoroutines();
+    }
+    public void IntroText(string _texto)
+    {
+        GameManager.Instance._letterTyper.LetterByLetter(_texto, _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+    }
+    public void IntroTutText(string _texto)
+    {
+        GameManager.Instance._letterTyper.LetterByLetter(_texto, _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+    }
+
+    public void SaltarIntro(bool tuto)
+    {
+        GameManager.Instance._letterTyper.StopWriting();
+        if (tuto){_introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _textIntro;}
+        else{_introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = _textIntro;}
     }
 
     #region cosas tutorial
@@ -197,10 +212,6 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void IntroText(string _texto)
-    {
-        GameManager.Instance._letterTyper.LetterByLetter(_texto, _introUI.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>());
-    }
 
     public void MostrarControles(bool SiONo) 
     { 

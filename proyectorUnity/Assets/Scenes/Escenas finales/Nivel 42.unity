@@ -11448,6 +11448,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3875521789436672168, guid: ef922484aa7268444b5ae035fec0bdf1, type: 3}
   m_PrefabInstance: {fileID: 554773060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &131252552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131252553}
+  m_Layer: 0
+  m_Name: Liana Maikel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131252553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131252552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.43, y: 1.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 661898536}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141917985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4320326590028734497, guid: b742b597e4f65c54e9eca5a8382c50a0, type: 3}
@@ -26987,6 +27018,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3439963555350040537, guid: 98bb86afc61402948a6cce845a1d81ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 313766075, guid: c3bae3b44b65e7c4a895ca494f20d8e9, type: 3}
     - target: {fileID: 8216589809397526828, guid: 98bb86afc61402948a6cce845a1d81ab, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -32676,6 +32711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _npcGO: {fileID: 0}
+--- !u!4 &661898536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1545007309915100514, guid: 98bb86afc61402948a6cce845a1d81ab, type: 3}
+  m_PrefabInstance: {fileID: 499687904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &671705917
 GameObject:
   m_ObjectHideFlags: 0
@@ -48929,7 +48969,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 9b2aa80499442674aa2991d6bcc4d558, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48947,9 +48987,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -799517251
+  m_SortingLayer: 1
+  m_SortingOrder: 8
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -49832,6 +49872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157936146}
+  - component: {fileID: 1157936147}
   m_Layer: 0
   m_Name: LianaOrigin
   m_TagString: Untagged
@@ -49854,6 +49895,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157936147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157936145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bd85be939a01445accb43a02f8eb71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1168495920
 PrefabInstance:
   m_ObjectHideFlags: 0
