@@ -6,19 +6,33 @@ html,body {
   font-size: 18px;
 }
 body {
-  padding-bottom: 1rem;
-  color: #5a5a5a;
+    background-image: url('Fondo.png');
+    backgroud-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Comic Sans ms';
+    text-align: center;
+    padding-bottom: 1rem;
+    color: sienna;
 }
 
 
+.btn-primary,  .btn-primary:active, .btn-primary:visited {
+    background-color: maroon !important;
+    border-color: maroon !important;
+    color: limegreen;
+}
 
-
-/* CUSTOMIZE THE HEADER
+    .btn-primary:hover {
+        background-color: green !important;
+        border-color: green !important;
+        color: maroon;
+    }
+    /* CUSTOMIZE THE HEADER
 -------------------------------------------------- */
-
-img.img-header {
-  max-height: 500px;
-}
+    img.img-header {
+        max-height: 500px;
+    }
 
 
 /* MARKETING CONTENT
