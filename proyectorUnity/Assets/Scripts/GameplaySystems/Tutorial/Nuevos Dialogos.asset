@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Nuevos Dialogos
   m_EditorClassIdentifier: 
   _dialogos:
-  - "Primero vamos a coger una semilla de tomates. Ac\xE9rcate a la bolsa y haz click."
+  - "Primero vamos a coger semillas de tomates. Ac\xE9rcate a la bolsa y haz click."
   - Coge otra. Puedes llevar hasta tres semillas al mismo tiempo, pero empecemos
-    con dos
-  - "Muy bien. Ahora vamos a plantarlas. Por ejemplo, ah\xED"
-  - "Y planta la otra ah\xED. Esa tierra ha estado en barbecho, asi que crecer\xE1
+    con dos.
+  - "\xA1Muy bien! Ahora vamos a plantarlas. Por ejemplo, ah\xED."
+  - "Y planta la otra ah\xED. Esa tierra ha estado en barbecho, as\xED que crecer\xE1
     m\xE1s r\xE1pido y no se secar\xE1."
   - "\xA1Perfecto! Ahora vamos a regarlas para que crezcan m\xE1s r\xE1pido. Ve a
     por la regadera."
-  - "Si se empiezan a secar las plantas, ri\xE9galas. Si no, se morir\xE1n, y tendr\xE1s
-    que desplantarlas. Vamos adejar la regadera"
+  - "Si se empiezan a secar las plantas, ri\xE9galas. Si no, se morir\xE1n y tendr\xE1s
+    que desplantarlas con la pala."
   - "\xA1No te olvides de dejar la regadera!"
-  - "Por \xFAltimo, vamos a quitar las piedras peque\xF1as. ve a por la pala."
+  - "Por \xFAltimo, vamos a quitar las piedras peque\xF1as. Ve a por la pala."
   - "No podemos hacer nada con las piedras grandes, pero al menos podemos quitar
     las peque\xF1as."
   - "\xA1Genial! \xA1Qu\xE9 buen jardinero! Ahora solo tienes que hacer esto un par
     de veces m\xE1s, hasta que tengas todas tus plantitas palantadas. \xA1A por ellos,
-    Charlie!\xA1Y cuidado con los tornados!"
+    Charlie! \xA1Y cuidado con los tornados!"

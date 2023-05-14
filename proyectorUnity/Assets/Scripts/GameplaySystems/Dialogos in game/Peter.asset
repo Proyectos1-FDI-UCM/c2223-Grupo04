@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogos:
   - "\xA1Un, dos! \xA1Un, dos! \xA1Un, dos! "
-  - "\xA1Venga! \xA1Calabazas, zanahorias! "
-  - "\xA1Pero no te quedes aqu\xED, Charlie, que se te escapan!"
+  - "\xA1Venga! \xA1Calabazas, zanahorias, patatas y guisante! "
+  - "\xA1Pero no te quedes ah\xED parado, Charlie, que se te escapan!"
   - "Me encantan los d\xEDas de brazo."
   - "Con m\xE1s cuidado, Charlie, que te est\xE1s empapando. "
   - "Menuda paliza nos estamos dando, \xBFeh? "
