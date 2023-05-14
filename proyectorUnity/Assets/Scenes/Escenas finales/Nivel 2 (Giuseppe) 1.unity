@@ -233,8 +233,8 @@ Transform:
   - {fileID: 332432053}
   - {fileID: 961553733}
   - {fileID: 771933971}
-  - {fileID: 1689360993}
   - {fileID: 1672938293}
+  - {fileID: 1689360993}
   - {fileID: 483611843}
   - {fileID: 1263823800}
   - {fileID: 1390479510}
@@ -8403,7 +8403,7 @@ GameObject:
   - component: {fileID: 332432055}
   - component: {fileID: 332432054}
   m_Layer: 0
-  m_Name: NivelGiuseppe Vallas (Collider)
+  m_Name: NivelGiuseppe Fences (Collider)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10800,7 +10800,7 @@ GameObject:
   - component: {fileID: 483611845}
   - component: {fileID: 483611844}
   m_Layer: 0
-  m_Name: NivelGiuseppe Deco
+  m_Name: NivelGiuseppe Deco2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12356,7 +12356,7 @@ GameObject:
   - component: {fileID: 771933973}
   - component: {fileID: 771933972}
   m_Layer: 0
-  m_Name: NivelGiuseppe Puerta
+  m_Name: NivelGiuseppe Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12637,7 +12637,7 @@ GameObject:
   - component: {fileID: 961553735}
   - component: {fileID: 961553734}
   m_Layer: 0
-  m_Name: NivelGiuseppe Casa (Collider)
+  m_Name: NivelGiuseppe House (Collider)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17040,7 +17040,7 @@ GameObject:
   - component: {fileID: 1270412346}
   - component: {fileID: 1270412345}
   m_Layer: 0
-  m_Name: "NivelGiuseppe C\xE9sped y Caminos"
+  m_Name: NivelGiuseppe Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31562,7 +31562,7 @@ GameObject:
   - component: {fileID: 1372662848}
   - component: {fileID: 1372662847}
   m_Layer: 0
-  m_Name: NivelGiuseppe ClffsBack
+  m_Name: NivelGiuseppe CliffsBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33814,7 +33814,7 @@ GameObject:
   - component: {fileID: 1672938295}
   - component: {fileID: 1672938294}
   m_Layer: 0
-  m_Name: NivelGiuseppe Collider Deco
+  m_Name: NivelGiuseppe Deco (Collider)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33833,7 +33833,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77897682}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!66 &1672938294
 CompositeCollider2D:
@@ -35010,7 +35010,7 @@ GameObject:
   - component: {fileID: 1689360994}
   - component: {fileID: 1689360996}
   m_Layer: 0
-  m_Name: NivelGiuseppe Deco2
+  m_Name: NivelGiuseppe Deco1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35029,7 +35029,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77897682}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1689360994
 TilemapRenderer:
