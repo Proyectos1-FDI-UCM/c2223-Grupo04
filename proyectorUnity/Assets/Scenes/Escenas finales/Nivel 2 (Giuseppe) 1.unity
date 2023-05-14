@@ -10710,7 +10710,7 @@ GameObject:
   - component: {fileID: 480491453}
   - component: {fileID: 480491452}
   m_Layer: 0
-  m_Name: worldmap fondo
+  m_Name: FondoTransicion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
