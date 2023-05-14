@@ -134,14 +134,6 @@ public class GameManager : MonoBehaviour
                 Puntuacion.Instance.SetNumeroTornados(nivel, _nTornados, _plantasMuertas);
             }
             Debug.Log("STATE: WIN");
-        } else if (_state == GameStates.WIN_TRANSITION)
-        {
-            Camera.main.GetComponent<SmoothCameraFollow>().enabled = false;
-            Camera.main.transform.position = _cameraCenterPoint.transform.position;
-            Camera.main.orthographicSize = _cameraEndSize;
-            _inputController.MoveOrNot(false);
-            Instantiate(_prefabInvernadero, _grid.transform);
-
         }
         _uIManager.CambiarUISegunEstadoJuego();
     }
@@ -181,6 +173,15 @@ public class GameManager : MonoBehaviour
         _goHome = true;
     }
 
+    public void GanarPartida()
+    {
+        ChangeState(GameStates.WIN_TRANSITION);
+        Camera.main.GetComponent<SmoothCameraFollow>().enabled = false;
+        Camera.main.transform.position = _cameraCenterPoint.transform.position;
+        Camera.main.orthographicSize = _cameraEndSize;
+        _inputController.MoveOrNot(false);
+        Instantiate(_prefabInvernadero, _grid.transform);
+    }
     /// <summary>
     /// reanuda el juego
     /// </summary>
