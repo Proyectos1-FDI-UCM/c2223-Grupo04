@@ -27,7 +27,7 @@ public class IntroManager : MonoBehaviour
     IEnumerator IntroScene() // Corrutina para la intro.
     {
         _audioSource.PlayOneShot(_clip);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(8);
         SceneManager.LoadScene(1); // Carga la escena del menu inicial.
     }
     void AumentaLogo() // Para aumentar la escala del logo de la intro.
