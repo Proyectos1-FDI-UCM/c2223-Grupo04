@@ -231,7 +231,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Comprobacion del numero de tornados
+        // Comprobacion del numero de tornados
         if (_nTornados >= _nTornadosFloja)
         {
             Rain();
@@ -253,10 +253,6 @@ public class GameManager : MonoBehaviour
             {
                 ChangeState(GameStates.WIN);
             }
-        }
-        //Guarrada para probar la transición a victoria
-        if (Input.GetKeyDown(KeyCode.P)) { 
-            ChangeState(GameStates.WIN_TRANSITION);
         }
     }
 }
