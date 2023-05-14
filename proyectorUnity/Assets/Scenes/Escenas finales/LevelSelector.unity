@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 88301248}
   - component: {fileID: 88301247}
   m_Layer: 0
-  m_Name: bvackground
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &107680467
 GameObject:
@@ -982,7 +982,7 @@ Transform:
   - {fileID: 1168945972}
   - {fileID: 1049130563}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347344539
 GameObject:
@@ -1322,7 +1322,7 @@ RectTransform:
   - {fileID: 554186421}
   - {fileID: 1081196633}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2342,7 +2342,7 @@ GameObject:
   - component: {fileID: 868495094}
   - component: {fileID: 868495093}
   m_Layer: 0
-  m_Name: foreground
+  m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2374,7 +2374,7 @@ Transform:
   m_Children:
   - {fileID: 164335250}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909508274
 GameObject:
@@ -2494,7 +2494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1049130563 stripped
 Transform:
@@ -3368,7 +3368,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487474143
 GameObject:
@@ -4077,7 +4077,7 @@ GameObject:
   - component: {fileID: 1781186091}
   - component: {fileID: 1781186090}
   m_Layer: 0
-  m_Name: layer 1
+  m_Name: Layer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4109,7 +4109,7 @@ Transform:
   m_Children:
   - {fileID: 909508275}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828315120
 GameObject:
@@ -4691,7 +4691,7 @@ GameObject:
   - component: {fileID: 2068140362}
   - component: {fileID: 2068140361}
   m_Layer: 0
-  m_Name: layer 2
+  m_Name: Layer 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5793,7 +5793,7 @@ GameObject:
   - component: {fileID: 174107673}
   - component: {fileID: 174107672}
   m_Layer: 0
-  m_Name: NivelMercedes Casa1
+  m_Name: NivelMercedes HouseRoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85177,7 +85177,7 @@ GameObject:
   - component: {fileID: 1969145523}
   - component: {fileID: 1969145522}
   m_Layer: 0
-  m_Name: NivelMercedes Puerta
+  m_Name: NivelMercedes Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85453,7 +85453,7 @@ GameObject:
   - component: {fileID: 2113696316}
   - component: {fileID: 2113696315}
   m_Layer: 0
-  m_Name: NivelMercedes Casa2
+  m_Name: NivelMercedes HouseWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
