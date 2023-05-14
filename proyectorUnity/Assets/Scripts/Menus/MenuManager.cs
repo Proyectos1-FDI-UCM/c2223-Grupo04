@@ -28,12 +28,12 @@ public class MenuManager : MonoBehaviour
     #region methods
     public void PlayBoton()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel(2));
         _menuSounds.ButtonSound();
     }
     public void MenuBoton()
     {
-        StartCoroutine(LoadLevel(0));
+        StartCoroutine(LoadLevel(1));
         _menuSounds.ButtonSound();
     }
     public void ExitBoton()
@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
     }
     public void OptionButton() 
     {
-        StartCoroutine(LoadLevel(7));
+        StartCoroutine(LoadLevel(8));
         _menuSounds.ButtonSound();
     }
     #endregion

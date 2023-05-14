@@ -28,7 +28,7 @@ public class LevelSelector : MonoBehaviour
     //cambia a la escena del index indicado
     public void CambiaEscena2()
     {
-        StartCoroutine(LoadLevel(_nivel + 2));
+        StartCoroutine(LoadLevel(_nivel + 3));
     }
 
     //actualiza el nivel del resumen
@@ -48,7 +48,7 @@ public class LevelSelector : MonoBehaviour
     public void ExitBoton()
     {
         _menuSounds.ButtonSound();
-        StartCoroutine(LoadLevel(0));
+        StartCoroutine(LoadLevel(1));
     }
 
     IEnumerator LoadLevel(int levelIndex)
