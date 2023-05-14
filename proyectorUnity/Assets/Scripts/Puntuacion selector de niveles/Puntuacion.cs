@@ -48,7 +48,7 @@ public class Puntuacion : MonoBehaviour
     }
     public void SetNumeroTornados(int nivel, int tornados, int plantasMuertas)
     {
-        print("GUARDA LA PUNTUACION");
+        //print("GUARDA LA PUNTUACION");
 
         _numeroTornados[nivel] = tornados - 1;
         _numeroPlantasSecas[nivel] = plantasMuertas;

@@ -58,7 +58,7 @@ public class SoundManager : MonoBehaviour
         _chillMus.volume = 0;
     }
 
-    void PlayChill(){ _chillMus.clip=_chillMusic; _chillMus.Play(); print("ER"); }
+    void PlayChill(){ _chillMus.clip=_chillMusic; _chillMus.Play(); print("PoneMusica"); }
 
     void PlayTornado(){ _torMus.clip=_tornadoMusic; _torMus.Play();}
    

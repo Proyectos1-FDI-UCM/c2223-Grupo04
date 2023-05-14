@@ -118,7 +118,7 @@ public class LevelManager : MonoBehaviour
         List<PlantaBehaviour> plantasGrowadas = new List<PlantaBehaviour>();
         for( int c= 0; c < plantas.Count; c++)
         {
-            Debug.Log(plantas[c].GetPlantState().ToString());
+            //Debug.Log(plantas[c].GetPlantState().ToString());
             if (plantas[c].GetPlantState() == PlantaBehaviour.PlantState.Drying) {
                 plantasGrowadas.Add(plantas[c]);
             }

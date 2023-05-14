@@ -107,7 +107,7 @@ public class InventoryControllerTutorial : InventoryController
     private void MoverLuz()
     {
         _luz.transform.position = ObjetosAInteractuar[(int)_parteActual].transform.position;
-        Debug.Log("luz Movida");
+        //Debug.Log("luz Movida");
     }
 
 }

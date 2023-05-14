@@ -37,12 +37,12 @@ public class InputControllerPeter : InputController
                 //Solo entra si ha impactado con algun collider
                 if (hit)
                 {
-                    Debug.Log("hit a tool");
+                    //Debug.Log("hit a tool");
 
                     GameObject objeto = hit.collider.gameObject;
                     if (objeto.GetComponent<Tool>() != null)
                     {
-                        print("la tool tiene tula");
+                        //print("la tool tiene tula");
                         inventoryController.TryPickUpTool(objeto, mousePos);
                     }
 
@@ -53,7 +53,7 @@ public class InputControllerPeter : InputController
                     hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePos), Vector2.zero);
                     if (hit)
                     {
-                        Debug.Log("hit not a tool");
+                        //Debug.Log("hit not a tool");
                         GameObject objeto = hit.collider.gameObject;
 
                         if (LayerMask.LayerToName(objeto.layer) == "NPC")

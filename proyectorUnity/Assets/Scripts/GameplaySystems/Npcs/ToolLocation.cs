@@ -10,14 +10,14 @@ public class ToolLocation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Entrada colision" + gameObject.name);
+        //Debug.Log("Entrada colision" + gameObject.name);
         if (CheckCollidingTool(collision.gameObject.GetComponent<Tool>()))
             isOcupied = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Salida colision" + gameObject.name);
+        //Debug.Log("Salida colision" + gameObject.name);
         if(CheckCollidingTool(collision.gameObject.GetComponent<Tool>()))
             isOcupied = false;
     }

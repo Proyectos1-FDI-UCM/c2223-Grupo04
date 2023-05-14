@@ -49,7 +49,7 @@ public class Pala : Tool
         else if(objetoClicado.GetComponent<MercedesController>() != null)
         {
             objetoClicado.GetComponent<MercedesController>().Stunear();
-            Debug.Log("mercedes stuneada");
+            Debug.Log("Mercedes stuneada");
         } 
 
     }

@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
     }
     public void CantSem(int cant)
     {       
-        print("" + cant);
+        //print("" + cant);
         //Si hay varias semillas
         if (cant > 0) { _cantInventario.gameObject.SetActive(true); _cantInventario.text = "" + cant; }
         else { _cantInventario.gameObject.SetActive(false); }
